@@ -72,7 +72,7 @@ comment.
 
 ## Output
 
-One block, grouped by bucket, each reply copy-ready and already humanized:
+One block, grouped by bucket, each reply copy-ready and already run through `/ig-human` (the user's `humanizer`):
 
 ```
 REPLIES  ·  84 comments  ·  41 KEYWORD, 2 LEAD, 3 SUBSTANCE, 2 QUESTION, 34 SUPPORT, 2 NOISE

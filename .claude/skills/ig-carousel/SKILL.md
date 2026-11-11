@@ -82,7 +82,7 @@ seconds and edit before anything is rendered. Then the **caption**, which for a
 carousel is Job B in `/ig-caption`: the caption is doing work here, because the
 cover has already used its six words.
 
-Run both through `/ig-human`. Build the files only after the user approves the
+Run both through `/ig-human`, which uses the user's `humanizer` skill. Build the files only after the user approves the
 copy.
 
 ```

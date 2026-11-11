@@ -75,7 +75,7 @@ rehearse.
 a hook past 3 seconds, any beat over 4 seconds, a run of beats with nothing
 concrete in them, no loop. Re-run until it is clean.
 
-**5. Humanize it.** Run the script through `/ig-human` before showing it. A
+**5. Humanize it.** Run the script through `/ig-human` before showing it. The rewrite is done by the user's `humanizer` skill. A
 written-sounding line is obvious the moment someone says it out loud.
 
 **6. Print the block.** The script in a fenced block, the on-screen text as a
@@ -86,7 +86,7 @@ REEL READY
 hook:       #3 Nobody Tells You, scored 86 STRONG
 length:     28.4s across 9 beats at 165 wpm
 on-screen:  6 cards
-humanizer:  4 artefacts stripped, human score 81 PASS
+humanizer:  user's humanizer applied, 4 artefacts stripped, score 81 PASS
 caption:    run /ig-caption next
 
 Reply "yes" to log it, or tell me what to change.
