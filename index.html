@@ -8,7 +8,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Sport-Tool">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#0f766e">
 <title>Unterrichtsversuche Sport 1–13</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -307,7 +306,7 @@ table.jp hr{border:0;border-top:1px dashed #cfe0d8;margin:8px 0}
 </head>
 <body>
 <div class="wrap">
-<header class="top"><h1>Unterrichts<em>versuche</em> Sport</h1><p>Klasse 1–13 nach den Hamburger Bildungsplänen. <span id="etappe"></span></p></header>
+<header class="top"><h1>Unterrichts<em>versuche</em> Sport</h1><p><span id="kl">Klasse 1–13</span> nach den Hamburger Bildungsplänen. <span id="etappe"></span></p></header>
 <nav class="mainnav" aria-label="Bereiche"><button data-nav="" aria-current="page">Unterrichtsversuche</button><button data-nav="curriculum">Schulcurriculum</button><button data-nav="gruppen">Meine Lerngruppen</button><button data-nav="reflexion">Reflektiere herausfordernde Unterrichtssituationen</button><button data-nav="fallberatung">Kollegiale Fallberatung</button><button data-nav="hilfe">So geht's</button></nav>
 <main id="app"></main>
 <footer>Grundlage: Bildungspläne Sport der Freien und Hansestadt Hamburg (Grundschule 2022, Sekundarstufe I 2024, Studienstufe 2022). Die Unterrichtsversuche sind Planungsvorschläge und müssen an Lerngruppe, Halle und Sicherheitsvorgaben der eigenen Schule angepasst werden. Mit [prüfen] markierte Angaben bitte am Original kontrollieren.</footer>
@@ -7881,6 +7880,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 const app=$('#app');
 const state={q:'',bf:new Set(),kb:new Set(),quer:new Set(),stufe:new Set()};
 UV.forEach(u=>{u.blob=[u.titel,u.thema,u.reihe,BF[u.bf],KB[u.kb][0],u.kb,`Klasse ${u.klasse}`,u.quer.join(' '),u.bp,Object.values(u.bedingung).join(' '),u.sach,u.didaktik,u.ziele.map(z=>z.text+' '+z.op).join(' '),u.verlauf.map(v=>[v.p,v.was,v.orga,v.komm].join(' ')).join(' '),u.diff.leichter.join(' '),u.diff.schwerer.join(' '),u.diff.inklusion,Object.values(u.querText).join(' '),u.reflexSuS.join(' '),u.reflexLK.join(' '),u.halle.ein,u.halle.mehr,u.material,REIHE[u.id]?REIHE[u.id].ziel+' '+REIHE[u.id].st.map(x=>x.flat().join(' ')).join(' '):''].join(' \n ');u.low=u.blob.toLowerCase()});
+{const K={gs:'Grundschule, Klasse 1–4',sts:'Stadtteilschule, Klasse 5–10',gym:'Gymnasium, Klasse 5–10',os:'Oberstufe, Klasse 11–13'};if(typeof FIXED!=='undefined'&&FIXED&&K[FIXED])$('#kl').textContent=K[FIXED]}
 $('#etappe').textContent=`Stand: ${UV.length} Unterrichtsversuche, ${new Set(UV.map(u=>u.bf)).size} von 8 Bewegungsfeldern.`;
 
 function terms(){return state.q.toLowerCase().split(/\s+/).filter(Boolean)}
