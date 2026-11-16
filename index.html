@@ -301,6 +301,7 @@ table.jp hr{border:0;border-top:1px dashed #cfe0d8;margin:8px 0}
 .hero h1{overflow-wrap:break-word;hyphens:manual}
 .fbstep{padding:0;display:inline-grid;place-items:center;line-height:1}
 .rnote{margin-top:12px}
+ol.jpl{margin:0;padding-left:1.3em;columns:2;column-gap:18px}ol.jpl li{break-inside:avoid;margin:0 0 4px;font-size:.92rem}@media(max-width:640px){ol.jpl{columns:1}}
 
 </style>
 </head>
@@ -7850,6 +7851,725 @@ REIHE[`bf6-we-6`]={ziel:`Die Kinder entwickeln Stützkraft und Körperspannung, 
 REIHE[`bf6-lue-7`]=REIHE[`bf6-we-6`];
 REIHE[`bf6-wk-5`]=REIHE[`bf6-lue-5`];
 
+// Grundschule, Fachcurriculum Sport FNS: exemplarische Unterrichtsvorhaben BF1 und BF2
+
+UV.push({
+id:`bf1-wk-6`, bf:1, kb:`WK`, klasse:`2`, stufe:`GS`, dauer:45,
+titel:`Gelingt uns das Schneemann-Spiel?`,
+thema:`Im Wurfspiel „Schneemann“ die eigene Figur schützen, die anderen abwerfen und Gelingensbedingungen für das Spiel finden`,
+reihe:`Stunde 1 von 8 der Reihe „Zielgerichtetes Werfen“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 1, Werfen: vielfältiges Werfen mit unterschiedlichen Materialien; Bewegungsfeld 5, kleine Spiele (BSB, 2022a, S. 18, 24–26, 31). Kompetenzbereich Wettkämpfen und Kooperieren (BSB, 2022a, S. 15). Fachcurriculum FNS: exemplarisches Unterrichtsvorhaben „Zielgerichtetes Werfen“ Jg. 1/2 (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`23 Kinder, Klasse 2. Die Wurferfahrung ist sehr unterschiedlich, einige Kinder werfen kaum über fünf Meter. In Mannschaftsspielen werfen oft dieselben Kinder, andere stehen am Rand. Zwei Kinder reagieren auf Niederlagen mit Rückzug.`,
+ vorauss:`Werfen und Fangen zu zweit, einfache Fangspiele. Das Spiel ist neu.`,
+ raum:`Einfeldhalle, vier Langbänke als Kreuz in der Mitte, dazwischen vier Spielfelder. In jedem Feld steht ein Schneemann aus Medizinball, Gymnastikring, kleinerem Ball und Hütchen oder Papprolle.`,
+ sicherheit:`Nur Softbälle. Geworfen wird auf den Schneemann, nicht auf Kinder. Die Bänke dürfen nicht überquert werden. Abstand zum Schneemann mindestens zwei Meter, markiert mit Tellerhütchen.`},
+sach:`Beim Schneemann-Spiel verteidigt jedes Team die eigene Figur und versucht, die Figuren der anderen Teams umzuwerfen. Erfolg hängt davon ab, ob gezielt geworfen wird, ob das Team Aufgaben verteilt (werfen, schützen, Bälle holen) und ob alle beteiligt sind. Das Spiel verbindet das Werfen auf Ziele mit einer einfachen Spielidee. Es steht am Anfang und am Ende der Reihe und macht so den Lernzuwachs sichtbar.`,
+didaktik:`Die erste Stunde stellt das Spiel als Problem: Gelingt es uns, das Spiel fair und spannend zu spielen? Die Kinder erleben zuerst eine Runde ohne Hinweise. Im Austausch sammeln sie, was gut lief und was nicht. Die Lehrkraft bündelt zwei Gelingensbedingungen: Aufgaben im Team verteilen und gezielt werfen. In der zweiten Runde wenden die Teams sie an. Am Ende halten Reflexionskarten fest, was in Stunde 7 wieder überprüft wird.`,
+ziele:[
+ {b:`motorisch`, st:`Durchführung`, op:`ausführen`, text:`Die SuS führen gezielte Würfe auf den Schneemann aus, indem sie aus dem Stand mit Schrittstellung werfen und dabei auf die Figur schauen.`},
+ {b:`kognitiv`, st:`Verständnis`, op:`benennen`, text:`Die SuS benennen Gelingensbedingungen des Spiels, indem sie im Kreis eine Sache nennen, die ihrem Team geholfen hat.`},
+ {b:`sozial-affektiv`, st:``, op:`kooperieren`, text:`Die SuS kooperieren im Team, indem sie Aufgaben wie Werfen, Schützen und Bälle holen verteilen und nach jeder Runde tauschen.`}],
+verlauf:[
+ {p:`Einstieg`, t:3, was:`Sitzkreis. L zeigt einen Schneemann und erklärt die Spielidee in drei Sätzen. Leitfrage der Stunde: „Gelingt uns das Schneemann-Spiel?“`, orga:`Sitzkreis; ein Schneemann`, komm:`Problemorientierter Einstieg, Spielidee knapp.`},
+ {p:`Erwärmung`, t:6, was:`Partnerwerfen über eine Bank: zuwerfen, Bogenwurf, Zielwurf auf ein Hütchen. Wechsel der Partner auf Signal.`, orga:`Paare an den Bänken; Softbälle, Hütchen`, komm:`Wurfvorbereitung, Zielen auf kleine Ziele.`},
+ {p:`Erleben`, t:9, was:`Vier Teams, erste Runde Schneemann-Spiel mit zwei Bällen. Ohne Tipps der Lehrkraft. Fällt ein Schneemann, wird er wieder aufgebaut und das Team bekommt einen Punkt Abzug.`, orga:`4 Felder; 4 Schneemänner, 2 Softbälle`, komm:`Offene Phase. L beobachtet Rollen und Wurfverhalten.`},
+ {p:`Austauschen`, t:5, was:`Sitzkreis. „Was lief gut? Was war unfair oder schwierig?“ Kinder erzählen, L notiert an der Tafel.`, orga:`Sitzkreis; Tafel`, komm:`Die Kinder bringen ihre Erfahrungen ein.`},
+ {p:`Verstehen`, t:3, was:`L bündelt zwei Gelingensbedingungen: „Wir verteilen Aufgaben: Werfer, Schützer, Ballholer“ und „Wir werfen gezielt, nicht hart“. Rollenkarten für jedes Team.`, orga:`Sitzkreis; Rollenkarten`, komm:`Deduktive Verdichtung zu zwei Prinzipien.`},
+ {p:`Anwenden`, t:12, was:`Zwei Runden mit Rollen. Nach jeder Runde tauschen die Rollen im Team. Neue Regel: Ein Wurf zählt nur, wenn vorher ein Pass im Team gespielt wurde.`, orga:`4 Felder`, komm:`Die Prinzipien werden im Spiel angewendet, alle Kinder kommen an den Ball.`},
+ {p:`Abschluss`, t:2, was:`Reflexionskarten: Jedes Kind wählt eine Karte, zum Beispiel „Heute habe ich gelernt …“ oder „… war schwierig“, und ergänzt den Satz.`, orga:`Kreis; Reflexionskarten`, komm:`Ausgangspunkt für Stunde 7, in der dasselbe Spiel wieder gespielt wird.`}],
+diff:{
+ leichter:[`größerer Schneemann`, `kürzere Wurfentfernung`, `mehr Bälle im Spiel`],
+ schwerer:[`nur Würfe mit der schwächeren Hand`, `kleinere Figur`, `Wurf nur nach zwei Pässen`],
+ inklusion:`Kinder mit wenig Wurferfahrung beginnen als Ballholer oder Schützer und werfen dann aus kürzerer Entfernung. Die zwei Kinder, die sich bei Niederlagen zurückziehen, sind in Teams mit einem ermutigenden Kind. Punkte werden für das Team gezählt, nicht für einzelne.`},
+querText:{'Inklusion':`Drei Rollen geben jedem Kind eine wichtige Aufgabe. Wurfentfernung und Figurengröße lassen sich pro Team anpassen.`},
+reflexSuS:[`Was hat eurem Team geholfen, den Schneemann zu schützen?`, `Wie trifft man gut?`, `Welche Rolle hat dir gefallen?`],
+reflexLK:[`Haben die Teams die Rollen genutzt?`, `Kamen alle Kinder zum Werfen?`, `Waren die Reflexionskarten aussagekräftig für Stunde 7?`, `Wie gingen die Teams mit Niederlagen um?`],
+halle:{ein:`Vier Langbänke als Kreuz in der Hallenmitte, vier Felder dazwischen.`, mehr:`In der Mehrfeldhalle zwei Kreuze, acht Teams zu drei Kindern.`},
+material:`4 Langbänke, 4 Medizinbälle, 4 Gymnastikringe, 4 kleine Bälle, 4 Hütchen oder Papprollen, 12 Softbälle, Tellerhütchen, Rollenkarten, Reflexionskarten`,
+skizze:{titel:`Schneemann-Spiel mit vier Feldern`, el:[
+ [`r`,49,3,2,44,``,`b`],[`r`,6,24,88,2,``,`b`],
+ [`o`,25,12],[`o`,75,12],[`o`,25,38],[`o`,75,38],
+ [`x`,25,6,`Team 1`],[`x`,75,6,`Team 2`],[`x`,25,46,`Team 3`],[`x`,75,46,`Team 4`],
+ [`s`,12,14,2,5,0],[`s`,32,16,2,5,0],[`s`,62,14,2,5,0],[`s`,82,16,2,5,0],
+ [`s`,12,34,2,5,0],[`s`,32,36,2,5,0],[`s`,62,34,2,5,0],[`s`,82,36,2,5,0],[`L`,92,25]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf1-lue-7`, bf:1, kb:`LÜ`, klasse:`3`, stufe:`GS`, dauer:45,
+titel:`Bierdeckelbiathlon`,
+thema:`Ausdauernd laufen, nach jeder Runde einen Bierdeckel werfen und die eigenen Kräfte über zehn Minuten einteilen`,
+reihe:`Stunde 3 von 5 der Reihe „Ausdauerndes Laufen“`,
+quer:[`Inklusion`,`Nachhaltigkeit`],
+bp:`Bewegungsfeld 1, Laufen: ausdauernd laufen, körperliche Reaktionen wahrnehmen (BSB, 2022a, S. 18, 24–26). Kompetenzbereich Leisten und Üben (BSB, 2022a, S. 13–14). Fachcurriculum FNS: Jg. 3 „Vom Laufen zum Ausdauerlauf“, Vorbereitung Sponsorenlauf und Zehntel (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 3. Viele starten zu schnell und gehen nach zwei Minuten. Mehrere konditionell schwächere oder übergewichtige Kinder vermeiden das Laufen. In Laufspielen wird über langsame Kinder gelacht.`,
+ vorauss:`Stunde 1 „Laufen ohne zu Schnaufen“ (Lauf-ABC, Kräfte einteilen, Körperreaktionen) und Stunde 2 Teamlauf in der Endlosstaffel.`,
+ raum:`Einfeldhalle, Laufrunde außen, in den vier Ecken je ein umgedrehter kleiner Kasten als Wurfziel, Wurflinie zwei Meter davor.`,
+ sicherheit:`Laufrichtung gegen den Uhrzeigersinn, Überholen außen. Wurfziele stehen innen, nicht in der Laufbahn. Bierdeckel nur in den Kasten werfen, nicht auf Kinder.`},
+sach:`Beim Biathlon wechseln sich Laufen und eine Zielaufgabe ab. Das Werfen gibt dem Lauf ein Ziel und lenkt vom Gefühl der Anstrengung ab. Wer zu schnell läuft, wirft unruhiger. So erfahren die Kinder, dass ein gleichmäßiges Tempo hilft. Ausdauer entwickelt sich bei Kindern über längere Belastung in mäßigem Tempo. Eine einfache Regel ist: so schnell, dass man noch sprechen kann.`,
+didaktik:`Die Kinder erleben zuerst fünf Minuten Biathlon ohne Tempohinweis. Im Austausch merken sie, dass zu schnelles Laufen die Würfe verschlechtert und früh zum Gehen zwingt. Die Lehrkraft bündelt zwei Regeln: Sprechtempo und ruhig ankommen vor dem Wurf. Im zweiten Durchgang wenden die Kinder sie zehn Minuten lang an. Die Belastung wird über die Zeit gesteigert, nicht über das Tempo. Ziel bis Stunde 5 ist, so viele Minuten zu laufen, wie man alt ist.`,
+ziele:[
+ {b:`motorisch`, st:`Anpassung`, op:`anpassen`, text:`Die SuS passen ihr Lauftempo an die Belastungsdauer an, indem sie zehn Minuten im Sprechtempo laufen und nur zum Werfen anhalten.`},
+ {b:`kognitiv`, st:`Verständnis`, op:`erklären`, text:`Die SuS erklären den Zusammenhang von Tempo und Treffen, indem sie nach dem ersten Durchgang sagen, wann ihre Würfe besser gelangen.`},
+ {b:`sozial-affektiv`, st:``, op:`Rücksicht nehmen`, text:`Die SuS nehmen Rücksicht auf langsamere Kinder, indem sie außen überholen und niemanden für sein Tempo kommentieren.`}],
+verlauf:[
+ {p:`Einstieg`, t:3, was:`Kreis. Kurze Erinnerung an Stunde 1: „Woran merkt ihr, dass ihr zu schnell seid?“ L zeigt Bierdeckel und Kästen.`, orga:`Kreis`, komm:`Anknüpfen an die Körperreaktionen aus Stunde 1.`},
+ {p:`Erwärmung`, t:5, was:`Lauf-ABC auf der Runde: Fußgelenksarbeit, Kniehebelauf, Anfersen, dazwischen lockeres Traben.`, orga:`Laufrunde`, komm:`Laufschule aus Stunde 1, Aufwärmen.`},
+ {p:`Erleben`, t:8, was:`Fünf Minuten Biathlon: Jedes Kind läuft eine Runde, wirft an einer Ecke einen Bierdeckel in den Kasten, läuft weiter. Treffer zählt es selbst.`, orga:`Laufrunde, 4 Wurfziele; 2 Bierdeckel pro Kind`, komm:`Offene Phase. Viele starten zu schnell.`},
+ {p:`Austauschen`, t:4, was:`Sitzkreis. „Wann hast du getroffen? Wer musste gehen, und warum?“ Hand auf das Herz legen und spüren.`, orga:`Sitzkreis`, komm:`Körperreaktionen und Erfahrungen werden verbunden.`},
+ {p:`Verstehen`, t:3, was:`L bündelt zwei Regeln: „So schnell, dass ich noch sprechen kann“ und „Vor dem Wurf zwei ruhige Atemzüge“.`, orga:`Sitzkreis; Plakat`, komm:`Deduktive Verdichtung, merkbar und anwendbar.`},
+ {p:`Anwenden`, t:12, was:`Zehn Minuten Biathlon mit den Regeln. Nach fünf Minuten kurze Sprechprobe mit dem Nachbarn im Laufen. Strichliste für Runden und Treffer.`, orga:`Laufrunde; Strichlisten, Stifte`, komm:`Längere Belastung mit gleichmäßigem Tempo. Die Strichliste macht Fortschritt sichtbar.`},
+ {p:`Abschluss`, t:5, was:`Auslaufen und Dehnen. Kreis: Runden und Treffer vergleichen mit dem ersten Durchgang. „Wie viele Minuten bist du ohne Gehen gelaufen?“ Ausblick Hindernislauf.`, orga:`Kreis; Strichlisten`, komm:`Belastung wird bewusst gemacht, individuelle Bezugsnorm.`}],
+diff:{
+ leichter:[`kürzere Innenrunde`, `Gehpause nach jeder zweiten Runde erlaubt`, `größeres Wurfziel`],
+ schwerer:[`zwei Würfe pro Ecke, bei Fehlwurf eine Strafrunde`, `längere Runde`, `Wurf mit der schwächeren Hand`],
+ inklusion:`Konditionell schwächere oder übergewichtige Kinder laufen die Innenrunde und setzen sich ein eigenes Minutenziel. Gehen ist erlaubt und wird nicht kommentiert. Ein Kind mit Asthma hat sein Spray bei der Lehrkraft und darf jederzeit pausieren.`},
+querText:{'Inklusion':`Eigene Minutenziele und zwei Rundenlängen machen Fortschritt für alle möglich. Ausgrenzung wird sofort angesprochen.`,'Nachhaltigkeit':`Die Bierdeckel stammen aus Gastronomie-Restbeständen und werden in vielen Stunden wiederverwendet.`},
+reflexSuS:[`Wann hast du besser getroffen?`, `Woran merkst du, dass dein Tempo passt?`, `Wie viele Minuten bist du ohne Gehen gelaufen?`],
+reflexLK:[`Haben die Kinder im zweiten Durchgang gleichmäßiger gelaufen?`, `Kamen die schwächeren Kinder ohne Bloßstellung durch?`, `Waren die Wurfziele sicher außerhalb der Laufbahn?`, `Ist das Ziel „Minuten wie das Alter“ für Stunde 5 realistisch?`],
+halle:{ein:`Laufrunde an den Wänden, vier Wurfziele in den Ecken innen.`, mehr:`In der Mehrfeldhalle zwei Runden in unterschiedlicher Länge.`},
+material:`48 Bierdeckel, 4 kleine Kästen, 8 Hütchen, Strichlisten, Stifte, Plakat`,
+skizze:{titel:`Biathlon-Runde mit vier Wurfzielen`, el:[
+ [`r`,12,10,6,6,``,`b`],[`r`,82,10,6,6,``,`b`],[`r`,12,34,6,6,``,`b`],[`r`,82,34,6,6,``,`b`],
+ [`k`,4,4],[`k`,96,4],[`k`,4,46],[`k`,96,46],
+ [`a`,10,3,90,3,``],[`a`,97,8,97,42,``],[`a`,90,47,10,47,``],[`a`,3,42,3,8,``],
+ [`s`,40,3,4,4,0],[`s`,40,47,4,4,0],[`x`,50,25,`Wurflinien 2 m vor den Kästen`],[`L`,50,32]]},
+lit:[`bsb22gs`,`fncs`,`borg`]
+});
+
+UV.push({
+id:`bf2-lue-5`, bf:2, kb:`LÜ`, klasse:`1`, stufe:`GS`, dauer:45,
+titel:`Der kleine Rollbrettführerschein`,
+thema:`In einer spielerischen Prüfung Sicherheitsregeln erklären und fünf Fahraufgaben auf dem Rollbrett sicher bewältigen`,
+reihe:`Stunde 8 von 8 der Reihe „Einführung Rollbrett und Rollbrettführerschein“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 2, Gleiten, Fahren und Rollen: sicherer Umgang mit Rollbrettern (BSB, 2022a, S. 18, 26–27). Kompetenzbereich Leisten und Üben (BSB, 2022a, S. 13–14). Fachcurriculum FNS: Jg. 1 Rollbrettführerschein, exemplarisches Unterrichtsvorhaben Jg. 1/2 (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 1, Ende des ersten Halbjahres. Die meisten fahren sicher, einige werden bei Aufregung zu schnell. Zwei Kinder sind unsicher beim Bremsen. Prüfungen machen einigen Kindern Angst.`,
+ vorauss:`Sicherheitsregeln, Positionen, schnelles und präzises Fahren, Spiele und Fahrzeuge aus Stunde 1 bis 7.`,
+ raum:`Einfeldhalle, Rollbrettwagen am Eingang, fünf Prüfstationen an den Hallenrändern, Regelstation an der Bank.`,
+ sicherheit:`Regeln aus dem LI-Skript: nie auf dem Rollbrett stehen, Finger und Haare weg von den Rollen, nicht an andere ankoppeln, nur in Pfeilrichtung fahren. Rollbrett-Ausgabedienst und Rückgabe in zwei Reihen. Defekte Bretter aus dem Verkehr ziehen.`},
+sach:`Der Rollbrettführerschein bündelt die Reihe: Die Kinder zeigen, dass sie Regeln kennen, beschleunigen, lenken, präzise fahren und anhalten können. Die Prüfung ist spielerisch angelegt und so gestaltet, dass jedes Kind bestehen kann. Bewertet wird Sicherheit, nicht Tempo.`,
+didaktik:`Auch die Prüfungsstunde folgt dem Rhythmus der Schule. Die Kinder erleben die Stationen zunächst als Übungsrunde ohne Stempel. Im Austausch sagen sie, wo sie noch unsicher sind. Die Lehrkraft wiederholt drei Prüfmerkmale. In der Anwendung prüfen Partnerkinder mit Stempelkarte, die Lehrkraft übernimmt die Regelfragen. Jedes Kind darf eine Station wiederholen. Am Ende erhalten alle ihren Führerschein.`,
+ziele:[
+ {b:`motorisch`, st:`Präzision`, op:`steuern`, text:`Die SuS steuern das Rollbrett durch fünf Prüfstationen, indem sie in Bauch- oder Sitzlage Tempo aufnehmen, durch Gassen lenken und an der Linie anhalten.`},
+ {b:`kognitiv`, st:`Kenntnisse`, op:`benennen`, text:`Die SuS benennen drei Sicherheitsregeln für das Rollbrett, indem sie an der Regelstation Bildkarten den richtigen Regeln zuordnen.`},
+ {b:`sozial-affektiv`, st:``, op:`einhalten`, text:`Die SuS halten die Abläufe beim Ausgeben und Zurückgeben ein, indem sie ruhig in der Schlange warten und ihr Brett geordnet zurücklegen.`}],
+verlauf:[
+ {p:`Einstieg`, t:3, was:`Sitzkreis. L zeigt einen Führerschein: „Heute macht ihr den kleinen Rollbrettführerschein. Alle können ihn schaffen.“ Ausgabedienst verteilt die Bretter.`, orga:`Sitzkreis; Rollbrettwagen`, komm:`Angst nehmen, Ritual der Ausgabe.`},
+ {p:`Erwärmung`, t:5, was:`Spiel „Ampel“: grün fahren, gelb langsam, rot anhalten.`, orga:`ganze Halle; Ampelkarten`, komm:`Bremsen und Tempokontrolle aus Stunde 1.`},
+ {p:`Erleben`, t:7, was:`Übungsrunde an den fünf Stationen ohne Stempel: Start und Ziel, Slalom, enge Gasse, Ziel anfahren und halten, Kurve in Sitzlage.`, orga:`5 Stationen`, komm:`Die Kinder probieren alle Aufgaben ohne Druck.`},
+ {p:`Austauschen`, t:4, was:`Sitzkreis. „Wo fühlst du dich sicher? Wo noch nicht?“ Daumen für jede Station.`, orga:`Sitzkreis; Stationsbilder`, komm:`Selbsteinschätzung vor der Prüfung.`},
+ {p:`Verstehen`, t:3, was:`L wiederholt drei Prüfmerkmale: Hände weg von den Rollen, Blick nach vorn, rechtzeitig bremsen. Ein Kind zeigt es vor.`, orga:`Sitzkreis`, komm:`Klare Kriterien für alle.`},
+ {p:`Anwenden`, t:14, was:`Prüfung: Partnerkinder stempeln die Fahrstationen auf der Karte. An der Regelstation fragt L drei Regeln mit Bildkarten ab. Jede Station darf einmal wiederholt werden.`, orga:`5 Stationen und Regelstation; Stempelkarten, Stempel`, komm:`Peer-Prüfung entlastet, Wiederholung nimmt Angst.`},
+ {p:`Abschluss`, t:4, was:`Rückgabe in zwei Reihen. Feierliche Übergabe der Führerscheine im Kreis. „Was war in der Reihe am schwierigsten?“`, orga:`Kreis; Führerscheine`, komm:`Würdigung aller Kinder, Rückblick auf die Reihe.`}],
+diff:{
+ leichter:[`Stationen in Bauchlage statt Sitzlage`, `breitere Gassen`, `Regeln mit nur zwei Bildkarten`],
+ schwerer:[`Slalom rückwärts`, `Station mit Partnerkind an der Hand`, `Ziel auf einer kleinen Markierung anhalten`],
+ inklusion:`Die zwei unsicheren Kinder fahren die Stationen mit breiteren Gassen und beginnen an ihrer Lieblingsstation. Ein Kind mit Angst vor Prüfungen wird als Erstes von der Lehrkraft begleitet. Der Führerschein wird für die erreichte Stufe ausgestellt, nicht für Bestehen oder Nichtbestehen.`},
+querText:{'Inklusion':`Alle Kinder erhalten einen Führerschein. Stationen gibt es in zwei Schwierigkeiten, die Prüfung ist an das Können angepasst.`},
+reflexSuS:[`Welche Regel ist dir am wichtigsten?`, `Welche Station hast du am besten geschafft?`, `Was hat dir in der Reihe Spaß gemacht?`],
+reflexLK:[`Konnten alle Kinder die Regeln nennen?`, `War die Peer-Prüfung zuverlässig?`, `Gab es gefährliche Situationen, die ich in der Reihe früher hätte üben sollen?`, `Sind die Rollbretter alle intakt zurück?`],
+halle:{ein:`Fünf Stationen an den Rändern, Regelstation an der Bank, Rollbrettwagen am Eingang.`, mehr:`In der Mehrfeldhalle alle Stationen doppelt, zwei Klassen gleichzeitig mit zwei Lehrkräften.`},
+material:`24 Rollbretter im Rollwagen, 20 Hütchen, Kreppband, Ampelkarten, Bildkarten zu den Regeln, Stempelkarten, 5 Stempel, Führerscheine`,
+skizze:{titel:`Prüfstationen für den Rollbrettführerschein`, el:[
+ [`k`,20,8],[`k`,30,8],[`k`,40,8],[`k`,50,8],[`x`,35,3,`Slalom`],
+ [`l`,64,6,90,6,``],[`l`,64,12,90,12,``],[`x`,77,16,`enge Gasse`],
+ [`o`,86,36],[`x`,86,44,`Ziel halten`],
+ [`l`,50,44,66,44,`Haltelinie`],[`a`,26,40,48,40,``],[`x`,30,46,`Start und Ziel`],
+ [`r`,4,20,4,14,`Bank`,`b`],[`x`,14,27,`Regeln`],[`r`,92,22,6,8,`Wagen`,`z`],
+ [`s`,30,22,4,4,0],[`L`,12,36]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf2-wk-5`, bf:2, kb:`WK`, klasse:`3`, stufe:`GS`, dauer:45,
+titel:`Wir kooperieren auf Teppichfliesen`,
+thema:`Zu zweit auf Teppichfliesen gleiten, sich abstimmen und gemeinsam vorwärtskommen`,
+reihe:`Stunde 3 von 4 der Reihe „Bewegung und Spielformen mit Teppichfliesen“`,
+quer:[`Inklusion`,`Nachhaltigkeit`],
+bp:`Bewegungsfeld 2, Gleiten, Fahren und Rollen: Gleichgewicht, verantwortungsbewusst bewegen (BSB, 2022a, S. 18, 26–27). Kompetenzbereich Wettkämpfen und Kooperieren (BSB, 2022a, S. 15). Fachcurriculum FNS: Jg. 3 „Bewegen mit Teppichfliesen“, exemplarisches Unterrichtsvorhaben Jg. 3/4 (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 3. Viele gleiten inzwischen sicher allein. Bei Partneraufgaben ziehen kräftigere Kinder schwächere mit, ohne sich abzustimmen. Einige Kinder wollen nicht mit jedem eine Partnerübung machen.`,
+ vorauss:`Einzelformen wie Po-Rutschen, Roller fahren und Schlittschuhschritt aus Stunde 1, Positionen mit zwei Fliesen aus Stunde 2.`,
+ raum:`Einfeldhalle, sauberer Boden, Gleitbahnen längs, Bereich für Partnerformen in der Mitte.`,
+ sicherheit:`Hallenboden fegen. Fliesen mit glatter Seite nach unten nur auf Hallenboden. Keine Sprünge auf Fliesen. Beim Schubkarrenlauf nur langsam schieben. Abstand zu anderen Paaren zwei Fliesenlängen.`},
+sach:`Bei Partnerformen auf Teppichfliesen gelingt die Bewegung nur, wenn beide sich abstimmen: Takt, Richtung und Tempo müssen passen. Beim Dreibeinlauf schieben beide eine gemeinsame Fliese, beim Paargleiten bewegen sie sich eingehakt, beim Zweibeinlauf stehen sie hintereinander auf denselben zwei Fliesen. Gemeinsames Zählen oder ein Kommando hilft, den Takt zu finden.`,
+didaktik:`Die Kinder erleben die Partnerformen zuerst ohne Hinweise und merken, dass Ziehen allein nicht funktioniert. Im Austausch beschreiben sie, was geholfen hat. Die Lehrkraft bündelt zwei Prinzipien: gemeinsamer Takt durch Zählen und eine Person sagt an. In der Anwendung probieren die Paare alle vier Formen und eine Paar-Staffel. Das bereitet die Gruppenaufgaben in Stunde 4 vor.`,
+ziele:[
+ {b:`motorisch`, st:`Anpassung`, op:`anpassen`, text:`Die SuS passen ihre Gleitbewegung an das Partnerkind an, indem sie im Dreibeinlauf und Paargleiten im gemeinsamen Takt vorwärts und rückwärts gleiten.`},
+ {b:`kognitiv`, st:`Verständnis`, op:`beschreiben`, text:`Die SuS beschreiben, was die Partnerformen gelingen lässt, indem sie nach dem Erleben eine Absprache oder ein Signal ihres Paares nennen.`},
+ {b:`sozial-affektiv`, st:``, op:`kooperieren`, text:`Die SuS kooperieren zu zweit, indem sie vor jeder Form vereinbaren, wer zählt, und die Rolle danach tauschen.`}],
+verlauf:[
+ {p:`Einstieg`, t:3, was:`Kreis. L zeigt zwei Kinder, die nicht im Takt gleiten. „Heute geht es nur zu zweit. Wie klappt das?“`, orga:`Kreis`, komm:`Problemstellung durch Kontrast.`},
+ {p:`Erwärmung`, t:6, was:`Einzelformen aus Stunde 1 im Wechsel: Roller fahren, Schlittschuhschritt, Drehgleiten. Auf Signal Richtungswechsel.`, orga:`Gleitbahnen; Fliesen`, komm:`Wiederholung und Aufwärmen.`},
+ {p:`Erleben`, t:8, was:`Paare probieren Dreibeinlauf und Paargleiten eine Bahn hin und zurück, ohne Hinweise.`, orga:`Paare; je 2 bis 3 Fliesen`, komm:`Offene Phase, Abstimmungsprobleme werden spürbar.`},
+ {p:`Austauschen`, t:4, was:`Sitzkreis. „Was hat euch geholfen? Was ging schief?“ Zwei Paare zeigen.`, orga:`Sitzkreis`, komm:`Lösungen der Kinder werden sichtbar.`},
+ {p:`Verstehen`, t:3, was:`L bündelt: „Wir zählen gemeinsam: eins, zwei“ und „Eine Person sagt an, dann wird getauscht“.`, orga:`Sitzkreis; Plakat`, komm:`Zwei Prinzipien für Kooperation.`},
+ {p:`Anwenden`, t:13, was:`Stationen für Paare: Dreibeinlauf, Paargleiten, Zweibeinlauf, Schubkarrenlauf. Wechsel alle drei Minuten. Zum Schluss Paar-Staffel im Dreibeinlauf.`, orga:`4 Stationen, dann Staffel`, komm:`Prinzipien in vier Formen anwenden.`},
+ {p:`Abschluss`, t:3, was:`Kreis. „Welche Form hat euch am besten geklappt, und warum?“ Fliesen stapeln. Ausblick: Gruppenaufgaben und Bobfahren in Stunde 4.`, orga:`Kreis`, komm:`Sicherung, Brücke zur letzten Stunde.`}],
+diff:{
+ leichter:[`nur vorwärts`, `Paargleiten mit Hand auf der Schulter statt eingehakt`, `kürzere Bahn`],
+ schwerer:[`rückwärts`, `Slalom um Hütchen`, `zu dritt auf vier Fliesen`],
+ inklusion:`Kinder, die nicht jede Partnerübung machen möchten, wählen ihr Partnerkind für den Schubkarrenlauf selbst. Unsichere Kinder beginnen mit Paargleiten, weil dabei ein Fuß am Boden bleibt. Ein Kind im Rollstuhl fährt mit einem Partnerkind auf Fliesen nebenher und gibt das Kommando.`},
+querText:{'Inklusion':`Die Rolle des Ansagenden ist für alle zugänglich. Formen mit Bodenkontakt geben Sicherheit.`,'Nachhaltigkeit':`Teppichfliesen sind Musterreste aus dem Handel und werden lange genutzt.`},
+reflexSuS:[`Was hat euch geholfen, im Takt zu bleiben?`, `Wer hat angesagt, und wie war der Tausch?`, `Welche Form war am schwierigsten?`],
+reflexLK:[`Haben die Paare das Zählen genutzt?`, `War der Schubkarrenlauf sicher?`, `Konnten die Kinder ihre Partner frei wählen, ohne dass jemand übrig blieb?`, `Ist die Gruppe bereit für die Gruppenaufgaben in Stunde 4?`],
+halle:{ein:`Vier Gleitbahnen längs, Stationen in den Hallenvierteln.`, mehr:`In der Mehrfeldhalle Stationen doppelt, Staffel auf längerer Bahn.`},
+material:`50 Teppichfliesen, 12 Hütchen, Plakat, Besen`,
+skizze:{titel:`Partnerstationen auf Teppichfliesen`, el:[
+ [`r`,8,6,6,4,``,`z`],[`r`,8,12,6,4,``,`z`],[`a`,18,9,40,9,``],[`x`,28,4,`Dreibeinlauf`],
+ [`r`,58,6,6,4,``,`z`],[`r`,58,12,6,4,``,`z`],[`a`,68,9,92,9,``],[`x`,78,4,`Paargleiten`],
+ [`r`,8,32,6,4,``,`z`],[`r`,8,38,6,4,``,`z`],[`a`,18,35,40,35,``],[`x`,28,46,`Zweibeinlauf`],
+ [`r`,58,32,6,4,``,`z`],[`a`,68,35,92,35,``],[`x`,78,46,`Schubkarre`],
+ [`s`,4,9,2,0,4],[`s`,54,9,2,0,4],[`s`,4,35,2,0,4],[`s`,54,35,2,0,4],[`L`,50,25]]},
+lit:[`bsb22gs`,`fncs`,`neumann`]
+});
+
+REIHE[`bf1-wk-6`]={ziel:`Die Kinder erproben verschiedene Wurfarten und Materialien, werfen gezielt auf feste und bewegliche Ziele und wenden das Werfen in Wurfspielen an.`,st:[
+ [`Gelingt uns das Schneemann-Spiel?`,`Wurfspiel, Gelingensbedingungen`,`Die Kinder spielen das Schneemann-Spiel und benennen, was dem Team hilft.`,[`Partnerwerfen über die Bank`,`Spiel erleben, Gelingensbedingungen bündeln, mit Rollen spielen`,`Reflexionskarten`]],
+ [`Wie kann ich am besten werfen?`,`Wurfarten erproben und vergleichen`,`Die Kinder erproben einhändige und beidhändige Wurfarten und vergleichen die Weite.`,[`Bohnensäckchen-Spiel`,`Wurfarten an Stationen vergleichen`,`Lieblingswurf zeigen`]],
+ [`Womit kannst du weiter werfen?`,`Materialien und Flugeigenschaften`,`Die Kinder werfen unterschiedliche Materialien und beschreiben deren Flugeigenschaften.`,[`Tücherfangen`,`Tennisball, Softball, Tuch, Taschentuchpaket werfen`,`Was fliegt weit, was nicht?`]],
+ [`Wie muss ich werfen, um ein festes Ziel zu treffen?`,`Zielwerfen auf feste Ziele`,`Die Kinder treffen feste Ziele aus wachsender Entfernung.`,[`Zielwerfen auf Hütchen`,`Zielstationen mit Kästen und Reifen`,`Treffertipps sammeln`]],
+ [`Wie muss ich werfen, um ein bewegliches Ziel zu treffen?`,`Zielwerfen auf bewegliche Ziele im Spiel`,`Die Kinder treffen rollende oder bewegte Ziele im Spiel.`,[`Rollball`,`Ball auf rollenden Ball werfen, Spielform`,`Kreis: Wohin zielen?`]],
+ [`Wie gut kann ich schon zielen?`,`Eigene Wurfstationen entwickeln`,`Die Kinder entwickeln in Gruppen eine Wurfstation und üben an den Stationen der anderen.`,[`Wurfspiel freier Wahl`,`Stationen bauen und üben`,`Stationsrundgang`]],
+ [`Gelingt uns das Schneemann-Spiel jetzt?`,`Wurfspiel, Lernzuwachs reflektieren`,`Die Kinder spielen das Schneemann-Spiel erneut und vergleichen mit Stunde 1.`,[`Partnerwerfen`,`Schneemann-Spiel mit Rollen`,`Reflexionskarten vergleichen`]],
+ [`Welche Regeln gelten in Abwurfspielen?`,`Zombieball kennenlernen`,`Die Kinder spielen Zombieball und halten die Regeln zum Abwerfen ein.`,[`Fangspiel`,`Zombieball mit Zombiezaun`,`Regeln gemeinsam prüfen`]]]};
+REIHE[`bf1-lue-7`]={ziel:`Die Kinder laufen in spielerischen Formen immer länger ohne Pause, teilen ihre Kräfte ein, nehmen Körperreaktionen wahr und bereiten sich auf Sponsorenlauf, Laufabzeichen oder Zehntel vor.`,st:[
+ [`Laufen ohne zu Schnaufen`,`Lauf-ABC, Kräfte einteilen, Körperreaktionen`,`Die Kinder laufen im Sprechtempo und beschreiben, wie ihr Körper auf Laufen reagiert.`,[`Lauf-ABC`,`Laufen ohne zu Schnaufen in Zeitblöcken`,`Es ist okay, wenn dir warm wird`]],
+ [`Teamlauf`,`Endlosstaffel in Kleingruppen`,`Die Kinder laufen in einer Endlosstaffel und teilen sich die Belastung im Team ein.`,[`Staffelspiele`,`Endlosstaffel zu zweit oder dritt`,`Wer hat wann gewechselt?`]],
+ [`Bierdeckelbiathlon`,`Laufen und Werfen im Wechsel`,`Die Kinder laufen zehn Minuten im Sprechtempo und werfen nach jeder Runde.`,[`Lauf-ABC`,`Biathlon erleben, Regeln bündeln, zehn Minuten anwenden`,`Strichliste vergleichen`]],
+ [`Hindernislauf`,`Laufen über Hindernisse in Halle oder auf dem Platz`,`Die Kinder laufen eine längere Zeit durch einen Hindernisparcours.`,[`Aufbau in Gruppen`,`Hindernislauf mit Bank, Kasten, Bock, Seilen`,`Minutenziel prüfen`]],
+ [`Laufabzeichen oder Zehntel`,`Abschlusswettkampf`,`Die Kinder laufen so viele Minuten, wie sie alt sind, oder nehmen am Wettkampf teil.`,[`Gemeinsames Aufwärmen`,`Laufabzeichen, Crosslauf oder Zehntel-Probe`,`Urkunden`]]]};
+REIHE[`bf2-lue-5`]={ziel:`Die Kinder lernen das Rollbrett sicher kennen, fahren in verschiedenen Positionen schnell und präzise, spielen und bauen Fahrzeuge und erwerben den kleinen Rollbrettführerschein.`,st:[
+ [`Wir lernen das Rollbrett kennen`,`Materialkunde, Sicherheitsregeln, Bremsen, Beschleunigen`,`Die Kinder nennen die Verletzungsgefahren und halten die Regeln beim Fahren ein.`,[`Ausgabedienst einführen`,`Bremsen und Beschleunigen, Spiel Ampel`,`Regeln wiederholen`]],
+ [`Wie kannst du auf dem Rollbrett fahren?`,`Positionen kennenlernen`,`Die Kinder erproben Bauch-, Sitz- und Kniestand-Positionen.`,[`Regeln abfragen`,`Positionen an Stationen`,`Lieblingsposition zeigen`]],
+ [`Wir werden Rennfahrer!`,`Schnelles Fahren`,`Die Kinder vergleichen Positionen beim schnellen Fahren.`,[`Ampel`,`Rennbahnen mit Start und Ziel`,`Vor- und Nachteile benennen`]],
+ [`Vorsicht Unfall!`,`Präzises Fahren`,`Die Kinder fahren präzise durch enge Gassen.`,[`Heißer Draht`,`Parcours mit engen Gassen`,`Tipps für genaues Fahren`]],
+ [`Spiele auf dem Rollbrett`,`Curling und Kegeln`,`Die Kinder spielen zu zweit Rollbrett-Curling und Kegeln.`,[`Fahren nach Musik`,`Curling und Kegeln`,`Faire Punktezählung`]],
+ [`Wir bauen sichere Fahrzeuge`,`Wagen aus Kästen und Rollbrettern`,`Die Kinder bauen Fahrzeuge und ziehen sich vorsichtig zu zweit.`,[`Sicherheitsregeln für Fahrzeuge`,`Bauen und vorsichtig ziehen`,`Was war gefährlich?`]],
+ [`Wir fahren im Straßenverkehr`,`Autolandschaft mit Waschstation`,`Die Kinder bewegen sich in einer Autolandschaft regelgerecht.`,[`Aufbau der Landschaft`,`Straßenverkehr mit Rollen`,`Verkehrsregeln reflektieren`]],
+ [`Der kleine Rollbrettführerschein`,`Spielerische Prüfung`,`Die Kinder bestehen Regelfragen und fünf Fahraufgaben.`,[`Ampel`,`Übungsrunde, Kriterien, Prüfung mit Stempelkarte`,`Übergabe der Führerscheine`]]]};
+REIHE[`bf2-wk-5`]={ziel:`Die Kinder bewegen sich vielfältig auf Teppichfliesen, halten das Gleichgewicht, stimmen sich mit Partnern ab und lösen Gruppenaufgaben sicher.`,st:[
+ [`Wir bewegen uns mit Teppichfliesen`,`Einzelformen von Po-Rutschen bis Fliesenschlittern`,`Die Kinder erproben viele Gleitformen allein und halten das Gleichgewicht.`,[`Fangspiel auf Fliesen`,`Po-Rutschen, Stier, Raupe, Roller, Schlittschuhschritt`,`Lieblingsform zeigen`]],
+ [`Bewegungsaufgaben mit zwei Fliesen`,`Positionen mit Händen und Füßen`,`Die Kinder bewegen sich im Stütz mit zwei Fliesen und halten Körperspannung.`,[`Einzelformen wiederholen`,`Raupe, Rudern, Scheibenwischer, Kreiswandern`,`Was war anstrengend?`]],
+ [`Wir kooperieren auf Teppichfliesen`,`Partnerformen`,`Die Kinder gleiten zu zweit im gemeinsamen Takt.`,[`Einzelformen`,`Partnerformen erleben, Prinzipien bündeln, Stationen`,`Beste Form begründen`]],
+ [`Gruppenaufgaben und Spiele`,`Transport, Raupe, Bob, Skispringen`,`Die Kinder lösen Gruppenaufgaben und beachten Unfallrisiken.`,[`Paarformen wiederholen`,`Transportaufgaben, Bob fahren, Skispringen mit Hilfe`,`Rückblick auf die Reihe`]]]};
+
+// Grundschule, Fachcurriculum Sport FNS: exemplarische Unterrichtsvorhaben BF4 bis BF8
+
+UV.push({
+id:`bf4-wk-5`, bf:4, kb:`WK`, klasse:`3`, stufe:`GS`, dauer:45,
+titel:`Stopp heißt Stopp`,
+thema:`Ein Kampfritual mit Begrüßung, Abklopfen und Verabschiedung vereinbaren und beim Bodenkampf um den Schatz einhalten`,
+reihe:`Stunde 1 von 7 der Reihe „Faires Kämpfen und Verteidigen“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 4, Miteinander kämpfen und Kräfte messen: Regeln beim Kräftemessen vereinbaren und einhalten, fair kämpfen (BSB, 2022a, S. 19, 29–30). Kompetenzbereich Wettkämpfen und Kooperieren (BSB, 2022a, S. 15). Fachcurriculum FNS: Jg. 3 „Faires Kämpfen und Verteidigen“ (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 3. Kämpfen ist beliebt, aber auf dem Schulhof eskalieren Rangeleien. Einige Kinder kämpfen sehr hart, andere meiden Körperkontakt. Ein Kind hat in Konflikten schnell Wut.`,
+ vorauss:`Rangelspiele mit Regeln aus Klasse 1 und 2, Körperspannung, Schildkröten umdrehen.`,
+ raum:`Einfeldhalle, zwölf Turnmatten als Kampfinseln, Mattenränder mit Abstand. Ruhezone mit Bank am Rand.`,
+ sicherheit:`Nur auf Matten kämpfen, Schuhe und Schmuck ab, Fingernägel kurz. Verboten sind Kopf, Hals, Haare, Kitzeln, Schlagen und Treten. Abklopfen oder „Stopp“ beendet den Kampf sofort. Gleich große Paare.`},
+sach:`Faires Kämpfen braucht ein festes Ritual. Es beginnt mit einer Begrüßung als Zeichen, dass beide kämpfen wollen. Das Abklopfen mit der flachen Hand auf Matte oder Körper und das Wort „Stopp“ beenden den Kampf sofort. Die Verabschiedung zeigt, dass der Kampf vorbei ist und keiner nachtritt. Beim Kampf um den Schatz liegt ein Ball unter einem Kind in Bauchlage, das andere versucht, ihn wegzuholen.`,
+didaktik:`Die Kinder erleben einen kurzen Schatzkampf ohne Ritual. Im Austausch erzählen sie, wann es unangenehm wurde und woran sie das gemerkt haben. Die Lehrkraft bündelt das Ritual in drei Schritten und lässt es vormachen. Danach kämpfen die Paare in festen Runden mit dem Ritual. Nach jeder Runde wird gewechselt. Die Kinder halten das Ritual auf einem Plakat fest, das die ganze Reihe über hängt.`,
+ziele:[
+ {b:`sozial-affektiv`, st:``, op:`einhalten`, text:`Die SuS halten das Kampfritual ein, indem sie sich vor jedem Kampf begrüßen, bei „Stopp“ oder Abklopfen sofort loslassen und sich danach verabschieden.`},
+ {b:`kognitiv`, st:`Verständnis`, op:`begründen`, text:`Die SuS begründen eine Regel des Rituals, indem sie im Kreis erklären, wovor sie schützt.`},
+ {b:`motorisch`, st:`Durchführung`, op:`anwenden`, text:`Die SuS wenden Ziehen, Schieben und Festhalten im Bodenkampf an, indem sie den Ball in Bauchlage verteidigen oder ohne verbotene Griffe wegholen.`}],
+verlauf:[
+ {p:`Einstieg`, t:3, was:`Sitzkreis. L erzählt von Rangeleien auf dem Hof. „Wie kann Kämpfen fair und sicher sein?“`, orga:`Sitzkreis`, komm:`Lebensweltbezug, Problemstellung.`},
+ {p:`Erwärmung`, t:5, was:`Schildkröten umdrehen in Paaren, nach 30 Sekunden Wechsel. Dazwischen lockern.`, orga:`Paare auf Matten`, komm:`Bekannte Kampfform, Aufwärmen.`},
+ {p:`Erleben`, t:6, was:`Kampf um den Schatz: ein Kind liegt auf dem Ball, das andere versucht ihn zu holen. 30 Sekunden, dann Wechsel. Ohne weitere Regeln als die Sicherheitsregeln.`, orga:`Paare auf 12 Matten; 12 Bälle`, komm:`Offene Phase, L beobachtet genau und bricht bei Gefahr ab.`},
+ {p:`Austauschen`, t:5, was:`Sitzkreis. „Wann war es unangenehm? Wie hast du es gezeigt? Hat der andere es gemerkt?“`, orga:`Sitzkreis`, komm:`Grenzen werden benannt.`},
+ {p:`Verstehen`, t:4, was:`L bündelt das Ritual: Begrüßung, Stopp und Abklopfen, Verabschiedung. Zwei Kinder machen es vor. Plakat aufhängen.`, orga:`Sitzkreis; Plakat`, komm:`Klare Struktur, Grundlage der Reihe.`},
+ {p:`Anwenden`, t:12, was:`Schatzkampf mit Ritual in drei Runden. Nach jeder Runde neue Partner. L ruft zwischendurch „Stopp“, alle lassen los. Kinder mit Pause gehen in die Ruhezone.`, orga:`Paare auf Matten`, komm:`Ritual wird geübt, Stopp-Probe prüft die Umsetzung.`},
+ {p:`Abschluss`, t:5, was:`Rücken an Rücken sitzen und gemeinsam atmen. Kreis: „Welche Regel war heute am wichtigsten?“ Daumenabfrage zum Ritual.`, orga:`Kreis`, komm:`Beruhigen, Reflexion der Regel.`}],
+diff:{
+ leichter:[`kürzere Kampfzeit`, `Kampf im Knien statt im Liegen`, `größerer Ball, der leichter zu halten ist`],
+ schwerer:[`kleiner Ball`, `Verteidigung nur mit einem Arm`, `Zwei gegen einen beim Wegholen, mit Ritual`],
+ inklusion:`Kinder, die Körperkontakt meiden, beginnen mit einem vertrauten Partnerkind und dürfen zuerst Schiedsrichter sein. Das Kind mit schneller Wut hat eine verabredete Ruhezone und ein Zeichen für die Pause. Paare werden nach Größe gebildet.`},
+querText:{'Inklusion':`Die Schiedsrichterrolle und die Ruhezone ermöglichen Teilhabe in eigenem Tempo.`},
+reflexSuS:[`Woran merkst du, dass dein Partner aufhören will?`, `Welche Regel schützt dich am meisten?`, `Wie hast du dich nach dem Kampf gefühlt?`],
+reflexLK:[`Haben alle beim Stopp sofort losgelassen?`, `Wie gehe ich mit dem Kind mit schneller Wut in Stunde 2 um?`, `Waren die Paare gleich stark?`, `Hat das Plakat die Regeln verständlich festgehalten?`],
+halle:{ein:`Zwölf Matten in drei Reihen, Ruhezone an der Bank.`, mehr:`In der Mehrfeldhalle Mattenreihen auf zwei Felder verteilen, größere Abstände.`},
+material:`12 Turnmatten, 12 Bälle, Plakat, Stifte, 1 Bank`,
+skizze:{titel:`Kampfinseln mit Ruhezone`, el:[
+ [`r`,8,8,14,9,``,`m`],[`r`,30,8,14,9,``,`m`],[`r`,52,8,14,9,``,`m`],[`r`,74,8,14,9,``,`m`],
+ [`r`,8,22,14,9,``,`m`],[`r`,30,22,14,9,``,`m`],[`r`,52,22,14,9,``,`m`],[`r`,74,22,14,9,``,`m`],
+ [`r`,8,36,14,9,``,`m`],[`r`,30,36,14,9,``,`m`],[`r`,52,36,14,9,``,`m`],[`r`,74,36,14,9,``,`m`],
+ [`s`,12,12,2,5,0],[`s`,34,12,2,5,0],[`s`,56,26,2,5,0],[`s`,78,40,2,5,0],
+ [`r`,93,14,4,22,`Ruhe`,`b`],[`L`,47,32]]},
+lit:[`bsb22gs`,`fncs`,`busch`,`lange07`]
+});
+
+UV.push({
+id:`bf5-wk-7`, bf:5, kb:`WK`, klasse:`2`, stufe:`GS`, dauer:45,
+titel:`Linienball`,
+thema:`Im Linienball den Ball durch Zuspiel hinter die gegnerische Linie bringen und sich als Team abstimmen`,
+reihe:`Stunde 4 von 9 der Reihe „Kleine Spiele mit dem Ball“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 5, Spielen: einfache Mannschaftsspiele, Spielidee erfassen und umsetzen (BSB, 2022a, S. 20, 31–32). Kompetenzbereich Wettkämpfen und Kooperieren (BSB, 2022a, S. 15). Fachcurriculum FNS: exemplarisches Unterrichtsvorhaben Kleine Spiele Jg. 2 mit Linienball und Lebender Wand (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`22 Kinder, Klasse 2. In Ballspielen laufen alle zum Ball. Wenige Kinder dominieren, andere bekommen nie einen Pass. Fangen aus kurzer Entfernung gelingt den meisten.`,
+ vorauss:`Zuwerfen und Fangen zu zweit, Tigerball, Spiele mit Freilaufen in Stunde 3.`,
+ raum:`Einfeldhalle, Spielfeld quer geteilt, Endlinien mit Kreppband, zwei Spielfelder mit je 5 gegen 5 oder 6 gegen 6.`,
+ sicherheit:`Softball. Kein Ballreißen aus den Händen. Mit Ball in der Hand nicht laufen. Abstand zur Wand hinter der Endlinie mindestens zwei Meter.`},
+sach:`Beim Linienball punktet ein Team, wenn ein Kind den Ball hinter der gegnerischen Linie fängt. Mit Ball darf man nicht laufen. Das Spiel lebt vom Freilaufen und schnellen Zuspiel. Es führt zu Grundideen der großen Spiele: Ball sichern, freien Raum nutzen, gemeinsam angreifen.`,
+didaktik:`Die Kinder spielen eine Runde Linienball und merken, dass sich alle um den Ball drängen. Im Austausch beschreiben sie, wie Punkte gelungen sind. Die Lehrkraft bündelt zwei Prinzipien: freien Raum suchen und erst passen, dann laufen. In der Anwendung gilt die Regel, dass vor dem Punkt drei Kinder den Ball hatten. So kommen auch zurückhaltende Kinder ins Spiel.`,
+ziele:[
+ {b:`motorisch`, st:`Durchführung`, op:`anwenden`, text:`Die SuS wenden Zuspiel und Freilaufen im Linienball an, indem sie sich nach einem Pass in einen freien Raum bewegen und anspielbar sind.`},
+ {b:`kognitiv`, st:`Verständnis`, op:`erklären`, text:`Die SuS erklären, wie ein Punkt gelingt, indem sie nach der ersten Runde eine gelungene Situation beschreiben.`},
+ {b:`sozial-affektiv`, st:``, op:`kooperieren`, text:`Die SuS kooperieren im Team, indem sie den Ball so lange passen, bis drei verschiedene Kinder ihn hatten.`}],
+verlauf:[
+ {p:`Einstieg`, t:2, was:`Sitzkreis. L zeigt das Feld und erklärt das Ziel: Ball hinter der Linie fangen.`, orga:`Sitzkreis`, komm:`Knappe Spielidee.`},
+ {p:`Erwärmung`, t:6, was:`Zehnerball in Vierergruppen: zehn Pässe ohne Bodenkontakt, Gruppe zählt laut.`, orga:`Vierergruppen; Softbälle`, komm:`Passen und Fangen, Bezug zur Spielidee.`},
+ {p:`Erleben`, t:8, was:`Linienball 6 gegen 6 auf zwei Feldern, Grundregeln.`, orga:`2 Felder; 2 Softbälle, Leibchen`, komm:`Offene Phase. L beobachtet Rudelbildung.`},
+ {p:`Austauschen`, t:4, was:`Sitzkreis. „Wie habt ihr Punkte gemacht? Was war schwierig?“`, orga:`Sitzkreis`, komm:`Kinder beschreiben Situationen.`},
+ {p:`Verstehen`, t:3, was:`L bündelt: „Lauf dorthin, wo niemand ist“ und „Ball abgeben, dann loslaufen“. Zwei Kinder zeigen es langsam.`, orga:`Sitzkreis; Magnettafel`, komm:`Zwei Prinzipien, visualisiert.`},
+ {p:`Anwenden`, t:14, was:`Linienball mit Regel: Punkt zählt nur, wenn vorher drei Kinder den Ball hatten. Nach 6 Minuten Teamwechsel. Zum Schluss Spiel ohne Zusatzregel.`, orga:`2 Felder`, komm:`Regel steuert die Beteiligung, dann freies Spiel.`},
+ {p:`Abschluss`, t:3, was:`Kreis. „Hattest du heute öfter den Ball als sonst?“ Ausblick: Lebende Wand in Stunde 5.`, orga:`Kreis`, komm:`Beteiligung reflektieren.`}],
+diff:{
+ leichter:[`breitere Endzone`, `Überzahl für ein Team`, `Ball darf einmal aufspringen`],
+ schwerer:[`schmale Endzone`, `nur Bodenpässe`, `höchstens drei Sekunden Ballbesitz`],
+ inklusion:`Ein Kind mit Unsicherheit beim Fangen spielt mit einem größeren Ball oder fängt in der Endzone im Sitzen. Dominante Kinder dürfen keinen Punkt selbst fangen.`},
+querText:{'Inklusion':`Die Drei-Kinder-Regel und angepasste Bälle sichern die Beteiligung aller.`},
+reflexSuS:[`Wohin bist du gelaufen, um den Ball zu bekommen?`, `Wie oft hattest du den Ball?`, `Was hat dein Team gut gemacht?`],
+reflexLK:[`Hat die Drei-Kinder-Regel die Beteiligung verändert?`, `Wer stand trotzdem am Rand?`, `Waren die Teams ausgeglichen?`, `Ist die Gruppe bereit für die Lebende Wand?`],
+halle:{ein:`Zwei Querfelder mit Endzonen.`, mehr:`In der Mehrfeldhalle drei Felder mit 4 gegen 4.`},
+material:`4 Softbälle, Leibchen in zwei Farben, Kreppband, Magnettafel`,
+skizze:{titel:`Linienball auf zwei Querfeldern`, el:[
+ [`l`,4,24,96,24,``],[`l`,10,3,10,22,``],[`l`,90,3,90,22,``],[`l`,10,27,10,47,``],[`l`,90,27,90,47,``],
+ [`x`,6,12,`Endzone`],[`x`,94,12,`Endzone`],
+ [`s`,25,8,3,15,4],[`s`,40,10,3,12,4],[`s`,25,32,3,15,4],[`s`,40,34,3,12,4],
+ [`a`,30,12,55,10,``],[`L`,50,25]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf5-lue-6`, bf:5, kb:`LÜ`, klasse:`4`, stufe:`GS`, dauer:45,
+titel:`Treffen wir den Korb?`,
+thema:`Beim Mini-Basketball den Korbwurf aus der Nähe üben und im Spiel 3 gegen 3 nutzen`,
+reihe:`Stunde 3 von 8 der Reihe „Basketball: Mini-Basketball und Easybasket“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 5, Spielen: ein großes Spiel in vereinfachter Form spielen, Bälle sachgerecht nutzen (BSB, 2022a, S. 20, 31–32). Kompetenzbereich Leisten und Üben (BSB, 2022a, S. 13–14). Fachcurriculum FNS: Jg. 4 Basketball, exemplarisches Unterrichtsvorhaben Jg. 3/4 (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 4. Sechs Kinder spielen im Verein, viele Kinder haben noch nie auf einen Korb geworfen. Würfe werden oft aus großer Entfernung mit beiden Händen von unten geschleudert.`,
+ vorauss:`Prellen und Passen aus Stunde 1 und 2, Prellen ohne Hinsehen aus Klasse 3.`,
+ raum:`Einfeldhalle mit sechs Körben: zwei Hauptkörbe, auf Mini-Höhe abgesenkt, und vier Ersatzkörbe aus Kästen mit Reifen oder Easybasket-Ständern.`,
+ sicherheit:`Mini-Basketbälle Größe 5. Nach dem Wurf den Ball holen, erst werfen, wenn der Korbraum frei ist. Keine Ballwürfe an Kinder unter dem Korb.`},
+sach:`Ein sicherer Korbwurf aus der Nähe folgt der Formel „Auge, Ellenbogen, Korb“: Die Wurfhand liegt unter dem Ball, der Ellenbogen zeigt zum Korb, der Ball wird nach oben geschoben und das Handgelenk klappt ab. Treffer entstehen aus Nähe und Bogen, nicht aus Kraft. Aus Ballprellen und Stopp entsteht der Wurf aus dem Stand.`,
+didaktik:`Die Kinder erproben zuerst frei an den sechs Körben, wie sie am besten treffen. Im Austausch zeigen Kinder mit vielen Treffern ihre Würfe. Die Lehrkraft bündelt die Formel „Auge, Ellenbogen, Korb“ und die Regel „nah ran“. In der Anwendung üben die Kinder an drei Entfernungslinien und spielen dann 3 gegen 3 auf einen Korb. Würfe nach einem Stopp zählen doppelt.`,
+ziele:[
+ {b:`motorisch`, st:`Präzision`, op:`verbessern`, text:`Die SuS verbessern ihre Trefferquote beim Korbwurf, indem sie aus naher Entfernung mit Ellenbogen zum Korb und Bogenwurf werfen.`},
+ {b:`kognitiv`, st:`Verständnis`, op:`beschreiben`, text:`Die SuS beschreiben die Wurfbewegung, indem sie die Formel „Auge, Ellenbogen, Korb“ ihrem Partnerkind vorsagen und vormachen.`},
+ {b:`sozial-affektiv`, st:``, op:`rückmelden`, text:`Die SuS melden ihrem Partnerkind zurück, indem sie nach fünf Würfen ein Merkmal der Formel loben oder einen Tipp geben.`}],
+verlauf:[
+ {p:`Einstieg`, t:2, was:`Kreis. L zeigt zwei Würfe: geschleudert und geschoben. „Welcher trifft öfter? Probiert es heraus.“`, orga:`Kreis`, komm:`Problemstellung durch Kontrast.`},
+ {p:`Erwärmung`, t:6, was:`Prellen im Raum, auf Pfiff Stopp und Ball über den Kopf. Dann Prellen mit Handwechsel.`, orga:`ganze Halle; 1 Ball pro Kind`, komm:`Wiederholung, Stopp als Wurfvorbereitung.`},
+ {p:`Erleben`, t:7, was:`Freies Werfen an sechs Körben in Vierergruppen. Jedes Kind zählt Treffer bei zehn Würfen.`, orga:`6 Körbe; Bälle`, komm:`Offene Phase, Entfernung frei.`},
+ {p:`Austauschen`, t:4, was:`Sitzkreis. Kinder mit vielen Treffern zeigen, wie sie werfen. „Von wo habt ihr getroffen?“`, orga:`Sitzkreis`, komm:`Lösungen aus der Gruppe.`},
+ {p:`Verstehen`, t:3, was:`L bündelt: „Auge, Ellenbogen, Korb“ und „nah ran“. Trockenübung mit Ball über dem Kopf.`, orga:`Sitzkreis; Bälle`, komm:`Deduktive Verdichtung.`},
+ {p:`Anwenden`, t:15, was:`Fünf Minuten Wurfübung an drei Linien (1, 2, 3 Meter) mit Partnerfeedback. Dann 3 gegen 3 auf einen Korb, Wurf nach Stopp zählt doppelt.`, orga:`6 Körbe, Linien; Leibchen`, komm:`Üben mit Rückmeldung, dann Transfer ins Spiel.`},
+ {p:`Abschluss`, t:3, was:`Kreis. Treffer aus dem Erleben und dem Üben vergleichen. Ausblick: Korbleger in Stunde 4.`, orga:`Kreis`, komm:`Lernzuwachs sichtbar machen.`}],
+diff:{
+ leichter:[`Easybasket-Ständer oder Reifen auf Kasten`, `leichterer Ball`, `Wurf aus 1 Meter`],
+ schwerer:[`Wurf nach Prellen und Stopp`, `Wurf vom Brett`, `Verteidiger mit erhobenen Armen`],
+ inklusion:`Vereinsspieler übernehmen Trainerrollen an einer Linie. Ein Kind mit wenig Kraft wirft auf den Ersatzkorb aus 1 Meter. Im Spiel 3 gegen 3 dürfen Vereinsspieler nicht selbst werfen.`},
+querText:{'Inklusion':`Sechs Körbe in drei Höhen und Trainerrollen machen den Korbwurf für alle erreichbar.`},
+reflexSuS:[`Von wo triffst du am besten?`, `Welcher Teil der Formel hilft dir?`, `Welchen Tipp hat dir dein Partner gegeben?`],
+reflexLK:[`Haben sich die Trefferquoten verbessert?`, `Waren die Ersatzkörbe stabil und sicher?`, `Haben die Vereinsspieler die anderen eingebunden?`, `Brauche ich für den Korbleger mehr Zeit?`],
+halle:{ein:`Zwei Hauptkörbe und vier Ersatzkörbe an den Seiten.`, mehr:`In der Mehrfeldhalle alle Seitenkörbe nutzen.`},
+material:`24 Mini-Basketbälle, 4 Kästen mit Reifen oder Easybasket-Ständer, Kreppband für Linien, Leibchen`,
+skizze:{titel:`Sechs Körbe mit Wurflinien`, el:[
+ [`o`,4,25],[`o`,96,25],[`r`,30,2,6,5,``,`b`],[`r`,64,2,6,5,``,`b`],[`r`,30,43,6,5,``,`b`],[`r`,64,43,6,5,``,`b`],
+ [`o`,33,4],[`o`,67,4],[`o`,33,46],[`o`,67,46],
+ [`l`,12,18,12,32,``],[`l`,88,18,88,32,``],[`s`,16,22,3,0,3],[`s`,82,22,3,0,3],[`s`,33,12,2,4,0],[`s`,67,38,2,4,0],[`L`,50,25]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf6-lue-8`, bf:6, kb:`LÜ`, klasse:`1`, stufe:`GS`, dauer:45,
+titel:`Fit für die Bundesjugendspiele Turnen`,
+thema:`An Stationen die Turnaufgaben der Bundesjugendspiele üben und die eigenen Punkte einschätzen`,
+reihe:`Stunde 3 von 5 der Reihe „Bundesjugendspiele Turnen“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 6, Bewegen an und von Geräten: turnerische Bewegungen erlernen, balancieren, rollen, springen, stützen (BSB, 2022a, S. 21, 33–37). Kompetenzbereich Leisten und Üben (BSB, 2022a, S. 13–14). Fachcurriculum FNS: BJS Turnen Jg. 1/2 und 3/4 (Fridtjof-Nansen-Grundschule, o. J.). Bundesjugendspiele Turnen, Wettbewerb Grundschule (Ausschuss für die Bundesjugendspiele [prüfen: aktuelle Ausschreibung]).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 1, Frühjahr. Viele Kinder sind motiviert, einige ängstlich an hohen Geräten. Der Ablauf an Stationen ist bekannt, die Wartezeiten sind noch zu lang.`,
+ vorauss:`Bewegungslandschaften, Rolle vorwärts an der Schräge, Balancieren auf der Bank. Stunde 1 und 2 der Reihe: Stationen kennenlernen.`,
+ raum:`Einfeldhalle, sechs Stationen: Balancieren auf der umgedrehten Bank, Rolle vorwärts an der Schräge, Strecksprung vom Kasten auf den Weichboden, Hangeln an der Sprossenwand, Hüpfen in Reifen, Seilspringen.`,
+ sicherheit:`Matten unter allen Absprung- und Rollstellen, Weichboden hinter dem Kasten. Kastenhöhe zwei Teile. Nur ein Kind pro Gerät. Lehrkraft an der Kastenstation.`},
+sach:`Die Bundesjugendspiele Turnen bewerten in der Grundschule einfache Aufgaben aus Balancieren, Rollen, Springen, Stützen, Hangeln und Koordination. Jede Aufgabe hat Punktstufen. Für die Kinder zählen zwei Dinge: die Bewegung sauber und sicher zeigen und wissen, was die nächste Stufe ist.`,
+didaktik:`Die Kinder kennen die Stationen. Sie üben zuerst frei und markieren auf einer Bildkarte, was schon gelingt. Im Austausch nennen sie ihre Lieblingsstation und eine schwierige. Die Lehrkraft zeigt an zwei Stationen, was „sauber“ heißt: Körperspannung und sichere Landung. In der Anwendung üben die Kinder in festen Gruppen mit Wechsel auf Signal. Am Ende schätzen sie sich mit Smileys ein.`,
+ziele:[
+ {b:`motorisch`, st:`Durchführung`, op:`üben`, text:`Die SuS üben die Turnaufgaben an sechs Stationen, indem sie jede Aufgabe mehrmals mit Körperspannung und sicherer Landung ausführen.`},
+ {b:`kognitiv`, st:`Beurteilung`, op:`einschätzen`, text:`Die SuS schätzen ihr Können ein, indem sie auf der Bildkarte für jede Station einen Smiley ankreuzen.`},
+ {b:`sozial-affektiv`, st:``, op:`einhalten`, text:`Die SuS halten die Stationsregeln ein, indem sie nur einzeln am Gerät turnen und mit Abstand warten.`}],
+verlauf:[
+ {p:`Einstieg`, t:2, was:`Sitzkreis. L zeigt die Urkunde vom letzten Sportfest. „Heute üben wir für unsere Bundesjugendspiele.“`, orga:`Sitzkreis`, komm:`Ziel und Motivation.`},
+ {p:`Erwärmung`, t:5, was:`Lauf durch die Halle, auf Signal Turnpositionen: Päckchen, Kerze, Brett.`, orga:`ganze Halle`, komm:`Körperspannung vorbereiten.`},
+ {p:`Erleben`, t:8, was:`Freies Üben an den Stationen, Kinder wählen selbst. Bildkarte: Was klappt schon?`, orga:`6 Stationen; Bildkarten`, komm:`Selbstbestimmte Übungszeit.`},
+ {p:`Austauschen`, t:3, was:`Sitzkreis. „Wo hast du dich sicher gefühlt? Wo nicht?“`, orga:`Sitzkreis`, komm:`Selbstwahrnehmung.`},
+ {p:`Verstehen`, t:4, was:`L zeigt an zwei Stationen, was sauber heißt: Körper fest und gelandet wie eine Katze. Kinder machen es nach.`, orga:`an Rolle und Kasten`, komm:`Zwei Qualitätsmerkmale.`},
+ {p:`Anwenden`, t:14, was:`Stationsbetrieb in sechs Gruppen, Wechsel auf Signal nach gut zwei Minuten. Partnerkind achtet auf die Landung.`, orga:`6 Stationen`, komm:`Geübt wird mit Qualitätsmerkmal.`},
+ {p:`Abschluss`, t:4, was:`Abbau in Gruppen. Bildkarte: Smiley pro Station. „Was übst du nächstes Mal?“`, orga:`Kreis; Bildkarten`, komm:`Selbsteinschätzung, Vorbereitung auf den Wettkampf.`}],
+diff:{
+ leichter:[`Balancieren auf der breiten Bankseite`, `Rolle an steilerer Schräge`, `Kasten einteilig`],
+ schwerer:[`Balancieren mit Sandsäckchen auf dem Kopf`, `Strecksprung mit halber Drehung`, `Seilspringen rückwärts`],
+ inklusion:`Ängstliche Kinder beginnen an der Station ihrer Wahl und werden an der Kastenstation von der Lehrkraft an der Hand begleitet. Für ein Kind mit Gleichgewichtsproblemen gibt es eine Balancierlinie am Boden. Die Bewertung bei den BJS richtet sich nach der Wettbewerbsform, in der Reihe zählt der eigene Fortschritt.`},
+querText:{'Inklusion':`Jede Station hat eine leichtere Variante. Die Bildkarte zeigt Fortschritt ohne Vergleich.`},
+reflexSuS:[`Welche Station kannst du schon gut?`, `Was heißt „sauber turnen“?`, `Was willst du noch üben?`],
+reflexLK:[`Waren die Wartezeiten kürzer als in Stunde 2?`, `Stimmen die Smileys mit meinen Beobachtungen überein?`, `Welche Station braucht mehr Hilfe?`, `Ist die Bewertung beim Wettkampf vorbereitet?`],
+halle:{ein:`Sechs Stationen im Kreis an Wand und Mitte.`, mehr:`In der Mehrfeldhalle jede Station doppelt, zwei Klassen gleichzeitig.`},
+material:`2 Langbänke, 2 Kästen, 1 Weichboden, 8 Turnmatten, Sprossenwand, 6 Reifen, 6 Springseile, Bildkarten, Stifte`,
+skizze:{titel:`Sechs BJS-Stationen`, el:[
+ [`r`,6,6,22,3,`Bank`,`b`],[`r`,40,4,14,8,``,`m`],[`r`,40,8,6,4,``,`b`],[`x`,47,15,`Rolle an der Schräge`],
+ [`r`,72,4,8,6,`Kasten`,`b`],[`r`,82,2,14,12,`Weichboden`,`m`],
+ [`r`,94,22,4,18,`Sprossen`,`b`],[`o`,62,36],[`o`,68,40],[`o`,74,36],[`x`,68,46,`Reifen`],
+ [`x`,20,40,`Seilspringen`],[`s`,12,32,3,6,0],[`s`,10,12,2,5,0],[`s`,74,16,2,4,0],[`L`,72,22]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf6-gd-7`, bf:6, kb:`GD`, klasse:`3`, stufe:`GS`, dauer:45,
+titel:`Unsere Kür mit dem Tuch`,
+thema:`Kunststücke mit Tuch und Ball erfinden, zu einer kurzen Kür verbinden und vorführen`,
+reihe:`Stunde 5 von 6 der Reihe „Kunststücke mit Kleingeräten“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 6, Bewegen an und von Geräten: akrobatische Kunststücke präsentieren, Bewegungsformen variieren und kombinieren (BSB, 2022a, S. 21, 33–37). Kompetenzbereich Gestalten und Darstellen (BSB, 2022a, S. 14). Fachcurriculum FNS: Jg. 3 „Erfinden und Ausprobieren verschiedener Kunststücke mit Kleingeräten“ (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 3. Die Kinder haben in der Reihe mit Band, Reifen, Seil und Ball gearbeitet. Einige trauen sich nicht, vorzuführen. Mehrere Kinder sind sehr kreativ und erfinden schnell.`,
+ vorauss:`Stunde 1 bis 4: Gymnastikband, Reifen, Seil, Bälle. Werfen und Fangen mit einer Hand, Drehungen.`,
+ raum:`Einfeldhalle, sechs Gruppenbereiche, Bühne mit Teppich in der Mitte, Musikanlage.`,
+ sicherheit:`Abstand zwischen den Gruppen. Tücher und Bälle nur in die eigene Gruppe werfen. Bei Drehungen Platz zur Seite.`},
+sach:`Ein Jongliertuch fällt langsam und gibt Zeit für Kunststücke: werfen, fangen mit anderen Körperteilen, drehen, Tücher tauschen. Eine Kür verbindet drei Kunststücke mit Anfang und Ende. Wie Gestaltungen in der Bewegungskunst wirkt sie durch klare Start- und Endpose, Gleichzeitigkeit in der Gruppe und Steigerung.`,
+didaktik:`Die Kinder erfinden zuerst in Dreiergruppen Kunststücke mit Tuch und Ball. Im Austausch zeigen sie ein Kunststück, die anderen nennen, was daran gefällt. Die Lehrkraft bündelt drei Kriterien für eine Kür: Startpose, drei Kunststücke, Endpose. Die Gruppen verbinden ihre Kunststücke und zeigen sie auf der Bühne. Die Zuschauer geben mit Daumen und einem Satz Rückmeldung. Die Präsentation wird in Stunde 6 vor einer Parallelklasse wiederholt.`,
+ziele:[
+ {b:`motorisch`, st:`Verfügbarkeit`, op:`gestalten`, text:`Die SuS gestalten eine Kür, indem sie drei Kunststücke mit Tuch oder Ball mit Start- und Endpose verbinden.`},
+ {b:`kognitiv`, st:`Beurteilung`, op:`bewerten`, text:`Die SuS bewerten eine Kür, indem sie mit den drei Kriterien sagen, was gelungen ist.`},
+ {b:`sozial-affektiv`, st:``, op:`präsentieren`, text:`Die SuS präsentieren ihre Kür vor der Klasse, indem sie gemeinsam auf ein Zeichen beginnen und mit der Endpose stehen bleiben.`}],
+verlauf:[
+ {p:`Einstieg`, t:2, was:`Kreis. L zeigt ein kurzes Kunststück mit Tuch: werfen, drehen, mit dem Fuß fangen. „Heute wird daraus eine Kür.“`, orga:`Kreis`, komm:`Neugier wecken.`},
+ {p:`Erwärmung`, t:5, was:`Tuch werfen und mit verschiedenen Körperteilen fangen, dazu Musik.`, orga:`ganze Halle; 1 Tuch pro Kind`, komm:`Wiederholung, Aufwärmen.`},
+ {p:`Erleben`, t:8, was:`Dreiergruppen erfinden Kunststücke mit Tuch und Ball, mindestens drei.`, orga:`6 Bereiche; Tücher, Bälle`, komm:`Offene Gestaltungsphase.`},
+ {p:`Austauschen`, t:4, was:`Jede Gruppe zeigt ein Kunststück. „Was gefällt euch daran?“`, orga:`Halbkreis vor der Bühne`, komm:`Ideen werden geteilt.`},
+ {p:`Verstehen`, t:3, was:`L bündelt drei Kriterien: Startpose, drei Kunststücke, Endpose. Karte für jede Gruppe.`, orga:`Kriterienkarten`, komm:`Gestaltungskriterien.`},
+ {p:`Anwenden`, t:14, was:`Gruppen verbinden ihre Kunststücke zur Kür und üben sie. Danach Präsentation auf der Bühne zu Musik, Rückmeldung mit Daumen und einem Satz.`, orga:`Bühne; Musik`, komm:`Gestalten, präsentieren, beurteilen.`},
+ {p:`Abschluss`, t:4, was:`Kreis. „Was machen wir in Stunde 6 noch besser?“ Material zurück in Kisten.`, orga:`Kreis`, komm:`Vorbereitung der Präsentation.`}],
+diff:{
+ leichter:[`nur Tuch`, `zwei Kunststücke`, `Kür ohne Musik`],
+ schwerer:[`zwei Tücher pro Kind`, `Wechsel der Geräte in der Kür`, `Kunststück synchron zu dritt`],
+ inklusion:`Kinder mit Vorführangst zeigen zuerst in der eigenen Gruppe oder übernehmen die Musik. Ein Kind mit motorischen Einschränkungen nutzt ein größeres Tuch oder einen Luftballon.`},
+querText:{'Inklusion':`Materialwahl und Rollen wie Musik oder Ansage ermöglichen allen eine Rolle in der Kür.`},
+reflexSuS:[`Welches Kunststück war euer bestes?`, `Wie habt ihr Anfang und Ende gezeigt?`, `Was hat dir bei einer anderen Gruppe gefallen?`],
+reflexLK:[`Hatten alle Gruppen eine vollständige Kür?`, `Wie gingen die ängstlichen Kinder mit der Präsentation um?`, `Waren die Rückmeldungen auf die Kriterien bezogen?`, `Was braucht die Präsentation in Stunde 6?`],
+halle:{ein:`Sechs Bereiche an den Rändern, Bühne in der Mitte.`, mehr:`In der Mehrfeldhalle Bühne auf ein Feld, Übungsbereiche auf die anderen.`},
+material:`24 Jongliertücher, 12 Bälle, Kriterienkarten, Musikanlage, Teppich oder Matte als Bühne`,
+skizze:{titel:`Gruppenbereiche und Bühne`, el:[
+ [`r`,38,16,24,18,`Bühne`,`m`],
+ [`s`,8,6,3,4,0],[`s`,44,6,3,4,0],[`s`,80,6,3,4,0],[`s`,8,44,3,4,0],[`s`,44,44,3,4,0],[`s`,80,44,3,4,0],
+ [`x`,12,14,`Gruppe`],[`x`,88,14,`Gruppe`],[`c`,90,25,0,`Musik`],[`L`,30,25]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf6-gd-8`, bf:6, kb:`GD`, klasse:`4`, stufe:`GS`, dauer:45,
+titel:`Pyramiden mit Bank und Kasten`,
+thema:`Mit Hilfsmitteln wie Bank und Kasten Partner- und Gruppenpyramiden sicher bauen und präsentieren`,
+reihe:`Stunde 6 von 9 der Reihe „Akrobatik mit Hilfsmitteln“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 6, Bewegen an und von Geräten: akrobatische Kunststücke präsentieren, Körpergewicht halten und stützen (BSB, 2022a, S. 21, 33–37). Kompetenzbereich Wettkämpfen und Kooperieren (BSB, 2022a, S. 15). Fachcurriculum FNS: Jg. 4 „Akrobatik mit Hilfsmitteln“, Pyramiden-Regeln (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 4. Die Kinder kennen Bankstellung und Partnerpyramiden. Einige sind ehrgeizig und wollen hoch bauen, andere scheuen Körperkontakt. Zwei übergewichtige Kinder wollen nur unten stehen.`,
+ vorauss:`Stunde 1 bis 5: Körperspannung, Bankticken, Pyramidenregeln, Zweier- und Dreierpyramiden am Boden.`,
+ raum:`Einfeldhalle, sechs Stationen mit Matten, je eine Bank oder ein Kastenoberteil, Pyramidenkarten.`,
+ sicherheit:`Pyramiden-Regeln: auf Hüfte und Schultern stehen, nie auf den Rücken in der Mitte; Untermann in stabiler Bankstellung; Auf- und Abbau in umgekehrter Reihenfolge; ein Kind sichert seitlich. Höchstens zwei Ebenen über dem Boden.`},
+sach:`Hilfsmittel verändern Pyramiden: Eine Bank gibt Höhe und eine feste Basis, ein Kastenoberteil eine kleine Plattform. Stabil wird die Pyramide, wenn die Untermänner breit stehen, die Obermänner auf tragfähigen Punkten stehen und alle Spannung halten. Die Pyramide wird drei Sekunden gehalten, dann kontrolliert abgebaut.`,
+didaktik:`Die Gruppen erproben mit Pyramidenkarten, wie Bank und Kasten genutzt werden können. Im Austausch zeigen zwei Gruppen ihre Lösung, die Klasse prüft mit den Regeln. Die Lehrkraft bündelt das Prinzip „breite Basis, tragfähige Punkte, Sichern“. In der Anwendung erfinden die Gruppen eine eigene Pyramide mit Hilfsmittel und präsentieren sie mit Auf- und Abbau.`,
+ziele:[
+ {b:`motorisch`, st:`Durchführung`, op:`stabilisieren`, text:`Die SuS stabilisieren eine Gruppenpyramide mit Bank oder Kasten, indem sie in Bankstellung Spannung halten und nur auf Hüfte oder Schultern stehen.`},
+ {b:`kognitiv`, st:`Anwendung`, op:`prüfen`, text:`Die SuS prüfen eine Pyramide auf Sicherheit, indem sie die Regeln der Pyramidenkarte nacheinander abhaken.`},
+ {b:`sozial-affektiv`, st:``, op:`Verantwortung übernehmen`, text:`Die SuS übernehmen Verantwortung für die Gruppe, indem ein Kind als Sicherer neben der Pyramide steht und bei Unsicherheit „Ab“ ruft.`}],
+verlauf:[
+ {p:`Einstieg`, t:2, was:`Kreis. L zeigt ein Foto einer Zirkuspyramide mit Bank. „Was macht die Bank anders?“`, orga:`Kreis; Foto`, komm:`Fragestellung.`},
+ {p:`Erwärmung`, t:5, was:`Bankticken: Fänger tickt, wer in Bankstellung geht, ist sicher, aber nur mit Partner auf dem Rücken.`, orga:`ganze Halle`, komm:`Bankstellung, Spannung.`},
+ {p:`Erleben`, t:9, was:`Vierergruppen bauen Pyramiden nach Karten mit Bank oder Kasten.`, orga:`6 Stationen; Karten, Matten`, komm:`Erprobungsphase.`},
+ {p:`Austauschen`, t:4, was:`Zwei Gruppen zeigen. Klasse prüft mit den Regeln. „Was hat die Pyramide stabil gemacht?“`, orga:`Halbkreis`, komm:`Peer-Prüfung.`},
+ {p:`Verstehen`, t:3, was:`L bündelt: breite Basis, tragfähige Punkte, ein Kind sichert.`, orga:`Plakat`, komm:`Prinzipien für die Eigengestaltung.`},
+ {p:`Anwenden`, t:13, was:`Gruppen erfinden eine eigene Pyramide mit Hilfsmittel, üben Auf- und Abbau. Präsentation: Aufbau, drei Sekunden halten, Abbau. Zuschauer prüfen eine Regel.`, orga:`6 Stationen, dann Präsentation`, komm:`Gestaltung, Sicherheit, Präsentation.`},
+ {p:`Abschluss`, t:4, was:`Abbau. Kreis: „Wer hat heute gesichert? Was hat das gebracht?“`, orga:`Kreis`, komm:`Verantwortung reflektieren.`}],
+diff:{
+ leichter:[`Pyramide mit nur einer Ebene`, `Kniestand statt Stand oben`, `vorgegebene Karte`],
+ schwerer:[`Pyramide mit Bank und Kasten kombiniert`, `Einnehmen der Pose in zwei Zählzeiten`, `Abbau im Takt`],
+ inklusion:`Die zwei übergewichtigen Kinder wählen ihre Position frei, auch als Sicherer oder in der stabilen Basis. Kinder, die Kontakt scheuen, übernehmen zuerst das Sichern und die Regelprüfung. Paare werden nach Größe und Gewicht gebildet.`},
+querText:{'Inklusion':`Jede Position ist wichtig: Basis, Obermann und Sicherer. Kinder wählen ihre Position selbst.`},
+reflexSuS:[`Woran erkennst du eine sichere Pyramide?`, `Welche Position hattest du, und wie war sie?`, `Was hat die Bank verändert?`],
+reflexLK:[`Wurden die Regeln immer eingehalten?`, `Haben alle Kinder eine Position gefunden?`, `War die Höhe angemessen?`, `Welche Pyramide eignet sich für die Abschlusspräsentation?`],
+halle:{ein:`Sechs Stationen mit Matten und Hilfsmitteln.`, mehr:`In der Mehrfeldhalle eine Präsentationsfläche abtrennen.`},
+material:`12 Turnmatten, 3 Langbänke, 3 Kastenoberteile, Pyramidenkarten, Plakat`,
+skizze:{titel:`Pyramidenstationen mit Bank und Kasten`, el:[
+ [`r`,6,6,22,12,``,`m`],[`r`,38,6,22,12,``,`m`],[`r`,70,6,22,12,``,`m`],
+ [`r`,6,32,22,12,``,`m`],[`r`,38,32,22,12,``,`m`],[`r`,70,32,22,12,``,`m`],
+ [`r`,8,10,18,3,`Bank`,`b`],[`r`,40,10,18,3,`Bank`,`b`],[`r`,72,10,18,3,`Bank`,`b`],
+ [`r`,13,35,8,6,`Kasten`,`b`],[`r`,45,35,8,6,`Kasten`,`b`],[`r`,77,35,8,6,`Kasten`,`b`],
+ [`s`,10,20,4,4,0],[`s`,42,46,4,4,0],[`L`,50,25]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf7-lue-6`, bf:7, kb:`LÜ`, klasse:`3`, stufe:`GS`, dauer:45,
+titel:`Sprünge zur Folge zusammensetzen`,
+thema:`Eine Gummitwist-Sprungfolge zu einem Vers im Rhythmus springen und auf höheren Stufen meistern`,
+reihe:`Stunde 3 von 7 der Reihe „Rhythmisches Gummitwist“`,
+quer:[`Inklusion`,`Diversität`],
+bp:`Bewegungsfeld 7, Tanzen, Inszenieren und Präsentieren: Rhythmen in Bewegung umsetzen (BSB, 2022a, S. 21, 38–39). Kompetenzbereich Leisten und Üben (BSB, 2022a, S. 13–14). Fachcurriculum FNS: Jg. 3 „Rhythmisches Gummitwist“, exemplarisches Unterrichtsvorhaben (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 3. Einige Mädchen springen Gummitwist auf dem Schulhof, viele Jungen haben es nie probiert und halten es für ein Mädchenspiel. Rhythmusgefühl ist sehr unterschiedlich.`,
+ vorauss:`Stunde 1 und 2: Grundsprünge rein, raus, drauf, Grätsche; erster Vers.`,
+ raum:`Einfeldhalle, acht Gummitwist-Stationen mit je drei Kindern, Stuhlbeine oder Hütchen als Halter für Kinder, die nicht stehen wollen.`,
+ sicherheit:`Mit Turnschuhen springen. Gummi nicht loslassen, wenn jemand springt. Höhe nur bis zur Hüfte.`},
+sach:`Gummitwist verbindet Sprungfolgen mit einem gesprochenen Vers. Jede Silbe oder jeder Takt ist ein Sprung. Die Höhenstufen steigen: Knöchel, Wade, Knie, Oberschenkel, Hüfte. Wer einen Fehler macht, wechselt nach außen. Gelingt die Folge, wenn der Rhythmus des Verses mit den Sprüngen übereinstimmt, ist auch die höhere Stufe leichter.`,
+didaktik:`Die Kinder springen die bekannte Folge auf freier Höhe. Im Austausch merken sie, dass Fehler vor allem aus dem Takt entstehen. Die Lehrkraft bündelt: Vers laut mitsprechen und kurze, federnde Sprünge. In der Anwendung springen die Gruppen die Stufen hoch, die Kinder außen sprechen den Vers mit. Gemischte Gruppen und Rollenwechsel holen alle ins Spiel.`,
+ziele:[
+ {b:`motorisch`, st:`Durchführung`, op:`ausführen`, text:`Die SuS führen die Sprungfolge im Rhythmus aus, indem sie zu jedem Takt des Verses einen federnden Sprung machen.`},
+ {b:`kognitiv`, st:`Verständnis`, op:`erklären`, text:`Die SuS erklären, warum der Vers hilft, indem sie nach dem Erleben sagen, wann ihnen ein Sprung gelungen oder misslungen ist.`},
+ {b:`sozial-affektiv`, st:``, op:`kooperieren`, text:`Die SuS kooperieren in der Dreiergruppe, indem sie Rollen tauschen und den Vers für das springende Kind laut mitsprechen.`}],
+verlauf:[
+ {p:`Einstieg`, t:2, was:`Kreis. L springt den Vers kurz vor. „Heute geht es höher.“`, orga:`Kreis`, komm:`Vorbild und Ziel.`},
+ {p:`Erwärmung`, t:5, was:`Seilspringen oder Hüpfen im Takt einer Trommel, langsam und schnell.`, orga:`ganze Halle; Trommel`, komm:`Rhythmisierung.`},
+ {p:`Erleben`, t:8, was:`Dreiergruppen springen die Folge auf freier Höhe, Wechsel bei Fehler.`, orga:`8 Stationen; 8 Gummis`, komm:`Offene Phase.`},
+ {p:`Austauschen`, t:4, was:`Sitzkreis. „Wann habt ihr Fehler gemacht? Was hilft?“`, orga:`Sitzkreis`, komm:`Erfahrungen sammeln.`},
+ {p:`Verstehen`, t:3, was:`L bündelt: Vers laut mitsprechen, kurze federnde Sprünge. Alle sprechen den Vers einmal und klatschen dazu.`, orga:`Sitzkreis`, komm:`Zwei Merkmale, Klatschprobe.`},
+ {p:`Anwenden`, t:14, was:`Stufenspringen: Knöchel, Wade, Knie, Oberschenkel. Kinder außen sprechen mit. Wer eine Stufe schafft, trägt sie auf der Gruppenliste ein.`, orga:`8 Stationen; Listen`, komm:`Steigerung, Fortschritt sichtbar.`},
+ {p:`Abschluss`, t:4, was:`Kreis. „Welche Stufe hast du geschafft? Was war leicht, was schwer?“ Ausblick: eigene Folge erfinden.`, orga:`Kreis`, komm:`Reflexion, Ausblick auf Gestaltung.`}],
+diff:{
+ leichter:[`Gummi am Knöchel bleibt`, `nur zwei Sprünge des Verses`, `Gummi am Boden als Linie`],
+ schwerer:[`höhere Stufen`, `Folge schneller sprechen`, `Gummi schmal gestellt`],
+ inklusion:`Kinder, die nicht springen können, sprechen den Vers oder halten das Gummi und geben den Takt mit der Trommel. Jungen werden über gemischte Gruppen und Wettkampfelemente angesprochen.`},
+querText:{'Inklusion':`Rollen als Sprecher, Halter und Springer ermöglichen Teilhabe.`,'Diversität':`Gemischte Gruppen stellen das Bild vom „Mädchenspiel“ in Frage. Jungen und Mädchen springen und sprechen gemeinsam.`},
+reflexSuS:[`Welche Stufe hast du geschafft?`, `Wie hilft dir der Vers?`, `Wie war es, Halter oder Sprecher zu sein?`],
+reflexLK:[`Haben sich die Jungen beteiligt?`, `Ist das Tempo der Verse passend?`, `Sind die Stufen gut gewählt?`, `Welche Gruppen können schon eigene Folgen erfinden?`],
+halle:{ein:`Acht Stationen an den Hallenrändern.`, mehr:`In der Mehrfeldhalle zehn Stationen, mehr Platz zwischen den Gruppen.`},
+material:`8 Gummitwist-Bänder, Trommel, Gruppenlisten, Stifte, Hütchen als Halter`,
+skizze:{titel:`Gummitwist-Stationen`, el:[
+ [`l`,8,6,20,6,``],[`l`,8,10,20,10,``],[`s`,6,8,2,16,0],[`s`,14,8,1,0,0],
+ [`l`,40,6,52,6,``],[`l`,40,10,52,10,``],[`s`,38,8,2,16,0],
+ [`l`,72,6,84,6,``],[`l`,72,10,84,10,``],[`s`,70,8,2,16,0],
+ [`l`,8,40,20,40,``],[`l`,8,44,20,44,``],[`s`,6,42,2,16,0],
+ [`l`,40,40,52,40,``],[`l`,40,44,52,44,``],[`s`,38,42,2,16,0],
+ [`l`,72,40,84,40,``],[`l`,72,44,84,44,``],[`k`,70,42],[`k`,86,42],[`L`,50,25]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf7-we-5`, bf:7, kb:`WE`, klasse:`4`, stufe:`GS`, dauer:45,
+titel:`Step auf der Turnmatte`,
+thema:`Grundschritte des Stepaerobics an der Turnmatte zur Musik lernen und im Takt der Gruppe bleiben`,
+reihe:`Stunde 4 von 9 der Reihe „Aerobic und Stepaerobic an Turnmatten“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 7, Tanzen, Inszenieren und Präsentieren: sich zu Musik bewegen, Bewegungsfolgen erlernen (BSB, 2022a, S. 21, 38–39). Kompetenzbereich Wahrnehmen und Erfahren (BSB, 2022a, S. 15–16). Fachcurriculum FNS: Jg. 4 „Aerobic und Stepaerobic an Turnmatten“ (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 4. Die Kinder kennen Aerobic-Grundschritte ohne Stufe. Einige sind schnell außer Atem, andere langweilen sich bei Wiederholungen. Viele zählen nicht im Takt mit.`,
+ vorauss:`Stunde 1 bis 3: Marsch, V-Step, Grapevine und Knee-up am Boden, Zählen in Achtern.`,
+ raum:`Einfeldhalle, 24 zusammengeklappte Turnmatten als Stufen in vier Reihen, Blick zur Lehrkraft, Musikanlage mit 120 bis 125 Schlägen pro Minute.`,
+ sicherheit:`Matten rutschfest, mit der langen Seite zur Lehrkraft. Ganzer Fuß auf die Matte, nicht mit der Ferse überstehen. Trinkpause einplanen.`},
+sach:`Beim Stepaerobic wird eine Stufe in Grundschritten bestiegen. Der Basic Step geht rechts hoch, links hoch, rechts runter, links runter auf vier Zählzeiten. Der V-Step führt die Füße breit auf die Stufe und eng zurück. Beim Knee-up wird das Knie oben gehoben. Die Musik gibt den Takt, gezählt wird in Achtern. Bewegung zu Musik erhöht Puls und Atmung im mittleren Bereich.`,
+didaktik:`Die Kinder probieren die bekannten Schritte frei an der Matte zur Musik. Im Austausch merken sie, dass sie aus dem Takt kommen. Die Lehrkraft bündelt zwei Hilfen: auf die Eins achten und laut zählen. In der Anwendung übernimmt die Gruppe eine Folge aus vier Achtern, die Lehrkraft zählt erst mit, dann zählen die Kinder. Am Ende spüren alle ihren Puls.`,
+ziele:[
+ {b:`motorisch`, st:`Durchführung`, op:`ausführen`, text:`Die SuS führen Basic Step, V-Step und Knee-up an der Matte aus, indem sie die Schritte im Takt der Musik in Achtern verbinden.`},
+ {b:`kognitiv`, st:`Verständnis`, op:`erkennen`, text:`Die SuS erkennen die Eins in der Musik, indem sie bei einem neuen Lied auf die Eins klatschen.`},
+ {b:`sozial-affektiv`, st:``, op:`vergleichen`, text:`Die SuS vergleichen ihre Belastung vor und nach der Folge, indem sie den Puls am Hals fühlen und dem Ruhepuls gegenüberstellen.`}],
+verlauf:[
+ {p:`Einstieg`, t:2, was:`Kreis. Ruhepuls fühlen und merken. „Heute steigen wir auf die Matte.“`, orga:`Kreis`, komm:`Ausgangswert für die Pulsreflexion.`},
+ {p:`Erwärmung`, t:5, was:`Marschieren, V-Step und Grapevine am Boden zur Musik, L zählt mit.`, orga:`4 Reihen`, komm:`Wiederholung.`},
+ {p:`Erleben`, t:7, was:`Freies Ausprobieren der Schritte an der Matte zur Musik.`, orga:`24 Matten`, komm:`Offene Phase, Taktprobleme werden spürbar.`},
+ {p:`Austauschen`, t:3, was:`Kreis. „Wann warst du im Takt, wann nicht?“`, orga:`Kreis`, komm:`Erfahrungen benennen.`},
+ {p:`Verstehen`, t:4, was:`L bündelt: Auf die Eins starten, laut zählen. Klatschprobe zu einem Lied.`, orga:`Kreis; Musik`, komm:`Zwei Hilfen, Höraufgabe.`},
+ {p:`Anwenden`, t:15, was:`Folge aus vier Achtern: Basic Step, V-Step, Knee-up, Marsch. Erst mit Zählen der Lehrkraft, dann zählen die Kinder. Reihen wechseln nach vorn.`, orga:`4 Reihen`, komm:`Üben und Verantwortung in der Gruppe.`},
+ {p:`Abschluss`, t:4, was:`Puls fühlen und vergleichen. Dehnen der Waden. „Was hilft dir, im Takt zu bleiben?“`, orga:`Kreis`, komm:`Belastung wahrnehmen.`}],
+diff:{
+ leichter:[`Schritte am Boden statt auf der Matte`, `nur Basic Step`, `langsamere Musik`],
+ schwerer:[`Armbewegungen dazu`, `Richtungswechsel um die Matte`, `Vorturnen in der ersten Reihe`],
+ inklusion:`Kinder, die schnell außer Atem sind, steppen am Boden und machen Pause, wann sie wollen. Ein Kind mit Gleichgewichtsproblemen steppt an der Wand. Kinder, die sich langweilen, erfinden eine Armbewegung für die Folge.`},
+querText:{'Inklusion':`Stufenhöhe und Tempo sind frei wählbar, Pause ist erlaubt.`},
+reflexSuS:[`Wie hat sich dein Puls verändert?`, `Welcher Schritt war am schwierigsten?`, `Was hilft dir, im Takt zu bleiben?`],
+reflexLK:[`Haben die Kinder die Eins gefunden?`, `Waren die Matten sicher?`, `Wie habe ich die gelangweilten Kinder eingebunden?`, `Ist die Folge für die Präsentation geeignet?`],
+halle:{ein:`Vier Reihen mit je sechs Matten, Lehrkraft vorn.`, mehr:`In der Mehrfeldhalle zwei Gruppen mit je einer Vorturnerin.`},
+material:`24 Turnmatten, Musikanlage, Musik mit 120 bis 125 Schlägen pro Minute`,
+skizze:{titel:`Mattenreihen für Stepaerobic`, el:[
+ [`r`,12,10,8,4,``,`m`],[`r`,24,10,8,4,``,`m`],[`r`,36,10,8,4,``,`m`],[`r`,48,10,8,4,``,`m`],[`r`,60,10,8,4,``,`m`],[`r`,72,10,8,4,``,`m`],
+ [`r`,12,20,8,4,``,`m`],[`r`,24,20,8,4,``,`m`],[`r`,36,20,8,4,``,`m`],[`r`,48,20,8,4,``,`m`],[`r`,60,20,8,4,``,`m`],[`r`,72,20,8,4,``,`m`],
+ [`r`,12,30,8,4,``,`m`],[`r`,24,30,8,4,``,`m`],[`r`,36,30,8,4,``,`m`],[`r`,48,30,8,4,``,`m`],[`r`,60,30,8,4,``,`m`],[`r`,72,30,8,4,``,`m`],
+ [`s`,16,16,6,12,0],[`s`,16,26,6,12,0],[`s`,16,36,6,12,0],[`L`,92,22],[`c`,92,40,0,`Musik`]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf8-gd-5`, bf:8, kb:`GD`, klasse:`1`, stufe:`GS`, dauer:45,
+titel:`Yoga-Reise in den Zoo`,
+thema:`In einer Yoga-Geschichte Tierhaltungen einnehmen, Anspannung und Entspannung spüren und eine eigene Tierhaltung erfinden`,
+reihe:`Stunde 2 von 4 der Reihe „Yoga für Kinder“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 8, Anspannen, Entspannen und Kräftigen: Spannung und Entspannung spüren, Yogaübungen (BSB, 2022a, S. 22, 40–41). Kompetenzbereich Wahrnehmen und Erfahren (BSB, 2022a, S. 15–16). Fachcurriculum FNS: Jg. 1 „Yoga für Kinder“, exemplarisches Unterrichtsvorhaben Jg. 1/2 (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 1. Die Kinder sind nach der Pause oft unruhig. Viele lieben Tiere. Stillhalten fällt einigen sehr schwer, zwei Kinder lachen bei Entspannungsübungen viel.`,
+ vorauss:`Stunde 1: Baum, Katze, Hund und Kerze als einzelne Haltungen, Ruhesignal mit der Klangschale.`,
+ raum:`Einfeldhalle, eine Matte pro Kind im großen Kreis, gedämpftes Licht, Klangschale.`,
+ sicherheit:`Barfuß oder mit Socken auf Matten. Keine Haltungen erzwingen, nur so weit dehnen, wie es angenehm ist. Abstand zwischen den Matten.`},
+sach:`Kinderyoga verbindet Haltungen mit Bildern und Geschichten. Tierhaltungen wie Katze, Hund, Kobra, Flamingo und Schmetterling sprechen Kräftigung, Dehnung und Gleichgewicht an. Wechsel von Anspannung und Entspannung wird über das Halten und Lösen erlebt. Eine kurze Ruhephase am Ende hilft beim Herunterfahren.`,
+didaktik:`Die Kinder gehen auf eine Reise in den Zoo. Zuerst bewegen sie sich frei wie Tiere ihrer Wahl. Im Austausch zeigen sie ihr Tier und sagen, wo sie Spannung gespürt haben. Die Lehrkraft bündelt: Bei jeder Haltung fest werden, drei Atemzüge halten, locker lassen. In der Anwendung führt die Geschichte durch fünf Haltungen. Die Kinder erfinden in Paaren ein Tier und zeigen es. Ruhephase mit Klangschale zum Schluss.`,
+ziele:[
+ {b:`motorisch`, st:`Durchführung`, op:`zeigen`, text:`Die SuS zeigen fünf Tierhaltungen, indem sie jede Haltung drei Atemzüge lang mit Spannung halten und dann locker lassen.`},
+ {b:`kognitiv`, st:`Kenntnisse`, op:`benennen`, text:`Die SuS benennen, wo sie Spannung spüren, indem sie nach einer Haltung auf das Körperteil zeigen und es nennen.`},
+ {b:`sozial-affektiv`, st:``, op:`entwickeln`, text:`Die SuS entwickeln zu zweit eine eigene Tierhaltung, indem sie sich auf ein Tier einigen und die Haltung gemeinsam vormachen.`}],
+verlauf:[
+ {p:`Einstieg`, t:3, was:`Kreis auf Matten, Klangschale. „Wir fahren heute in den Zoo.“`, orga:`Kreis; Klangschale`, komm:`Ritual, Ruhe.`},
+ {p:`Erwärmung`, t:5, was:`Tiergang durch die Halle: Elefant, Maus, Känguru, Schlange. Bei der Klangschale Stopp.`, orga:`ganze Halle`, komm:`Bewegungsdrang abbauen.`},
+ {p:`Erleben`, t:6, was:`Jedes Kind nimmt auf der Matte die Haltung eines Lieblingstiers ein und hält sie.`, orga:`Matten`, komm:`Freies Erproben.`},
+ {p:`Austauschen`, t:4, was:`Kinder zeigen ihr Tier. „Wo hast du es im Körper gespürt?“`, orga:`Kreis`, komm:`Körperwahrnehmung benennen.`},
+ {p:`Verstehen`, t:3, was:`L bündelt: fest werden, drei Atemzüge halten, locker lassen. Probe mit der Katze.`, orga:`Kreis`, komm:`Strukturierung von Spannung und Entspannung.`},
+ {p:`Anwenden`, t:13, was:`Yoga-Geschichte: Flamingo, Katze, Hund, Kobra, Schmetterling. Danach erfinden Paare ein Tier und zeigen es, die anderen raten.`, orga:`Matten; Geschichte`, komm:`Angeleitete Haltungen, dann eigene Gestaltung.`},
+ {p:`Abschluss`, t:6, was:`Ruhephase in Rückenlage, L liest ein kurzes Ende der Geschichte. Klangschale. „Wie fühlt sich dein Körper jetzt an?“`, orga:`Matten`, komm:`Entspannung erleben.`}],
+diff:{
+ leichter:[`Flamingo mit Hand an der Wand`, `kürzer halten`, `Haltungen im Sitzen`],
+ schwerer:[`Flamingo mit geschlossenen Augen`, `länger halten`, `Übergang ohne Pause`],
+ inklusion:`Kinder, die nicht stillhalten können, dürfen in der Ruhephase ein Kuscheltier auf dem Bauch atmen sehen. Ein Kind mit Bewegungseinschränkung wählt Haltungen im Sitzen. Lachen wird nicht bestraft, das Ritual hilft zurück zur Ruhe.`},
+querText:{'Inklusion':`Haltungen gibt es im Stand, Sitzen und Liegen.`},
+reflexSuS:[`Welches Tier hat dir am besten gefallen?`, `Wo hast du Spannung gespürt?`, `Wie fühlst du dich jetzt?`],
+reflexLK:[`Waren die Kinder in der Ruhephase ruhig?`, `Ist die Geschichte passend für Klasse 1?`, `Wie gehe ich mit den lachenden Kindern um?`, `Welche Haltungen wiederhole ich in Stunde 3?`],
+halle:{ein:`Großer Mattenkreis in der Hallenmitte.`, mehr:`In der Mehrfeldhalle nur ein Feld nutzen, Trennvorhang schließen.`},
+material:`24 Turnmatten, Klangschale, Geschichte, Tierbildkarten, kleine Kuscheltiere`,
+skizze:{titel:`Mattenkreis für Kinderyoga`, el:[
+ [`r`,44,3,10,5,``,`m`],[`r`,62,7,10,5,``,`m`],[`r`,74,17,10,5,``,`m`],[`r`,74,29,10,5,``,`m`],[`r`,62,39,10,5,``,`m`],[`r`,44,42,10,5,``,`m`],
+ [`r`,26,39,10,5,``,`m`],[`r`,14,29,10,5,``,`m`],[`r`,14,17,10,5,``,`m`],[`r`,26,7,10,5,``,`m`],
+ [`s`,49,5,1,0,0],[`s`,79,19,1,0,0],[`s`,19,31,1,0,0],[`s`,49,44,1,0,0],[`L`,49,25]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+UV.push({
+id:`bf8-lue-6`, bf:8, kb:`LÜ`, klasse:`3`, stufe:`GS`, dauer:45,
+titel:`Tabata: 20 Sekunden Vollgas`,
+thema:`Im hochintensiven Intervalltraining nach Tabata Übungen mit dem eigenen Körpergewicht ausführen und die Belastung spüren`,
+reihe:`Stunde 2 von 4 der Reihe „Hochintensives Intervalltraining“`,
+quer:[`Inklusion`],
+bp:`Bewegungsfeld 8, Anspannen, Entspannen und Kräftigen: Veränderbarkeit konditioneller Fähigkeiten erfahren, Körperreaktionen wahrnehmen (BSB, 2022a, S. 22, 40–41). Kompetenzbereich Wahrnehmen und Erfahren (BSB, 2022a, S. 15–16). Fachcurriculum FNS: Jg. 3 „Hochintensives Intervalltraining (HIT)“ (Fridtjof-Nansen-Grundschule, o. J.).`,
+bedingung:{
+ gruppe:`24 Kinder, Klasse 3. Die Kinder lieben Wettbewerbe und kurze Belastungen. Einige sind konditionell schwach und geben schnell auf. Viele führen Kniebeugen und Liegestütze unsauber aus.`,
+ vorauss:`Stunde 1: Übungen mit dem eigenen Körpergewicht kennenlernen, Puls fühlen.`,
+ raum:`Einfeldhalle, acht Stationen mit Bildkarten, eine Matte pro Station, Lautsprecher mit Tabata-Timer.`,
+ sicherheit:`Ausführung vor Tempo. Bei Schwindel oder Schmerz sofort Pause. Trinkflaschen am Rand. Abstand zwischen den Stationen.`},
+sach:`Tabata ist ein Intervallformat mit 20 Sekunden Belastung und 10 Sekunden Pause, achtmal hintereinander, also vier Minuten. Für Kinder eignen sich einfache Übungen mit dem eigenen Körpergewicht: Hampelmann, Kniebeuge, Bergsteiger, Wandsitz, Brett, Skipping. Kinder belasten sich in kurzen Intervallen natürlich und erholen sich schnell. Ziel ist nicht Höchstleistung, sondern Erleben von Belastung und Erholung.`,
+didaktik:`Die Kinder probieren zuerst eine Tabata-Runde mit freier Übungswahl. Im Austausch beschreiben sie, wie sich die letzten Intervalle angefühlt haben. Die Lehrkraft bündelt: saubere Ausführung zählt mehr als Tempo, und Erholung gehört dazu. In der Anwendung arbeiten Paare an acht Stationen, ein Kind übt, eines achtet auf die Ausführung. Die Kinder vergleichen ihren Puls vor, direkt nach und drei Minuten nach der Belastung.`,
+ziele:[
+ {b:`motorisch`, st:`Durchführung`, op:`ausführen`, text:`Die SuS führen Übungen mit dem eigenen Körpergewicht im Tabata-Intervall aus, indem sie 20 Sekunden sauber belasten und 10 Sekunden aktiv pausieren.`},
+ {b:`kognitiv`, st:`Analyse`, op:`vergleichen`, text:`Die SuS vergleichen ihren Puls vor, direkt nach und drei Minuten nach der Belastung, indem sie die Schläge in zehn Sekunden zählen und notieren.`},
+ {b:`sozial-affektiv`, st:``, op:`rückmelden`, text:`Die SuS melden dem Partnerkind die Ausführung zurück, indem sie mit der Bildkarte prüfen und einen Tipp geben.`}],
+verlauf:[
+ {p:`Einstieg`, t:2, was:`Kreis. Ruhepuls zählen und auf der Karte notieren. L erklärt Tabata kurz mit dem Timer.`, orga:`Kreis; Pulskarten`, komm:`Ausgangswert, Format verstehen.`},
+ {p:`Erwärmung`, t:5, was:`Lockeres Laufen, Armkreisen, Hampelmann langsam.`, orga:`ganze Halle`, komm:`Aufwärmen.`},
+ {p:`Erleben`, t:6, was:`Tabata-Runde mit freier Übungswahl, vier Minuten.`, orga:`am Platz; Timer`, komm:`Belastung erleben.`},
+ {p:`Austauschen`, t:4, was:`Kreis. „Wie hat sich das letzte Intervall angefühlt? Wann bist du langsamer geworden?“`, orga:`Kreis`, komm:`Körperwahrnehmung benennen.`},
+ {p:`Verstehen`, t:3, was:`L bündelt: saubere Ausführung zählt, Pause aktiv nutzen. Zwei Übungen sauber vormachen.`, orga:`Kreis`, komm:`Qualität vor Tempo.`},
+ {p:`Anwenden`, t:14, was:`Paare an acht Stationen. Kind A übt im Tabata-Intervall, Kind B achtet mit der Bildkarte auf die Ausführung. Wechsel nach jeder Station. Puls direkt nach der Runde zählen.`, orga:`8 Stationen; Bildkarten, Timer, Pulskarten`, komm:`Belastung mit Partnerfeedback.`},
+ {p:`Abschluss`, t:6, was:`Lockern und Dehnen. Nach drei Minuten erneut Puls zählen. Kreis: „Wie schnell erholt sich dein Herz?“`, orga:`Kreis; Pulskarten`, komm:`Erholung sichtbar machen.`}],
+diff:{
+ leichter:[`15 Sekunden Belastung, 15 Sekunden Pause`, `Liegestütz im Knien`, `Wandsitz kürzer`],
+ schwerer:[`Kniebeuge mit Sprung`, `Liegestütz mit Abklatschen`, `zwei Runden`],
+ inklusion:`Konditionell schwache Kinder wählen die leichteren Varianten und verkürzen die Belastung. Ein Kind mit Asthma hat das Spray bereit und entscheidet selbst über die Pausen. Es wird nicht gezählt, wer am meisten schafft.`},
+querText:{'Inklusion':`Jede Übung hat eine leichtere Variante, Belastungsdauer ist anpassbar.`},
+reflexSuS:[`Welche Übung war am anstrengendsten?`, `Wie hat sich dein Puls verändert?`, `Welchen Tipp hat dir dein Partner gegeben?`],
+reflexLK:[`Waren die Ausführungen sauber?`, `Hat das Partnerfeedback funktioniert?`, `Gab es Überlastungen?`, `Wie baue ich in Stunde 3 die eigene Tabata-Runde auf?`],
+halle:{ein:`Acht Stationen im Kreis.`, mehr:`In der Mehrfeldhalle 12 Stationen, Paare doppelt.`},
+material:`8 Turnmatten, 8 Bildkarten, Tabata-Timer mit Lautsprecher, Pulskarten, Stifte`,
+skizze:{titel:`Acht Tabata-Stationen`, el:[
+ [`r`,10,4,10,6,``,`m`],[`r`,45,4,10,6,``,`m`],[`r`,80,4,10,6,``,`m`],[`r`,88,22,10,6,``,`m`],
+ [`r`,80,40,10,6,``,`m`],[`r`,45,40,10,6,``,`m`],[`r`,10,40,10,6,``,`m`],[`r`,2,22,10,6,``,`m`],
+ [`s`,13,13,2,4,0],[`s`,48,13,2,4,0],[`s`,83,13,2,4,0],[`s`,48,36,2,4,0],[`c`,50,25,0,`Timer`],[`L`,62,25]]},
+lit:[`bsb22gs`,`fncs`,`fng24`]
+});
+
+REIHE[`bf4-wk-5`]={ziel:`Die Kinder vereinbaren ein Kampfritual, halten es ein und kämpfen und verteidigen fair im Stand und am Boden.`,st:[
+ [`Stopp heißt Stopp`,`Ritual mit Begrüßung, Abklopfen, Verabschiedung`,`Die Kinder vereinbaren das Ritual und halten es beim Schatzkampf ein.`,[`Schildkröten umdrehen`,`Schatzkampf erleben, Ritual bündeln und anwenden`,`Rücken an Rücken atmen`]],
+ [`Schiebekämpfe im Stand`,`Gleichgewicht halten und Kraft einsetzen`,`Die Kinder schieben den Partner aus dem Feld, ohne selbst hinauszufallen.`,[`Ritual wiederholen`,`Sumo-Schieben im Kreis`,`Wie stehst du stabil?`]],
+ [`Ziehkämpfe`,`Ziehen an Händen, Seil und Tau`,`Die Kinder ziehen kontrolliert und lassen auf Stopp los.`,[`Möhrenziehen`,`Ziehen an Händen und Tau`,`Wann hast du nachgegeben?`]],
+ [`Verteidigen am Boden`,`Bauchlage halten und umdrehen`,`Die Kinder verteidigen die Bauchlage und drehen den Partner fair um.`,[`Schatzkampf`,`Verteidigen in Bauch- und Bankstellung`,`Tipps zum Festmachen`]],
+ [`Festhalten`,`Haltegriffe am Boden`,`Die Kinder halten den Partner zehn Sekunden fest und befreien sich.`,[`Mausefalle`,`Haltegriff und Befreien`,`Was war fair?`]],
+ [`Schiedsrichter sein`,`Regeln überwachen`,`Die Kinder leiten einen Kampf als Schiedsrichter und achten auf das Ritual.`,[`Ritualprobe`,`Kämpfe zu dritt mit Schiedsrichter`,`Rückmeldung des Schiedsrichters`]],
+ [`Unser Kampfturnier`,`Kleines Turnier mit Ritual`,`Die Kinder kämpfen fair im Turnier und gehen wertschätzend mit Sieg und Niederlage um.`,[`Aufwärmen`,`Turnier an Stationen`,`Was nehmen wir aus der Reihe mit?`]]]};
+REIHE[`bf5-wk-7`]={ziel:`Die Kinder lernen kleine Spiele mit Ball kennen, erfassen die Spielideen, halten Regeln ein und spielen als Team zusammen.`,st:[
+ [`Fangen und Ticken`,`Fangspiele zur Einstimmung`,`Die Kinder spielen Fangspiele und halten die Regeln ein.`,[`Kettenticken`,`Schwänzchen-Fangen`,`Regeln besprechen`]],
+ [`Ball zu zweit`,`Zuwerfen und Fangen`,`Die Kinder werfen und fangen zu zweit sicher.`,[`Ballgewöhnung`,`Partnerwerfen mit Aufgaben`,`Tipps zum Fangen`]],
+ [`Freilaufen`,`Tigerball und Parteiball`,`Die Kinder laufen sich frei und spielen den Ball zu.`,[`Zehnerball`,`Tigerball, Parteiball`,`Wo stehst du frei?`]],
+ [`Linienball`,`Zuspiel und freier Raum`,`Die Kinder spielen Linienball mit Freilaufen und Zuspiel.`,[`Zehnerball`,`Linienball erleben, Prinzipien, Drei-Kinder-Regel`,`Beteiligung reflektieren`]],
+ [`Lebende Wand`,`Durchkommen gegen eine Wand`,`Die Kinder durchlaufen die lebende Wand und verteidigen als Gruppe.`,[`Fangspiel`,`Lebende Wand`,`Wie kommt man durch?`]],
+ [`Brennball`,`Laufen, Werfen, Fangen im Spiel`,`Die Kinder spielen Brennball und erfassen die Spielidee.`,[`Laufspiel`,`Brennball vereinfacht`,`Regeln prüfen`]],
+ [`Völkerball`,`Treffen und Ausweichen`,`Die Kinder spielen Völkerball fair mit Variationen.`,[`Ausweichspiel`,`Völkerball mit Variationen`,`Was ist fair?`]],
+ [`Wir verändern ein Spiel`,`Regeln anpassen`,`Die Kinder verändern eine Regel so, dass alle mitspielen.`,[`Lieblingsspiel`,`Regel verändern und testen`,`Vorstellen der Regel`]],
+ [`Spielefest`,`Lieblingsspiele der Klasse`,`Die Kinder spielen ihre Lieblingsspiele und gehen mit Sieg und Niederlage um.`,[`Aufwärmen`,`Spielstationen`,`Abschlussrunde`]]]};
+REIHE[`bf5-lue-6`]={ziel:`Die Kinder lernen Grundtechniken des Basketballs und spielen Mini-Basketball und Easybasket in vereinfachter Form regelgerecht.`,st:[
+ [`Ball und Hand`,`Prellen im Stand und in Bewegung`,`Die Kinder prellen mit beiden Händen und schauen dabei hoch.`,[`Ballgewöhnung`,`Prellparcours`,`Tipps zum Prellen`]],
+ [`Passen und Fangen`,`Druckpass und Bodenpass`,`Die Kinder passen sicher zu zweit und in Bewegung.`,[`Prellfangen`,`Passformen`,`Welcher Pass wann?`]],
+ [`Treffen wir den Korb?`,`Korbwurf aus der Nähe`,`Die Kinder werfen mit Ellenbogen zum Korb und treffen öfter.`,[`Prellen mit Stopp`,`Freies Werfen, Formel, Linienwerfen, 3 gegen 3`,`Treffer vergleichen`]],
+ [`Korbleger`,`Zwei Schritte und Wurf`,`Die Kinder führen den Korbleger aus dem Prellen aus.`,[`Rhythmus rechts, links, hoch`,`Korbleger an Stationen`,`Partnerfeedback`]],
+ [`Angreifen und Verteidigen`,`1 gegen 1, 2 gegen 1`,`Die Kinder setzen sich im Zweikampf durch und verteidigen fair.`,[`Schattenlaufen`,`1 gegen 1 auf Korb`,`Regel Foul`]],
+ [`Easybasket`,`Spielform ohne Körperkontakt`,`Die Kinder spielen Easybasket regelgerecht.`,[`Passspiel`,`Easybasket 4 gegen 4`,`Regeln prüfen`]],
+ [`Mini-Basketball`,`Regeln und Positionen`,`Die Kinder spielen 3 gegen 3 mit einfachen Regeln.`,[`Wurfstationen`,`3 gegen 3 Turnierform`,`Was hat geholfen?`]],
+ [`Basketball-Turnier`,`Abschluss`,`Die Kinder spielen fair im Turnier und reflektieren die Reihe.`,[`Aufwärmen`,`Turnier`,`Rückblick`]]]};
+REIHE[`bf6-lue-8`]={ziel:`Die Kinder üben die Aufgaben der Bundesjugendspiele Turnen an Stationen, schätzen ihr Können ein und nehmen am Wettbewerb teil.`,st:[
+ [`Die Stationen kennenlernen`,`Aufbau und Regeln`,`Die Kinder bauen Stationen nach Plan auf und erproben sie.`,[`Geräte benennen`,`Stationen erproben`,`Regeln sammeln`]],
+ [`Balancieren und Rollen`,`Zwei Stationen vertiefen`,`Die Kinder balancieren sicher und rollen an der Schräge.`,[`Spannungsspiele`,`Balancier- und Rollstationen`,`Was hilft beim Balancieren?`]],
+ [`Fit für die Bundesjugendspiele Turnen`,`Alle Stationen üben`,`Die Kinder üben an sechs Stationen und schätzen sich ein.`,[`Turnpositionen`,`Erleben, Merkmale, Stationsbetrieb`,`Smiley-Karten`]],
+ [`Generalprobe`,`Ablauf wie im Wettbewerb`,`Die Kinder durchlaufen die Stationen im Wettbewerbsablauf.`,[`Aufwärmen`,`Probedurchgang mit Punkten`,`Was übe ich noch?`]],
+ [`Bundesjugendspiele Turnen`,`Wettbewerb`,`Die Kinder zeigen ihre Aufgaben im Wettbewerb.`,[`Gemeinsames Aufwärmen`,`Wettbewerb`,`Urkunden`]]]};
+REIHE[`bf6-gd-7`]={ziel:`Die Kinder erfinden und probieren Kunststücke mit Kleingeräten aus, verbinden sie zu einer Kür und präsentieren sie.`,st:[
+ [`Das Gymnastikband`,`Schwünge und Kreise`,`Die Kinder erproben Bewegungen mit dem Band.`,[`Band kennenlernen`,`Schlangen, Kreise, Achten`,`Lieblingsbewegung zeigen`]],
+ [`Der Reifen`,`Rollen, Drehen, Springen`,`Die Kinder erfinden Kunststücke mit dem Reifen.`,[`Reifenspiel`,`Kunststücke erproben`,`Ideen sammeln`]],
+ [`Das Seil`,`Springen und Schwingen`,`Die Kinder springen allein und zu zweit mit dem Seil.`,[`Seilspiele`,`Sprungformen`,`Tipps teilen`]],
+ [`Bälle`,`Werfen, Fangen, Prellen`,`Die Kinder führen Kunststücke mit dem Ball aus.`,[`Ballgewöhnung`,`Kunststücke an Stationen`,`Bestes Kunststück zeigen`]],
+ [`Unsere Kür mit dem Tuch`,`Tuch und Ball zur Kür verbinden`,`Die Kinder verbinden drei Kunststücke zu einer Kür.`,[`Tuchwerfen`,`Erfinden, Kriterien, Kür üben und zeigen`,`Was verbessern wir?`]],
+ [`Unsere Präsentation`,`Vorführung vor Zuschauern`,`Die Kinder präsentieren ihre Kür vor einer anderen Klasse.`,[`Generalprobe`,`Präsentation`,`Rückblick auf die Reihe`]]]};
+REIHE[`bf6-gd-8`]={ziel:`Die Kinder bauen Partner- und Gruppenpyramiden sicher, auch mit Hilfsmitteln, gestalten eine Präsentation und halten die Pyramidenregeln ein.`,st:[
+ [`Körperspannung`,`Spannungsspiele`,`Die Kinder halten Spannung in Brett und Bank.`,[`Baumstamm`,`Spannungsstationen`,`Was ist Spannung?`]],
+ [`Bankstellung und Bankticken`,`Basis der Pyramide`,`Die Kinder bilden eine stabile Bankstellung und tragen ein Partnerkind.`,[`Bankticken`,`Partnerübungen`,`Regeln der Basis`]],
+ [`Pyramidenregeln`,`Tragfähige Punkte und Sichern`,`Die Kinder benennen die Pyramidenregeln und halten sie ein.`,[`Bankstellung`,`Zweierpyramiden`,`Regelplakat`]],
+ [`Dreierpyramiden`,`Mehr Kinder, mehr Ordnung`,`Die Kinder bauen Dreierpyramiden mit Auf- und Abbau.`,[`Spannungsspiel`,`Karten nachbauen`,`Ablauf klären`]],
+ [`Gruppenpyramiden`,`Vier bis sechs Kinder`,`Die Kinder bauen Gruppenpyramiden sicher auf und ab.`,[`Bankticken`,`Gruppenpyramiden`,`Prüfen mit Regeln`]],
+ [`Pyramiden mit Bank und Kasten`,`Hilfsmittel nutzen`,`Die Kinder bauen Pyramiden mit Hilfsmitteln und sichern.`,[`Bankticken`,`Karten, Prinzipien, eigene Pyramide`,`Verantwortung reflektieren`]],
+ [`Übergänge`,`Von Pyramide zu Pyramide`,`Die Kinder verbinden zwei Pyramiden mit einem Übergang.`,[`Wiederholung`,`Übergänge gestalten`,`Was war flüssig?`]],
+ [`Unsere Vorführung planen`,`Musik und Ablauf`,`Die Kinder planen eine Vorführung mit Musik.`,[`Aufwärmen`,`Gestalten in Gruppen`,`Probe`]],
+ [`Akrobatik-Show`,`Präsentation`,`Die Kinder präsentieren ihre Akrobatik vor Publikum.`,[`Generalprobe`,`Show`,`Rückblick`]]]};
+REIHE[`bf7-lue-6`]={ziel:`Die Kinder springen Gummitwist-Folgen im Rhythmus von Versen, springen synchron, entwickeln eigene Folgen und präsentieren sie.`,st:[
+ [`Welche Bewegungsmöglichkeiten findest du mit dem Gummitwist?`,`Materialkunde, Gefahren, freies Erproben`,`Die Kinder erproben Bewegungen am Gummi und nennen Regeln für den sicheren Umgang.`,[`Hüpfspiele`,`freies Erproben in Dreiergruppen`,`Regeln sammeln`]],
+ [`Welche Sprünge kannst du am Gummitwist springen?`,`Grundsprünge benennen und üben`,`Die Kinder benennen und springen rein, raus, drauf und Grätsche.`,[`Rhythmusspiel`,`Grundsprünge mit Bildkarten`,`Lieblingssprung zeigen`]],
+ [`Sprünge zur Folge zusammensetzen`,`Erste Sprungfolgen zum Vers, Höhenstufen`,`Die Kinder springen eine Folge im Rhythmus auf steigenden Stufen.`,[`Hüpfen im Takt`,`Erleben, Merkmale, Stufenspringen`,`Stufen vergleichen`]],
+ [`Wie schaffen wir es, eine Sprungfolge synchron zu springen?`,`Synchron springen`,`Die Kinder springen zu zweit eine Folge gleichzeitig.`,[`Spiegel`,`Synchron springen`,`Was hilft?`]],
+ [`Was brauchen wir für eine geeignete Sprungfolge?`,`Eigene Folgen entwickeln`,`Die Kinder entwickeln in Gruppen eine eigene Folge zu einem Vers oder zur Musik.`,[`Wiederholung`,`Gestalten`,`Probe`]],
+ [`Was müssen wir für unseren Auftritt beachten?`,`Präsentation üben`,`Die Kinder üben ihre Folgen für den Auftritt.`,[`Aufwärmen`,`Generalprobe`,`Tipps der Zuschauer`]],
+ [`Wie fühlt sich die Präsentation vor einem großen Publikum an?`,`Präsentation`,`Die Kinder präsentieren ihre Folgen vor Publikum.`,[`Aufwärmen`,`Vorführung`,`Rückblick`]]]};
+REIHE[`bf7-we-5`]={ziel:`Die Kinder lernen Aerobic- und Stepaerobic-Grundschritte, verbinden sie zu Folgen im Takt der Musik und präsentieren eine Gruppenchoreografie.`,st:[
+ [`Bewegen im Takt`,`Takt hören und zählen`,`Die Kinder bewegen sich im Takt und zählen in Achtern.`,[`Musikstopp`,`Marschieren und Zählen`,`Puls fühlen`]],
+ [`Aerobic-Grundschritte`,`V-Step, Grapevine`,`Die Kinder führen Grundschritte im Takt aus.`,[`Marsch`,`Schritte lernen`,`Welcher Schritt war leicht?`]],
+ [`Arme dazu`,`Koordination Arme und Beine`,`Die Kinder verbinden Schritte mit Armbewegungen.`,[`Grundschritte`,`Armvarianten`,`Vorturnen`]],
+ [`Step auf der Turnmatte`,`Stepaerobic-Grundschritte`,`Die Kinder führen Basic Step, V-Step und Knee-up im Takt aus.`,[`Grundschritte am Boden`,`Erleben, Takt-Hilfen, Folge aus vier Achtern`,`Puls vergleichen`]],
+ [`Stepfolge`,`Acht Achter`,`Die Kinder verbinden eine längere Folge.`,[`Wiederholung`,`Folge üben`,`Wer zählt?`]],
+ [`Richtungswechsel`,`Um die Matte`,`Die Kinder wechseln die Richtung in der Folge.`,[`Aufwärmen`,`Richtungswechsel`,`Was war schwierig?`]],
+ [`Eigene Achter`,`Gruppen erfinden`,`Die Kinder erfinden in Gruppen einen eigenen Achter.`,[`Folge`,`Gestalten`,`Zeigen`]],
+ [`Choreografie`,`Zusammenfügen`,`Die Kinder fügen die Achter zu einer Choreografie zusammen.`,[`Aufwärmen`,`Üben in Gruppen`,`Probe`]],
+ [`Aerobic-Show`,`Präsentation`,`Die Kinder präsentieren ihre Choreografie.`,[`Generalprobe`,`Show`,`Rückblick`]]]};
+REIHE[`bf8-gd-5`]={ziel:`Die Kinder lernen kindgerechte Yogahaltungen, spüren Anspannung und Entspannung und gestalten eigene Haltungen.`,st:[
+ [`Mein Körper und ich`,`Erste Haltungen`,`Die Kinder nehmen Baum, Katze, Hund und Kerze ein.`,[`Klangschalenritual`,`Haltungen kennenlernen`,`Ruhephase`]],
+ [`Yoga-Reise in den Zoo`,`Tierhaltungen in einer Geschichte`,`Die Kinder halten Tierhaltungen und erfinden eigene.`,[`Tiergang`,`Erleben, Merkmale, Yoga-Geschichte`,`Ruhephase`]],
+ [`Yoga zu zweit`,`Partnerhaltungen`,`Die Kinder führen Partnerhaltungen aus.`,[`Spiegel`,`Partneryoga`,`Rückenbild`]],
+ [`Unser Yoga-Ablauf`,`Eigene Folge`,`Die Kinder gestalten einen kurzen Yoga-Ablauf.`,[`Ritual`,`Gestalten in Gruppen`,`Gemeinsamer Ablauf`]]]};
+REIHE[`bf8-lue-6`]={ziel:`Die Kinder erleben hochintensives Intervalltraining mit dem eigenen Körpergewicht, nehmen Belastung und Erholung wahr und gestalten eine eigene Tabata-Runde.`,st:[
+ [`Übungen mit dem eigenen Körper`,`Übungen kennenlernen`,`Die Kinder führen sechs Übungen sauber aus.`,[`Puls fühlen`,`Übungen an Stationen`,`Was war anstrengend?`]],
+ [`Tabata: 20 Sekunden Vollgas`,`Intervallformat`,`Die Kinder belasten sich im Tabata-Intervall und vergleichen den Puls.`,[`Lockeres Laufen`,`Erleben, Merkmale, Stationen`,`Erholungspuls`]],
+ [`Unsere Tabata-Runde`,`Gruppen stellen eine Runde zusammen`,`Die Kinder planen eine Runde mit acht Übungen.`,[`Aufwärmen`,`Planen und ausprobieren`,`Vorstellen`]],
+ [`Fitness-Challenge`,`Runden der Gruppen`,`Die Kinder führen die Runden der anderen Gruppen aus.`,[`Aufwärmen`,`Gruppenrunden`,`Rückblick`]]]};
+
 const FIXED=null;
 const BF={1:`Laufen, Springen und Werfen`,2:`Gleiten, Fahren und Rollen`,3:`Bewegen im Wasser`,4:`Kämpfen und Verteidigen`,5:`Spielen`,6:`Bewegen an und von Geräten`,7:`Rhythmisches und tänzerisches Bewegen`,8:`Fitness und achtsames Bewegen`};
 const KB={LÜ:[`Leisten und Üben`,`#1d4ed8`,`Leistung`],GD:[`Gestalten und Darstellen`,`#9d174d`,`Gestaltung, Ausdruck`],EW:[`Erkunden und Wagen`,`#b45309`,`Wagnis`],WK:[`Wettkämpfen und Kooperieren`,`#0c6b4e`,`Miteinander`],WE:[`Wahrnehmen und Erfahren`,`#6d28d9`,`Eindruck, Körpererfahrung`]};
@@ -7871,6 +8591,9 @@ dguvschwimmen:`Deutsche Gesetzliche Unfallversicherung. (2018). Schwimmen lehren
 neumann:`Neumann, P. (1999). Das Wagnis im Sport: Grundlagen und pädagogische Forderungen. Hofmann. [prüfen]`,
 krick:`Krick, F., & Walther, C. (2014). Parkoursport: Le Parkour & Freerunning für Schule und Verein. Limpert.`,
 ukh:`Unfallkasse Hessen. (o. J.). Parkour: Sicherheitstipps [Broschüre; Titel und Jahr prüfen]. Unfallkasse Hessen.`,
+busch:`Busch, F. (2006). Ringen und Kämpfen: Ideen, Hintergründe und Praxisbeispiele für den Sportunterricht in der Grundschule. Auer.`,
+lange07:`Lange, H., & Sinning, S. (2007). Kämpfen, Ringen und Raufen im Sportunterricht. Limpert.`,
+fncs:`Fridtjof-Nansen-Grundschule. (o. J.). Fachcurriculum Sport [Unveröffentlichtes schulinternes Dokument, erarbeitet mit dem LI-Arbeitsbereich Bewegung & Sport]. [prüfen: Jahr]`,
 fng24:`Fridtjof-Nansen-Grundschule. (2024). Stoffverteilungsplan Sport [Unveröffentlichtes schulinternes Dokument].`,
 fngrp:`Fridtjof-Nansen-Grundschule. (o. J.). Rahmenplan für relevante Besonderheiten [Unveröffentlichtes schulinternes Dokument].`,
 borg:`Borg, G. (1998). Borg's perceived exertion and pain scales (Borgs Skalen für Anstrengungs- und Schmerzempfinden). Human Kinetics.`};
@@ -8746,10 +9469,10 @@ function lgDemo(){const names=['Ali K.','Mia S.','Jonas B.','Lea M.','Tom W.','E
 document.addEventListener('click',e=>{const c=e.target.closest('[data-to]');if(!c)return;const el=document.getElementById(c.dataset.to);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})});
 document.addEventListener('input',e=>{if(e.target.id==='kidq')kidSearch(e.target.value)});
 
-// Schulcurriculum der Fridtjof-Nansen-Grundschule (Stoffverteilungsplan Dezember 2024 und Rahmenplan für relevante Besonderheiten)
+// Schulcurriculum der Fridtjof-Nansen-Grundschule (Fachcurriculum Sport FNS mit Stoffverteilungsplan, Rahmenplan für relevante Besonderheiten und exemplarischen Unterrichtsvorhaben)
 const CURR={
 schule:`Fridtjof-Nansen-Grundschule`,
-stand:`Stoffverteilungsplan Sport, Stand Dezember 2024, und Rahmenplan für relevante Besonderheiten`,
+stand:`Fachcurriculum Sport FNS mit Rahmenplan für relevante Besonderheiten, Stoffverteilungsplan je Jahrgang und exemplarischen Unterrichtsvorhaben`,
 regel:[`In den vier Schuljahren soll jedes Bewegungsfeld jeweils einmal unterrichtet werden.`,`Pro Schulhalbjahr werden in der Regel zwei Bewegungsfelder berücksichtigt.`,`In Klasse 1 und 2 liegt der Schwerpunkt auf Spielen, Bewegen an und mit Geräten, Laufen, Springen, Werfen sowie Tanzen, Inszenieren und Präsentieren.`,`K1 bis K4 kennzeichnen die fachlichen Kompetenzen des Plans. E kennzeichnet Kompetenzen, die die Schule für ihre Schülerschaft selbst formuliert hat. Die überfachlichen Kompetenzen gehören zu jedem Bewegungsfeld.`],
 rhythmus:[[`Erleben`,`Die Kinder probieren frei aus und entdecken eigene Lösungen.`],[`Austauschen`,`Sie erzählen, was sie beobachtet haben, und vergleichen.`],[`Verstehen`,`Die Lehrkraft bündelt die Beobachtungen zu wenigen Merkmalen oder Prinzipien.`],[`Anwenden`,`Die Kinder üben mit dem neuen Wissen und setzen es im Spiel oder in einer Aufgabe ein.`]],
 leit:[
@@ -8758,44 +9481,45 @@ leit:[
  [`Erfahrung und Reflexion im Wechsel`,`Offene und gelenkte Phasen pendeln. Das hält die Motivation hoch und schafft Klarheit.`,`„Findet drei verschiedene Wege, über die Bank zu balancieren.“ Danach benennt die Lehrkraft Körperschwerpunkt und Gegenbewegung.`],
  [`Soziales Lernen durch Handeln`,`Aufgaben verlangen Zusammenarbeit. Auch weniger leistungsstarke Kinder tragen über Teamrollen bei. Das stärkt das Wir-Gefühl.`,`Alle müssen „über den Fluss“, ohne den Boden zu berühren.`],
  [`Unsere Schülerschaft`,`Die Lerngruppen sind sehr heterogen, die Motivation ist teils schwierig. Offene, spielerische Einstiege binden alle ein und vermeiden Überforderung.`,`Gemeinsames Erleben stärkt besonders Kinder mit Unsicherheiten oder wenig Bewegungserfahrung.`],
- [`Vorentlastung und Reflexion`,`Einfache Einstiegsaufgaben öffnen den Zugang. In Reflexionsphasen ordnet die Lehrkraft die Erfahrungen der Kinder.`,`Nach einem Fangspiel nennen die Kinder Strategien, die Lehrkraft formuliert daraus zwei Prinzipien.`]],
+ [`Vorentlastung und Reflexion`,`Einfache Einstiegsaufgaben öffnen den Zugang. In Reflexionsphasen ordnet die Lehrkraft die Erfahrungen der Kinder.`,`Nach einem Fangspiel nennen die Kinder Strategien, die Lehrkraft formuliert daraus zwei Prinzipien.`],
+ [`Schulausblick`,`Der Sportunterricht soll lebendig, strukturiert, differenzierend, motivierend und gemeinschaftsfördernd sein. Gemeinsame Leitlinien geben trotz unterschiedlicher Lehrstile einen roten Faden durch alle Jahrgänge.`,`Jede Stunde folgt dem Rhythmus Erleben, Austauschen, Verstehen, Anwenden, auch in Prüfungs- und Präsentationsstunden.`]],
 events:[
  [`Eingangswochen`,`Zum Schuljahresbeginn: handlungsorientierte Spielformen, soziales Lernen, Wir-Gefühl.`],
- [`Psychomotorische Bewegungslandschaft`,`Pro Klasse eine Stunde wöchentlich in der Turnhalle, alle Jahrgänge.`],
- [`Schulschwimmen`,`Laut Rahmenplan in Jg. 1 bis 3. Der Stoffverteilungsplan nennt für Klasse 4 halbjährlichen Unterricht durch Bäderland. [mit der Fachschaft klären]`],
- [`Sportfest`,`Bundesjugendspiele, Turnen und Leichtathletik im jährlichen Wechsel.`],
+ [`Psychomotorische Bewegungslandschaften`,`Laufen in allen Jahrgängen parallel zu den Unterrichtsvorhaben, pro Klasse eine Stunde wöchentlich in der Turnhalle.`],
+ [`Schulschwimmen`,`Jg. 1 bis 3, parallel zu den Unterrichtsvorhaben. Im Stoffverteilungsplan steht Schwimmen auch in Jahrgang 4 als parallele Spalte. [mit der Fachschaft klären]`],
+ [`Sportfest`,`Bundesjugendspiele, Turnen und Leichtathletik im jährlichen Wechsel. Im Stoffverteilungsplan: BJS Turnen in Jg. 1 und 3, BJS Leichtathletik in Jg. 2 und 4.`],
  [`Fußballturnier`,`Jahrgang 3 und 4.`],
- [`Das Zehntel`,`Kinder- und Jugendlauf über 4,2 km am Tag vor dem Hamburg-Marathon, Ende April.`],
+ [`Das Zehntel und Sponsorenlauf`,`Kinder- und Jugendlauf über 4,2 km am Tag vor dem Hamburg-Marathon, Ende April. „Vom Laufen zum Ausdauerlauf“ in Jg. 1 und 3 bereitet den Sponsorenlauf vor.`],
  [`Hamburger Parcours`,`Durchführung zum Ende von Klasse 2.`]],
 V:[
  {id:`12-sp`,jg:`1/2`,bf:5,name:`Spielen`,
   komp:[`eine Spielidee erfassen, erklären und umsetzen (K2)`,`Spielregeln vereinbaren und einhalten (K4)`,`miteinander und gegeneinander fair spielen (K4)`,`frei spielen können (K2)`,`Spielideen entwickeln (K2)`,`bewusst mit eigenen Emotionen wie Frust, Freude und Enttäuschung in sportlichen Situationen umgehen (E)`,`sich in die Emotionen anderer einfühlen und angemessen darauf reagieren (E)`,`ein starkes Gemeinschaftsgefühl durch gegenseitige Unterstützung und das Wertschätzen gemeinsamer Erfolge entwickeln (E)`,`Solidarität und Zusammenhalt fördern (E)`],
-  inhalte:[`Ticker- und Fangspiele`,`einfache Laufspiele`,`einfache Ballspiele`,`erlebnispädagogische Spiele und kooperative Spielformen`],
-  ideen:[`Ketten-, Brücken-, Würfelticken`,`Schwänzchen-Fangen`,`Katz und Maus`,`Hase und Jäger`,`Obstsalat`,`Plumpsack`,`Affenkrankenhaus`,`Schwarz-Weiß`,`Chinesische Mauer`,`Fischer, Fischer`,`Feuer, Wasser, Sturm`,`Sitzfußball`,`Halli, Hallo`,`Tigerball`,`Brennball`,`Countdown`,`Völkerball in Variationen`]},
+  inhalte:[`Regeln und Rituale, kooperieren`,`Kleine Spiele in Stufen zur allgemeinen Spielfähigkeit (Jg. 2)`,`Ticken und Fangenspiele (Jg. 1)`,`komplexere Spiele wie Brennball (Jg. 2)`,`Ticker- und Fangspiele`,`einfache Laufspiele`,`einfache Ballspiele`,`erlebnispädagogische Spiele und kooperative Spielformen`],
+  ideen:[`Linienball`,`Lebende Wand`,`Treffball`,`Strohpuppe`,`Ketten-, Brücken-, Würfelticken`,`Schwänzchen-Fangen`,`Katz und Maus`,`Hase und Jäger`,`Obstsalat`,`Plumpsack`,`Affenkrankenhaus`,`Schwarz-Weiß`,`Chinesische Mauer`,`Fischer, Fischer`,`Feuer, Wasser, Sturm`,`Sitzfußball`,`Halli, Hallo`,`Tigerball`,`Brennball`,`Countdown`,`Völkerball in Variationen`]},
  {id:`12-ge`,jg:`1/2`,bf:6,name:`Bewegen an und mit Geräten`,
   komp:[`unterschiedliche Körpererfahrungen machen (K1, K3)`,`Gerätekombinationen erstellen, kombinieren und präsentieren (K1, K3)`,`mit Wagnis umgehen (K3)`,`eigene Bewegungsformen mit und an Geräten finden und erproben (K1, K2, K3)`,`turnerische Bewegungen erlernen`,`Körpergewicht stützen (K1)`,`akrobatische Bewegungen realisieren (K1)`,`den eigenen Wurf- und Fangrhythmus finden (K1)`,`kleine Geräte benennen, aufbauen und transportieren (K3)`],
-  inhalte:[`schaukeln und schwingen`,`klettern`,`rollen`,`rutschen`,`Sprünge von verschiedenen Geräten`,`balancieren`,`Rolle vorwärts`,`Handstütz`,`am Barren stützen`,`Grundformen der Akrobatik, Haltegriffe und Sicherheitsmaßnahmen`,`Tücher jonglieren`,`Aufbaupläne umsetzen`],
-  ideen:[`psychomotorische Bewegungslandschaft`,`themenbezogene Gerätelandschaft (Dschungel)`,`Stationsarbeit`,`umgedrehte Bank, Balanciersteine`,`Schubkarre`,`Pyramidenkarteikarten`,`Teller jonglieren`,`Aufwärmspiel zu Materialeigenschaften: bei Musikstopp „Berühre mit dem rechten Ellenbogen etwas aus Holz.“`]},
+  inhalte:[`Bundesjugendspiele Turnen an Stationen (Jg. 1)`,`Gerätekombinationen erstellen, kombinieren und präsentieren (Jg. 1)`,`Bewegungslandschaften (Jg. 2)`,`schaukeln und schwingen`,`klettern`,`rollen`,`rutschen`,`Sprünge von verschiedenen Geräten`,`balancieren`,`Rolle vorwärts`,`Handstütz`,`am Barren stützen`,`Grundformen der Akrobatik, Haltegriffe und Sicherheitsmaßnahmen`,`Tücher jonglieren`,`Aufbaupläne umsetzen`],
+  ideen:[`BJS-Stationen Rollen, Gehen, Rutschen, Balancieren`,`Kunststücke mit Band, Tuch, Reifen, Seil und Bällen`,`psychomotorische Bewegungslandschaft`,`themenbezogene Gerätelandschaft (Dschungel)`,`Stationsarbeit`,`umgedrehte Bank, Balanciersteine`,`Schubkarre`,`Pyramidenkarteikarten`,`Teller jonglieren`,`Aufwärmspiel zu Materialeigenschaften: bei Musikstopp „Berühre mit dem rechten Ellenbogen etwas aus Holz.“`]},
  {id:`12-ta`,jg:`1/2`,bf:7,name:`Tanzen, Inszenieren und Präsentieren`,
   komp:[`Rhythmen in entsprechende Bewegungen umsetzen (K2)`,`Bewegungen mit und ohne Kleingeräte gestalten und präsentieren (K2)`],
-  inhalte:[`sich nach einem eindeutigen Takt (Trommel) bewegen`,`sich pantomimisch in unterschiedlichen Rollen erkennbar bewegen`,`einfache Formen des Seilspringens vorführen`,`zu unterschiedlicher Musik und Rhythmen bewegen`,`einfache Tänze erlernen und präsentieren`],
-  ideen:[`Bewegungslieder`,`Bewegen wie Tiere (Pantomime)`,`Bewegungsgeschichten`,`Seilspringdiplom`,`Kindertanz`]},
+  inhalte:[`Tanzen in rhythmischen Bewegungen (Jg. 1)`,`Seilspringen (Jg. 2)`,`Gefühle tänzerisch darstellen (Jg. 2)`,`sich nach einem eindeutigen Takt (Trommel) bewegen`,`sich pantomimisch in unterschiedlichen Rollen erkennbar bewegen`,`einfache Formen des Seilspringens vorführen`,`zu unterschiedlicher Musik und Rhythmen bewegen`,`einfache Tänze erlernen und präsentieren`],
+  ideen:[`Gummitwist`,`Bewegungslieder`,`Bewegen wie Tiere (Pantomime)`,`Bewegungsgeschichten`,`Seilspringdiplom`,`Kindertanz`]},
  {id:`12-ak`,jg:`1/2`,bf:8,name:`Anspannen, Entspannen und Kräftigen`,
   komp:[`sich mit dem eigenen Körper vertraut machen (K1)`,`Körperteile benennen können`,`Spannung und Entspannung spüren (K1, K3)`,`die Veränderbarkeit konditioneller und koordinativer Fähigkeiten erfahren (K1)`,`einen Test zur Fitness und körperlichen Leistungsfähigkeit absolvieren (K1)`],
-  inhalte:[`lockern, dehnen, kräftigen, z. B. Steifer Mann, Baumstamm`,`Vertrauensspiele`,`Fantasiereise`,`Reise durch den Körper`,`Yogaübungen`,`Übungen zur Fitness`,`Hamburger Parcours zum Ende der 2. Klasse`],
-  ideen:[`Pizza backen`,`Autowaschanlage`,`Schneemann`,`Rückenbilder`,`Sandwich`,`Roboterspiel`,`Das macht uns fit: Übungen an Sprossenwand, kleinem und großem Kasten`]},
+  inhalte:[`Yoga für Kinder (Jg. 1)`,`Übungen zur Körperwahrnehmung (Jg. 2)`,`lockern, dehnen, kräftigen, z. B. Steifer Mann, Baumstamm`,`Vertrauensspiele`,`Fantasiereise`,`Reise durch den Körper`,`Yogaübungen`,`Übungen zur Fitness`,`Hamburger Parcours zum Ende der 2. Klasse`],
+  ideen:[`Yoga-Geschichten mit Tierhaltungen`,`Klangschalenritual`,`Pizza backen`,`Autowaschanlage`,`Schneemann`,`Rückenbilder`,`Sandwich`,`Roboterspiel`,`Das macht uns fit: Übungen an Sprossenwand, kleinem und großem Kasten`]},
  {id:`12-lsw`,jg:`1/2`,bf:1,name:`Laufen, Springen, Werfen`,
   komp:[`vielfältige Lauferfahrungen sammeln (K1)`,`das Laufen unterschiedlichen Bedingungen anpassen (K1, K4)`,`im schnellen, zielstrebigen Laufen Gegenständen oder Personen ausweichen (K1, K4)`,`mit unterschiedlichen Materialien und Bällen werfen (K1)`,`Bälle einhändig gegen eine Wand werfen und den abprallenden Ball fangen (K1)`,`kontrolliert werfen (K1)`,`in die Weite und Höhe springen und sicher landen (K1, K4)`],
-  inhalte:[`Tiergangarten nachahmen`,`Laufen durch einen Hindernisparcours`,`Spiele zum ausdauernden Laufen, 8-Minuten-Lauf`,`Ausdauertraining in spielerischer Form`,`Ballproben, Partnerwerfen, Weitwurf, Wurfstationen`,`beidbeiniges und einbeiniges Springen, Seilspringen`,`aus dem Anlauf vom Sprungbrett über ein Hindernis auf eine dicke Matte springen`],
-  ideen:[`Memory-Lauf`,`Zahlen-Lauf`,`Puzzle-Lauf`,`Luftballon-Lauf`,`Joggi bunt`,`Zeitschätzspiele`,`Tennisballtransport`,`Strichlisten-Lauf`,`Bundesjugendspiele`,`alternatives Sportfest`,`Schweifkorken oder Flatterball basteln`,`Minitrampolin`,`über den Bock springen`]},
+  inhalte:[`Vom Laufen zum Ausdauerlauf, Vorbereitung Sponsorenlauf (Jg. 1)`,`BJS Leichtathletik (Jg. 2)`,`Zielgerichtetes Werfen (8 Stunden)`,`Tiergangarten nachahmen`,`Laufen durch einen Hindernisparcours`,`Spiele zum ausdauernden Laufen, 8-Minuten-Lauf`,`Ausdauertraining in spielerischer Form`,`Ballproben, Partnerwerfen, Weitwurf, Wurfstationen`,`beidbeiniges und einbeiniges Springen, Seilspringen`,`aus dem Anlauf vom Sprungbrett über ein Hindernis auf eine dicke Matte springen`],
+  ideen:[`Schneemann-Spiel`,`Zombieball`,`Memory-Lauf`,`Zahlen-Lauf`,`Puzzle-Lauf`,`Luftballon-Lauf`,`Joggi bunt`,`Zeitschätzspiele`,`Tennisballtransport`,`Strichlisten-Lauf`,`Bundesjugendspiele`,`alternatives Sportfest`,`Schweifkorken oder Flatterball basteln`,`Minitrampolin`,`über den Bock springen`]},
  {id:`12-gfr`,jg:`1/2`,bf:2,name:`Gleiten, Fahren und Rollen`,
   komp:[`Bewegungserfahrungen mit Roll-, Gleit- und Fahrgeräten sammeln (K1, K3)`,`den sicheren Umgang mit Rollbrettern erlernen und festigen (K1, K4)`,`das dynamische Gleichgewicht halten (K1, K3)`,`Bewegungsabläufe an das Gerät angepasst optimieren (K1, K3)`],
-  inhalte:[`sich nach dem Beschleunigen auf einem rollenden oder gleitenden Gerät bis zum Ausrollen im Gleichgewicht halten`,`sich mit einem rollenden oder gleitenden Gerät kontrolliert fortbewegen, die Richtung ändern und bremsen`],
-  ideen:[`Rollbretter und Teppichfliesen`,`Rollbrettführerschein`,`Rollbrettparcours`]},
+  inhalte:[`Rollbrettführerschein (Jg. 1, 8 Stunden)`,`Spielformen mit dem Rollbrett (Jg. 2)`,`sich nach dem Beschleunigen auf einem rollenden oder gleitenden Gerät bis zum Ausrollen im Gleichgewicht halten`,`sich mit einem rollenden oder gleitenden Gerät kontrolliert fortbewegen, die Richtung ändern und bremsen`],
+  ideen:[`Rollbrett-Curling und Kegeln`,`Autolandschaft mit Waschstation`,`Rollbretter und Teppichfliesen`,`Rollbrettführerschein`,`Rollbrettparcours`]},
  {id:`12-ka`,jg:`1/2`,bf:4,name:`Miteinander kämpfen und Kräfte messen`,
   komp:[`spielerische Kampfformen kennenlernen und anwenden (K1, K3)`,`Regeln beim Kräftemessen festlegen und einhalten (K3, K4)`,`Emotionen spüren und beherrschen (K3)`,`wertschätzend mit Sieg und Niederlage umgehen (K4)`],
-  inhalte:[`Spiele mit viel Körperkontakt gegen Berührungsängste`,`Rangelspiele mit Regeln für alle`,`Kämpfen an Stationen mit Besprechen der Regeln`],
-  ideen:[`Körperspannung wahrnehmen`,`Zieh- und Schiebekämpfe`,`Rücken an Rücken`,`Medizinballziehen`,`Mattenkämpfe`,`Ringkämpfe`,`Schildkröten umdrehen`]},
+  inhalte:[`Miteinander kämpfen (Jg. 1, 10 Stunden): Aufwärmen, Kämpfen, Entspannen`,`Faires Kräftemessen (Jg. 2)`,`Spiele mit viel Körperkontakt gegen Berührungsängste`,`Rangelspiele mit Regeln für alle`,`Kämpfen an Stationen mit Besprechen der Regeln`],
+  ideen:[`Bildkarten und Stationen nach Busch (2006)`,`Körperspannung wahrnehmen`,`Zieh- und Schiebekämpfe`,`Rücken an Rücken`,`Medizinballziehen`,`Mattenkämpfe`,`Ringkämpfe`,`Schildkröten umdrehen`]},
  {id:`12-sw`,jg:`1/2`,bf:3,name:`Schwimmen und Tauchen`,
   komp:[`sich nach festgelegten Schwimmbadregeln verhalten (K3, K4)`,`sich mit dem Bewegungsraum Wasser vertraut machen und ihn als Spielraum nutzen`,`vielfältige Sprungmöglichkeiten erfinden und nachvollziehen`,`vielfältige Bewegungsmöglichkeiten unter Wasser erfinden und nachvollziehen`,`elementare Schwimmtechniken lernen, üben und anwenden`],
   inhalte:[`Spiele zur Wassergewöhnung`,`Übungen zum Gleiten und zur Wasserbewältigung`,`Bewegen mit Hilfsmitteln`,`Spiele gegen die Angst vor dem Wasser`,`Spiele zum Anforderungsprofil Schwimmen`],
@@ -8806,47 +9530,65 @@ V:[
   ideen:[`Pausenhof`,`Ausflüge, Spielplätze, Park`,`Klassenreisen`,`Fußballturniere`,`Hammer Lauf`]},
  {id:`34-sp`,jg:`3/4`,bf:5,name:`Spielen`,
   komp:[`eine Rolle mannschaftsdienlich ausfüllen (K4)`,`mit Sieg und Niederlage wertschätzend umgehen (K4)`,`Mannschaften nach verschiedenen Auswahlverfahren bilden (K4)`,`ein großes Ballspiel in vereinfachter Form regel- und sportartgerecht spielen (K1, K4)`,`Bälle und Schläger im Spiel sachgerecht nutzen (K1)`],
-  inhalte:[`Brennball, Völkerball`,`Spielformen zum Fußball (Minifußball)`,`ein Sportspiel ausführlich: Basketball, Handball, Hockey oder Fußball`,`Wurf- und Fangtechniken`,`Mannschaftsaufgaben besprechen, ausprobieren und verändern`],
-  ideen:[`Spielformen zum Prellen, Fangen und Passen`,`Schwänzchen-Fangen`,`Rückschlagspiele`,`Takeshi`,`Nummernfußball und -handball`,`Gefängnisball`,`Ball über die Schnur`,`Burgball`,`Oktopussi`]},
+  inhalte:[`Regeln und Rituale, kooperieren`,`Hockey (Jg. 3)`,`Fußball und Fußballturnier (Jg. 3)`,`Basketball mit Mini-Basketball und Easybasket (Jg. 4, 8 Stunden)`,`Komplexe Spiele wie Capture the Flag (Jg. 4)`,`Brennball, Völkerball`,`Spielformen zum Fußball (Minifußball)`,`ein Sportspiel ausführlich: Basketball, Handball, Hockey oder Fußball`,`Wurf- und Fangtechniken`,`Mannschaftsaufgaben besprechen, ausprobieren und verändern`],
+  ideen:[`Easybasket`,`Capture the Flag`,`Spielformen zum Prellen, Fangen und Passen`,`Schwänzchen-Fangen`,`Rückschlagspiele`,`Takeshi`,`Nummernfußball und -handball`,`Gefängnisball`,`Ball über die Schnur`,`Burgball`,`Oktopussi`]},
  {id:`34-ge`,jg:`3/4`,bf:6,name:`Bewegen an und mit Geräten`,
   komp:[`unterschiedliche Körpererfahrungen machen (K1, K3)`,`mit Wagnis umgehen (K3)`,`Bewegungsformen variieren, kombinieren und präsentieren (K2)`,`turnerische Bewegungen erlernen und zwei Elemente im Boden- oder Geräteturnen zu einer Übung verbinden und präsentieren (K1, K3)`,`Körpergewicht halten und stützen (K1, K3)`,`akrobatische Kunststücke präsentieren (K2)`,`Gerätekombinationen erstellen, bewältigen und variieren (K3)`,`Geräte benennen, sicher aufbauen und transportieren (K3)`],
-  inhalte:[`psychomotorische Bewegungslandschaft`,`Einzelelemente: Strecksprung, Rolle am Reck, Stützsprung am Bock, Schweineschaukeln an den Ringen`,`zwei verbundene Elemente, z. B. Rolle vorwärts und Strecksprung mit halber Drehung`,`Partnerkunststücke`,`einfache Hilfestellungen`,`Stützsprung aus dem Anlauf über einen Kasten quer mit Sprungbrett oder Minitrampolin`,`Aufbaupläne umsetzen`],
-  ideen:[`Strecksprung mit Drehung`,`Aufhocken am Kasten`,`erste Hilfestellung: Klammergriff, Drehgriff`,`kleines Zirkusprojekt`]},
+  inhalte:[`Bundesjugendspiele Turnen (Jg. 3)`,`Kunststücke mit Kleingeräten erfinden und ausprobieren (Jg. 3)`,`Parcours (Jg. 4)`,`Akrobatik mit Hilfsmitteln (Jg. 4, 9 Stunden)`,`psychomotorische Bewegungslandschaft`,`Einzelelemente: Strecksprung, Rolle am Reck, Stützsprung am Bock, Schweineschaukeln an den Ringen`,`zwei verbundene Elemente, z. B. Rolle vorwärts und Strecksprung mit halber Drehung`,`Partnerkunststücke`,`einfache Hilfestellungen`,`Stützsprung aus dem Anlauf über einen Kasten quer mit Sprungbrett oder Minitrampolin`,`Aufbaupläne umsetzen`],
+  ideen:[`Bankticken`,`Pyramiden-Regeln`,`Strecksprung mit Drehung`,`Aufhocken am Kasten`,`erste Hilfestellung: Klammergriff, Drehgriff`,`kleines Zirkusprojekt`]},
  {id:`34-ta`,jg:`3/4`,bf:7,name:`Tanzen, Inszenieren und Präsentieren`,
   komp:[`Musik hören und sich frei danach bewegen (K2)`,`Bewegungen mit oder ohne Materialien gestalten (K2)`,`Tänze erlernen, Bewegungsgestaltungen inszenieren und präsentieren (K2)`,`Darstellungsfreude, Gemeinschaftserlebnis und gegenseitige Akzeptanz erfahren (K2, K4)`],
-  inhalte:[`freies Bewegen mit Materialien, z. B. Tücher`,`Bewegungsgeschichten`,`einen Tanz in Kleingruppen erarbeiten und präsentieren`],
-  ideen:[`Aufwärmen nach Musik`,`Bewegungslieder`,`Großgruppentanz`,`Präsentation auf der offenen Bühne, bei der Spaßolympiade oder beim Sommerfest`]},
+  inhalte:[`Rhythmisches Gummitwist (Jg. 3, 7 Stunden)`,`Aerobic und Stepaerobic an Turnmatten (Jg. 4, 9 Stunden)`,`freies Bewegen mit Materialien, z. B. Tücher`,`Bewegungsgeschichten`,`einen Tanz in Kleingruppen erarbeiten und präsentieren`],
+  ideen:[`Basic Step, V-Step, Knee-up`,`Aufwärmen nach Musik`,`Bewegungslieder`,`Großgruppentanz`,`Präsentation auf der offenen Bühne, bei der Spaßolympiade oder beim Sommerfest`]},
  {id:`34-ak`,jg:`3/4`,bf:8,name:`Anspannen, Entspannen und Kräftigen`,
   komp:[`den Wechsel von Anspannung und Entspannung erfahren und bewusst hervorrufen (K1, K3)`,`die Reaktionen des Körpers vor, bei und nach Belastung und Entspannung wahrnehmen und beschreiben (K1)`,`die Veränderbarkeit konditioneller und koordinativer Fähigkeiten erfahren (K1, K3)`],
-  inhalte:[`lockern, dehnen, kräftigen, z. B. Steifer Mann, Baumstamm`,`Übungen und Spiele zur Verbesserung konditioneller und koordinativer Fähigkeiten`,`Yogaübungen`],
-  ideen:[`Das macht uns fit: Sprossenwand, kleiner Kasten, Boden`,`Fit wie ein Turnschuh`,`Stark wie ein Bär`,`Joggi bunt`,`ruhigen und beschleunigten Puls unterscheiden`]},
+  inhalte:[`Hochintensives Intervalltraining HIT, Tabata (Jg. 3)`,`Fitness mit dem eigenen Körpergewicht (Jg. 4)`,`lockern, dehnen, kräftigen, z. B. Steifer Mann, Baumstamm`,`Übungen und Spiele zur Verbesserung konditioneller und koordinativer Fähigkeiten`,`Yogaübungen`],
+  ideen:[`Tabata-Timer`,`Traumreise`,`Das macht uns fit: Sprossenwand, kleiner Kasten, Boden`,`Fit wie ein Turnschuh`,`Stark wie ein Bär`,`Joggi bunt`,`ruhigen und beschleunigten Puls unterscheiden`]},
  {id:`34-lsw`,jg:`3/4`,bf:1,name:`Laufen, Springen, Werfen`,
   komp:[`vielfältige Lauferfahrungen sammeln (K1)`,`das Laufen unterschiedlichen Bedingungen anpassen (K1, K4)`,`körperliche Reaktionen beim Laufen wahrnehmen (K1)`,`verschiedene Wurfarten erlernen und in unterschiedlichen Situationen anwenden (K1, K4)`,`mit unterschiedlichen Materialien und Bällen werfen (K1)`,`verschiedene Sprungformen erlernen und aufgabenspezifisch anwenden (K1, K4)`,`in die Weite und Höhe springen und sicher landen (K1, K4)`],
-  inhalte:[`Staffelläufe`,`Einführung und Festigung der Techniken`,`Kurzstreckenlauf`,`Schlagwurf`,`Weitsprung`],
-  ideen:[`Orientierungslauf in der Halle oder draußen`,`Ausdauerlauf`,`Puls, Schwitzen, Seitenstechen bewusst erleben und in Ansätzen erklären`,`Zielwerfen an Stationen`,`Zonenweitwurf`,`Das Zehntel`,`Bundesjugendspiele`]},
+  inhalte:[`Vom Laufen zum Ausdauerlauf, Sponsorenlauf (Jg. 3)`,`BJS Leichtathletik (Jg. 4)`,`Staffelläufe`,`Einführung und Festigung der Techniken`,`Kurzstreckenlauf`,`Schlagwurf`,`Weitsprung`],
+  ideen:[`Lauf-ABC`,`Teamlauf`,`Bierdeckelbiathlon`,`Hindernislauf`,`Laufabzeichen`,`Orientierungslauf in der Halle oder draußen`,`Ausdauerlauf`,`Puls, Schwitzen, Seitenstechen bewusst erleben und in Ansätzen erklären`,`Zielwerfen an Stationen`,`Zonenweitwurf`,`Das Zehntel`,`Bundesjugendspiele`]},
  {id:`34-gfr`,jg:`3/4`,bf:2,name:`Gleiten, Fahren und Rollen`,
   komp:[`Gleiten, Fahren und Rollen erleben und sich angemessen und verantwortungsbewusst verhalten (K1, K4)`,`Orientierung im Raum erlangen und Erfahrungen im Spiel mit dem Gleichgewicht sammeln (K3)`],
-  inhalte:[`die Anforderungen eines differenzierten Geräteparcours sicher bewältigen`,`Fahrradführerschein und -prüfung (siehe Sachunterricht)`],
-  ideen:[`Rollbretter, Gokarts, Pedalos, Teppichfliesen`,`Rollbrettparcours`,`Winterolympiade in der Halle`]},
+  inhalte:[`Bewegen mit Teppichfliesen (Jg. 3, 4 Stunden)`,`Spielformen mit Teppichfliesen (Jg. 4)`,`die Anforderungen eines differenzierten Geräteparcours sicher bewältigen`,`Fahrradführerschein und -prüfung (siehe Sachunterricht)`],
+  ideen:[`Dreibeinlauf, Paargleiten, Bob fahren`,`Rollbretter, Gokarts, Pedalos, Teppichfliesen`,`Rollbrettparcours`,`Winterolympiade in der Halle`]},
  {id:`34-ka`,jg:`3/4`,bf:4,name:`Miteinander kämpfen und Kräfte messen`,
   komp:[`spielerische Kampfformen kennenlernen und anwenden (K3, K4)`,`Kampfsituationen achtsam und sicher gestalten (K3, K4)`,`technische und taktische Fähigkeiten erlernen und anwenden (K1)`,`Regeln beim Kräftemessen festlegen und einhalten (K3, K4)`,`fair kämpfen (K4)`,`wertschätzend mit Sieg und Niederlage umgehen (K4)`],
-  inhalte:[`Übungen und Spielformen zum Ringen und Raufen`,`Schiedsrichterfunktion übernehmen`,`durch Beobachten der Mitschülerinnen und Mitschüler Anregungen für das eigene Handeln bekommen und überprüfen`],
-  ideen:[`Schildkröten wenden`,`Rettet den Schatz (Medizinball)`,`Mausefalle`,`Möhrenziehen`]},
+  inhalte:[`Faires Kämpfen und Verteidigen (Jg. 3, 7 Stunden) mit Ritual und Abklopfen`,`Formen des Kräftemessens (Jg. 4)`,`Übungen und Spielformen zum Ringen und Raufen`,`Schiedsrichterfunktion übernehmen`,`durch Beobachten der Mitschülerinnen und Mitschüler Anregungen für das eigene Handeln bekommen und überprüfen`],
+  ideen:[`Kampf um den Schatz`,`Schildkröten wenden`,`Rettet den Schatz (Medizinball)`,`Mausefalle`,`Möhrenziehen`]},
  {id:`34-sw`,jg:`3/4`,bf:3,name:`Schwimmen und Tauchen`,
   komp:[`die Eigenschaften des Wassers für das sichere Bewegen nutzen`,`sich schwimmend fortbewegen`,`tauchen und springen`,`Schwimm- und Baderegeln erlernen und anwenden`],
   inhalte:[`Anforderungen für das Seepferdchen`,`Anforderungen für Bronze, Silber, Gold je nach Leistungsstand`],
-  ideen:[`Schwimmunterricht in Klasse 4 halbjährlich durch Bäderland (laut Stoffverteilungsplan)`]},
+  ideen:[`Schulschwimmen laut Fachcurriculum in Jg. 1 bis 3`]},
  {id:`34-gel`,jg:`3/4`,bf:0,name:`Gelände erkunden`,
   komp:[`die Natur und die Umgebung als Bewegungsraum erfahren (K1, K2, K3, K4)`],
-  inhalte:[`Spiele und Wettkämpfe`,`Naturerkundungsspiele`,`Geländespiele`,`Orientierungslauf`],
-  ideen:[`Pausenhof`,`Ausflüge, Spielplätze, Park`,`Klassenreisen`,`Fußballturniere`,`Hammer Lauf`]}],
-// Jahresplan nach dem Rasterverfahren (Vorschlag): je Halbjahr zwei Bewegungsfelder, Events und Jahreszeit berücksichtigt
+  inhalte:[`Orientierungslauf (Jg. 4)`,`Spiele und Wettkämpfe`,`Naturerkundungsspiele`,`Geländespiele`,`Orientierungslauf`],
+  ideen:[`Capture the Flag`,`Pausenhof`,`Ausflüge, Spielplätze, Park`,`Klassenreisen`,`Fußballturniere`,`Hammer Lauf`]}],
+// Stoffverteilungsplan je Jahrgang aus dem Fachcurriculum: zehn Unterrichtsvorhaben pro Jahrgang, Schwimmen und Bewegungslandschaften laufen parallel
 JP:{
- 1:[[[`12-sp`,`Eingangswochen und kooperative Spiele`],[`12-ge`,`Bewegungslandschaften im Winter`]],[[`12-ta`,`Bewegungslieder, Tiere, Kindertanz`],[`12-lsw`,`draußen laufen, springen, werfen; Sportfest`]]],
- 2:[[[`12-ka`,`Rangeln mit Regeln`],[`12-gfr`,`Rollbrettführerschein, Gleiten wie auf Eis`]],[[`12-ak`,`Fitness, Ruhe finden; Hamburger Parcours`],[`12-sp`,`einfache Ballspiele draußen`]]],
- 3:[[[`34-sp`,`Fußball bis 4 gegen 4; Fußballturnier`],[`34-ge`,`Turnen an Geräten; Sportfest in Turn-Jahren`]],[[`34-lsw`,`Schlagwurf, Weitsprung, Ausdauer; Zehntel und Sportfest`],[`34-gel`,`Orientierungslauf, Geländespiele`]]],
- 4:[[[`34-ka`,`Ringen und Raufen fair`],[`34-gfr`,`Winterolympiade in der Halle`]],[[`34-ak`,`Fit wie ein Turnschuh, Puls`],[`34-ta`,`Gruppentanz für die offene Bühne`]]]},
-JPN:[`Psychomotorische Bewegungslandschaft: jede Woche eine Stunde in allen Jahrgängen.`,`Schulschwimmen läuft neben dem Plan (Jg. 1 bis 3 laut Rahmenplan). Klasse 4 laut Stoffverteilungsplan halbjährlich bei Bäderland. [mit der Fachschaft klären]`,`Gelände erkunden in Klasse 1/2 über Ausflüge, Klassenreisen und den Pausenhof.`,`Sportfest wechselt jährlich zwischen Turnen und Leichtathletik. Im Turn-Jahr in Klasse 3 Geräte vor das Sportfest legen.`,`Termine für Fußballturnier, Sportfest und Zehntel (Ende April) jedes Jahr eintragen.`]
+ 1:[[`12-sp`,`Regeln und Rituale, Kooperieren; kleine Spiele, Ballgefühl`],[`12-lsw`,`Vom Laufen zum Ausdauerlauf (Vorbereitung Sponsorenlauf)`],[`12-gfr`,`Rollbrettführerschein`,`bf2-lue-5`],[`12-ka`,`Miteinander kämpfen`,`bf4-ew-1`],[`12-ge`,`BJS Turnen`,`bf6-lue-8`],[`12-ge`,`Gerätekombinationen erstellen, kombinieren und präsentieren`],[`12-ta`,`Tanzen in rhythmischen Bewegungen`],[`12-ak`,`Yoga für Kinder`,`bf8-gd-5`],[`12-sp`,`Ticken und Fangenspiele`],[`12-sw`,`Schwimmen`]],
+ 2:[[`12-sp`,`Regeln und Rituale, Kooperieren; Treffball, Strohpuppe`,`bf5-wk-7`],[`12-lsw`,`BJS Leichtathletik; Zielgerichtetes Werfen`,`bf1-wk-6`],[`12-gfr`,`Spielformen mit dem Rollbrett`],[`12-ka`,`Faires Kräftemessen`],[`12-ge`,`Bewegungslandschaften`],[`12-ta`,`Seilspringen`,`bf7-lue-5`],[`12-ta`,`Gefühle tänzerisch darstellen`],[`12-ak`,`Übungen zur Körperwahrnehmung`],[`12-sw`,`Schwimmen`],[`12-sp`,`Komplexere Spiele (Brennball)`]],
+ 3:[[`34-sp`,`Regeln und Rituale, Kooperieren; Hockey`],[`34-lsw`,`Vom Laufen zum Ausdauerlauf (Vorbereitung Sponsorenlauf)`,`bf1-lue-7`],[`34-gfr`,`Bewegen mit Teppichfliesen`,`bf2-wk-5`],[`34-ka`,`Faires Kämpfen und Verteidigen`,`bf4-wk-5`],[`34-ge`,`BJS Turnen`],[`34-ge`,`Erfinden und Ausprobieren von Kunststücken mit Kleingeräten`,`bf6-gd-7`],[`34-ta`,`Rhythmisches Gummitwist`,`bf7-lue-6`],[`34-ak`,`Hochintensives Intervalltraining (HIT)`,`bf8-lue-6`],[`34-sp`,`Fußball`,`bf5-lue-5`],[`34-sw`,`Schwimmen`]],
+ 4:[[`34-sp`,`Regeln und Rituale, Kooperieren; Basketball`,`bf5-lue-6`],[`34-lsw`,`BJS Leichtathletik`],[`34-gfr`,`Spielformen mit Teppichfliesen`],[`34-ka`,`Formen des Kräftemessens`],[`34-ge`,`Parcours`,`bf6-ew-5`],[`34-ge`,`Akrobatik mit Hilfsmitteln`,`bf6-gd-8`],[`34-ta`,`Aerobic und Stepaerobic an Turnmatten`,`bf7-we-5`],[`34-ak`,`Fitness mit dem eigenen Körpergewicht`],[`34-sw`,`Schwimmen (siehe Besonderheiten)`],[`34-gel`,`Komplexe Spiele: Capture the Flag, Orientierungslauf`,`bf1-ew-6`]]},
+JPN:[`Schwimmen und psychomotorische Bewegungslandschaften laufen in allen Jahrgängen parallel zu den Unterrichtsvorhaben.`,`Die Reihenfolge der zehn Unterrichtsvorhaben ist ein Vorschlag. Events wie Sportfest, Fußballturnier und Zehntel bestimmen die Lage im Jahr.`,`BJS Turnen in Jg. 1 und 3, BJS Leichtathletik in Jg. 2 und 4. Im Jahr des Turn-Sportfests liegen die Turnvorhaben vor dem Fest.`,`Ein Pfeil hinter dem Vorhaben führt zur ausgearbeiteten Stunde im Tool.`],
+// Exemplarische Unterrichtsvorhaben des Fachcurriculums mit Beobachtungskriterien (Ende Jg. 2 bzw. Regelanforderungen Ende Jg. 4)
+EX:[
+ {t:`Zielgerichtetes Werfen`,jg:`1/2`,bf:1,std:8,uv:`bf1-wk-6`,beob:[`mit unterschiedlichen Materialien gezielt werfen`,`feste und bewegliche Ziele treffen`,`Gelingensbedingungen für Wurfspiele benennen`,`Ideen zur Spiel- und Regelgestaltung formulieren`]},
+ {t:`Ausdauerndes Laufen`,jg:`3/4`,bf:1,std:5,uv:`bf1-lue-7`,beob:[`so lange in Minuten laufen, wie das eigene Alter ist`,`sich beim Laufen räumlich orientieren`,`das eigene Tempo einteilen`]},
+ {t:`Einführung Rollbrett und Rollbrettführerschein`,jg:`1/2`,bf:2,std:8,uv:`bf2-lue-5`,beob:[`gefährliche Situationen erkennen und umgehen`,`ihr Handeln auf andere einstellen`,`Tempo aufnehmen und anhalten`,`sich regelgerecht auf dem Rollbrett verhalten`,`ihr Gleichgewicht beim Rollen spüren`]},
+ {t:`Bewegung und Spielformen mit Teppichfliesen`,jg:`3/4`,bf:2,std:4,uv:`bf2-wk-5`,beob:[`das Gleichgewicht beim Gleiten halten`,`sich mit Partnern abstimmen`,`Unfallrisiken einschätzen`]},
+ {t:`Miteinander kämpfen`,jg:`1/2`,bf:4,std:10,uv:`bf4-ew-1`,beob:[`nach vereinbarten Regeln kämpfen`,`den Raum verteidigen oder erobern`,`auf spielerische Weise gegeneinander kämpfen`,`beschreiben, wie sich der Körper beim Kräftemessen anfühlt`]},
+ {t:`Faires Kämpfen und Verteidigen`,jg:`3/4`,bf:4,std:7,uv:`bf4-wk-5`,beob:[`das Kampfritual einhalten`,`bei Stopp oder Abklopfen sofort loslassen`,`fair verteidigen und angreifen`]},
+ {t:`Kleine Spiele: in Stufen zur allgemeinen Spielfähigkeit`,jg:`2`,bf:5,std:9,uv:`bf5-wk-7`,beob:[`in kleinen Spielen die Spielidee erfassen`,`sich im Raum bewegen und einfache Spielrollen einnehmen`,`situativ angemessen mit Spielgeräten umgehen`,`Ideen zur Spiel- und Regelgestaltung formulieren`,`bei der Mannschaftsbildung helfen`,`eigenständig spielen`]},
+ {t:`Basketball mit Mini-Basketball und Easybasket`,jg:`3/4`,bf:5,std:8,uv:`bf5-lue-6`,beob:[`prellen, passen und auf den Korb werfen`,`im Team spielen, sodass jedes Teammitglied punktet`,`einfache Regeln einhalten`]},
+ {t:`Bundesjugendspiele Turnen`,jg:`1/2`,bf:6,std:5,uv:`bf6-lue-8`,beob:[`Stationen sicher auf- und abbauen`,`sich gegenseitig helfen`,`auf stabilen und instabilen Untergründen balancieren`,`Bewegungen an den Stationen ausführen`,`Risiken abwägen und einschätzen`]},
+ {t:`Bundesjugendspiele Turnen`,jg:`3/4`,bf:6,std:5,uv:null,beob:[`Geräte sicher transportieren und aufbauen`,`einschätzen, welche Aufgabe sie schon schaffen`,`Aufgaben in den Bereichen des Wettbewerbs ausführen`]},
+ {t:`Kunststücke mit Kleingeräten`,jg:`1/2`,bf:6,std:6,uv:`bf6-gd-7`,beob:[`Kunststücke mit Kleingeräten erfinden`,`Grundsprünge beim Seilspringen ausführen`,`Kunststücke mit einem langen Seil ausführen`,`Bewegungen mit den Geräten wahrnehmen`]},
+ {t:`Akrobatik`,jg:`3/4`,bf:6,std:9,uv:`bf6-gd-8`,beob:[`sichere Dreier- und Viererpyramiden bauen`,`Pyramiden verändern`,`Positionen verteilen und Kommandos geben`]},
+ {t:`Rhythmisches Springen am Gummitwist`,jg:`1/2`,bf:7,std:7,uv:`bf7-lue-6`,beob:[`Sprünge am Gummitwist benennen`,`Sprünge nach Karte erkennen und ausführen`,`eine Sprungfolge flüssig springen`,`sich auf Partner einstellen und synchron springen`]},
+ {t:`Aerobic und Stepaerobic an Turnmatten`,jg:`3/4`,bf:7,std:9,uv:`bf7-we-5`,beob:[`Grundschritte im Takt ausführen`,`benennen, welcher Schritt gefallen hat und welcher schwer war`,`eine Folge in der Gruppe zeigen`]},
+ {t:`Yoga für Kinder`,jg:`1/2`,bf:8,std:4,uv:`bf8-gd-5`,beob:[`Haltungen einnehmen und halten`,`Spannung und Entspannung spüren`,`zur Ruhe kommen`]},
+ {t:`Hochintensives Intervalltraining (Tabata)`,jg:`3/4`,bf:8,std:4,uv:`bf8-lue-6`,beob:[`die Übungen korrekt ausführen`,`Körperspannung halten`,`Kräfte einteilen und ihre Belastungsgrenze erkennen`,`Muskeln bei der Dehnung wahrnehmen`,`Ruhephasen aushalten`,`Leistungszuwachs erkennen`]}]
 };
 // Zuordnung der Stunden im Tool zu den Unterrichtsvorhaben des Schulcurriculums
 const FNG={
@@ -8952,7 +9694,21 @@ const FNG={
 'bf6-gd-6':[`34-ge`,`Bewegungsformen kombinieren und präsentieren (K2); Gruppen-Run`],
 'bf6-we-6':[`34-ge`,`Körpergewicht halten und stützen (K1, K3); am Barren stützen`],
 'bf6-lue-7':[`34-ge`,`turnerische Bewegungen erlernen; Schwingen im Stütz am Barren`],
-'bf6-wk-5':[`34-ge`,`erste Hilfestellung: Klammergriff`]
+'bf6-wk-5':[`34-ge`,`erste Hilfestellung: Klammergriff`],
+'bf1-wk-6':[`12-lsw`,`Fachcurriculum: Zielgerichtetes Werfen, Schneemann-Spiel`],
+'bf1-lue-7':[`34-lsw`,`Fachcurriculum: Ausdauerndes Laufen, Bierdeckelbiathlon; Sponsorenlauf und Zehntel`],
+'bf2-lue-5':[`12-gfr`,`Fachcurriculum: Rollbrettführerschein Jg. 1`],
+'bf2-wk-5':[`34-gfr`,`Fachcurriculum: Bewegen mit Teppichfliesen Jg. 3, Partnerformen`],
+'bf4-wk-5':[`34-ka`,`Fachcurriculum: Faires Kämpfen und Verteidigen Jg. 3, Ritual und Abklopfen`],
+'bf5-wk-7':[`12-sp`,`Fachcurriculum: Kleine Spiele Jg. 2, Linienball`],
+'bf5-lue-6':[`34-sp`,`Fachcurriculum: Basketball Jg. 4, Korbwurf`],
+'bf6-lue-8':[`12-ge`,`Fachcurriculum: BJS Turnen Jg. 1`],
+'bf6-gd-7':[`34-ge`,`Fachcurriculum: Kunststücke mit Kleingeräten Jg. 3, Kür`],
+'bf6-gd-8':[`34-ge`,`Fachcurriculum: Akrobatik mit Hilfsmitteln Jg. 4`],
+'bf7-lue-6':[`34-ta`,`Fachcurriculum: Rhythmisches Gummitwist Jg. 3`],
+'bf7-we-5':[`34-ta`,`Fachcurriculum: Aerobic und Stepaerobic an Turnmatten Jg. 4`],
+'bf8-gd-5':[`12-ak`,`Fachcurriculum: Yoga für Kinder Jg. 1`],
+'bf8-lue-6':[`34-ak`,`Fachcurriculum: Hochintensives Intervalltraining Jg. 3`]
 };
 const cV=id=>CURR.V.find(v=>v.id===id);
 const cUvs=vid=>UV.filter(u=>FNG[u.id]&&FNG[u.id][0]===vid).sort((a,b)=>a.klasse-b.klasse||a.titel.localeCompare(b.titel));
@@ -8960,13 +9716,15 @@ const kTag=s=>s.replace(/\(([KE][^)]*)\)/g,(m,c)=>`<span class="ktag${c==='E'?' 
 const cBf=v=>v.bf?`Bewegungsfeld ${v.bf} · ${BF[v.bf]}`:`Kein eigenes Bewegungsfeld im Bildungsplan, fächer- und feldübergreifend`;
 function currNote(u){const m=FNG[u.id];if(!m||u.stufe!=='GS')return'';const v=cV(m[0]);return `<div class="cnote"><span class="lab">Schulcurriculum ${esc(CURR.schule)}</span><p><b>Jg. ${v.jg} · ${esc(v.name)}</b> · ${esc(m[1])}</p><button class="lnk" style="margin:0" data-nav="cur/${v.id}">Zum Unterrichtsvorhaben ›</button></div>`}
 function currHome(){const sec=jg=>CURR.V.filter(v=>v.jg===jg).map(v=>{const n=cUvs(v.id).length;return `<button class="ccard" data-nav="cur/${v.id}"><b>${esc(v.name)}</b><span>${v.bf?'BF '+v.bf:'übergreifend'} · ${n} ${n===1?'Stunde':'Stunden'} im Tool</span></button>`}).join('');
- const jp=Object.entries(CURR.JP).map(([j,h])=>`<tr><th>Klasse ${j}</th>${h.map(x=>`<td>${x.map(([id,t])=>`<button class="lnk" style="margin:0 0 2px" data-nav="cur/${id}">${esc(cV(id).name)}</button><small>${esc(t)}</small>`).join('<hr>')}</td>`).join('')}</tr>`).join('');
+ const jp=Object.entries(CURR.JP).map(([j,l])=>`<tr><th>Klasse ${j}</th><td><ol class="jpl">${l.map(([id,t,u])=>`<li><button class="lnk" style="margin:0" data-nav="cur/${id}">${esc(t)}</button>${u&&UV.some(x=>x.id===u)?` <button class="lnk" style="margin:0" data-nav="${u}" title="Ausgearbeitete Stunde">›</button>`:''}</li>`).join('')}</ol></td></tr>`).join('');
+ const ex=CURR.EX.map(e=>{const u=e.uv&&UV.find(x=>x.id===e.uv);return `<div class="box"><h4>${esc(e.t)}</h4><p class="note">Jg. ${e.jg} · BF ${e.bf} · ${e.std} Stunden</p><p style="margin-top:6px"><b>Beobachtungskriterien:</b> Können die Kinder …</p><ul class="cl">${e.beob.map(x=>`<li>${esc(x)}?</li>`).join('')}</ul>${u?`<button class="lnk" style="margin:6px 0 0" data-nav="${u.id}">Stunde „${esc(u.titel)}“ und Reihe ›</button>`:'<p class="note">Noch keine ausgearbeitete Stunde.</p>'}</div>`}).join('');
  app.innerHTML=`<div class="hero" style="--k:#0f766e"><span class="lab">Schulinternes Curriculum</span><h1>${esc(CURR.schule)}</h1><p>${esc(CURR.stand)}. Alle Unterrichtsvorhaben mit Kompetenzen, Inhalten und den passenden Stunden im Tool.</p></div>
  ${SEC('01','So arbeiten wir im Sportunterricht',`<div class="rhy">${CURR.rhythmus.map(([t,d],i)=>`<div><span class="num">${i+1}</span><b>${t}</b><small>${esc(d)}</small></div>`).join('')}</div><p class="prose" style="margin-top:12px">Die Stunden, die neu zum Schulcurriculum entstanden sind, haben genau diese Phasen. In den übrigen Stunden steckt der Rhythmus meist in offenem Einstieg, Kreisgespräch und Übungsphase. Die Leitlinien des Rahmenplans:</p><div class="g2">${CURR.leit.map(([t,d,b])=>`<div class="box"><h4>${esc(t)}</h4><p>${esc(d)}</p><p class="note" style="margin-top:6px">Beispiel: ${esc(b)}</p></div>`).join('')}</div>`,'c-leit')}
  ${SEC('02','Unterrichtsvorhaben Klasse 1 und 2',`<div class="cgrid">${sec('1/2')}</div>`,'c-12')}
  ${SEC('03','Unterrichtsvorhaben Klasse 3 und 4',`<div class="cgrid">${sec('3/4')}</div>`,'c-34')}
- ${SEC('04','Jahresplan (Vorschlag)',`<p class="prose">Nach dem Rasterverfahren: zwei Bewegungsfelder pro Halbjahr, Events und Jahreszeit berücksichtigt. Das ist ein Vorschlag zum Abstimmen in der Fachschaft.</p><div class="tw"><table class="jp"><thead><tr><th></th><th>1. Halbjahr</th><th>2. Halbjahr</th></tr></thead><tbody>${jp}</tbody></table></div><ul class="cl">${CURR.JPN.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`,'c-jp')}
- ${SEC('05','Besonderheiten und Events',`<div class="g2">${CURR.events.map(([t,d])=>`<div class="box"><h4>${esc(t)}</h4><p>${esc(d)}</p></div>`).join('')}</div><ul class="cl" style="margin-top:12px">${CURR.regel.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`,'c-ev')}`;
+ ${SEC('04','Stoffverteilungsplan je Jahrgang',`<p class="prose">Zehn Unterrichtsvorhaben pro Jahrgang laut Fachcurriculum. Der Name führt zum Unterrichtsvorhaben, der Pfeil zur ausgearbeiteten Stunde.</p><div class="tw"><table class="jp"><tbody>${jp}</tbody></table></div><ul class="cl">${CURR.JPN.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`,'c-jp')}
+ ${SEC('05','Exemplarische Unterrichtsvorhaben',`<p class="prose">Die Beispiele des Fachcurriculums mit Beobachtungskriterien für das Ende von Jahrgang 2 und die Regelanforderungen am Ende von Jahrgang 4.</p><div class="g2">${ex}</div>`,'c-ex')}
+ ${SEC('06','Besonderheiten und Events',`<div class="g2">${CURR.events.map(([t,d])=>`<div class="box"><h4>${esc(t)}</h4><p>${esc(d)}</p></div>`).join('')}</div><ul class="cl" style="margin-top:12px">${CURR.regel.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`,'c-ev')}`;
  window.scrollTo(0,0)}
 function currV(v){const us=cUvs(v.id);const byR=new Map();us.forEach(u=>{const R=REIHE[u.id];if(!byR.has(R))byR.set(R,[]);byR.get(R).push(u)});
  const rs=[...byR.entries()].map(([R,list])=>{const m=/der Reihe „(.+)“/.exec(list[0].reihe);return `<div class="box"><h4>Reihe „${esc(m?m[1]:'')}“ · ${R.st.length} Stunden</h4><p class="note">${esc(R.ziel)}</p>${list.map(u=>`<button class="hrow" data-nav="${u.id}"><span class="hd">Kl. ${u.klasse}</span><span class="ht"><b>${esc(u.titel)}</b><small>${u.kb} · ${esc(KB[u.kb][0])} · ${esc(FNG[u.id][1])}</small></span><span class="go">›</span></button>`).join('')}</div>`}).join('');
