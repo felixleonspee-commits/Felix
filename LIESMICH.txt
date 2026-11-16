@@ -1,0 +1,9 @@
+Sport-Tool als App auf iPhone und iPad
+
+1. Diesen Ordner (alle Dateien) bei einem kostenlosen Webhoster hochladen, z. B. GitHub Pages oder Netlify.
+2. Die Adresse (https://...) auf dem iPhone oder iPad in Safari öffnen.
+3. Teilen > Zum Home-Bildschirm > Hinzufügen.
+4. Das Tool startet danach im Vollbild wie eine App und funktioniert nach dem ersten Öffnen auch ohne Internet.
+
+Wichtig: Lerngruppen und Einträge liegen nur in der App auf diesem Gerät.
+Zum Umziehen unter Meine Lerngruppen eine Sicherung speichern und dort laden.
