@@ -302,6 +302,10 @@ table.jp hr{border:0;border-top:1px dashed #cfe0d8;margin:8px 0}
 .fbstep{padding:0;display:inline-grid;place-items:center;line-height:1}
 .rnote{margin-top:12px}
 ol.jpl{margin:0;padding-left:1.3em;columns:2;column-gap:18px}ol.jpl li{break-inside:avoid;margin:0 0 4px;font-size:.92rem}@media(max-width:640px){ol.jpl{columns:1}}
+details.vld{margin-top:8px;border-top:1px dashed #cfd8d0;padding-top:6px}details.vld summary{cursor:pointer;font-weight:600;color:#15803d;font-size:.92rem}
+table.vlt{width:100%;border-collapse:collapse;margin-top:6px;font-size:.9rem}table.vlt th{text-align:left;vertical-align:top;width:7.5em;padding:6px 8px 6px 0;font-weight:600}table.vlt th span{display:block;font-weight:400;color:#6b7a70;font-size:.82rem}table.vlt td{padding:6px 0;border-bottom:1px solid #eef1ec;vertical-align:top}table.vlt td em{display:block;font-style:normal;color:#6b7a70;font-size:.84rem;margin-top:2px}p.vlm{font-size:.86rem;margin:6px 0 0}
+@media(max-width:560px){table.vlt th{width:6.2em}}
+p.vlm b{font-size:inherit;font-weight:600}
 
 </style>
 </head>
@@ -8570,6 +8574,376 @@ REIHE[`bf8-lue-6`]={ziel:`Die Kinder erleben hochintensives Intervalltraining mi
  [`Unsere Tabata-Runde`,`Gruppen stellen eine Runde zusammen`,`Die Kinder planen eine Runde mit acht Übungen.`,[`Aufwärmen`,`Planen und ausprobieren`,`Vorstellen`]],
  [`Fitness-Challenge`,`Runden der Gruppen`,`Die Kinder führen die Runden der anderen Gruppen aus.`,[`Aufwärmen`,`Gruppenrunden`,`Rückblick`]]]};
 
+// Grundschule Klasse 1: genauer Stundenverlauf für alle noch nicht ausgearbeiteten Stunden der Unterrichtsreihen
+// Format je Phase: [Minuten, Unterrichtsgeschehen, Organisation]. Reihenfolge der Phasen: Einstieg, Erwärmung, Erleben, Austauschen, Verstehen, Anwenden, Abschluss.
+function VL(id,i,mat,ph){const R=REIHE[id];if(!R||!R.st[i])throw new Error('VL: '+id+' '+i);R.st[i][4]={mat,ph}}
+
+// BF1 Werfen, was das Zeug hält
+VL(`bf1-ew-1`,2,`Softbälle, Zeitungsbälle, Tennisbälle, 2 Bänke, Zauberschnur, farbiges Kreppband für Zonen, Bildkarte „Gegenfuß vor, Arm lang zurück“`,[
+ [3,`Sitzkreis. L zeigt einen Wurf mit beiden Händen von unten und einen einhändigen Wurf mit Ausholen. „Welcher fliegt weiter? Heute findet ihr es heraus.“`,`Sitzkreis`],
+ [5,`„Schneeballschlacht“: Zwei Teams werfen Zeitungsbälle über die Bänke in das andere Feld. Auf Pfiff wird gezählt, wo weniger Bälle liegen.`,`2 Felder, Bänke als Mauer`],
+ [8,`Freies Weitwerfen von der Grundlinie in farbige Zonen. Jedes Kind probiert verschiedene Wurfarten und merkt sich seine weiteste Zone.`,`Wurflinie, Zonen mit Kreppband; Bälle in Kisten`],
+ [4,`Sitzkreis. Zwei Kinder mit weiten Würfen zeigen. „Was machen Arm und Füße?“ Kinder beschreiben in eigenen Worten.`,`Sitzkreis`],
+ [3,`L zeigt die Bildkarte und bündelt: Gegenfuß vor, Wurfarm lang zurück, Ball über dem Kopf loslassen. Alle machen die Bewegung trocken nach.`,`Stand in einer Reihe`],
+ [13,`Weitwurf über die Zauberschnur in die Zonen, zuerst mit Tennisball, dann mit Softball. Partnerkind schaut auf den Gegenfuß und gibt ein Daumenzeichen. Wer dreimal dieselbe Zone erreicht, darf eine Linie weiter zurück.`,`Paare an drei Wurflinien; Zauberschnur in 2 m Höhe`],
+ [4,`Bälle einsammeln. Sitzkreis: „Was machen die Füße beim weiten Wurf?“ Kinder zeigen den Gegenfuß.`,`Sitzkreis`]]);
+VL(`bf1-ew-1`,3,`Stempelkarten, Stempel, 6 Stationsschilder, Reifen, Dosen, Kästen, Zauberschnur, Bälle aus der Reihe`,[
+ [3,`Sitzkreis. L zeigt die Stempelkarte mit sechs Feldern. „Heute ist Wurf-Olympiade. Ihr zeigt, was ihr könnt.“`,`Sitzkreis; Stempelkarten`],
+ [5,`Lieblingswurfspiel der Klasse, zum Beispiel „Haltet den Kasten voll“ oder „Schneeballschlacht“.`,`ganze Halle`],
+ [8,`Probedurchgang: Paare gehen frei von Station zu Station (weit, hoch über die Schnur, Dosen, Reifen an der Wand, rollender Ball, Korb) und probieren ohne Stempel.`,`6 Stationen; Paare`],
+ [4,`Sitzkreis. „Welche Station war leicht, welche schwer?“ Kinder legen eine Wäscheklammer an ihre schwerste Station.`,`Sitzkreis; Stationsbilder`],
+ [3,`L erinnert an die Wurfregeln: erst werfen, wenn das Feld frei ist, Bälle erst auf Signal holen. An jeder Station gibt es zwei Stufen: grün und rot.`,`Sitzkreis`],
+ [13,`Olympiade: Paare durchlaufen die sechs Stationen, wählen ihre Stufe und stempeln gegenseitig. Wechsel auf Gongsignal nach gut zwei Minuten.`,`6 Stationen; Stempelkarten`],
+ [4,`Sitzkreis. „Was kann ich jetzt, was ich vorher nicht konnte?“ Jedes Kind zeigt seinen Lieblingswurf in einer Bewegung.`,`Sitzkreis`]]);
+
+// BF2 Unterwegs auf dem Rollbrett
+VL(`bf2-ew-1`,1,`Rollbretter, Ampelkarten, Kreppband für Stopplinien, 8 Reifen als Garagen`,[
+ [3,`Sitzkreis. Wiederholung der drei Rollbrettregeln mit Bildkarten. Ausgabedienst verteilt die Bretter.`,`Sitzkreis`],
+ [5,`„Ampelspiel“: Grün fahren, Gelb langsam, Rot anhalten. L zeigt die Karten, zuerst langsam, dann schneller.`,`ganze Halle`],
+ [8,`Kinder probieren, vor Stopplinien anzuhalten. „Wer schafft es, genau mit dem Brett auf der Linie zu stehen?“`,`4 Stopplinien`],
+ [4,`Sitzkreis. „Womit hast du gebremst? Hände, Füße, beides?“ Kinder zeigen ihre Lösung.`,`Sitzkreis`],
+ [3,`L bündelt: Früh langsamer werden, mit beiden Händen oder Füßen gleichzeitig bremsen. Kein Bremsen mit den Fingern an den Rollen.`,`Sitzkreis`],
+ [13,`Garagenspiel: Kinder fahren zu Musik, auf Musikstopp fahren sie in eine Reifen-Garage und halten darin. Danach Partnerspiel: Ein Kind fährt, das andere hebt die Stoppkarte. Rollen tauschen.`,`8 Reifen; Musik; Paare`],
+ [4,`Bretter zurück in den Wagen. Kreis: „Womit bremst du am besten?“`,`Sitzkreis`]]);
+VL(`bf2-ew-1`,2,`Rollbretter, 20 Hütchen, 2 Kastenteile oder Bänke für einen Tunnel, Musik`,[
+ [3,`Sitzkreis. L zeigt einen Slalom aus Hütchen. „Heute lernt ihr lenken.“ Ausgabe der Bretter.`,`Sitzkreis`],
+ [5,`Fangspiel „Krebse“: Alle fahren im Sitz, die Fänger tragen ein Leibchen. Wer abgeschlagen ist, fährt einmal um ein Hütchen und ist wieder frei.`,`ganze Halle`],
+ [8,`Kinder probieren, um einzelne Hütchen zu fahren, links und rechts herum, in Bauch- und Sitzlage.`,`Hütchen verteilt`],
+ [4,`Sitzkreis. „Wie lenkst du nach links? Was machen deine Hände?“`,`Sitzkreis`],
+ [3,`L bündelt: In Bauchlage mit der rechten Hand stärker abstoßen, um nach links zu fahren. In Sitzlage mit den Füßen lenken. Langsam in die Kurve.`,`Sitzkreis`],
+ [13,`Drei Stationen in Paaren: Slalom, Achter um zwei Hütchen, Tunnel aus Kastenteilen. Partnerkind zählt berührte Hütchen. Wechsel alle vier Minuten.`,`3 Stationen; Paare`],
+ [4,`Kreis. „An welcher Station hast du kein Hütchen berührt?“ Bretter zurück.`,`Sitzkreis`]]);
+VL(`bf2-ew-1`,4,`Rollbretter, Hütchen, Tunnel, Reifen-Garagen, Stopplinie, Bildkarten der Regeln, Abhakliste, Führerscheine`,[
+ [3,`Sitzkreis. L zeigt den Führerschein. „Heute zeigt ihr alles, was ihr gelernt habt.“`,`Sitzkreis`],
+ [5,`Regelquiz mit Bildkarten: L zeigt ein Bild, Kinder zeigen Daumen hoch oder runter. Danach Ampelspiel zum Aufwärmen.`,`Sitzkreis, dann ganze Halle`],
+ [8,`Übungsrunde im Parcours: Slalom, Tunnel, Garage, Stopplinie. Jedes Kind fährt zweimal ohne Bewertung.`,`Parcours an den Hallenrändern`],
+ [4,`Sitzkreis. „Wo im Parcours musst du besonders aufpassen?“`,`Sitzkreis`],
+ [3,`L nennt die Prüfmerkmale: Hütchen nicht berühren, in der Garage halten, vor der Linie stoppen.`,`Sitzkreis`],
+ [13,`Führerscheinfahrt: Kinder fahren in Paaren, das Partnerkind hakt auf der Liste ab. Jede Station darf einmal wiederholt werden.`,`Parcours; Abhaklisten`],
+ [4,`Bretter zurück. Feierliche Übergabe der Führerscheine im Kreis. Rückblick: „Was war am schwierigsten?“`,`Sitzkreis`]]);
+
+// BF3 Wir werden Wasserkinder (Lehrschwimmbecken, Zeiten ab Beckenrand)
+VL(`bf3-ew-1`,0,`Bildkarten Baderegeln, Poolnudeln, schwimmende Tiere`,[
+ [3,`Am Beckenrand: L zeigt Bildkarten der Baderegeln (nicht rennen, nur auf Zeichen ins Wasser, nicht schubsen, Zeichen für Hilfe). Kinder wiederholen sie.`,`Sitzreihe am Rand`],
+ [5,`Einstieg über die Treppe einzeln. Wasser wecken: mit Händen spritzen, Arme waschen, Wasser auf die Schultern.`,`flacher Teil; L im Wasser`],
+ [8,`Bewegungsgeschichte „Reise durch den Dschungel“: wie ein Storch gehen, wie ein Frosch hüpfen, wie ein Elefant stampfen, durch den Fluss waten.`,`flacher Teil, alle in einer Gruppe`],
+ [4,`Am Rand stehend: „Was war im Wasser anders als an Land?“ Kinder erzählen.`,`Stand am Rand`],
+ [3,`L bündelt: Im Wasser kommt man langsamer voran, große Schritte und Arme helfen. Regel: Bei Pfiff an den Rand.`,`Stand am Rand`],
+ [13,`Spiele: „Fischer, wie tief ist das Wasser?“ im Gehen, Tiere retten (schwimmende Tiere zum Rand bringen), Pfiffprobe zwischendurch.`,`flacher Teil`],
+ [4,`Aus dem Wasser über die Treppe, Durchzählen. Jedes Kind zeigt seine Lieblingsbewegung.`,`Beckenrand`]]);
+VL(`bf3-ew-1`,3,`Poolnudeln, Schwimmbretter, Gegenstände für das Experiment (Ball, Stein, Korken, Löffel)`,[
+ [3,`Am Rand: Experiment „Was schwimmt, was sinkt?“ Kinder raten, L legt Gegenstände ins Wasser.`,`Sitzreihe am Rand`],
+ [5,`Wasser wecken, Blubbern und Gesicht ins Wasser aus Stunde 2 und 3 wiederholen.`,`flacher Teil`],
+ [8,`Kinder probieren mit Poolnudel unter den Achseln, die Füße vom Boden zu nehmen. Partnerkind hält die Hände.`,`Paare; Poolnudeln`],
+ [4,`„Wann hat dich das Wasser getragen? Wie hat sich das angefühlt?“`,`Stand im Kreis im Wasser`],
+ [3,`L bündelt: Luft einatmen und den Körper ausbreiten, dann trägt das Wasser. Ruhig bleiben hilft.`,`Kreis im Wasser`],
+ [13,`„Paket“ (Hockschwebe) und „Seestern“ in Bauch- und Rückenlage mit Nudel, dann mit Partnerhilfe an den Händen. Mutige versuchen es mit einem Brett. Partnerkind zählt bis fünf.`,`Paare; Nudeln, Bretter`],
+ [4,`Aus dem Wasser, Durchzählen. Kreis: „Wann hat dich das Wasser getragen?“`,`Beckenrand`]]);
+VL(`bf3-ew-1`,4,`Stempelkarten (wasserfest), Tauchringe, Tischtennisbälle, Poolnudeln, Urkunden`,[
+ [3,`Am Rand: L zeigt die Stempelkarte mit vier Stationen und die Urkunde.`,`Sitzreihe am Rand`],
+ [5,`Lieblingsspiel im Wasser, von der Klasse gewählt.`,`flacher Teil`],
+ [8,`Kinder probieren die vier Stationen frei: Blubbern, Tauchringe holen, Tischtennisball pusten, Schweben mit Nudel.`,`4 Stationen`],
+ [4,`„Welche Station traust du dir zu? Welche ist noch schwer?“`,`Stand am Rand`],
+ [3,`L erinnert: Jede Station hat zwei Stufen. Jede Stufe zählt. Die Baderegeln gelten weiter.`,`Stand am Rand`],
+ [13,`Stationen in Paaren mit Stempelkarte, Wechsel auf Pfiff. Das Partnerkind bestätigt, L stempelt.`,`4 Stationen; Paare`],
+ [4,`Aus dem Wasser, Durchzählen. Übergabe der Wasserkinder-Urkunden, Rückblick auf die Reihe.`,`Beckenrand`]]);
+
+// BF4 Raufen nach Regeln
+VL(`bf4-ew-1`,0,`12 Turnmatten, Plakat, Stifte, Stofftier-Bär`,[
+ [3,`Sitzkreis. L erzählt mit dem Stofftier die Geschichte von zwei Bären, die raufen, ohne sich wehzutun.`,`Sitzkreis`],
+ [5,`Bärengang durch die Halle, auf Signal Bärenbegrüßung mit Faust an Faust.`,`ganze Halle`],
+ [8,`Schiebespiel: Zwei Kinder knien auf einer Matte Hand an Hand und versuchen, sich langsam zu verschieben. Wechsel der Partner.`,`Paare auf Matten`],
+ [4,`Sitzkreis. „Was war schön? Was war unangenehm? Woran hast du es gemerkt?“`,`Sitzkreis`],
+ [3,`Kinder und L erarbeiten drei Regeln: Wir begrüßen uns. Bei Stopp lassen wir sofort los. Kein Kopf, keine Haare, kein Kitzeln.`,`Sitzkreis; Plakat`],
+ [13,`Schiebe- und Ziehspiele mit den Regeln: Rücken an Rücken schieben, Hände ziehen über eine Linie. L ruft zwischendurch Stopp, alle lassen los.`,`Paare auf Matten`],
+ [4,`Regelplakat: Jedes Kind unterschreibt mit seinem Namen oder Zeichen.`,`Sitzkreis; Plakat`]]);
+VL(`bf4-ew-1`,2,`12 Turnmatten, 12 Bälle, Regelplakat`,[
+ [3,`Sitzkreis. Regelplakat wiederholen. „Heute bewacht ihr einen Schatz.“`,`Sitzkreis`],
+ [5,`Spiel „Schatzräuber“: Kinder sammeln Bälle aus der Mitte in ihr Haus, ohne Körperkontakt.`,`4 Häuser`],
+ [8,`Paare: Ein Kind liegt auf dem Ball, das andere versucht ihn zu holen. 30 Sekunden, dann Wechsel.`,`Paare auf Matten; Bälle`],
+ [4,`Sitzkreis. „Wie hast du den Schatz geschützt? Wann hast du zu fest gezogen?“`,`Sitzkreis`],
+ [3,`L bündelt: Ziehen und Schieben ja, Reißen nein. Der Verteidiger macht sich schwer und rund.`,`Sitzkreis`],
+ [13,`Schatzkampf in drei Runden mit neuen Partnern. Variante: Schatz zwischen den Knien. L ruft Stopp, alle lassen los.`,`Paare auf Matten`],
+ [4,`Rücken an Rücken sitzen und atmen. Kreis: „Wie bekommt man den Schatz ohne Wehtun?“`,`Sitzkreis`]]);
+
+// BF5 Fangen, Laufen, Ausweichen
+VL(`bf5-we-1`,0,`Leibchen, Hütchen für Feldgrenzen, Bildkarten der Spielregeln`,[
+ [3,`Sitzkreis. L zeigt die Feldgrenzen und ein Leibchen für den Fänger. „Was ist ein gutes Abschlagen?“`,`Sitzkreis`],
+ [5,`Freies Laufen im Feld, auf Signal in die Hocke, Hände auf den Boden, wieder weiter.`,`Feld mit Hütchen`],
+ [8,`Spiel „Fischer, Fischer“ zweimal spielen. Kinder probieren, wie sie dem Fänger entkommen.`,`ganzes Feld`],
+ [4,`Sitzkreis. „Wie fühlt sich gutes Abschlagen an? Wann hat es wehgetan?“`,`Sitzkreis`],
+ [3,`L bündelt: Abschlagen mit der flachen Hand auf Schulter oder Rücken. Wer im Aus ist, ist gefangen.`,`Sitzkreis`],
+ [13,`Zwei Fangspiele mit Erlösen: „Versteinern“ (Erlösen durch Durchkriechen der Beine) und „Kettenfangen“. Fänger wechseln nach jeder Runde.`,`ganzes Feld; Leibchen`],
+ [4,`Kreis. Zwei Kinder zeigen ein gutes Abschlagen. Daumenabfrage: „Hat jeder fair abgeschlagen?“`,`Sitzkreis`]]);
+VL(`bf5-we-1`,3,`Leibchen, Hütchen, Schwänzchen, Abstimmungskarten`,[
+ [3,`Sitzkreis. Kinder stimmen mit Karten über zwei Lieblingsfangspiele der Reihe ab.`,`Sitzkreis`],
+ [5,`Eulenlauf aus Stunde 2: Laufen und auf Signal stehen bleiben, Kopf drehen wie eine Eule.`,`ganze Halle`],
+ [8,`Das gewählte Spiel nach bekannten Regeln spielen.`,`ganzes Feld`],
+ [4,`Sitzkreis. „Was war gut? Was war unfair oder langweilig?“`,`Sitzkreis`],
+ [3,`Kinder schlagen eine Regeländerung vor, zum Beispiel zwei Fänger oder ein Rettungshaus. Die Klasse wählt eine.`,`Sitzkreis`],
+ [13,`Spiel mit der neuen Regel spielen. Danach zweites Lieblingsspiel, ebenfalls mit einer Regeländerung.`,`ganzes Feld`],
+ [4,`Rückblick mit Daumen: „Wurde das Spiel besser?“ Lieblingsspiel der Reihe festhalten.`,`Sitzkreis`]]);
+
+// BF6 Unsere Bewegungslandschaft
+VL(`bf6-ew-1`,1,`2 Langbänke, 1 umgedrehte Bank, Seile, Teppichfliesen, Sandsäckchen, Turnmatten`,[
+ [3,`Sitzkreis. L erzählt: „Heute müssen wir über den Fluss, ohne nass zu werden.“`,`Sitzkreis`],
+ [5,`„Seiltänzer“: Kinder balancieren auf Linien des Hallenbodens vorwärts, rückwärts, seitwärts.`,`Hallenlinien`],
+ [8,`Balancierstationen frei erproben: breite Bank, umgedrehte Bank, Seil am Boden, Steine aus Teppichfliesen.`,`4 Stationen; Matten neben den Bänken`],
+ [4,`Sitzkreis. „Wo war es wackelig? Was hast du gemacht, damit du nicht fällst?“`,`Sitzkreis`],
+ [3,`L bündelt: Arme zur Seite, Blick nach vorn, langsame Schritte.`,`Sitzkreis`],
+ [13,`An jeder Station zwei Wege (leicht und schwer). Aufgaben: rückwärts, mit Sandsäckchen auf dem Kopf, mit Partner an der Hand. Wechsel auf Signal.`,`4 Stationen`],
+ [4,`Kreis. „Was hilft beim Gleichgewicht?“ Kinder zeigen die Arme. Abbau in Gruppen.`,`Sitzkreis`]]);
+VL(`bf6-ew-1`,3,`Geräte der Bewegungslandschaft, Stationsbilder, Steine zum Markieren`,[
+ [3,`Sitzkreis. Stationsbilder der Reihe liegen aus. „Heute dürft ihr eine Station verändern.“`,`Sitzkreis`],
+ [5,`Freies Bewegen durch die bestehende Landschaft.`,`Bewegungslandschaft`],
+ [8,`Gruppen sammeln Ideen an ihrer Station und probieren kleine Veränderungen mit L: eine Matte mehr, Bank schräg, Seil dazu.`,`4 Gruppen an 4 Stationen`],
+ [4,`Gruppen zeigen ihre Veränderung kurz der Klasse.`,`Rundgang`],
+ [3,`L prüft mit den Kindern die Sicherheit: Matten unter Absprung, nichts wackelt, eine Person pro Gerät.`,`Rundgang`],
+ [13,`Alle erproben die veränderten Stationen. Jedes Kind legt am Ende einen Stein an seinen Lieblingsweg.`,`Bewegungslandschaft`],
+ [4,`Rückblick mit Stationsbildern: „Was hast du dich in der Reihe getraut?“ Abbau.`,`Sitzkreis`]]);
+
+// BF7 Musik bewegt uns
+VL(`bf7-ew-1`,1,`Musik mit klarem Takt, Trommel`,[
+ [3,`Sitzkreis. L klatscht einen kurzen Rhythmus, Kinder antworten wie ein Echo.`,`Sitzkreis`],
+ [5,`Gehen zur Musik, auf Trommelschlag stehen bleiben, dann weiter.`,`ganze Halle`],
+ [8,`Kinder erfinden Geräusche mit dem Körper: klatschen, stampfen, patschen auf die Beine, schnipsen.`,`frei im Raum`],
+ [4,`Sitzkreis. Kinder zeigen ihre Körpergeräusche, alle machen nach.`,`Sitzkreis`],
+ [3,`L zeigt, wie man den Takt findet: Füße stampfen mit, dann kommen die Hände dazu.`,`Sitzkreis`],
+ [13,`Körperinstrumente im Kreis zur Musik: Klatschen, Patschen, Stampfen im Wechsel. Dann im Gehen durch die Halle. Zum Schluss Gruppen begleiten nacheinander die Musik.`,`Kreis, dann Halle`],
+ [4,`Jedes Kind zeigt seinen Lieblingsrhythmus, die Klasse antwortet.`,`Sitzkreis`]]);
+VL(`bf7-ew-1`,3,`Tücher, Musik aus Stunde 1`,[
+ [3,`Sitzkreis. L zeigt drei Tuchbewegungen aus der Reihe: Wellen, Kreisen, Hochwerfen.`,`Sitzkreis; 1 Tuch pro Kind`],
+ [5,`Tücher tanzen frei zur Musik.`,`ganze Halle`],
+ [8,`Kinder probieren in kleinen Gruppen, drei Bewegungen hintereinander zu machen.`,`Vierergruppen`],
+ [4,`Gruppen zeigen. „Wann habt ihr gewechselt?“`,`Halbkreis`],
+ [3,`L legt mit der Klasse die Reihenfolge fest: Wellen, Kreisen, Hochwerfen, und das Zeichen zum Wechsel.`,`Sitzkreis`],
+ [13,`Ganze Klasse übt den Tuchtanz in drei Teilen. Danach in zwei Gruppen: Eine tanzt, die andere schaut zu und klatscht am Ende.`,`ganze Halle`],
+ [4,`Vorführen für die Nachbarklasse oder Rückblick: „Was hat dir in der Reihe gefallen?“`,`Halbkreis`]]);
+
+// BF8 Fest und locker
+VL(`bf8-ew-1`,0,`Musik, Zauberstab`,[
+ [3,`Sitzkreis. L zeigt den Zauberstab: „Wer berührt wird, friert ein.“`,`Sitzkreis`],
+ [5,`Eiszauberer-Fangspiel: Abgeschlagene frieren ein und werden durch Umarmen erlöst.`,`ganze Halle`],
+ [8,`Kinder laufen zur Musik, bei Stopp frieren sie als Statue ein. Wie fest kann man sein?`,`ganze Halle; Musik`],
+ [4,`Sitzkreis. „Wie fühlt sich Eis an? Wo war dein Körper fest?“`,`Sitzkreis`],
+ [3,`L bündelt: Beim Einfrieren werden Bauch, Arme und Beine fest. Beim Auftauen wird alles weich.`,`Sitzkreis`],
+ [13,`Statuen bauen zu zweit: Ein Kind formt das andere zur Statue, sie hält fünf Sekunden. Dann taut sie in Zeitlupe auf. Rollentausch.`,`Paare`],
+ [4,`Im Liegen langsam auftauen. Kreis: „Wie fühlt sich locker an?“`,`liegend, dann Kreis`]]);
+VL(`bf8-ew-1`,3,`Turnmatten, Entspannungsgeschichte, Papier und Stifte, ruhige Musik`,[
+ [3,`Sitzkreis. L zeigt eine Stoffpuppe: „Heute geht sie auf Reise.“`,`Sitzkreis`],
+ [5,`Bewegtes Spiel „Roboter und Stoffpuppe“ aus der Reihe.`,`ganze Halle`],
+ [8,`Kinder probieren im Liegen, einzelne Körperteile fest zu machen und loszulassen.`,`Matten`],
+ [4,`Sitzkreis. „Welches Körperteil konntest du gut loslassen?“`,`Sitzkreis`],
+ [3,`L bündelt: Erst fest machen, bis drei zählen, dann ganz loslassen.`,`Sitzkreis`],
+ [13,`Geschichte „Die Reise der Stoffpuppe“: Die Puppe macht nacheinander Hände, Arme, Beine, Bauch und Gesicht fest und wieder locker. Ruhige Musik.`,`Matten, Rückenlage`],
+ [4,`Malen: „So fühlt sich locker an.“ Bilder werden ausgelegt.`,`Sitzkreis; Papier`]]);
+
+// BF3 Wasser entdecken
+VL(`bf3-we-3`,0,`Bildkarten Baderegeln, Poolnudeln, Bälle`,[
+ [3,`Am Beckenrand: Baderegeln mit Bildkarten, Pfiffzeichen vereinbaren.`,`Sitzreihe am Rand`],
+ [5,`Einstieg über die Treppe einzeln. Wasser wecken: spritzen, Arme waschen.`,`flacher Teil`],
+ [8,`Wasserlaufen: vorwärts, rückwärts, seitwärts, große und kleine Schritte.`,`flacher Teil`],
+ [4,`„Was war im Wasser anders als an Land?“`,`Stand am Rand`],
+ [3,`L bündelt: Wasser bremst. Mit Armen schaufeln hilft beim Vorankommen.`,`Stand am Rand`],
+ [13,`„Fischer, wie tief ist das Wasser?“ im Gehen. Danach Bälle mit den Händen durch das Wasser schieben.`,`flacher Teil`],
+ [4,`Aus dem Wasser, Durchzählen. Kreis: „Was hat dir Spaß gemacht?“`,`Beckenrand`]]);
+VL(`bf3-we-3`,3,`Poolnudeln, Schwimmbretter`,[
+ [3,`Am Rand: „Heute lassen wir uns vom Wasser tragen.“`,`Sitzreihe am Rand`],
+ [5,`Wasser wecken, blubbern, Gesicht ins Wasser.`,`flacher Teil`],
+ [8,`Kinder probieren mit Nudel unter den Armen die Füße hochzunehmen, vorn und hinten.`,`Poolnudeln`],
+ [4,`„Wo hast du dich am leichtesten gefühlt?“`,`Kreis im Wasser`],
+ [3,`L bündelt: Körper lang machen, Kopf ruhig, tief einatmen.`,`Kreis im Wasser`],
+ [13,`Seestern in Bauch- und Rückenlage mit Nudel. Gleitbahn: Partnerkind zieht an der Nudel durch das Wasser.`,`Paare`],
+ [4,`Aus dem Wasser, Durchzählen. Rückblick auf die Reihe.`,`Beckenrand`]]);
+
+// BF6 Abenteuer in der Gerätelandschaft
+VL(`bf6-wk-3`,0,`Bildkarten der Geräte, Langbank, Kasten, Turnmatten, Weichboden`,[
+ [3,`Sitzkreis. L zeigt Bildkarten von Bank, Kasten, Matte und Weichboden.`,`Sitzkreis`],
+ [5,`Zuordnungsspiel: Kinder laufen zu dem Gerät, das L nennt.`,`Geräte im Raum verteilt`],
+ [8,`Gruppen probieren, eine Bank und eine Matte zu tragen.`,`4 Gruppen`],
+ [4,`Sitzkreis. „Wie habt ihr getragen? Was war schwer?“`,`Sitzkreis`],
+ [3,`L bündelt: Matten zu viert tragen, Bank zu zweit oder viert, immer anheben, nie ziehen.`,`Sitzkreis`],
+ [13,`Tragen üben: Gruppen bringen Geräte an markierte Plätze. Danach kurz an den Geräten bewegen.`,`markierte Plätze`],
+ [4,`Abbau in Gruppen. Kreis: „Welches Gerät war schwer zu tragen?“`,`Sitzkreis`]]);
+VL(`bf6-wk-3`,1,`2 Langbänke, Kasten dreiteilig, Mattenberg, Turnmatten`,[
+ [3,`Sitzkreis. L zeigt drei Stationen: Bank, Kasten, Mattenberg.`,`Sitzkreis`],
+ [5,`Tierbewegungen durch die Halle: Katze, Bär, Hase.`,`ganze Halle`],
+ [8,`Freies Erproben an den Stationen.`,`3 Stationen`],
+ [4,`„Wo hast du dich etwas getraut?“`,`Sitzkreis`],
+ [3,`L bündelt: Beim Klettern drei Punkte am Gerät, beim Herunterkommen rückwärts oder mit Sprung auf die Matte.`,`Sitzkreis`],
+ [13,`Stationsbetrieb mit Wechsel auf Signal. An jeder Station gibt es eine leichte und eine schwere Aufgabe.`,`3 Stationen`],
+ [4,`Abbau. Kreis: Kinder zeigen ihren Lieblingsweg.`,`Sitzkreis`]]);
+
+// BF5 Wir sind eine Klasse (Eingangswochen)
+VL(`bf5-wk-5`,0,`Bildkarten der Hallenregeln, Handtrommel als Stoppsignal, Softball, Hütchen`,[
+ [3,`Sitzkreis an der Mittellinie. L stellt sich vor, zeigt die Trommel: „Zwei Schläge heißt: Stopp und zu mir schauen.“ Kurzer Probedurchgang im Sitzen.`,`Sitzkreis`],
+ [5,`Hallenrundgang in der Schlange hinter L: Umkleide, Toilette, Geräteraum (nur mit Erlaubnis), Ruhebank, Wasserflaschen. An jedem Ort hängt eine Bildkarte.`,`ganze Halle; Bildkarten an den Orten`],
+ [8,`Laufen frei in der Halle zur Trommel: schnell, langsam, auf Zehenspitzen. Bei zwei Schlägen sofort stehen bleiben und zur Lehrkraft schauen.`,`ganze Halle`],
+ [4,`Sitzkreis. „Wie schnell wart ihr beim Stoppsignal? Was hat geholfen?“ Kinder erzählen, was sie in der Halle gesehen haben.`,`Sitzkreis`],
+ [3,`L bündelt drei Hallenregeln mit Bildkarten: Auf das Stoppsignal hören, Geräte nur mit Erlaubnis, wir passen aufeinander auf.`,`Sitzkreis; Regelplakat`],
+ [13,`Namensball im Kreis: Ball zuwerfen und den eigenen Namen sagen, dann den Namen des Kindes, das fängt. Danach „Obstsalat“ mit vier Obstsorten: Aufgerufene Sorte tauscht die Plätze, bei „Obstsalat“ tauschen alle.`,`Kreis mit Hütchen als Plätze`],
+ [4,`Sitzkreis. Wer kann drei Namen nennen? Klassenruf vereinbaren und gemeinsam rufen.`,`Sitzkreis`]]);
+VL(`bf5-wk-5`,2,`4 Turnmatten, 2 Langbänke, Hütchen, Kastenteil, Rollenkarten (Ansager, Träger, Wegweiser)`,[
+ [3,`Sitzkreis. L zeigt den Parcours: um Hütchen, über die Bank, durch das Kastentor. „Eure Matte ist ein Floß. Es darf den Boden nicht schleifen.“`,`Sitzkreis`],
+ [5,`„Chinesische Mauer“: Die Mauer läuft an der Mittellinie, die anderen versuchen, vorbeizukommen. Gefangene werden Teil der Mauer.`,`ganze Halle`],
+ [8,`Vier Gruppen tragen ihre Matte einmal durch den Parcours, ohne Hinweise der Lehrkraft.`,`4 Gruppen à 6; Parcours`],
+ [4,`Sitzkreis. „Was hat euch geholfen? Wo gab es Durcheinander?“`,`Sitzkreis`],
+ [3,`L bündelt drei Rollen: Ansager sagt „Hoch, los, stopp“, Träger halten an den Griffen, Wegweiser geht vorn und zeigt den Weg.`,`Sitzkreis; Rollenkarten`],
+ [13,`Mattentransport mit Rollen. Nach jeder Runde tauschen die Rollen. Steigerung: Ein Kuscheltier liegt auf der Matte und darf nicht herunterfallen.`,`Parcours`],
+ [4,`Rückmeldung im Kreis: „Wer hat heute gut angesagt? Welche Rolle mochtest du?“`,`Sitzkreis`]]);
+VL(`bf5-wk-5`,3,`Material für drei Spiele (Bälle, Leibchen, Reifen), Abstimmungskarten, Kamera`,[
+ [3,`Sitzkreis. L stellt drei Spiele aus den Eingangswochen vor. Jedes Kind legt eine Karte an sein Lieblingsspiel.`,`Sitzkreis`],
+ [5,`Aufwärmen mit dem Spiel, das den zweiten Platz gemacht hat.`,`ganze Halle`],
+ [8,`Das Siegerspiel spielen, wie es bekannt ist.`,`ganze Halle`],
+ [4,`Sitzkreis. „Was war gut? Wo war es unfair oder hat jemand gefehlt?“`,`Sitzkreis`],
+ [3,`Kinder schlagen eine Regel vor, die alle mitnimmt, zum Beispiel: Jeder darf einmal Fänger sein. Die Klasse stimmt ab.`,`Sitzkreis`],
+ [13,`Klassenspiel mit der neuen Regel spielen, zwei Runden. L achtet darauf, dass die Regel eingehalten wird.`,`ganze Halle`],
+ [4,`Klassenfoto mit dem Klassenruf. Das Spiel wird als „unser Klassenspiel“ auf das Plakat geschrieben.`,`Sitzkreis`]]);
+
+// BF8 Ruhig werden
+VL(`bf8-we-5`,0,`Federn, Luftballons, Musik, Matten`,[
+ [3,`Sitzkreis. L pustet eine Feder in die Luft: „Heute spüren wir unseren Atem.“`,`Sitzkreis`],
+ [5,`Laufen zur Musik, bei Musikstopp einfrieren. Danach Hand auf das Herz legen.`,`ganze Halle`],
+ [8,`Kinder probieren, eine Feder so lange wie möglich durch Pusten in der Luft zu halten.`,`frei; 1 Feder pro Kind`],
+ [4,`Sitzkreis. „Wie war dein Atem nach dem Laufen? Wie ist er jetzt?“`,`Sitzkreis`],
+ [3,`L bündelt: Durch die Nase ein, durch den Mund lange aus. Langsames Atmen macht ruhig.`,`Sitzkreis`],
+ [13,`Atemübungen: Luftballon im Bauch (Hand auf dem Bauch im Liegen), Feder langsam über die Matte pusten, Luftballon mit dem Partner hochhalten nur durch Pusten.`,`Matten, Paare`],
+ [4,`Im Liegen Hand auf dem Bauch, fünf Atemzüge zählen. Kreis: „Wie fühlst du dich jetzt?“`,`Matten`]]);
+VL(`bf8-we-5`,2,`Matten, Decken, Fantasiereise, ruhige Musik, Papier, Wachsmalstifte`,[
+ [3,`Sitzkreis. L zeigt ein Bild vom Meer: „Heute reisen wir, ohne uns zu bewegen.“`,`Sitzkreis`],
+ [5,`„Schneemann schmilzt“: Kinder stehen fest wie ein Schneemann und sinken langsam zu Boden, wenn die Sonne kommt.`,`ganze Halle`],
+ [8,`Kinder probieren, still auf der Matte zu liegen, und hören auf Geräusche in der Halle.`,`Matten`],
+ [4,`Sitzkreis. „Was hast du gehört? War Stillliegen leicht oder schwer?“`,`Sitzkreis`],
+ [3,`L bündelt: Augen zu oder auf einen Punkt schauen, Arme neben dem Körper, ruhig atmen.`,`Sitzkreis`],
+ [13,`Fantasiereise zum Meer (etwa fünf Minuten) mit ruhiger Musik. Danach langsam aufwachen: strecken, gähnen, aufsetzen. Anschließend malen die Kinder ein Bild von der Reise.`,`Matten; Papier, Stifte`],
+ [4,`Bilder in die Ruheecke legen. Ein Kind erzählt zu seinem Bild.`,`Sitzkreis`]]);
+VL(`bf8-we-5`,3,`Matten, Federn, Bälle für die Massage, Fantasiereise, Bildkarten der Ruheformen`,[
+ [3,`Sitzkreis. Bildkarten zeigen alle Ruheformen der Reihe: Atmen, Rückenbilder, Fantasiereise, Einfrieren.`,`Sitzkreis`],
+ [5,`Kurzes Wiederholen aller Formen nacheinander, je eine Minute.`,`Matten`],
+ [8,`Ruhestationen frei wählen: Atemstation, Massagestation, Hörstation, Einfrierstation.`,`4 Stationen`],
+ [4,`„Welche Station hat dir gutgetan?“`,`Sitzkreis`],
+ [3,`L bündelt: Jeder findet anders Ruhe. Jedes Kind wählt seine Ruheinsel.`,`Sitzkreis`],
+ [13,`Kinder gehen an ihre Lieblingsstation und zeigen die Form danach einem Partnerkind, das sie ausprobiert.`,`Stationen, Paare`],
+ [4,`Klassenritual festlegen, zum Beispiel drei Atemzüge vor dem Umziehen.`,`Sitzkreis`]]);
+
+// BF2 Einführung Rollbrett und Rollbrettführerschein
+VL(`bf2-lue-5`,0,`Rollbretter im Wagen, Bildkarten der Regeln, Ampelkarten`,[
+ [3,`Sitzkreis. L zeigt ein Rollbrett von allen Seiten. „Wo kann man sich verletzen?“ Kinder zeigen auf Rollen und Kanten.`,`Sitzkreis; 1 Rollbrett`],
+ [5,`Ausgabedienst einführen: zwei Kinder geben aus, alle holen das Brett in einer Reihe und setzen sich darauf.`,`Rollbrettwagen am Eingang`],
+ [8,`Freies Fahren im Sitzen und auf dem Bauch. Kinder probieren anzufahren und anzuhalten.`,`ganze Halle`],
+ [4,`Sitzkreis. „Was war gefährlich? Wann ist es fast zusammengestoßen?“`,`Sitzkreis`],
+ [3,`L bündelt die Regeln mit Bildkarten: nie auf dem Brett stehen, Finger und Haare weg von den Rollen, nur in eine Richtung fahren, nicht ankoppeln.`,`Sitzkreis; Bildkarten`],
+ [13,`Bremsen und Beschleunigen: Spiel Ampel, dann Fahren mit Abstoßen von der Wand. L achtet auf die Regeln.`,`ganze Halle`],
+ [4,`Rückgabe in zwei Reihen. Regeln mit Daumen wiederholen.`,`Sitzkreis`]]);
+VL(`bf2-lue-5`,1,`Rollbretter, 4 Stationsbilder (Bauch, Sitz, Kniestand, zu zweit), Hütchen, Bildkarten der Regeln`,[
+ [3,`Sitzkreis. Regeln aus Stunde 1 mit Bildkarten abfragen: Kinder zeigen Daumen hoch oder runter. Ausgabedienst verteilt die Bretter.`,`Sitzkreis; Rollbrettwagen`],
+ [5,`Ampelspiel: Grün fahren, Gelb langsam, Rot anhalten. L wechselt die Karten immer schneller.`,`ganze Halle`],
+ [8,`„Wie kannst du noch auf dem Rollbrett fahren?“ Kinder erfinden Positionen: auf dem Bauch, im Sitzen, im Kniestand, auf dem Rücken.`,`ganze Halle`],
+ [4,`Sitzkreis. Drei Kinder zeigen ihre Position. „Welche war sicher, welche wackelig?“`,`Sitzkreis`],
+ [3,`L bündelt: Je tiefer der Körper, desto sicherer. Hände greifen das Brett an den Seiten, nie unten an den Rollen. Rückenlage nur im Stand ohne Fahrt.`,`Sitzkreis; Stationsbilder`],
+ [13,`Vier Stationen: Bauchlage um Hütchen, Sitz mit Füßen abstoßen, Kniestand geradeaus, zu zweit (ein Kind schiebt langsam an den Schultern). Wechsel auf Signal nach drei Minuten.`,`4 Stationen`],
+ [4,`Rückgabe in zwei Reihen. Jedes Kind zeigt im Sitzen seine Lieblingsposition.`,`Sitzkreis`]]);
+VL(`bf2-lue-5`,2,`Rollbretter, Hütchen für Start und Ziel, 4 Bahnen mit Kreppband, Sanduhren oder Stoppuhren`,[
+ [3,`Sitzkreis. L zeigt vier Rennbahnen: „Wer wird Rennfahrer? Und wie fährt man am schnellsten?“`,`Sitzkreis`],
+ [5,`Ampelspiel mit schnellen Wechseln, danach Lauf in Bauchlage längs der Halle hin und zurück.`,`ganze Halle`],
+ [8,`Freie Rennen auf den Bahnen in selbst gewählter Position, immer zwei Kinder nebeneinander.`,`4 Bahnen`],
+ [4,`Sitzkreis. „In welcher Position warst du am schnellsten? Woran lag es?“`,`Sitzkreis`],
+ [3,`L bündelt: In Bauchlage mit beiden Händen gleichzeitig weit vorne abstoßen, Kopf hoch, Beine gestreckt. Am Ziel rechtzeitig bremsen.`,`Sitzkreis`],
+ [13,`Positionen vergleichen: Jedes Kind fährt die Bahn einmal im Sitz und einmal in Bauchlage, das Partnerkind stoppt mit der Sanduhr. Danach kleine Staffel in Vierergruppen.`,`4 Bahnen; Paare, dann Vierergruppen`],
+ [4,`Rückgabe. Kreis: Vor- und Nachteile der Positionen nennen. „Welche Position nimmst du für ein Rennen, welche für eine Kurve?“`,`Sitzkreis`]]);
+VL(`bf2-lue-5`,3,`Rollbretter, 2 lange Seile, 30 Hütchen, Kreppband`,[
+ [3,`Sitzkreis. L stellt ein Hütchen um und erzählt von einem Unfall: „Heute fahrt ihr nicht schnell, sondern genau.“`,`Sitzkreis`],
+ [5,`„Heißer Draht“: Fahren entlang einer Seillinie, ohne das Seil zu berühren. Wer es berührt, fährt zurück zum Start.`,`2 Seillinien`],
+ [8,`Kinder probieren Gassen aus Hütchen, die immer enger werden.`,`3 Gassen unterschiedlicher Breite`],
+ [4,`Sitzkreis. „Wo hast du ein Hütchen berührt? Was hast du dann gemacht?“`,`Sitzkreis`],
+ [3,`L bündelt: Langsam fahren, Blick nach vorn auf das Ende der Gasse, kleine Bewegungen mit den Händen.`,`Sitzkreis`],
+ [13,`Parcours mit enger Gasse, Kurve, Rückwärtsfahren und Einparken zwischen zwei Hütchen. Partnerkind zählt Berührungen, das Ziel ist null. Zweiter Durchgang in anderer Position.`,`Parcours; Paare`],
+ [4,`Rückgabe. Tipps für genaues Fahren an der Tafel sammeln.`,`Sitzkreis`]]);
+VL(`bf2-lue-5`,4,`Rollbretter, Sandsäckchen, 4 Reifen als Curling-Ziel, Kegel oder Plastikflaschen, Musik`,[
+ [3,`Sitzkreis. L zeigt mit einem Brett und einem Sandsack, wie Curling geht.`,`Sitzkreis`],
+ [5,`Fahren nach Musik: Bei schneller Musik zügig, bei langsamer Musik im Zeitlupentempo, bei Stopp anhalten.`,`ganze Halle; Musik`],
+ [8,`Paare probieren, ein Brett mit Sandsack so anzuschieben, dass es im Reifen liegen bleibt.`,`Paare an 4 Curlingbahnen`],
+ [4,`Sitzkreis. „Wie fest muss man schieben? Wie habt ihr Punkte gezählt?“`,`Sitzkreis`],
+ [3,`L bündelt: Gefühlvoll anschieben und loslassen. Faire Punkte: Im Reifen 2, Rand 1. Erst holen, wenn beide gespielt haben.`,`Sitzkreis`],
+ [13,`Curling in Paaren, nach sechs Minuten Wechsel zum Rollbrett-Kegeln: in Bauchlage auf die Kegel zufahren und mit dem Ball rollen, ohne das Brett zu verlassen.`,`Curlingbahnen und Kegelbahnen`],
+ [4,`Rückgabe. „Wo habt ihr fair gezählt? Gab es Streit, und wie habt ihr ihn gelöst?“`,`Sitzkreis`]]);
+VL(`bf2-lue-5`,5,`Rollbretter, Kastenoberteile, Springseile, Turnmatten`,[
+ [3,`Sitzkreis. L zeigt ein Fahrzeug aus Kastenoberteil auf zwei Rollbrettern. „Was muss ein sicheres Fahrzeug haben?“`,`Sitzkreis`],
+ [5,`Fahren in Bauchlage, auf Signal einen Partner finden und gemeinsam anhalten.`,`ganze Halle`],
+ [8,`Gruppen bauen ein Fahrzeug: Kastenoberteil oder Matte auf zwei Rollbretter legen, Seil vorn anbinden.`,`4 Gruppen`],
+ [4,`Sitzkreis. Gruppen zeigen ihr Fahrzeug. „Was wackelt? Wo kann man sich einklemmen?“`,`Sitzkreis`],
+ [3,`L bündelt Fahrzeugregeln: Ein Kind sitzt, eines zieht langsam am Seil, nie stehen, Finger innen, beim Anhalten Seil locker lassen.`,`Sitzkreis`],
+ [13,`Ziehen in Gruppen auf einer Rundbahn, Fahrer und Zieher wechseln jede Runde. Ein Kind pro Gruppe ist Sicherheitsbeauftragter.`,`Rundbahn`],
+ [4,`Abbau. Kreis: „Was war gefährlich? Was hat geholfen?“`,`Sitzkreis`]]);
+VL(`bf2-lue-5`,6,`Rollbretter, Hütchen, Reifen, Kreppband für Straßen, Ampelkarten, Waschstation aus Teppichfliesen und Tüchern, Leibchen für Polizei`,[
+ [3,`Sitzkreis. L zeigt die Autolandschaft: Straßen, Kreuzung, Parkplatz, Waschstation.`,`Sitzkreis`],
+ [5,`Gemeinsamer Aufbau in Gruppen nach Bildplan.`,`Gruppen`],
+ [8,`Kinder fahren frei durch die Landschaft.`,`Autolandschaft`],
+ [4,`Sitzkreis. „Wo gab es Stau oder fast einen Unfall?“`,`Sitzkreis`],
+ [3,`L bündelt Verkehrsregeln: rechts fahren, an der Ampel halten, in der Waschstation einzeln.`,`Sitzkreis`],
+ [13,`Straßenverkehr mit Rollen: Ampelkind an der Kreuzung, Polizei achtet auf Regeln, Waschstation putzt mit Tüchern. Rollen wechseln alle vier Minuten.`,`Autolandschaft`],
+ [4,`Abbau. Verkehrsregeln reflektieren: „Welche Regel war am wichtigsten?“`,`Sitzkreis`]]);
+
+// BF6 Bundesjugendspiele Turnen
+VL(`bf6-lue-8`,0,`Stationsplan mit Bildern, Geräte für sechs Stationen, Turnmatten`,[
+ [3,`Sitzkreis. L zeigt Urkunde und Stationsplan. „In fünf Stunden ist Wettbewerb. Heute lernt ihr die Stationen kennen.“`,`Sitzkreis`],
+ [5,`Geräte benennen: L ruft ein Gerät, Kinder laufen hin.`,`ganze Halle`],
+ [8,`Gruppen bauen je eine Station nach Bildplan mit L auf und probieren sie aus.`,`6 Gruppen`],
+ [4,`Rundgang: Jede Gruppe zeigt ihre Station.`,`Rundgang`],
+ [3,`L und Kinder sammeln Regeln: ein Kind pro Gerät, warten hinter der Linie, Matten nicht verschieben.`,`Sitzkreis; Plakat`],
+ [13,`Alle Stationen im Wechsel erproben, Wechsel auf Signal.`,`6 Stationen`],
+ [4,`Abbau in Gruppen. Kreis: „Welche Station wird spannend?“`,`Sitzkreis`]]);
+VL(`bf6-lue-8`,1,`2 Langbänke, umgedrehte Bank, schiefe Ebene aus Bank und Kasten, Turnmatten, Sandsäckchen`,[
+ [3,`Sitzkreis. L zeigt die zwei Stationen des Tages: Balancieren und Rollen.`,`Sitzkreis`],
+ [5,`Spannungsspiele: Päckchen, Brett, Kerze auf Kommando.`,`Matten`],
+ [8,`Kinder erproben Balancieren auf der breiten und schmalen Bank und Rollen an der Schräge.`,`2 Stationen, doppelt aufgebaut`],
+ [4,`„Was hilft beim Balancieren? Wann hat die Rolle geklappt?“`,`Sitzkreis`],
+ [3,`L bündelt: Balancieren mit Blick nach vorn, Arme seitlich. Rolle: Kinn auf die Brust, rund wie ein Igel, Hände neben den Kopf.`,`Sitzkreis`],
+ [13,`Übungsstationen mit Steigerung: Balancieren mit Sandsäckchen, rückwärts; Rolle an der Schräge, dann auf der flachen Matte. Partnerkind achtet auf das Kinn.`,`4 Stationen; Paare`],
+ [4,`Abbau. „Was übst du noch?“`,`Sitzkreis`]]);
+VL(`bf6-lue-8`,3,`Geräte der sechs Stationen, Wertungskarten wie im Wettbewerb, Stifte`,[
+ [3,`Sitzkreis. L erklärt den Ablauf des Wettbewerbs: feste Gruppen, Reihenfolge, Punkte.`,`Sitzkreis`],
+ [5,`Aufwärmen: Laufen, Turnpositionen, Strecksprünge.`,`ganze Halle`],
+ [8,`Probedurchgang ohne Punkte im Wettbewerbsablauf.`,`6 Stationen`],
+ [4,`„Wo war der Ablauf unklar?“`,`Sitzkreis`],
+ [3,`L wiederholt die Merkmale „sauber“: Körperspannung und sichere Landung.`,`Sitzkreis`],
+ [13,`Generalprobe mit Punkten: Partnerkind trägt ein, L kontrolliert.`,`6 Stationen; Wertungskarten`],
+ [4,`Abbau. „Was übe ich noch bis zum Wettbewerb?“`,`Sitzkreis`]]);
+VL(`bf6-lue-8`,4,`Geräte der sechs Stationen, Wertungskarten, Stifte, Urkunden, Klemmbretter für Helfer aus Klasse 4`,[
+ [3,`Sitzkreis. Begrüßung, Ablauf in festen Gruppen mit Startstation. „Ihr zeigt heute, was ihr geübt habt. Jede Urkunde ist verdient.“`,`Sitzkreis; Gruppenliste`],
+ [5,`Gemeinsames Aufwärmen nach Musik: Laufen, Hampelmann, Turnpositionen Päckchen, Brett, Kerze.`,`ganze Halle`],
+ [8,`Einturnen: Jede Gruppe probiert jede Station einmal ohne Wertung.`,`6 Stationen`],
+ [4,`Sitzkreis. „Wie fühlst du dich? Wo bist du aufgeregt?“ L macht Mut: Ein Fehlversuch darf wiederholt werden.`,`Sitzkreis`],
+ [3,`L erinnert an die zwei Merkmale (Körper fest, landen wie eine Katze) und an die Regeln an den Stationen.`,`Sitzkreis`],
+ [13,`Wettbewerb: Gruppen wechseln auf Signal nach gut zwei Minuten. Helfer oder L tragen die Punkte ein, Kinder dürfen zwei Versuche machen.`,`6 Stationen; Wertungskarten`],
+ [4,`Abbau in Gruppen. Urkunden werden in der nächsten Stunde überreicht, heute Applaus für jede Gruppe. „Worauf bist du stolz?“`,`Sitzkreis`]]);
+
+// BF8 Yoga für Kinder
+VL(`bf8-gd-5`,0,`Turnmatten im Kreis, Klangschale, Bildkarten Baum, Katze, Hund, Kerze`,[
+ [3,`Kreis auf Matten. L zeigt die Klangschale: „Wenn sie klingt, werden wir still.“ Erstes Ritual: Klang hören, bis er verstummt.`,`Mattenkreis`],
+ [5,`Freies Laufen zur Musik, bei Klangschale anhalten und still stehen wie ein Baum.`,`ganze Halle`],
+ [8,`Kinder probieren Haltungen nach Bildkarten: Wie sieht ein Baum, eine Katze, ein Hund aus?`,`Matten; Bildkarten`],
+ [4,`Kreis. Kinder zeigen ihre Lösung. „Wo hast du es im Körper gespürt?“`,`Mattenkreis`],
+ [3,`L zeigt die vier Haltungen richtig: Baum mit Fuß am Unterschenkel, Katze mit rundem Rücken, Hund als Dach, Kerze mit Händen am Rücken.`,`Mattenkreis`],
+ [13,`Haltungen nacheinander: je drei Atemzüge halten, dann locker lassen. Zweite Runde mit Tierlauten beim Ausatmen. Dritte Runde: Kinder wählen die Reihenfolge.`,`Mattenkreis`],
+ [4,`Ruhephase in Rückenlage, Klangschale. „Welche Haltung mochtest du?“`,`Mattenkreis`]]);
+VL(`bf8-gd-5`,2,`Turnmatten, Klangschale, Bildkarten der Partnerhaltungen`,[
+ [3,`Mattenkreis mit Klangschalenritual. „Heute machen wir Yoga zu zweit.“`,`Mattenkreis`],
+ [5,`Spiegelspiel: Ein Kind macht langsame Bewegungen vor, das Partnerkind spiegelt.`,`Paare`],
+ [8,`Paare probieren, Haltungen aus den Stunden 1 und 2 zu zweit zu bauen.`,`Paare auf Matten`],
+ [4,`Paare zeigen ihre Ideen. „Wie habt ihr euch gegenseitig geholfen?“`,`Mattenkreis`],
+ [3,`L zeigt drei Partnerhaltungen: Doppelbaum (Hand an Hand), Brücke über die Katze, Rücken an Rücken aufstehen. Regel: Langsam, absprechen, Stopp gilt.`,`Mattenkreis; Bildkarten`],
+ [13,`Partnerhaltungen üben, jede dreimal. Danach erfinden Paare eine eigene Partnerhaltung und zeigen sie.`,`Paare`],
+ [4,`Rückenbild: Ein Kind malt mit dem Finger ein Tier auf den Rücken des anderen, das andere rät.`,`Paare im Kreis`]]);
+VL(`bf8-gd-5`,3,`Turnmatten, Klangschale, Bildkarten aller Haltungen, Plakat`,[
+ [3,`Mattenkreis mit Klangschalenritual. „Heute baut ihr euren eigenen Yoga-Ablauf.“`,`Mattenkreis`],
+ [5,`Alle Haltungen der Reihe einmal nacheinander, L sagt an.`,`Mattenkreis`],
+ [8,`Vierergruppen wählen vier Bildkarten und legen eine Reihenfolge.`,`Vierergruppen`],
+ [4,`Gruppen zeigen ihren Ablauf kurz. „Was passt gut nacheinander?“`,`Mattenkreis`],
+ [3,`L bündelt: Ein Ablauf beginnt ruhig, wird anstrengender und endet entspannt.`,`Mattenkreis`],
+ [13,`Gruppen üben ihren Ablauf und zeigen ihn. Die Klasse macht einen Ablauf mit. Gemeinsam wird ein Klassenablauf für das Plakat gewählt.`,`Gruppen, dann Kreis`],
+ [4,`Ruhephase mit Klangschale. Rückblick: „Was nimmst du aus dem Yoga mit?“`,`Mattenkreis`]]);
+
 const FIXED='gs';for(let i=UV.length-1;i>=0;i--)if(UV[i].stufe!=='GS')UV.splice(i,1);
 const BF={1:`Laufen, Springen und Werfen`,2:`Gleiten, Fahren und Rollen`,3:`Bewegen im Wasser`,4:`Kämpfen und Verteidigen`,5:`Spielen`,6:`Bewegen an und von Geräten`,7:`Rhythmisches und tänzerisches Bewegen`,8:`Fitness und achtsames Bewegen`};
 const KB={LÜ:[`Leisten und Üben`,`#1d4ed8`,`Leistung`],GD:[`Gestalten und Darstellen`,`#9d174d`,`Gestaltung, Ausdruck`],EW:[`Erkunden und Wagen`,`#b45309`,`Wagnis`],WK:[`Wettkämpfen und Kooperieren`,`#0c6b4e`,`Miteinander`],WE:[`Wahrnehmen und Erfahren`,`#6d28d9`,`Eindruck, Körpererfahrung`]};
@@ -8712,9 +9086,11 @@ function sketch(sk,acc='#0c6b4e',thumb=false){
 }
 function svgToPng(svg){return new Promise((res,rej)=>{const im=new Image();im.onload=()=>{try{const c=document.createElement('canvas');c.width=1624;c.height=824;const g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);g.drawImage(im,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',.92))}catch(e){rej(e)}};im.onerror=rej;im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)})}
 function reihePos(u){const m=/Stunde (\d+) von (\d+)/.exec(u.reihe)||[];return {cur:+m[1]||1,n:+m[2]||1,name:(/Reihe „(.+)“/.exec(u.reihe)||[])[1]||''}}
+const VLP=['Einstieg','Erwärmung','Erleben','Austauschen','Verstehen','Anwenden','Abschluss'];
+function vlHtml(v){return `<details class="vld"><summary>Stundenverlauf (${v.ph.reduce((a,x)=>a+x[0],0)} Min.) ansehen</summary><table class="vlt"><tbody>${v.ph.map((x,i)=>`<tr><th>${VLP[i]}<span>${x[0]} Min.</span></th><td>${esc(x[1])}<em>${esc(x[2])}</em></td></tr>`).join('')}</tbody></table><p class="vlm"><b>Material:</b> ${esc(v.mat)}</p></details>`}
 function reiheHtml(u){const R=REIHE[u.id];if(!R)return'';const {cur,name}=reihePos(u);const sibs={};UV.forEach(x=>{if(x.id!==u.id&&REIHE[x.id]===R)sibs[reihePos(x).cur]=x});
  return `<p class="rname">„${esc(name)}“</p><div class="box" style="margin-bottom:18px"><h4>Ziel der Reihe</h4><p>${esc(R.ziel)}</p></div>
- <ol class="steps">${R.st.map((s,i)=>{const n=i+1,c=n<cur?'done':n===cur?'now':'next';return `<li class="${c}"><div class="sn"><span class="num">${n}</span></div><div class="sb"><span class="tag2">${n<cur?'Woher wir kommen':n===cur?'Diese Stunde':'Was noch kommt'}</span><b>${esc(s[0])}</b><span class="fo">${esc(s[1])}</span><div class="sg"><div><h4>Stundenziel</h4><p>${esc(s[2])}</p></div><div><h4>Grobverlauf</h4><dl><dt>Einstieg</dt><dd>${esc(s[3][0])}</dd><dt>Hauptteil</dt><dd>${esc(s[3][1])}</dd><dt>Abschluss</dt><dd>${esc(s[3][2])}</dd></dl></div></div>${n===cur?`<button class="lnk" data-go="x-verlauf">Ausführlicher Verlaufsplan dieser Stunde ↓</button>`:''}${n!==cur&&sibs[n]?`<button class="lnk" data-nav="${sibs[n].id}">Ausgearbeitete Stunde ansehen ›</button>`:''}</div></li>`}).join('')}</ol>`}
+ <ol class="steps">${R.st.map((s,i)=>{const n=i+1,c=n<cur?'done':n===cur?'now':'next';return `<li class="${c}"><div class="sn"><span class="num">${n}</span></div><div class="sb"><span class="tag2">${n<cur?'Woher wir kommen':n===cur?'Diese Stunde':'Was noch kommt'}</span><b>${esc(s[0])}</b><span class="fo">${esc(s[1])}</span><div class="sg"><div><h4>Stundenziel</h4><p>${esc(s[2])}</p></div><div><h4>Grobverlauf</h4><dl><dt>Einstieg</dt><dd>${esc(s[3][0])}</dd><dt>Hauptteil</dt><dd>${esc(s[3][1])}</dd><dt>Abschluss</dt><dd>${esc(s[3][2])}</dd></dl></div></div>${s[4]?vlHtml(s[4]):''}${n===cur?`<button class="lnk" data-go="x-verlauf">Ausführlicher Verlaufsplan dieser Stunde ↓</button>`:''}${n!==cur&&sibs[n]?`<button class="lnk" data-nav="${sibs[n].id}">Ausgearbeitete Stunde ansehen ›</button>`:''}</div></li>`}).join('')}</ol>`}
 function times(u){let t=0;return u.verlauf.map(v=>{const a=t;t+=v.t;return `${a}′–${t}′`})}
 function detailView(u){u=VU(u);
  const ts=times(u);const netto=u.verlauf.reduce((a,v)=>a+v.t,0);const k=KB[u.kb][1];
@@ -9869,7 +10245,7 @@ function buildPdf(u,img){
  const netto=u.verlauf.reduce((a,v)=>a+v.t,0);
  P(`Klasse ${u.klasse} (${u.form?FORM[u.form][0]:STUFE_L[u.stufe]})  |  ${u.dauer} min (${netto} min netto)  |  ${u.reihe}`,9,'normal',1);
  P(`Querschnittsthemen: ${u.quer.join(', ')}  |  Perspektive nach Kurz: ${KB[u.kb][2]}`,9,'normal',2);
- if(REIHE[u.id]){const rp=reihePos(u);H('Unterrichtsreihe');P(`„${rp.name}“`,10.5,'bold',1);P('Ziel der Reihe: '+REIHE[u.id].ziel,9.5,'normal',2);doc.autoTable({startY:y,margin:{left:M,right:M},theme:'grid',styles:{font:'helvetica',fontSize:7.6,cellPadding:1.4,textColor:[27,36,32],lineColor:[190,186,172],lineWidth:.15,overflow:'linebreak'},headStyles:{fillColor:[231,239,233],textColor:[27,36,32],fontStyle:'bold'},columnStyles:{0:{cellWidth:9,halign:'center'},1:{cellWidth:40},2:{cellWidth:58},3:{cellWidth:73}},head:[['Std.','Thema und Schwerpunkt','Stundenziel','Grobverlauf']],body:REIHE[u.id].st.map((x,i)=>[String(i+1),x[0]+(i+1===rp.cur?' (diese Stunde)':'')+'\n'+x[1],x[2],'Einstieg: '+x[3][0]+'\nHauptteil: '+x[3][1]+'\nAbschluss: '+x[3][2]]),didParseCell:d=>{if(d.section==='body'&&d.row.index===rp.cur-1){d.cell.styles.fillColor=[244,240,226];if(d.column.index<2)d.cell.styles.fontStyle='bold'}}});y=doc.lastAutoTable.finalY+2;y+=1.5}
+ if(REIHE[u.id]){const rp=reihePos(u);H('Unterrichtsreihe');P(`„${rp.name}“`,10.5,'bold',1);P('Ziel der Reihe: '+REIHE[u.id].ziel,9.5,'normal',2);doc.autoTable({startY:y,margin:{left:M,right:M},theme:'grid',styles:{font:'helvetica',fontSize:7.6,cellPadding:1.4,textColor:[27,36,32],lineColor:[190,186,172],lineWidth:.15,overflow:'linebreak'},headStyles:{fillColor:[231,239,233],textColor:[27,36,32],fontStyle:'bold'},columnStyles:{0:{cellWidth:9,halign:'center'},1:{cellWidth:40},2:{cellWidth:58},3:{cellWidth:73}},head:[['Std.','Thema und Schwerpunkt','Stundenziel','Verlauf']],body:REIHE[u.id].st.map((x,i)=>[String(i+1),x[0]+(i+1===rp.cur?' (diese Stunde)':'')+'\n'+x[1],x[2],(x[4]?x[4].ph.map((q,k)=>VLP[k]+' ('+q[0]+'): '+q[1]).join('\n')+'\nMaterial: '+x[4].mat:'Einstieg: '+x[3][0]+'\nHauptteil: '+x[3][1]+'\nAbschluss: '+x[3][2])]),didParseCell:d=>{if(d.section==='body'&&d.row.index===rp.cur-1){d.cell.styles.fillColor=[244,240,226];if(d.column.index<2)d.cell.styles.fontStyle='bold'}}});y=doc.lastAutoTable.finalY+2;y+=1.5}
  H('1 Bildungsplanbezug');P(u.bp);
  H('2 Bedingungsanalyse');h3('Lerngruppe');P(u.bedingung.gruppe);h3('Lernvoraussetzungen');P(u.bedingung.vorauss);h3('Raum und Material');P(u.bedingung.raum);h3('Sicherheit');P(u.bedingung.sicherheit);
  H('3 Sachanalyse');P(u.sach);
