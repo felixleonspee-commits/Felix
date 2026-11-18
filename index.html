@@ -8982,6 +8982,7 @@ fng24:`Fridtjof-Nansen-Grundschule. (2024). Stoffverteilungsplan Sport [Unveröf
 fngrp:`Fridtjof-Nansen-Grundschule. (o. J.). Rahmenplan für relevante Besonderheiten [Unveröffentlichtes schulinternes Dokument].`,
 iqsh12:`Institut für Qualitätsentwicklung an Schulen Schleswig-Holstein. (2012). Methoden im Unterricht: Anregungen für Schule und Lehrerbildung (2. Aufl.). IQSH.`,
 bpb04:`Scholz, L. (2004). Methoden-Kiste (3. Aufl.; Thema im Unterricht extra). Bundeszentrale für politische Bildung.`,
+mk26:`Methodenkartei. (2026). Methoden [Website]. Universität Oldenburg und Universität Vechta. Abgerufen am 18. November 2026, von https://www.methodenkartei.uni-oldenburg.de/methoden/`,
 wdr11:`Schwandner, M. (2011, 17. Mai). Loben ist gar nicht so einfach [Radiobeitrag, Sendemanuskript]. In Leonardo: Wissenschaft und mehr. WDR 5.`,
 borg:`Borg, G. (1998). Borg's perceived exertion and pain scales (Borgs Skalen für Anstrengungs- und Schmerzempfinden). Human Kinetics.`};
 
@@ -10337,8 +10338,6 @@ const METH=[
  sport:`Kostet kaum Zeit und passt in jeden Stundenabschluss. Eine Zielscheibe lässt sich mit Hütchen oder Reifen auf den Hallenboden legen, die Lernenden stellen sich hinein. Daumenproben vor und nach einer Übung zeigen Veränderung („Wie sicher fühlst du dich?“).`,
  tipps:[`Weitergeben erlauben, wer nichts sagen möchte.`,`Bei heiklen Fragen Augen schließen lassen, dann sieht niemand, wie die anderen abstimmen.`]}
 ];
-function litOf(u){const k=u.lit.slice();const h=methodsIn(u);if(h.some(([m])=>m.q!=='bpb')&&!k.includes('iqsh12'))k.push('iqsh12');if(h.some(([m])=>m.q!=='iqsh')&&!k.includes('bpb04'))k.push('bpb04');if(!k.includes('wdr11'))k.push('wdr11');return k}
-const MBY=Object.fromEntries(METH.map(m=>[m.id,m]));
 
 /* Richtig loben (nach Schwandner, 2011) */
 const LOB={
@@ -10379,6 +10378,182 @@ const MSUG=[
  [`kugellager`,u=>u.stufe!=='GS'||u.klasse>='3',`zum Sichern: dem Gegenüber erklären oder zeigen, was heute geholfen hat`],
  [`debatte`,u=>u.stufe==='Sek II'&&(u.kb==='WK'||u.kb==='LÜ'),`als Kurzform (Streitlinie) zur Leitfrage der Stunde`],
  [`blitzlicht`,u=>true,`am Stundenende: ein Satz pro Person oder Daumenprobe zum Stundenziel`]];
+/* Ergänzung aus der Methodenkartei der Universitäten Oldenburg und Vechta */
+Object.assign(MFN,{start:[`Gruppen bilden und ankommen`,`#c2410c`],ruhe:[`Zur Ruhe kommen`,`#0e7490`],peer:[`Rückmeldung unter Lernenden`,`#a21caf`]});
+MQ.mk=`Methodenkartei, 2026`;
+const MKU=`https://www.methodenkartei.uni-oldenburg.de/methode/`;
+METH.push(
+{id:`fuenffinger`,name:`Fünf-Finger-Feedback`,fn:[`peer`,`refl`],q:`mk`,url:MKU+`fuenf-finger-feedback/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`3–8 min`,re:/Fünf-Finger|Fuenf-Finger/,
+ kurz:`Jeder Finger der Hand steht für eine Frage. Die Lernenden antworten der Reihe nach vom Daumen bis zum kleinen Finger, möglichst mit Ich-Botschaften.`,
+ ablauf:[`Daumen: Was hat mir gefallen?`,`Zeigefinger: Was fand ich interessant, wozu möchte ich mehr wissen?`,`Mittelfinger: Was kann man besser machen?`,`Ringfinger: Was nehme ich mit?`,`Kleiner Finger: Was ist mir zu kurz gekommen?`],
+ sport:`Gut am Ende einer Reihe oder nach einer Präsentation (Kür, Choreografie, selbst erfundenes Spiel). Die Hand braucht kein Material und funktioniert auch in der Halle im Sitzkreis. Für eine kurze Rückmeldung reichen zwei oder drei Finger, etwa Daumen, Mittelfinger und Ringfinger.`,
+ tipps:[`Die Hand mit den fünf Fragen einmal als Plakat aufhängen, dann kennen alle die Reihenfolge.`,`Beim Mittelfinger einen konkreten Vorschlag verlangen, nicht nur Kritik.`]},
+{id:`twostars`,name:`Two Stars and a Wish (Zwei Sterne, ein Wunsch)`,fn:[`peer`],q:`mk`,url:MKU+`two-stars-and-a-wish/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`2–5 min`,re:/Two Stars|zwei Sterne|Zwei Sterne/,
+ kurz:`Wer Rückmeldung gibt, nennt zwei Dinge, die gelungen sind, und formuliert einen Wunsch für das nächste Mal. Der Wunsch hilft, Kritik ohne Angriff zu äußern.`,
+ ablauf:[`Gruppe oder Person zeigt ihr Ergebnis.`,`Zuschauende überlegen zwei Sterne: zwei gelungene Punkte, möglichst zu den Kriterien.`,`Dazu ein Wunsch: ein Vorschlag, was beim nächsten Versuch besser werden kann.`,`Die Gezeigten hören zu und sagen, welchen Wunsch sie ausprobieren.`],
+ sport:`Passt zu jeder Phase, in der Gruppen etwas zeigen: Bewegungsfolge, Spielzug, Pyramide, Tanz. Die Sterne beziehen sich auf die Kriterienkarte der Stunde, damit die Rückmeldung fachlich bleibt. In der Grundschule mündlich, mit zwei Sternkarten und einer Sternschnuppe als Bild.`,
+ tipps:[`Nur sachliche Punkte zulassen, keine Bemerkungen über Personen.`,`Den Wunsch als Satz formulieren lassen: „Ich wünsche mir, dass ihr …“`]},
+{id:`wuerfel`,name:`Würfelfeedback`,fn:[`peer`,`refl`],q:`mk`,url:MKU+`wuerfelfeedback/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`3–6 min`,re:/Würfelfeedback|Feedback-Würfel/,
+ kurz:`Ein Würfel teilt Satzanfänge zu. Wer würfelt, ergänzt den Satz, der zur gewürfelten Zahl gehört.`,
+ ablauf:[`Sechs Satzanfänge sichtbar machen, z. B. „Mir hat gefallen, dass …“, „Mir hat nicht gefallen, dass …“, „Gut umsetzen konnte ich …“, „Schwer fiel mir …“, „Beim nächsten Mal mache ich …“, „Ich habe gelernt, dass …“.`,`Mehrere Lernende würfeln nacheinander und vollenden ihren Satz.`,`Die Lehrkraft greift auf, was sich wiederholt.`],
+ sport:`Ein großer Schaumstoffwürfel aus dem Geräteraum macht daraus ein kleines Ritual im Abschlusskreis. Die Satzanfänge lassen sich auf das Stundenziel zuschneiden, etwa „Beim Absprung habe ich gemerkt …“. Später können Gruppen die Satzanfänge selbst entwickeln.`,
+ tipps:[`Satzanfänge an der Hallenwand hängen lassen, dann geht es schnell.`,`Nicht alle würfeln lassen, vier bis sechs Würfe reichen.`]},
+{id:`warmedusche`,name:`Warme Dusche`,fn:[`peer`,`koop`],q:`mk`,url:MKU+`warme-dusche/`,st:[`GS`,`Sek I`],zeit:`3–5 min pro Person`,re:/Warme Dusche/,
+ kurz:`Eine Person sitzt in der Mitte des Kreises, die anderen sprechen ihr der Reihe nach ein Kompliment zu einer Fähigkeit oder Eigenschaft aus. Die Teilnahme ist freiwillig.`,
+ ablauf:[`Sitzkreis, eine Person setzt sich freiwillig in die Mitte.`,`Wer möchte, sagt ihr etwas Positives: was sie gut kann oder was sie für die Gruppe getan hat.`,`Die Person in der Mitte hört zu und bedankt sich.`,`Als Ritual kommt jede Stunde eine andere Person dran.`],
+ sport:`Stärkt das Klima nach kooperativen Aufgaben oder am Ende einer Wettkampfreihe. Im Sport bieten sich Komplimente zu Fairness, Mut, Hilfe und Einsatz an, nicht nur zur Leistung. So würdigt die Gruppe auch Kinder, die selten gewinnen.`,
+ tipps:[`Nur freiwillig, niemand muss in die Mitte oder etwas sagen.`,`Komplimente konkret halten: „Du hast mir beim Sichern Mut gemacht.“ Das passt zu den Grundsätzen unter „Richtig loben“.`,`Vorher klären, dass Ironie tabu ist.`]},
+{id:`reflexionshaus`,name:`Reflexionshaus`,fn:[`refl`,`peer`],q:`mk`,url:MKU+`reflexionshaus-2/`,st:[`Sek I`,`Sek II`,`GS`],zeit:`5–10 min`,re:/Reflexionshaus/,
+ kurz:`Ein gezeichnetes Haus ordnet die Reflexion einer Stunde: Jedes Bauteil steht für eine Frage.`,
+ ablauf:[`Dach: Was war das Ziel der Stunde?`,`Fenster: Was haben wir beobachtet?`,`Wände: Was waren Stärken, was ließe sich verbessern?`,`Tür: Was wollen wir verändern?`,`Fundament: Um welches Thema ging es, und wie hängt es mit dem Ziel zusammen?`],
+ sport:`Als Plakat an der Hallenwand oder auf dem Boden mit Seilen und Hütchen gelegt: Die Lernenden stellen sich in das Bauteil, zu dem sie etwas sagen wollen. Eignet sich für die Reflexion einer Gruppenaufgabe oder einer Reihe. Für Jüngere weniger Bauteile nehmen, etwa nur Fenster, Wände und Tür.`,
+ tipps:[`Die Fragen an die Lerngruppe anpassen, die Kartei schlägt das ausdrücklich vor.`,`Das Haus über mehrere Stunden hängen lassen und ergänzen.`]},
+{id:`stimmung`,name:`Stimmungsbarometer`,fn:[`refl`],q:`mk`,url:MKU+`stimmungsbarometer/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`2–4 min`,re:/Stimmungsbarometer/,
+ kurz:`Nach einer Arbeitsphase markieren die Lernenden auf einer Skala, wie zufrieden sie sind, etwa mit Klebepunkten auf einem Plakat. Geht ab Klasse 1.`,
+ ablauf:[`Kurz über die vergangene Phase nachdenken.`,`Auf einer Skala von „sehr unzufrieden“ bis „sehr zufrieden“ einen Punkt setzen, nacheinander oder in Kleingruppen.`,`Die Lehrkraft spricht das Bild an und fragt bei Auffälligkeiten nach.`],
+ sport:`In der Halle ohne Papier: Ein Seil oder die Seitenlinie ist die Skala, die Lernenden stellen sich auf. Mit Klebepunkten auf einem Plakat lässt sich die Entwicklung über eine Reihe festhalten, wenn jedes Kind seinen Punkt kennzeichnet. Für heikle Fragen anonym arbeiten, zum Beispiel mit der Skala hinter einer Stellwand.`,
+ tipps:[`Klare Frage stellen: Klima, eigener Einsatz oder Schwierigkeit, nicht alles auf einmal.`,`Ergebnis kurz würdigen und sagen, was sich daraus ändert.`]},
+{id:`ampel`,name:`Ampelkarten (Ampelquiz)`,fn:[`refl`,`kontr`,`urteil`],q:`mk`,url:MKU+`ampelquiz/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`2–5 min`,re:/Ampelquiz/,
+ kurz:`Alle halten auf eine Frage oder These eine Karte in Ampelfarbe hoch: grün für Zustimmung, gelb für unentschieden, rot für Ablehnung. Die Lehrkraft sieht sofort das Bild der Gruppe.`,
+ ablauf:[`Jede Person hat drei Karten oder drei farbige Bänder.`,`Frage oder These stellen, alle zeigen gleichzeitig.`,`Auszählen, nach Gründen fragen.`,`Variante: Paare einigen sich kurz und zeigen gemeinsam eine Farbe.`],
+ sport:`Statt Karten passen Leibchen oder Hütchen in drei Farben, auf die sich alle stellen. Nützlich zur Selbsteinschätzung vor einer Station („Traust du dir den Sprung vom Kasten zu?“), zur Wissensabfrage über Regeln oder als schnelle Rückmeldung zum Stundenziel.`,
+ tipps:[`Bei Fragen zu Angst oder Können lieber verdeckt abfragen.`,`Nur rot und grün nutzen, wenn eine eindeutige Entscheidung gebraucht wird.`]},
+{id:`rueckenplakat`,name:`Feedbackplakate auf dem Rücken`,fn:[`peer`],q:`mk`,url:MKU+`feedbackplakate/`,st:[`Sek I`,`Sek II`],zeit:`10–15 min`,re:/Feedbackplakat|Rückenplakat/,
+ kurz:`Allen hängt ein Blatt auf dem Rücken. Die Gruppe bewegt sich durch den Raum und schreibt sich gegenseitig begründete Rückmeldungen auf. Am Ende liest jede Person ihr eigenes Blatt.`,
+ ablauf:[`DIN-A3-Blatt mit Kreppband auf den Rücken kleben, alle haben einen Stift.`,`Durch den Raum gehen und Rückmeldungen auf die Rücken schreiben, an Vorhandenes anknüpfen ist erlaubt.`,`Jede Aussage wird begründet, bei Kritik steht ein Vorschlag dabei.`,`Nach der festgelegten Zeit Blätter abnehmen und lesen.`],
+ sport:`Passt an das Ende einer längeren Gruppenarbeit: Choreografie, Projekt, Spielfest, Kampfgericht. Rückmeldungen können sich auf gezeigte Leistung und auf Zusammenarbeit beziehen. Die Bewegung durch die Halle gehört schon zur Methode.`,
+ tipps:[`Vorher Regeln klären: begründen, freundlich, konkret.`,`Die Lehrkraft schreibt mit und achtet darauf, dass niemand leer ausgeht.`]},
+{id:`vierecken`,name:`Vier-Ecken-Methode`,fn:[`urteil`,`aktiv`,`refl`],q:`mk`,url:MKU+`vier-ecke-methode/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`8–15 min`,re:/Vier-Ecken|vier Ecken der Halle|Ecke ihrer Meinung/,
+ kurz:`In jeder Ecke hängt eine von vier Aussagen zu einer Frage. Die Lernenden gehen in die Ecke, der sie am ehesten zustimmen, begründen dort ihre Wahl und bringen die Ergebnisse ins Plenum.`,
+ ablauf:[`Vier Aussagen, Bilder oder Positionen vorbereiten und in die Ecken hängen.`,`Alle stellen sich zu der Aussage, die am besten passt.`,`In jeder Ecke Gründe sammeln.`,`Plenum: Jede Ecke berichtet, dann gemeinsam diskutieren.`,`Variante: Gruppen wandern im Uhrzeigersinn und bearbeiten alle vier Fragen.`],
+ sport:`Die Halle hat vier Ecken, die Methode braucht also kaum Vorbereitung. Beispiele: „Warum treibst du Sport?“ mit vier Motiven (Gesundheit, Leistung, Spaß, Gemeinschaft), passend zu den pädagogischen Perspektiven. Oder vier Trainingsmethoden, vier Lösungen für ein Regelproblem, vier Antworten in einem Wissensquiz. Mehr Möglichkeiten als bei der Positionslinie, die nur ein Ja-Nein-Spektrum kennt.`,
+ tipps:[`Ein leeres Blatt in jeder Ecke sammelt Begründungen für später.`,`Eine fünfte Möglichkeit („keine passt“) in der Mitte erlauben.`]},
+{id:`eckenraten`,name:`Eckenraten`,fn:[`kontr`],q:`mk`,url:MKU+`eckenraten/`,st:[`GS`,`Sek I`],zeit:`4–10 min`,re:/Eckenraten/,
+ kurz:`Vier Lernende stehen in den Ecken. Wer eine Frage zuerst richtig beantwortet, rückt eine Ecke weiter. Wer zuerst wieder in der eigenen Ecke ankommt, gewinnt.`,
+ ablauf:[`Vier Personen in die Ecken stellen.`,`Die Lehrkraft stellt Fragen, wer zuerst richtig antwortet, zieht eine Ecke weiter.`,`Wer die Runde schafft, hat gewonnen. Neue vier Personen.`],
+ sport:`In der Halle bietet sich eine Variante an, bei der alle mitmachen: Vier Teams starten in den Ecken, das Team mit der richtigen Antwort läuft eine Ecke weiter. Gute Fragen: Regeln, Fachbegriffe, Muskeln, Baderegeln. So wird Wissenssicherung zur Bewegungszeit.`,
+ tipps:[`Niemanden als Verlierer vorführen, Teams statt Einzelner nehmen.`,`Schwierigkeit der Fragen an die Lerngruppe anpassen oder ein Zeitlimit setzen.`]},
+{id:`bewegteraustausch`,name:`Bewegter Austausch`,fn:[`aust`,`refl`,`start`],q:`mk`,url:MKU+`bewegter-austausch/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`5–10 min`,re:/Bewegter Austausch|bewegten Austausch/,
+ kurz:`Alle gehen frei durch den Raum, treffen auf jemanden und tauschen sich paarweise über eine vereinbarte Frage aus. Dann geht es weiter zum nächsten Gegenüber.`,
+ ablauf:[`Frage festlegen, etwa „Was hat dir heute am meisten geholfen?“`,`Frei gehen, auf Signal ein Paar bilden und sprechen.`,`Nach kurzer Zeit weitergehen, neues Paar.`,`Zwei bis vier Wechsel.`],
+ sport:`Eine lockere Variante des Kugellagers, die sich gut mit dem Cool-down verbinden lässt: Gehen, Signal, kurzer Austausch, weitergehen. Auch als Kennenlernspiel zu Beginn eines Schuljahres.`,
+ tipps:[`Nach einer schwierigen Stunde nicht nur nach Negativem fragen, sonst gehen alle frustriert aus der Halle.`,`Kindern mit Unterstützungsbedarf Bildkarten zur Frage mitgeben.`]},
+{id:`schaetzen`,name:`Schätzen und prüfen`,fn:[`aktiv`,`refl`],q:`mk`,url:MKU+`schaetzspiel/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`3–8 min`,re:/\b[Ss]chätz(t|en|ung)/,
+ kurz:`Die Lernenden schätzen einen Wert, bevor er gemessen wird. Dabei üben sie, sich selbst einzuschätzen, und ziehen Schlüsse aus der Abweichung.`,
+ ablauf:[`Klare Frage mit messbarem Ergebnis stellen.`,`Alle schätzen und notieren oder sagen ihren Wert.`,`Messen und vergleichen.`,`Kurz besprechen: Wer lag nah dran, woran lag es?`],
+ sport:`Im Sport ist die Methode eine Übung zur Selbsteinschätzung: Wie weit springe ich? Wie viele Liegestütze schaffe ich in 30 Sekunden? Wie lang ist eine Hallenrunde? Wie hoch ist mein Puls nach der Erwärmung? Wiederholt über eine Reihe zeigt sich, ob die Einschätzung genauer wird.`,
+ tipps:[`Schätzungen nicht bewerten, nur die Abweichung besprechen.`,`Für Jüngere Antwortmöglichkeiten vorgeben.`]},
+{id:`knoten`,name:`Gordischer Knoten`,fn:[`start`,`koop`],q:`mk`,url:MKU+`gordischer-knoten/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`5–10 min`,re:/Gordische[nr]? Knoten/,
+ kurz:`Die Gruppe fasst sich mit geschlossenen Augen kreuz und quer an den Händen und muss den Knoten lösen, ohne loszulassen. Am Ende steht ein Kreis.`,
+ ablauf:[`Kreis bilden, Augen schließen, mit ausgestreckten Armen zur Mitte gehen.`,`Jede Hand fasst die Hand einer anderen Person, nicht zweimal dieselbe.`,`Augen auf, den Knoten durch Übersteigen und Durchtauchen entwirren.`,`Variante: Zwei Personen lösen den Knoten von außen nur mit Anweisungen.`],
+ sport:`Ein Klassiker für kooperative Einstiege im Bereich Wettkämpfen und Kooperieren. Er lockert die Stimmung und macht deutlich, dass ohne Absprache keine Lösung entsteht. Gruppen von acht bis zwölf Personen funktionieren gut.`,
+ tipps:[`Körperkontakt vorher ansprechen. Wer nicht mitmachen möchte, löst als Beobachter von außen.`,`Langsam bewegen, Handgelenke nicht verdrehen, bei Schmerz lockern.`]},
+{id:`blindball`,name:`Blindball`,fn:[`start`,`koop`],q:`mk`,url:MKU+`blindball/`,st:[`Sek I`,`Sek II`],zeit:`10–15 min`,re:/Blindball/,
+ kurz:`In Zweierteams lotst eine sehende Person eine Person mit verbundenen Augen nur mit Worten durch den Raum. Die „blinden“ Personen versuchen, sich gegenseitig mit Softbällen abzuwerfen. Nach jedem Treffer tauschen alle Teams die Rollen.`,
+ ablauf:[`Zweierteams bilden, eine Person bekommt eine Augenbinde und zwei Softbälle.`,`Auf Signal steuert die sehende Person nur mit Worten.`,`Geworfen wird auf die blinden Personen anderer Teams.`,`Nach jedem Treffer wechseln in allen Teams die Rollen.`,`Danach Rückmeldung zu Kommunikation und Vertrauen.`],
+ sport:`Fordert präzise Anweisungen und Vertrauen unter Zeitdruck. Passt zu Reihen über Kooperation, Wagnis und Wahrnehmung. Schwerer wird es mit Vierergruppen: eine blinde Person, drei steuern.`,
+ tipps:[`Nur Softbälle, nur langsames Gehen, die Sehenden haften für ihre Blinden.`,`Hindernisse und Geräte vorher aus dem Feld räumen.`,`Es bleibt ein Spiel: Die Lehrkraft beobachtet und gibt danach Rückmeldung zur Zusammenarbeit.`]},
+{id:`klammern`,name:`Klammern klauen`,fn:[`start`],q:`mk`,url:MKU+`klammern-klauen/`,st:[`GS`,`Sek I`],zeit:`5–8 min`,re:/Klammern klauen/,
+ kurz:`Alle tragen eine Wäscheklammer am Rücken und versuchen im Spielfeld, anderen ihre Klammern zu stehlen. Gewinnt, wer am meisten sammelt oder seine eigene Klammer am längsten behält.`,
+ ablauf:[`Jede Person bekommt eine Wäscheklammer an den Rücken des Shirts.`,`Spielfeld begrenzen, auf Signal geht es los.`,`Ende, wenn alle Klammern eingesammelt sind.`],
+ sport:`Ein kurzes Aufwärmspiel, das Reaktion und Orientierung schult. Variante für die Wahrnehmung: Mit verbundenen Augen in kleinem Feld und langsam, dann wird Hören wichtiger als Sehen. Gesammelte Klammern dürfen an die eigene Kleidung, dann bleibt jeder im Spiel.`,
+ tipps:[`Kein Festhalten und kein Zerren an der Kleidung.`,`Mit Kindern, die Berührungen meiden, vorher eine Regel absprechen.`]},
+{id:`menschenmemory`,name:`Menschen-Memory`,fn:[`start`,`kontr`],q:`mk`,url:MKU+`menschen-memory/`,st:[`GS`,`Sek I`],zeit:`10–15 min`,re:/Menschen-Memory/,
+ kurz:`Paare überlegen sich eine gemeinsame Bewegung zu einem Begriff. Zwei Ratende decken nacheinander je zwei Personen auf und suchen die Paare.`,
+ ablauf:[`Oberthema festlegen.`,`Zwei Ratende gehen kurz hinaus.`,`Die übrigen bilden Paare und vereinbaren eine Bewegung.`,`Ratende wählen abwechselnd zwei Personen, die ihre Bewegung zeigen. Gefundene Paare stellen sich hinter die ratende Person.`],
+ sport:`Im Sport selbst ist die Bewegung der Inhalt: Paare zeigen eine Technik, ein Tier, eine Tanzfigur, eine Turnübung oder eine Schwimmbewegung an Land. So werden Begriffe aus der Reihe spielerisch wiederholt.`,
+ tipps:[`Begriffe aus den letzten Stunden nehmen, damit alle sie kennen.`,`Bei großen Klassen zwei Spielfelder parallel.`]},
+{id:`spiegel`,name:`Spiegelbild`,fn:[`start`,`erarb`],q:`mk`,url:MKU+`spiegelbild/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`5–10 min`,re:/Spiegelbild|spiegeln|Spiegelpaar/,
+ kurz:`Zwei stehen sich gegenüber. Eine Person führt langsame Bewegungen aus, die andere spiegelt sie so genau und zeitgleich wie möglich.`,
+ ablauf:[`Paare stehen sich an einer gedachten oder markierten Spiegellinie gegenüber.`,`Eine Person führt, die andere spiegelt.`,`Wechsel der Rollen.`,`Steigerung: schnellere Bewegungen, Ortswechsel, zwei Spiegelpersonen.`],
+ sport:`Grundübung für das Gestalten und Darstellen und für das Bewegungslernen durch Beobachten. Beobachtbar ist, ob die Spiegelperson die richtige Körperseite nimmt und den Abstand hält. Eine Seillinie oder ein Hallenstreifen macht die Spiegelachse sichtbar.`,
+ tipps:[`Erst sehr langsam beginnen, damit Spiegeln gelingt und nicht zum Fangspiel wird.`,`Mit Musik als Rahmen wird daraus der Einstieg in eine Partnerchoreografie.`]},
+{id:`pantomime`,name:`Pantomime`,fn:[`kontr`,`erarb`],q:`mk`,url:MKU+`pantomime/`,st:[`GS`,`Sek I`],zeit:`5–15 min`,re:/Pantomime|pantomimisch/,
+ kurz:`Begriffe werden ohne Worte dargestellt, die anderen raten. Wer darstellt, darf nur nicken oder den Kopf schütteln.`,
+ ablauf:[`Begriffe aus den letzten Stunden vorbereiten.`,`Gruppen überlegen, wie sie den Begriff zeigen.`,`Vorführen innerhalb einer festen Zeit, die anderen raten.`],
+ sport:`Wiederholt Fachbegriffe über den Körper: Sportarten, Techniken, Fouls, Schiedsrichterzeichen, Gefühle. Im Bereich Gestalten und Darstellen ist Pantomime außerdem selbst Unterrichtsinhalt.`,
+ tipps:[`Zeitlimit an Schwierigkeit und Gruppengröße anpassen.`,`Variante: Die Gruppe stellt einen Ablauf dar, etwa einen Spielzug.`]},
+{id:`starkepaare`,name:`Starke Paare`,fn:[`koop`,`erarb`],q:`mk`,url:MKU+`starke-paare/`,st:[`GS`,`Sek I`],zeit:`15–25 min`,re:/Starke Paare/,
+ kurz:`Lernende lösen Stationsaufgaben erst allein, dann dieselben Aufgaben zu zweit, und vergleichen die Ergebnisse auf einem Laufzettel. Sie erleben, dass sie zu zweit mehr schaffen.`,
+ ablauf:[`Aufgaben so wählen, dass sie zu zweit tatsächlich besser gelingen.`,`Einzeldurchgang an allen Stationen, Ergebnisse notieren.`,`Gleicher Durchgang im Paar, Ergebnisse notieren.`,`Vergleich: Wo hat das Paar mehr erreicht und warum?`],
+ sport:`Die Kartei nennt selbst sportnahe Beispiele wie Bälle in einer Zeit möglichst oft gegen die Wand werfen. Weitere Ideen: Bälle mit Rollbrett transportieren, Tücher fangen, Seil schwingen, Hütchen sammeln. Passt in Reihen zum Kooperieren in der Grundschule und Unterstufe.`,
+ tipps:[`Stationen an die Fähigkeiten einzelner Kinder anpassen.`,`Im Vergleich nicht die Einzelleistung, sondern den Zugewinn als Paar betonen.`]},
+{id:`gruppen`,name:`Gruppen bilden mit Bewegung`,fn:[`start`],q:`mk`,url:MKU+`gruppeneinteilung/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`1–3 min`,re:/Gruppeneinteilung|Meier, Meyer/,
+ kurz:`Varianten, um Gruppen zufällig und mit etwas Bewegung zu bilden, statt Kapitäne wählen zu lassen.`,
+ ablauf:[`Reihe: Aufstellen nach Größe, Geburtstag oder Schuhgröße, dann abwechselnd von links und rechts den Gruppen zuteilen.`,`Kette: Im Kreis anfassen, die Lehrkraft teilt die Kette an Stellen auf.`,`Meier, Meyer, Maier: Zettel mit ähnlich klingenden Namen ziehen, Gleiche finden sich durch Nachfragen.`,`Puzzle: Bildteile ziehen und zusammensetzen.`],
+ sport:`Im Sport ist das Wählen von Mannschaften durch Kapitäne für viele Kinder eine Bloßstellung. Zufällige Verfahren vermeiden das und gehören gleich zur Erwärmung. Für ausgeglichene Teams kann die Lehrkraft vorher festlegen, wer gesetzt ist, und den Rest zufällig zuteilen.`,
+ tipps:[`Mit dem Aufstellen nach Kriterien lassen sich auch Gesprächsanlässe schaffen, etwa ohne Sprechen nach Geburtstag sortieren.`,`Bei wiederholt unglücklichen Zufallsgruppen nachsteuern.`]},
+{id:`durchatmen`,name:`Durchatmen`,fn:[`ruhe`],q:`mk`,url:MKU+`durchatmen/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`2–4 min`,re:/Durchatmen/,
+ kurz:`Eine kurze Atemübung zur Beruhigung: einatmen bis drei, kurz halten, langsam ausatmen bis eins.`,
+ ablauf:[`Bequem sitzen oder liegen, Augen schließen oder einen Punkt anschauen.`,`Einatmen und bis drei zählen, erst in den Bauch, dann in die Brust.`,`Bei vier und fünf kurz halten.`,`Ausatmen und von fünf rückwärts bis eins zählen. Einige Runden.`],
+ sport:`Gut nach wilden Spielen, vor einer Erklärung oder am Stundenende im Cool-down. In der Halle auf der Matte liegend oder im Sitzkreis. Wer mag, legt eine Hand auf den Bauch und spürt die Atmung. Passt zum Bewegungsfeld Fitness und achtsames Bewegen.`,
+ tipps:[`Die Lehrkraft zählt anfangs vor und macht mit.`,`Das Halten kurz lassen und niemanden drängen. Wer sich unwohl fühlt, atmet normal weiter.`]},
+{id:`placemat`,name:`Placemat`,fn:[`aktiv`,`aust`],q:`mk`,url:MKU+`placemat/`,st:[`Sek I`,`Sek II`],zeit:`10–15 min`,re:/Placemat/,
+ kurz:`Ein Blatt mit einem Feld pro Gruppenmitglied und einem Gemeinschaftsfeld in der Mitte. Erst notiert jede Person still ihre Gedanken, dann einigt sich die Gruppe auf ein gemeinsames Ergebnis in der Mitte.`,
+ ablauf:[`Nachdenken: still im eigenen Feld notieren, mit Zeitvorgabe.`,`Austausch: reihum vorstellen, Gemeinsames in die Mitte schreiben.`,`Vorstellen: Jede Gruppe präsentiert ihr Mittelfeld.`],
+ sport:`Für Theorieanteile in Sek I und Sek II: Was macht ein gutes Aufwärmen aus? Welche Regeln brauchen wir für unser Spiel? Woran erkennen wir eine faire Bewertung? In der Halle auf einem Plakat am Boden, die Gruppe sitzt drumherum. Die Struktur folgt Denken-Austauschen-Besprechen.`,
+ tipps:[`Kurz halten, damit die Bewegungszeit nicht leidet.`,`Ergebnisse als Plakat hängen lassen und in der Praxis prüfen.`]},
+{id:`disney`,name:`Walt-Disney-Methode`,fn:[`erarb`,`urteil`],q:`mk`,url:MKU+`walt-disney-methode/`,st:[`Sek II`,`Sek I`],zeit:`15–25 min`,re:/Walt-Disney|Walt Disney|Träumer/,
+ kurz:`Ein Vorhaben wird nacheinander aus drei Rollen betrachtet: Träumer (Idee und Ziel), Realist (Umsetzung und Zeitplan), Kritiker (Schwächen prüfen). Jede Rolle hat einen eigenen Ort und eine eigene Haltung.`,
+ ablauf:[`Drei Orte in der Halle festlegen, je einer pro Rolle.`,`Am Ort des Träumers die Idee positiv beschreiben.`,`Am Ort des Realisten planen: Was brauchen wir, bis wann?`,`Am Ort des Kritikers prüfen: Was kann schiefgehen?`,`Den Zyklus wiederholen, bis die Lösung trägt.`],
+ sport:`Passt zu Planungsaufgaben: eine Choreografie, ein selbst entwickeltes Spiel, ein Spielfest für jüngere Klassen, ein eigener Trainingsplan. Dass die Rollen an Orte gebunden sind, bringt Bewegung in die Planung.`,
+ tipps:[`Kritik erst am Kritikerort zulassen, damit die Träumerphase frei bleibt.`,`Eine beobachtende Person achtet darauf, dass die Rollen eingehalten werden.`]},
+{id:`denktiere`,name:`Denkhüte (Denktiere)`,fn:[`urteil`,`refl`],q:`mk`,url:MKU+`denkhuete/`,st:[`Sek I`,`Sek II`],zeit:`10–20 min`,re:/Denkhüte|Denktiere/,
+ kurz:`Bei einer Diskussion übernimmt jede Person eine von sechs Sichtweisen, in der Kartei als Tiere dargestellt: Bär (Vorteile), Eule (kreative Ideen), Hase (Fakten), Fisch (Gefühle), Katze (Leitung), Igel (Kritik).`,
+ ablauf:[`Thema oder Entscheidungsfrage festlegen.`,`Sichtweisen per Karte verteilen.`,`Diskussion, in der jede Person aus ihrer Sicht argumentiert, die Katze moderiert.`,`Zum Schluss sammeln, was jede Sicht beigetragen hat.`],
+ sport:`Gut für Entscheidungen der Klasse: Welchen Wettkampfmodus wählen wir? Sollen wir mit Videoanalyse arbeiten? Auch für die Auswertung einer Stunde, in der etwas schiefging. Satzbausteine pro Tier helfen beim Argumentieren.`,
+ tipps:[`Rollen wechseln lassen, damit niemand immer der Igel ist.`,`Die Kartei verweist für die Methode auf de Bono, die Tiere sind ihre eigene Variante.`]},
+{id:`heisserstuhl`,name:`Heißer Stuhl`,fn:[`urteil`,`aust`],q:`mk`,url:MKU+`heisser-stuhl/`,st:[`Sek I`,`Sek II`],zeit:`8–15 min`,re:/Heiße[rn]? Stuhl/,
+ kurz:`Eine Person sitzt in der Mitte des Kreises und beantwortet die Fragen der anderen aus einer vorgegebenen Perspektive.`,
+ ablauf:[`Rolle oder Perspektive festlegen und vergeben.`,`Die anderen stellen gezielte Fragen.`,`Die Person auf dem Stuhl antwortet aus ihrer Rolle.`,`Kurze Auswertung: Was haben wir über die Sichtweise erfahren?`],
+ sport:`Rollen aus dem Sport: Schiedsrichterin nach einer strittigen Entscheidung, Trainer, der einen Spieler auswechselt, Athletin, die Doping ablehnt, Kind, das immer zuletzt gewählt wird. Eine Variante setzt Expertinnen und Experten auf den Stuhl, etwa Vereinsjudoka aus der Klasse.`,
+ tipps:[`Freiwillig besetzen und klar trennen: Es spricht die Rolle, nicht die Person.`,`Fragen vorher sammeln, wenn die Gruppe ungeübt ist.`]},
+{id:`conceptcartoon`,name:`Concept Cartoons`,fn:[`aktiv`,`urteil`],q:`mk`,url:MKU+`concept-cartoons/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`8–15 min`,re:/Concept Cartoon/,
+ kurz:`Ein kleines Bild zeigt eine Frage und mehrere Figuren mit unterschiedlichen Antworten, darunter auch halbrichtige. Die Lernenden prüfen, wem sie zustimmen, und begründen.`,
+ ablauf:[`Bild mit Frage und drei bis vier Sprechblasen zeigen.`,`Allein entscheiden, welcher Figur man zustimmt.`,`Austausch zu zweit oder auf der Positionslinie.`,`Klären, was stimmt, und praktisch ausprobieren.`],
+ sport:`Ideal für typische Fehlvorstellungen: „Dehnen vor dem Sprint verhindert Verletzungen.“ „Wer mehr schwitzt, verbrennt mehr Fett.“ „Beim Brustschwimmen hält der Kopf immer über Wasser.“ „Der Größte steht in der Pyramide unten.“ Das anschließende Ausprobieren in der Halle macht daraus eine kleine Untersuchung.`,
+ tipps:[`Figuren neutral zeichnen, damit niemand nach Aussehen urteilt.`,`Auch die halbrichtigen Aussagen ernst nehmen, dort lernen die meisten.`]},
+{id:`lautdenken`,name:`Lautes Denken`,fn:[`erarb`,`refl`],q:`mk`,url:MKU+`lautes-denken/`,st:[`Sek I`,`Sek II`,`GS`],zeit:`5–10 min`,re:/[Ll]autes Denken|laut denken/,
+ kurz:`Lernende sprechen während einer Aufgabe laut aus, was sie denken und wie sie vorgehen. Damit werden Gedankengänge hörbar und besprechbar.`,
+ ablauf:[`Aufgabe stellen.`,`Eine Person löst sie und spricht dabei ihre Gedanken laut aus, die anderen hören zu.`,`Rollentausch.`,`Gemeinsam auswerten: Welche Strategien sind gut?`],
+ sport:`In der Kartei ist die Methode für das Lesen beschrieben. Im Sport lässt sie sich übertragen: beim Planen einer Bewegungsfolge, beim Lesen einer Spielsituation am Taktikboard oder beim Einschätzen eines Wagnisses („Ich schaue auf …, dann entscheide ich …“). Gut kombinierbar mit Videoanalyse.`,
+ tipps:[`Vormachen: Die Lehrkraft denkt einmal selbst laut, das senkt die Hemmschwelle.`,`Nicht beim schnellen Ausführen sprechen lassen, sondern davor oder danach.`]},
+{id:`stummerimpuls`,name:`Stummer Impuls`,fn:[`aktiv`,`orient`],q:`mk`,url:MKU+`stummer-impuls/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`3–8 min`,re:/[Ss]tumme[rn]? Impuls|kommentarlos/,
+ kurz:`Die Lehrkraft legt ohne Kommentar ein Bild, einen Gegenstand oder ein Wort in die Mitte. Die Lernenden schauen, äußern ihre Gedanken, und erst danach steigt die Lehrkraft ins Thema ein.`,
+ ablauf:[`Impuls kommentarlos präsentieren.`,`Zeit zum Anschauen lassen.`,`Wer möchte, äußert eine Idee, die anderen kommentieren nicht.`,`Die Lehrkraft fasst die Ideen zusammen und leitet ins Thema über.`],
+ sport:`In der Halle reicht oft ein Gerät oder ein Aufbau: ein Weichboden vor dem Kasten, ein Seil quer durch die Halle, ein Ball mit Klingel, ein Foto einer Sportsituation. Die Kinder vermuten, was heute passiert, und sind schon im Thema, bevor erklärt wird.`,
+ tipps:[`Den Impuls wirklich wirken lassen und Stille aushalten.`,`Die Vermutungen am Ende der Stunde wieder aufgreifen.`]},
+{id:`lerntempo`,name:`Lerntempoduett`,fn:[`erarb`,`aust`],q:`mk`,url:MKU+`lerntempoduett/`,st:[`Sek I`,`Sek II`],zeit:`15–25 min`,re:/Lerntempoduett/,
+ kurz:`Zwei Hälften der Klasse bearbeiten verschiedene Aufgaben im eigenen Tempo. Wer fertig ist, steht auf und bildet mit der nächsten fertigen Person der anderen Hälfte ein Paar. Die beiden erklären sich gegenseitig ihre Ergebnisse.`,
+ ablauf:[`Gruppe A und Gruppe B bekommen unterschiedliche Aufgaben.`,`Jede Person arbeitet im eigenen Tempo.`,`Fertig: aufstehen und warten, bis jemand aus der anderen Gruppe fertig ist.`,`Im Duett gegenseitig erklären oder vormachen.`],
+ sport:`Im Sport mit zwei Bewegungsaufgaben: Gruppe A erarbeitet ein Element, Gruppe B ein anderes. Wer seine Aufgabe sicher kann, geht an den Treffpunkt und bringt dem Duettpartner sein Element bei. Langsamere bekommen so mehr Übungszeit, ohne zu warten.`,
+ tipps:[`Setzt ein gutes Klassenklima voraus, sonst entsteht Konkurrenz ums Fertigwerden.`,`Zusatzaufgabe für die Letzten bereithalten, falls keine Partner mehr frei sind.`]},
+{id:`geocaching`,name:`Geocaching und Schnitzeljagd`,fn:[`erarb`,`koop`],q:`mk`,url:MKU+`geocaching/`,st:[`GS`,`Sek I`,`Sek II`],zeit:`45–90 min`,re:/Geocaching|Schnitzeljagd|Educaching/,
+ kurz:`Kleingruppen suchen Stationen mit GPS-Geräten oder Karten. An jeder Station lösen sie eine Aufgabe und bekommen dafür die nächste Koordinate. Am Ende wartet ein Schatz.`,
+ ablauf:[`Geräte und Regeln erklären (auf den Wegen bleiben, Natur schonen).`,`Gruppen von höchstens vier Personen bilden, Fragebogen ausgeben.`,`Stationen anlaufen, Aufgaben lösen, Koordinaten erhalten.`,`Schatz finden, gemeinsam auswerten.`],
+ sport:`Verbindet Laufen, Orientierung und Zusammenarbeit. Passt zu Orientierungsläufen auf dem Schulgelände, zu Wandertagen und Ausflügen. Die Aufgaben an den Stationen können Bewegungsaufgaben sein. Ohne GPS geht es mit Lageplan, Fotos oder Tablet.`,
+ tipps:[`Rettungsplan und Treffpunkt festlegen, Gruppen nicht allein ins unübersichtliche Gelände schicken.`,`Unterschiedliche Aufgaben pro Gruppe verhindern Hinterherlaufen.`]},
+{id:`sandwich`,name:`Sandwich-Methode`,fn:[`erarb`,`orient`],q:`mk`,url:MKU+`sandwich-methode/`,st:[`Sek I`,`Sek II`],zeit:`eine Doppelstunde oder länger`,re:/Sandwich/,
+ kurz:`Eigenarbeit und Input der Lehrkraft wechseln sich ab wie die Schichten eines Sandwichs: erst Ideen aus dem Vorwissen, dann ein kurzer Input, dann die Ideen mit dem Neuen verbinden, dann vorstellen.`,
+ ablauf:[`Kleingruppen sammeln erste Ideen aus ihrem Vorwissen.`,`Kurzer Input der Lehrkraft mit fachlichen Gesichtspunkten.`,`Kleingruppen verbinden ihre Ideen mit dem Input und arbeiten weiter.`,`Plenum: vorstellen und besprechen.`],
+ sport:`Passt zum Lernrhythmus Erleben, Austauschen, Verstehen, Anwenden: erst selbst probieren, dann ein kurzer Input, dann mit dem neuen Wissen weiterüben. Statt Vortrag kann der Input ein Video, ein Vormachen oder eine Kriterienkarte sein.`,
+ tipps:[`Den Input wirklich kurz halten, die Schichten der Lernenden sind das Wichtigste.`,`In der Kartei findet sich die Methode auch als Vorlage für Feedback, das Reflexionshaus baut darauf auf.`]}
+);
+MSUG.splice(1,0,
+ [`twostars`,u=>u.kb==='GD',`nach dem Zeigen der Gestaltung: zwei gelungene Punkte nach den Kriterien und ein Wunsch`],
+ [`schaetzen`,u=>u.kb==='LÜ',`vor dem ersten Versuch die eigene Weite, Zeit oder Wiederholungszahl schätzen, am Ende vergleichen`],
+ [`knoten`,u=>u.kb==='WK'&&u.stufe!=='GS',`als kooperativer Einstieg, der zeigt, dass ohne Absprache nichts geht`],
+ [`starkepaare`,u=>u.kb==='WK'&&u.stufe==='GS',`als Stationsrunde: erst allein, dann zu zweit, Ergebnisse vergleichen`],
+ [`vierecken`,u=>u.kb==='WE'||(u.kb==='EW'&&u.stufe!=='GS'),`im Einstieg oder Abschluss: vier Aussagen in den Hallenecken, alle stellen sich zu ihrer`],
+ [`conceptcartoon`,u=>u.kb==='EW',`als Einstieg mit einer typischen Fehlvorstellung, die danach praktisch geprüft wird`],
+ [`spiegel`,u=>u.bf===7&&u.kb!=='GD',`als Aufwärmen zur Musik: führen und spiegeln im Wechsel`],
+ [`durchatmen`,u=>u.bf===8,`im Cool-down auf der Matte`]);
+const PEERF={GS:`twostars`,'Sek I':`wuerfel`,'Sek II':`fuenffinger`};
+function peerFor(u){const id=u.kb==='GD'&&u.stufe!=='GS'?'rueckenplakat':PEERF[u.stufe]||'twostars';return MBY[id]}
+
+const MBY=Object.fromEntries(METH.map(m=>[m.id,m]));
+function litOf(u){const k=u.lit.slice();const h=methodsIn(u).map(([m])=>m);h.push(peerFor(u));h.forEach(m=>SRC[m.q].forEach(x=>{if(!k.includes(x))k.push(x)}));if(!k.includes('wdr11'))k.push('wdr11');return k}
+const SRC={iqsh:['iqsh12'],bpb:['bpb04'],beide:['iqsh12','bpb04'],mk:['mk26']};
 function methodsIn(u){const out=[];METH.forEach(m=>{if(!m.re)return;const ph=u.verlauf.filter(v=>{const t=v.p+' '+v.was+' '+v.orga+' '+v.komm;return m.re.test(t)&&!(m.ex&&m.ex.test(t))}).map(v=>v.p);if(ph.length)out.push([m,ph])});return out}
 let MUSE=null;function methUse(){if(MUSE)return MUSE;MUSE={};UV.forEach(u=>methodsIn(u).forEach(([m])=>{(MUSE[m.id]=MUSE[m.id]||[]).push(u)}));return MUSE}
 function methSug(u,have){const ids=new Set(have.map(([m])=>m.id)),out=[];for(const [id,f,txt] of MSUG){if(out.length>=3)break;const m=MBY[id];if(ids.has(id)||!m.st.includes(u.stufe)||!f(u))continue;out.push([m,txt]);ids.add(id)}return out}
@@ -10389,12 +10564,12 @@ function methSection(u){const have=methodsIn(u),sug=methSug(u,have);
  const sugH=sug.length?`<div class="mlist">${sug.map(([m,t])=>`<button class="mitem" data-nav="m/${m.id}"><b>${esc(m.name)}</b><small>${esc(t)}</small></button>`).join('')}</div>`:'';
  const zs=u.ziele.filter(z=>FBZ[z.b]);
  return `<div class="g2"><div><h4>In dieser Stunde</h4>${haveH}</div><div><h4>Passt zusätzlich</h4>${sugH}</div></div>
- <div class="box" style="margin-top:14px"><h4>Rückmeldung zu den Lernzielen</h4>${zs.map(z=>`<p><b>${esc(z.b)}: ${FBZ[z.b][0]}.</b> ${FBZ[z.b][1]}</p>`).join('')}<p style="margin-top:6px"><button class="lnk" data-nav="methoden/loben">Richtig loben: Grundsätze und Beispiele</button></p></div>`}
+ <div class="box" style="margin-top:14px"><h4>Rückmeldung zu den Lernzielen</h4>${zs.map(z=>`<p><b>${esc(z.b)}: ${FBZ[z.b][0]}.</b> ${FBZ[z.b][1]}</p>`).join('')}${(()=>{const pf=peerFor(u);return `<p><b>Rückmeldung unter Lernenden:</b> <button class="lnk" style="margin:0" data-nav="m/${pf.id}">${esc(pf.name)}</button> eignet sich für diese Stufe.</p>`})()}<p style="margin-top:6px"><button class="lnk" data-nav="methoden/loben">Richtig loben: Grundsätze und Beispiele</button></p></div>`}
 
 function mCard(m){const n=(methUse()[m.id]||[]).length;return `<button class="ccard" data-nav="m/${m.id}"><b>${esc(m.name)}</b><span>${esc(m.kurz.split('. ')[0])}.</span><span class="mtags">${m.fn.map(f=>`<span class="mfn" style="--c:${MFN[f][1]}">${MFN[f][0]}</span>`).join('')}</span><span>${m.zeit} · ${m.st.join(', ')}${n?` · in ${n} Unterrichtsversuch${n>1?'en':''}`:''}</span></button>`}
 const mstate={fn:'',st:(typeof FIXED!=='undefined'&&FIXED)?({gs:'GS',gym:'Sek I',sts:'Sek I',os:'Sek II'})[FIXED]||'':''};
 function methHome(anchor){const list=METH.filter(m=>(!mstate.fn||m.fn.includes(mstate.fn))&&(!mstate.st||m.st.includes(mstate.st)));
- app.innerHTML=`<div class="hero" style="--k:#17201c"><span class="lab">Methodenkoffer</span><h1>Methoden und Rückmeldung</h1><p>Methoden aus dem Methodenkoffer des IQSH und der Methodenkiste der bpb, übertragen auf die Sporthalle. Dazu Grundsätze, wie Lob und Rückmeldung wirken.</p></div>
+ app.innerHTML=`<div class="hero" style="--k:#17201c"><span class="lab">Methodenkoffer</span><h1>Methoden und Rückmeldung</h1><p>Methoden aus dem Methodenkoffer des IQSH, der Methodenkiste der bpb und der Methodenkartei der Universitäten Oldenburg und Vechta, übertragen auf die Sporthalle. Dazu Grundsätze, wie Lob und Rückmeldung wirken.</p></div>
  <nav class="jump" aria-label="Bereiche"><button class="btn" data-to="m-koffer">Methoden</button><button class="btn" data-to="m-loben">Richtig loben</button><button class="btn" data-to="m-peer">Rückmeldung unter Schülerinnen und Schülern</button></nav>
  ${SEC('01','Methoden nach Funktion',`<p class="prose">Eine Methode ist kein Selbstzweck. Sie soll zu Ziel, Inhalt, Lerngruppe und Situation passen (IQSH, 2012). Wähle zuerst, wozu die Phase dienen soll.</p>
  <div class="mfilter"><span class="lab">Funktion</span><div class="mchips"><button class="mchip" aria-pressed="${!mstate.fn}" data-mf="">Alle</button>${Object.entries(MFN).map(([k,v])=>`<button class="mchip" aria-pressed="${mstate.fn===k}" data-mf="${k}" style="--c:${v[1]}">${v[0]}</button>`).join('')}</div>
@@ -10403,11 +10578,11 @@ function methHome(anchor){const list=METH.filter(m=>(!mstate.fn||m.fn.includes(m
  ${SEC('02','Richtig loben',`<p class="prose">Lob wirkt nicht automatisch. Entscheidend ist, dass es aufrichtig gemeint ist und sich auf das bezieht, was das Kind tatsächlich gezeigt hat (Schwandner, 2011).</p>
  <div class="g3">${LOB.prinz.map(([t,x])=>`<div class="box"><h4>${t}</h4><p>${x}</p></div>`).join('')}</div>
  <h4 style="margin-top:18px">Beispiele aus dem Sportunterricht</h4><div class="mtab"><table><thead><tr><th>Stufe</th><th>Situation</th><th>Statt</th><th>Besser</th></tr></thead><tbody>${LOB.bsp.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</tbody></table></div>`,'m-loben')}
- ${SEC('03','Rückmeldung unter Schülerinnen und Schülern',`<ol class="hsteps">${LOB.peer.map(x=>`<li>${x}</li>`).join('')}</ol><p class="prose">Ab der Mittelstufe zählt die Rückmeldung von Gleichaltrigen oft mehr als die der Lehrkraft. Kriterienkarten aus den Unterrichtsversuchen eignen sich als Grundlage.</p>`,'m-peer')}
- <div class="lit" style="margin-top:20px">${['iqsh12','bpb04','wdr11'].map(k=>`<p>${esc(LIT[k])}</p>`).join('')}</div>`;
+ ${SEC('03','Rückmeldung unter Schülerinnen und Schülern',`<ol class="hsteps">${LOB.peer.map(x=>`<li>${x}</li>`).join('')}</ol><p class="prose">Ab der Mittelstufe zählt die Rückmeldung von Gleichaltrigen oft mehr als die der Lehrkraft. Kriterienkarten aus den Unterrichtsversuchen eignen sich als Grundlage. Feste Formen helfen dabei:</p><div class="cgrid">${METH.filter(m=>m.fn.includes('peer')).map(mCard).join('')}</div>`,'m-peer')}
+ <div class="lit" style="margin-top:20px">${['iqsh12','bpb04','mk26','wdr11'].map(k=>`<p>${esc(LIT[k])}</p>`).join('')}</div>`;
  if(anchor){const el=document.getElementById(anchor);if(el)setTimeout(()=>el.scrollIntoView({block:'start'}),0)}}
 function methDetail(m){const us=(methUse()[m.id]||[]).slice().sort((a,b)=>STUFE.indexOf(a.stufe)-STUFE.indexOf(b.stufe)||String(a.klasse).localeCompare(String(b.klasse),'de',{numeric:true}));
- const src=m.q==='beide'?['iqsh12','bpb04']:[m.q==='iqsh'?'iqsh12':'bpb04'];
+ const src=SRC[m.q];
  app.innerHTML=`<div class="bar"><button class="btn" data-nav="methoden">← Alle Methoden</button></div>
  <div class="hero" style="--k:${MFN[m.fn[0]][1]}"><span class="lab">${m.fn.map(f=>MFN[f][0]).join(' · ')}</span><h1>${esc(m.name)}</h1><p>${esc(m.kurz)}</p></div>
  <div class="facts"><div class="fact"><span class="lab">Zeit</span><b>${m.zeit}</b></div><div class="fact"><span class="lab">Geeignet für</span><b style="font-size:1.05rem">${m.st.map(s=>STUFE_L[s]).join(', ')}</b></div><div class="fact"><span class="lab">Quelle</span><b style="font-size:1.05rem">${MQ[m.q]}</b></div></div>
@@ -10415,9 +10590,10 @@ function methDetail(m){const us=(methUse()[m.id]||[]).slice().sort((a,b)=>STUFE.
  ${SEC('02','Im Sportunterricht',`<p class="prose">${esc(m.sport)}</p>`)}
  ${SEC('03','Tipps',`<ul class="cl">${m.tipps.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`)}
  ${SEC('04','In diesen Unterrichtsversuchen',us.length?`<div class="mlist">${us.map(u=>`<button class="mitem" data-nav="${u.id}"><b>${esc(u.titel)}</b><small>Klasse ${u.klasse} · ${STUFE_L[u.stufe]} · ${BF[u.bf]} · ${KB[u.kb][0]}</small></button>`).join('')}</div>`:`<p class="prose">Noch in keinem Unterrichtsversuch ausdrücklich eingesetzt. Bei den einzelnen Stunden steht unter „Methoden und Rückmeldung“, wo sie passen würde.</p>`)}
- <div class="lit">${src.map(k=>`<p>${esc(LIT[k])}</p>`).join('')}</div>`}
+ ${m.url?`<p class="prose" style="margin-top:14px"><a href="${m.url}" target="_blank" rel="noopener">Originalkarte in der Methodenkartei öffnen</a></p>`:''}<div class="lit">${src.map(k=>`<p>${esc(LIT[k])}</p>`).join('')}</div>`}
 function methRoute(id){if(id==='methoden'){methHome();return true}if(id==='methoden/loben'){methHome('m-loben');return true}const p=id.split('/');if(p[0]==='m'&&MBY[p[1]]){methDetail(MBY[p[1]]);return true}return false}
 document.addEventListener('click',e=>{const c=e.target.closest('[data-mf],[data-ms]');if(!c)return;if(c.dataset.mf!==undefined)mstate.fn=c.dataset.mf;if(c.dataset.ms!==undefined)mstate.st=c.dataset.ms;const y=scrollY;methHome();window.scrollTo(0,y)});
+
 
 function route(){const id=location.hash.slice(1);navMark(id);if(methRoute(id)){if(id!=='methoden/loben')window.scrollTo(0,0);return}if(lgRoute(id)){window.scrollTo(0,0);return}const u=UV.find(x=>x.id===id);if(u)return detailView(u);if(id==='ergebnisse'){syncDraft();resultsView()}else{homeView()}window.scrollTo(0,0)}
 addEventListener('hashchange',route);route();
