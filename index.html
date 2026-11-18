@@ -309,12 +309,20 @@ p.vlm b{font-size:inherit;font-weight:600}
 q.vli{display:block;quotes:none;margin:5px 0 0;padding:4px 8px;background:#eef6ef;border-left:3px solid #16a34a;border-radius:3px;font-size:.88rem;color:#14532d}q.vli::before{content:"Impuls: ";font-weight:600}
 @media(max-width:560px){table.vlt,table.vlt tbody,table.vlt tr,table.vlt th,table.vlt td{display:block;width:auto}table.vlt th{padding:8px 0 2px}table.vlt th span{display:inline;margin-left:6px}}
 
+.mfn{display:inline-block;margin:2px 4px 0 0;padding:1px 8px;border-radius:999px;font-size:.74rem;font-weight:600;color:var(--c);background:color-mix(in srgb,var(--c) 12%,#fff)}
+.mtags{display:block}
+.mfilter{display:grid;gap:6px}.mchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.mchip{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:5px 12px;font-size:.86rem;font-weight:600}
+.mchip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.mlist{display:grid;gap:8px}.mitem{display:flex;flex-direction:column;gap:2px;text-align:left;border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 12px}
+.mitem:hover{border-color:var(--acc);background:var(--soft)}.mitem small{color:var(--mut);font-size:.85rem;line-height:1.4}
+.mtab{overflow-x:auto}.mtab table{border-collapse:collapse;width:100%;font-size:.9rem}.mtab th,.mtab td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.mtab th{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="top"><h1>Unterrichts<em>versuche</em> Sport</h1><p><span id="kl">Klasse 1–13</span> nach den Hamburger Bildungsplänen. <span id="etappe"></span></p></header>
-<nav class="mainnav" aria-label="Bereiche"><button data-nav="" aria-current="page">Unterrichtsversuche</button><button data-nav="curriculum">Schulcurriculum</button><button data-nav="gruppen">Meine Lerngruppen</button><button data-nav="reflexion">Reflektiere herausfordernde Unterrichtssituationen</button><button data-nav="fallberatung">Kollegiale Fallberatung</button><button data-nav="hilfe">So geht's</button></nav>
+<nav class="mainnav" aria-label="Bereiche"><button data-nav="" aria-current="page">Unterrichtsversuche</button><button data-nav="curriculum">Schulcurriculum</button><button data-nav="methoden">Methoden und Rückmeldung</button><button data-nav="gruppen">Meine Lerngruppen</button><button data-nav="reflexion">Reflektiere herausfordernde Unterrichtssituationen</button><button data-nav="fallberatung">Kollegiale Fallberatung</button><button data-nav="hilfe">So geht's</button></nav>
 <main id="app"></main>
 <footer>Grundlage: Bildungspläne Sport der Freien und Hansestadt Hamburg (Grundschule 2022, Sekundarstufe I 2024, Studienstufe 2022). Die Unterrichtsversuche sind Planungsvorschläge und müssen an Lerngruppe, Halle und Sicherheitsvorgaben der eigenen Schule angepasst werden. Mit [prüfen] markierte Angaben bitte am Original kontrollieren.</footer>
 </div>
@@ -796,7 +804,7 @@ verlauf:[
  {p:`Üben 1`, t:20, was:`Sprünge in Dreiergruppen: springen, filmen (seitlich auf Höhe der Zone, Zeitlupe), beobachten mit Kriterienkarte. Ablauf: Sprung, „Wie hat es sich angefühlt?“, Video, ein Tipp, Marke ggf. um einen Fuß versetzen. Wechsel nach zwei Sprüngen.`, orga:`2 Anlagen; je 2 Tablets, Kriterienkarten`, komm:`Kopplung von Innen- und Außensicht. Zwei Kriterien begrenzen die Beobachtung auf das Lernbare. L steht zwischen den Anlagen mit Blick auf beide Landeflächen.`},
  {p:`Zwischenreflexion`, t:6, was:`Sitzhalbkreis. L: „Was habt ihr an eurer Marke verändert und was hat es gebracht?“ Zwei bis drei Gruppen berichten. L ergänzt: Blick geradeaus, die Marke regelt den Rest.`, orga:`Halbkreis an Anlage 1`, komm:`Macht Lernwege sichtbar und schärft den Auftrag für die zweite Übungsphase.`},
  {p:`Üben 2`, t:18, was:`Fünf Wertungssprünge mit Marke. Die Gruppe notiert pro Sprung: Zone getroffen (ja/nein), Tempo gehalten (ja/nein), Weite. Vergleich mit dem Ausgangswert aus Stunde 2.`, orga:`2 Anlagen; Maßband, Protokollbogen`, komm:`Überprüft das motorische Lernziel direkt. Die individuelle Bezugsnorm hält auch leistungsschwächere SuS im Üben.`},
- {p:`Sicherung`, t:9, was:`Kreis. Jede Person nennt ihren Zuwachs oder ihr Ergebnis „Zone getroffen x von 5“. L: „Erklärt jemandem, der heute gefehlt hat, wie man eine Ablaufmarke findet.“ Ausblick: Flugphase.`, orga:`Kreis; Protokollbögen`, komm:`Verbalisieren sichert das Verfahren. Zuwachs statt Rangliste.`},
+ {p:`Sicherung`, t:9, was:`Kreis. Jede Person nennt ihren Zuwachs oder ihr Ergebnis „Zone getroffen x von 5“. L: „Erklärt jemandem, der heute gefehlt hat, wie man eine Ablaufmarke findet.“ Ausblick: Flugphase. Die Erklärung für jemanden, der gefehlt hat, läuft als Kugellager: Innen- und Außenkreis erklären sich gegenseitig das Finden der Ablaufmarke, nach jeder Erklärung rückt der Innenkreis zwei Plätze weiter. Zwei Wechsel.`, orga:`Kreis; Protokollbögen`, komm:`Verbalisieren sichert das Verfahren. Zuwachs statt Rangliste. Im Kugellager formulieren alle gleichzeitig, und die Zuhörenden wiederholen das Wichtigste (Scholz, 2004).`},
  {p:`Abbau`, t:5, was:`Abbau nach Plan, Videos auf den Tablets löschen (L kontrolliert).`, orga:`Gruppen`, komm:`Datensparsamkeit als fester Teil der Routine.`}],
 diff:{
  leichter:[`5 Schritte Anlauf`, `breitere Absprungzone (1 m)`, `Beobachtung nur mit einem Kriterium`],
@@ -814,7 +822,7 @@ skizze:{titel:`Zwei Weitsprunganlagen längs`, el:[
  [`s`,6,11,4,2,2],[`s`,6,33,4,2,2],
  [`x`,34,11,`Ablaufmarken`],[`x`,34,33,`Ablaufmarken`],
  [`c`,68,4,1.6,`Tablet`],[`c`,68,46,1.6,`Tablet`],[`L`,60,25],[`t`,40,25,`Rückweg außen`]]},
-lit:[`bsb24`,`meinel`,`helmke`]
+lit:[`bsb24`,`meinel`,`helmke`,`bpb04`]
 });
 
 UV.push({
@@ -1061,7 +1069,7 @@ verlauf:[
  {p:`Erwärmung`, t:10, was:`Von SuS angeleitet (zwei Freiwillige, in Stunde 4 vereinbart): Einlaufen, Lauf-ABC, Sprungläufe, Stoßvorbereitung mit leichtem Ball, zwei Steigerungen.`, orga:`Gesamtgruppe`, komm:`Disziplinspezifische Vorbereitung in SuS-Hand (Studienstufe: Selbstständigkeit).`},
  {p:`Wettkampf`, t:36, was:`Vier Teams rotieren durch drei Stationen plus Wertungsstation (je 8 Min., 1 Min. Wechsel). Das Team an der Wertungsstation ist Kampfgericht für die Nachbarstation und trägt Werte direkt in die Tabelle ein. Zwei Versuche pro Person, der bessere zählt.`, orga:`4 Teams à 5–6; Lichtschranke oder 2 Stoppuhren, Maßbänder, 4 Medizinbälle, Tablet`, komm:`Jedes Team ist einmal Kampfgericht. L steht am Stoßsektor (höchstes Risiko) und greift in Regelfragen nur auf Nachfrage ein.`},
  {p:`Auswertung`, t:10, was:`Teams sitzen zusammen, die Tabelle berechnet beide Ranglisten. Auftrag auf Karte: „Vergleicht Rang A und Rang B. Wer gewinnt wo? Welches Modell ist fairer, welches motiviert mehr? Notiert ein Argument pro Kriterium.“`, orga:`Teams; Tablet oder Ausdruck, Kriterienkarte`, komm:`Analyse am eigenen Datenmaterial. Drei Kriterien strukturieren das Urteil.`},
- {p:`Diskussion`, t:10, was:`Plenum. Jedes Team nennt sein Urteil mit Begründung. L spitzt zu: „Modell B belohnt, wer sich beim ersten Test zurückhält. Wie verhindert man das?“ und „Ist ein Wettkampf ohne absolute Leistung noch ein Wettkampf?“ Abstimmung über das Modell für die Abschlussstunde, ggf. Mischmodell.`, orga:`Sitzkreis; Tafel`, komm:`Urteilsbildung mit Gegenargumenten (Anforderungsbereich III). Die Abstimmung hat reale Folgen für Stunde 6.`},
+ {p:`Diskussion`, t:10, was:`Plenum. Jedes Team nennt sein Urteil mit Begründung. L spitzt zu: „Modell B belohnt, wer sich beim ersten Test zurückhält. Wie verhindert man das?“ und „Ist ein Wettkampf ohne absolute Leistung noch ein Wettkampf?“ Abstimmung über das Modell für die Abschlussstunde, ggf. Mischmodell. Vor der Abstimmung als Streitlinie: Die Teams stellen sich an die Wand von Modell A oder Modell B, sammeln kurz Argumente und tragen sie abwechselnd vor. Danach positionieren sich alle erneut auf der Linie zwischen beiden Wänden.`, orga:`Sitzkreis; Tafel`, komm:`Urteilsbildung mit Gegenargumenten (Anforderungsbereich III). Die Abstimmung hat reale Folgen für Stunde 6. Die Streitlinie verbindet die Urteilsbildung mit Bewegung und zeigt, wer sich von Argumenten der anderen Seite überzeugen ließ (Scholz, 2004).`},
  {p:`Abschluss`, t:6, was:`Siegerehrung nach beiden Modellen, kurz und mit Humor. Feedback an die Kampfgerichte: „Was lief organisatorisch gut?“ Abbau.`, orga:`Kreis`, komm:`Würdigt Leistung und Organisation. Hält die Balance zwischen Ernst und Spiel.`}],
 diff:{
  leichter:[`Medizinball 1,5–2 kg`, `Standweitsprung statt Fünfersprunglauf`, `Sprint ohne Startkommando aus dem Stand`],
@@ -1078,7 +1086,7 @@ skizze:{titel:`Team-Mehrkampf mit vier Stationen`, el:[
  [`r`,62,30,32,15,`Stoßsektor`,`z`],[`l`,62,30,62,45,`Stoßlinie`],
  [`r`,6,32,16,9,`Wertung`,`f`],[`c`,10,44.5,1.6,`Tablet`],
  [`s`,50,6,5,2.2,0],[`s`,46,40,5,2.2,0],[`L`,40,34]]},
-lit:[`bsb22gyo`,`kurz`,`balzneumann`]
+lit:[`bsb22gyo`,`kurz`,`balzneumann`,`bpb04`]
 });
 
 UV.push({
@@ -2709,7 +2717,7 @@ verlauf:[
  {p:`Randori 1`, t:14, was:`Ohne Handicap, Partner frei gewählt, zwei Kämpfe à 90 Sekunden. Danach Protokoll: „War der Ausgang offen?“ (ja, nein).`, orga:`4 Kampfflächen, je ein Paar kämpft, ein Paar richtet, eines pausiert; Protokollkarten`, komm:`Ausgangserfahrung als Vergleichswert.`},
  {p:`Erarbeitung`, t:10, was:`Kreis. Auswertung der Protokolle. Handicap-Ideen sammeln und an die Wand schreiben. Vereinsjudoka erläutern Gewichtsklassen.`, orga:`Kreis; Plakat`, komm:`Die SuS entwickeln die Lösungen selbst.`},
  {p:`Randori 2`, t:20, was:`Bewusst ungleiche Paare. Vor jedem Kampf 30 Sekunden Aushandeln eines Handicaps, dann 90 Sekunden Kampf, dann Rückmeldung: eine Stärke des Partners. Drei Kämpfe mit wechselnden Partnern.`, orga:`4 Kampfflächen; Protokollkarten`, komm:`Wettkämpfen und Kooperieren fallen zusammen.`},
- {p:`Reflexion`, t:12, was:`Kreis. „Welche Handicaps haben den Kampf offen gemacht? Ist ein Sieg mit Handicap weniger wert?“ Vergleich mit Gewichtsklassen, Paralympics, Golf-Handicap.`, orga:`Kreis`, komm:`Urteilsbildung mit Gegenpositionen.`},
+ {p:`Reflexion`, t:12, was:`Kreis. „Welche Handicaps haben den Kampf offen gemacht? Ist ein Sieg mit Handicap weniger wert?“ Vergleich mit Gewichtsklassen, Paralympics, Golf-Handicap. Die Frage „Ist ein Sieg mit Handicap weniger wert?“ beginnt auf der Positionslinie quer über die Matte: ja an der einen Wand, nein an der anderen. Drei Begründungen aus verschiedenen Positionen, danach das Gespräch.`, orga:`Kreis`, komm:`Urteilsbildung mit Gegenpositionen. Die Positionslinie macht unterschiedliche Urteile sichtbar, bevor diskutiert wird (Scholz, 2004).`},
  {p:`Abschluss`, t:6, was:`Abgrüßen, Mattenabbau. Ausblick: Abschlussturnier mit selbst gewähltem Modus.`, orga:`Reihe, Gruppen`, komm:`Ritual und Ausblick.`}],
 diff:{
  leichter:[`Kampf um das Umdrehen aus der Bank`, `Kampfzeit 60 Sekunden`, `Rolle als Kampfrichter mit Beobachtungsbogen`],
@@ -2724,7 +2732,7 @@ skizze:{titel:`Vier Kampfflächen`, el:[
  [`r`,10,6,38,17,`Fläche 1`,`m`],[`r`,52,6,38,17,`Fläche 2`,`m`],[`r`,10,26,38,17,`Fläche 3`,`m`],[`r`,52,26,38,17,`Fläche 4`,`m`],
  [`s`,24,19,2,5,0],[`s`,66,19,2,5,0],[`s`,24,39,2,5,0],[`s`,66,39,2,5,0],
  [`s`,4,10,3,0,4],[`s`,96,10,3,0,4],[`L`,50,46.5]]},
-lit:[`bsb22gyo`,`kurz`,`balzneumann`]
+lit:[`bsb22gyo`,`kurz`,`balzneumann`,`bpb04`]
 });
 
 REIHE[`bf4-ew-1`]={ziel:`Die Kinder raufen fair am Boden, halten Rituale und die Stopp-Regel ein und trauen sich Körperkontakt in selbst gewählten Stufen zu.`,st:[
@@ -2923,7 +2931,7 @@ ziele:[
  {b:`motorisch`, st:`Anpassung`, op:`verändern`, text:`Die SuS verändern ihr Spiel nach dem ersten Probespiel, indem sie eine Regel oder das Feld so anpassen, dass alle Kinder der Gruppe beteiligt sind.`},
  {b:`sozial-affektiv`, st:``, op:`kooperieren`, text:`Die SuS kooperieren in der Gruppe, indem sie ihre Rollenkarte ausfüllen und Entscheidungen per Handzeichen treffen.`}],
 verlauf:[
- {p:`Einstieg`, t:5, was:`Sitzkreis um eine Materialkiste. „Was könnte man damit spielen?“ Drei Ideen hören. Baukarte und Rollenkarten erklären.`, orga:`Kreis; Kiste, Baukarte groß`, komm:`Weckt Ideen und klärt den Arbeitsrahmen.`},
+ {p:`Einstieg`, t:5, was:`Sitzkreis um eine Materialkiste. „Was könnte man damit spielen?“ Drei Ideen hören. Baukarte und Rollenkarten erklären. Die Rollenkarten folgen der Methode Nummerierte Köpfe: Baumeister, Regelschreiber, Zeitwächter und Erklärer.`, orga:`Kreis; Kiste, Baukarte groß`, komm:`Weckt Ideen und klärt den Arbeitsrahmen. Mit festen Zuständigkeiten übernimmt jedes Kind Verantwortung für einen Teil der Zusammenarbeit (IQSH, 2012).`},
  {p:`Erfinden`, t:12, was:`Gruppen sichten ihre Kiste, entscheiden sich für eine Spielidee und bauen das Feld. Der Regelschreiber notiert drei Regeln. L geht herum und fragt: „Wie gewinnt man? Was macht jeder?“`, orga:`6 Gruppen à 4; Materialkisten, Baukarten, Stifte`, komm:`Fragen statt Vorschläge lassen die Idee bei den Kindern.`},
  {p:`Probespiel`, t:8, was:`Jede Gruppe spielt ihr Spiel. Der Zeitwächter stoppt nach vier Minuten. Gruppenfrage: „Hatten alle zu tun? Was ändern wir?“ Eine Änderung eintragen und noch einmal spielen.`, orga:`6 Gruppenfelder`, komm:`Das Spiel wird am Kriterium Beteiligung geprüft und verbessert.`},
  {p:`Spiele-Messe`, t:14, was:`Drei Gruppen bleiben als Gastgeber (zwei Erklärer am Feld), drei Gruppen besuchen ein fremdes Spiel und spielen es fünf Minuten. Dann Wechsel.`, orga:`Gruppen wechseln die Felder`, komm:`Erklären für andere zeigt, ob die Regeln verständlich sind.`},
@@ -2940,7 +2948,7 @@ material:`6 Materialkisten (Joghurtbecher, Zeitungen, Korken, Kartons, Wäschekl
 skizze:{titel:`Sechs Erfinderfelder`, el:[
  [`r`,6,6,24,16,`Gruppe 1`,`f`],[`r`,38,6,24,16,`Gruppe 2`,`f`],[`r`,70,6,24,16,`Gruppe 3`,`f`],[`r`,6,28,24,16,`Gruppe 4`,`f`],[`r`,38,28,24,16,`Gruppe 5`,`f`],[`r`,70,28,24,16,`Gruppe 6`,`f`],
  [`r`,8,8,4,3,``,`b`],[`r`,40,8,4,3,``,`b`],[`r`,72,8,4,3,``,`b`],[`r`,8,30,4,3,``,`b`],[`r`,40,30,4,3,``,`b`],[`r`,72,30,4,3,``,`b`],[`L`,50,25]]},
-lit:[`bsb22gs`,`kurz`,`balzneumann`]
+lit:[`bsb22gs`,`kurz`,`balzneumann`,`iqsh12`]
 });
 
 UV.push({
@@ -2966,7 +2974,7 @@ verlauf:[
  {p:`Erwärmung`, t:10, was:`„Zehnerball“ 4 gegen 4 auf vier kleinen Feldern: Zehn Pässe im Team geben einen Punkt. Regel: Nach dem Pass muss man den Platz wechseln.`, orga:`4 Felder, 7 Teams à 4 (ein Team pausiert und zählt); 4 Bälle, Leibchen`, komm:`Erwärmt und erzwingt Bewegung nach dem Pass.`},
  {p:`Erarbeitung`, t:10, was:`Taktiktafel: Standbild aus dem Spiel nachstellen. „Wer ist anspielbar? Wohin müsste Lea laufen?“ Begriff Anbieten. Übung 3 gegen 1 im Viereck: Die drei besetzen immer die freien Ecken.`, orga:`Halbkreis, dann Vierergruppen in Vierecken; Taktiktafel, Hütchen`, komm:`Verstehen am Bild, dann Üben in einfacher Überzahl.`},
  {p:`Spiel 1`, t:16, was:`Mattenball 4 gegen 4 auf zwei Feldern, Spielzeit vier Minuten, dann Wechsel. Ohne Schiedsrichter. Pausierende Teams beobachten: Wie viele Pässe vor dem Punkt? Wie lange dauert eine Klärung?`, orga:`2 Querfelder; Beobachtungskarten, Stoppuhr`, komm:`Beobachtungsaufträge binden die Pausierenden ein und liefern Daten.`},
- {p:`Zwischenreflexion`, t:8, was:`Kreis. Beobachtende berichten. „Was hat bei der Klärung geholfen?“ Regel ergänzen: „Punkt zählt doppelt, wenn alle den Ball hatten.“`, orga:`Kreis`, komm:`Rückmeldung aus der Klasse statt von der Lehrkraft.`},
+ {p:`Zwischenreflexion`, t:8, was:`Kreis. Beobachtende berichten. „Was hat bei der Klärung geholfen?“ Regel ergänzen: „Punkt zählt doppelt, wenn alle den Ball hatten.“ Form: Fishbowl. Je eine beobachtende Person pro Feld sitzt im Innenkreis auf einem kleinen Kasten, eine Matte ist der freie Platz. Wer aus dem Außenkreis etwas ergänzen will, setzt sich kurz dazu.`, orga:`Kreis`, komm:`Rückmeldung aus der Klasse statt von der Lehrkraft. Im Fishbowl sprechen die Beobachtenden miteinander statt nacheinander zur Lehrkraft. Der freie Platz öffnet das Gespräch für alle (Scholz, 2004).`},
  {p:`Spiel 2`, t:18, was:`Zweite Runde mit der Zusatzregel. Nach jedem Spiel 30 Sekunden „Spirit-Kreis“: Beide Teams stehen gemischt im Kreis und nennen eine faire Aktion des Gegners.`, orga:`2 Querfelder`, komm:`Der gemischte Kreis macht Fairness zum festen Teil des Spiels.`},
  {p:`Reflexion`, t:6, was:`Kreis. Daumen zu beiden Zielen. „Was nehmen wir für das Turnier mit?“`, orga:`Kreis`, komm:`Bündelt taktisches und soziales Lernen.`},
  {p:`Abbau`, t:4, was:`Weichböden zu viert, Leibchen zurück.`, orga:`Teams`, komm:`Geordneter Schluss.`}],
@@ -2983,7 +2991,7 @@ skizze:{titel:`Zwei Querfelder mit Endzonen`, el:[
  [`r`,6,4,38,5,`Endzone`,`m`],[`r`,6,41,38,5,`Endzone`,`m`],[`r`,56,4,38,5,`Endzone`,`m`],[`r`,56,41,38,5,`Endzone`,`m`],
  [`r`,6,10,38,30,``,`f`],[`r`,56,10,38,30,``,`f`],
  [`s`,12,18,4,8,0],[`s`,14,32,4,8,0],[`s`,62,18,4,8,0],[`s`,64,32,4,8,0],[`s`,48,14,4,0,3],[`s`,52,14,4,0,3],[`L`,50,34]]},
-lit:[`bsb24`,`ballschule`,`kurz`]
+lit:[`bsb24`,`ballschule`,`kurz`,`bpb04`]
 });
 
 UV.push({
@@ -3623,7 +3631,7 @@ ziele:[
 verlauf:[
  {p:`Einstieg`, t:8, was:`Kreis. Drei Fotos von Figuren, darunter eine mit einer kleinen Person als Basis. „Wer trägt hier wen, und warum geht das?“ Regeln wiederholen. Auftrag: drei Figuren, zwei Rollen pro Person.`, orga:`Kreis; Fotos, Regelplakat`, komm:`Irritiert die Annahme „groß trägt klein“ und klärt Kriterien.`},
  {p:`Erwärmung`, t:8, was:`Körperspannung zu zweit, „Bank-Test“ (Partner drückt auf Becken und Schultern), Gleichgewichtsübungen Rücken an Rücken.`, orga:`Paare auf Matten`, komm:`Sichert die tragenden Positionen.`},
- {p:`Erarbeitung`, t:16, was:`Gruppen à vier erproben Figuren aus dem Katalog (grün, gelb, rot). Jede Figur wird mit Kommandos aufgebaut, drei Sekunden gehalten, abgebaut. Rollen wechseln bei jeder Figur.`, orga:`6 Gruppen; Figurenkatalog`, komm:`Repertoire und Sicherheit vor der Gestaltung.`},
+ {p:`Erarbeitung`, t:16, was:`Gruppen à vier erproben Figuren aus dem Katalog (grün, gelb, rot). Jede Figur wird mit Kommandos aufgebaut, drei Sekunden gehalten, abgebaut. Rollen wechseln bei jeder Figur. Organisiert als Gruppenpuzzle: In jeder Vierergruppe bekommt jede Person eine Nummer und damit eine Figur aus dem Katalog. Die Expertengruppen mit gleicher Nummer erproben ihre Figur acht Minuten lang, L nimmt jede Expertengruppe ab. Zurück in der Stammgruppe leitet jede Expertin und jeder Experte die eigene Figur an.`, orga:`6 Gruppen; Figurenkatalog`, komm:`Repertoire und Sicherheit vor der Gestaltung. Im Gruppenpuzzle lernen die SuS eine Figur gründlich und das Anleiten dazu. Die Abnahme durch L sichert, dass nur sichere Griffe weitergegeben werden (IQSH, 2012; Scholz, 2004).`},
  {p:`Gestaltung`, t:22, was:`Auftrag: „Drei Figuren, eine davon selbst erfunden, verbunden durch Übergänge. Jede Person in zwei Rollen. Anfangs- und Schlussbild.“ Gruppen skizzieren und üben. L berät zu Belastungspunkten.`, orga:`6 Gruppen; Skizzenblätter`, komm:`Klare Kriterien, viel Raum für eigene Ideen.`},
  {p:`Präsentation`, t:14, was:`Drei Gruppen zeigen, drei beobachten mit Kriterienkarte (stabil, sicher, Übergänge) und geben eine Rückmeldung. Wechsel.`, orga:`halbe Klasse zeigt; Kriterienkarten, Musikbox`, komm:`Kriteriengeleitete Rückmeldung statt Geschmacksurteil.`},
  {p:`Reflexion`, t:8, was:`Kreis. „Welche Rolle hat dich überrascht? Wie habt ihr Rollen verteilt?“ Gespräch über die Annahme, dass Statur die Rolle bestimmt.`, orga:`Kreis`, komm:`Reflektiert Rollenbilder am eigenen Tun.`},
@@ -3640,7 +3648,7 @@ material:`24 Turnmatten, 6 Figurenkataloge, Skizzenblätter, Stifte, Kriterienka
 skizze:{titel:`Sechs Gruppenfelder`, el:[
  [`r`,8,6,24,16,`Gruppe 1`,`m`],[`r`,38,6,24,16,`Gruppe 2`,`m`],[`r`,68,6,24,16,`Gruppe 3`,`m`],[`r`,8,28,24,16,`Gruppe 4`,`m`],[`r`,38,28,24,16,`Gruppe 5`,`m`],[`r`,68,28,24,16,`Gruppe 6`,`m`],
  [`s`,14,18,4,4,0],[`s`,44,18,4,4,0],[`s`,74,18,4,4,0],[`s`,14,40,4,4,0],[`s`,44,40,4,4,0],[`s`,74,40,4,4,0],[`L`,50,25]]},
-lit:[`bsb24`,`kurz`,`balzneumann`]
+lit:[`bsb24`,`kurz`,`balzneumann`,`iqsh12`,`bpb04`]
 });
 
 UV.push({
@@ -3667,7 +3675,7 @@ verlauf:[
  {p:`Kriterien`, t:10, was:`Vier Teams einigen sich im Plenum auf drei Ausführungskriterien (z. B. Körperspannung, Fluss, sicherer Schluss) und die Skala. L ergänzt Passungswert und Streichwertung. Probewertung an einer freiwilligen Kür.`, orga:`Kreis; Plakat, Tablet`, komm:`Gemeinsame Kriterien und eine Eichung vor dem Ernstfall.`},
  {p:`Proben`, t:16, was:`Teams proben. Jede Person turnt ihre Kür einmal vor dem eigenen Team und erhält eine Rückmeldung zu einem Kriterium.`, orga:`4 Teams à 5 auf 2 Bahnen`, komm:`Letzte Verbesserung mit Peer-Feedback.`},
  {p:`Wettkampf`, t:20, was:`Zwei Bahnen parallel. Team A turnt, Team B ist Kampfgericht (vier Wertende, eine Person trägt ein), dann Wechsel. Wertungen werden nach jeder Kür offen gezeigt.`, orga:`2 Bahnen; Wertungskarten, Tablet`, komm:`Alle sind Turnende und Wertende, Transparenz durch offene Wertung.`},
- {p:`Auswertung`, t:12, was:`Tabelle am Beamer: Teamergebnisse und Streuung der Wertungen pro Kür. „Wo waren wir uns einig, wo nicht? Was sagt das über Kampfrichterurteile?“ Vergleich mit Videobeweis und Kampfgerichten im Spitzensport.`, orga:`Halbkreis; Beamer`, komm:`Daten machen Subjektivität sichtbar und diskutierbar.`},
+ {p:`Auswertung`, t:12, was:`Tabelle am Beamer: Teamergebnisse und Streuung der Wertungen pro Kür. „Wo waren wir uns einig, wo nicht? Was sagt das über Kampfrichterurteile?“ Vergleich mit Videobeweis und Kampfgerichten im Spitzensport. Vorher Kontrolle im Tandem: Je zwei Wertende vergleichen ihre Noten zu einer Kür und klären Abweichungen über die Kriterien. Was sie nicht klären, besprechen sie mit einem zweiten Tandem. Ins Plenum kommen nur Küren, bei denen beide Tandems uneinig bleiben.`, orga:`Halbkreis; Beamer`, komm:`Daten machen Subjektivität sichtbar und diskutierbar. Die Kontrolle im Tandem zwingt dazu, Wertungen mit Kriterien zu begründen, und spart Plenumszeit (IQSH, 2012).`},
  {p:`Abbau`, t:4, was:`Matten und Tische zurück. Ausblick: Kür überarbeiten für die Abschlussstunde.`, orga:`Teams`, komm:`Geordneter Schluss.`}],
 diff:{
  leichter:[`Kür aus fünf Grundelementen (Rolle, Standwaage, Strecksprung, Drehung, Rad)`, `Turnen mit Hilfestellung ohne Abzug`, `Wertung nur zu einem Kriterium`],
@@ -3682,7 +3690,7 @@ skizze:{titel:`Zwei Bodenbahnen mit Kampfgericht`, el:[
  [`r`,10,8,80,8,`Bodenbahn 1`,`m`],[`r`,10,34,80,8,`Bodenbahn 2`,`m`],
  [`r`,40,19,20,3,`Kampfgericht`,`b`],[`r`,40,28,20,3,`Kampfgericht`,`b`],[`s`,43,24,5,3.4,0],[`s`,43,26.5,5,3.4,0],
  [`s`,4,8,5,0,2],[`s`,4,34,5,0,2],[`c`,66,25,1.4,`Tabelle`],[`L`,82,25]]},
-lit:[`bsb22gyo`,`kurz`,`helmke`]
+lit:[`bsb22gyo`,`kurz`,`helmke`,`iqsh12`]
 });
 
 REIHE[`bf6-ew-1`]={ziel:`Die Kinder bewegen sich sicher und vielseitig in einer Bewegungslandschaft, schätzen ihr Können ein und halten die Regeln ein.`,st:[
@@ -3929,7 +3937,7 @@ verlauf:[
  {p:`Battle Runde 1`, t:18, was:`Je zwei Crews stehen sich im Kreis gegenüber: Handschlag, Crew A zeigt, Crew B antwortet, Handschlag. Das Publikum applaudiert beiden und nennt eine Beobachtung zu Takt oder Zusammenspiel. Drei Battles.`, orga:`Battle-Kreis, Publikum außen`, komm:`Ritualisierter Ablauf schützt und strukturiert.`},
  {p:`Crew-Arbeit 2`, t:16, was:`Crews bauen ihre Folge aus: ein dritter Achter mit einer „Antwort“ auf etwas, das sie bei der anderen Crew gesehen haben (aufgreifen, verändern). Formation ändern (Reihe, Dreieck).`, orga:`6 Crew-Flächen`, komm:`Aus Gegnern werden Ideengeber.`},
  {p:`Battle Runde 2`, t:10, was:`Neue Paarungen, verkürzter Ablauf. Am Ende tanzen alle Crews ihre Folge gleichzeitig.`, orga:`Battle-Kreis, dann alle`, komm:`Gemeinsamer Abschluss nach dem Wettbewerb.`},
- {p:`Reflexion`, t:4, was:`Kreis. „Wie hat sich der Applaus angefühlt? Was habt ihr von der anderen Crew übernommen?“`, orga:`Kreis`, komm:`Hält fest, dass man im Battle voneinander lernt.`}],
+ {p:`Reflexion`, t:4, was:`Kreis. „Wie hat sich der Applaus angefühlt? Was habt ihr von der anderen Crew übernommen?“ Als Blitzlicht: Jede Person sagt einen Satz, beginnend mit „Von der anderen Crew habe ich …“. Wer nichts sagen möchte, gibt weiter.`, orga:`Kreis`, komm:`Hält fest, dass man im Battle voneinander lernt. Das Blitzlicht holt in kurzer Zeit von allen eine Rückmeldung ein (Scholz, 2004).`}],
 diff:{
  leichter:[`ein Achter`, `Moves am Platz ohne Formationswechsel`, `Crew zeigt gemeinsam mit einer zweiten Crew`],
  schwerer:[`Kanon innerhalb der Crew`, `Ebenenwechsel hoch und tief`, `Solo von zwei Zählzeiten für jede Person`],
@@ -3942,7 +3950,7 @@ material:`Musikbox, Instrumental-Beats in mittlerem Tempo, Tablet oder Beamer, P
 skizze:{titel:`Crew-Flächen und Battle-Kreis`, el:[
  [`r`,5,5,18,12,`Crew 1`,`f`],[`r`,41,4,18,10,`Crew 2`,`f`],[`r`,77,5,18,12,`Crew 3`,`f`],[`r`,5,33,18,12,`Crew 4`,`f`],[`r`,41,36,18,10,`Crew 5`,`f`],[`r`,77,33,18,12,`Crew 6`,`f`],
  [`r`,34,17,32,16,`Battle`,`z`],[`s`,38,21,4,0,3],[`s`,62,21,4,0,3],[`L`,27,25],[`r`,90,22,6,6,`Musik`,`b`]]},
-lit:[`bsb24`,`kurz`,`balzneumann`]
+lit:[`bsb24`,`kurz`,`balzneumann`,`bpb04`]
 });
 
 UV.push({
@@ -4092,7 +4100,7 @@ verlauf:[
  {p:`Einstieg`, t:8, was:`Halbkreis. L zeigt ein einfaches Motiv (vier Zählzeiten) und verändert es live: tief statt hoch, halbes Tempo, zart statt kräftig. „Was habe ich verändert?“ Parameter an die Wand, Auftrag.`, orga:`Halbkreis; Plakat`, komm:`Das Verfahren wird am Beispiel durchschaubar.`},
  {p:`Erwärmung`, t:8, was:`Selbstständig in den Gruppen: Motive der Vorstunde wiederholen, ein Motiv einer anderen Gruppe lernen.`, orga:`5 Gruppen`, komm:`Reaktiviert das Material und weitet den Blick.`},
  {p:`Variieren`, t:14, was:`Jede Gruppe zieht drei Karten (z. B. „Ebene wechseln“, „Kanon“, „plötzlich und gehalten“) und erarbeitet drei Variationen. Jede Variation erhält einen Arbeitstitel.`, orga:`5 Gruppen à 4–5; Variationskarten`, komm:`Zufallskarten zwingen aus Gewohnheiten heraus.`},
- {p:`Komponieren`, t:24, was:`Auftrag: „Vier Achter aus Original und Variationen. Wählt eine Reihenfolge, die sich steigert. Anfang und Schluss klar.“ Nach zehn Minuten Zwischenstand filmen, ansehen mit zwei Fragen: „Erkennt man die Variationen? Trägt der Aufbau?“ Überarbeiten.`, orga:`5 Gruppen; 5 Tablets, Fragenkarte`, komm:`Video als Außenblick im Arbeitsprozess.`},
+ {p:`Komponieren`, t:24, was:`Auftrag: „Vier Achter aus Original und Variationen. Wählt eine Reihenfolge, die sich steigert. Anfang und Schluss klar.“ Nach zehn Minuten Zwischenstand filmen, ansehen mit zwei Fragen: „Erkennt man die Variationen? Trägt der Aufbau?“ Überarbeiten. Nummerierte Köpfe: 1 achtet auf die Zeit, 2 filmt, 3 zählt ein und startet die Musik, 4 prüft, dass alle drei Variationen vorkommen.`, orga:`5 Gruppen; 5 Tablets, Fragenkarte`, komm:`Video als Außenblick im Arbeitsprozess. Feste Rollen verteilen die Verantwortung für den Prozess auf einzelne Personen. Bei Problemen spricht L die zuständige Person an, nicht die ganze Gruppe (IQSH, 2012).`},
  {p:`Werkschau`, t:14, was:`Jede Gruppe zeigt ihren Stand. Die Zuschauenden benennen, welche Parameter sie erkennen. Keine Bewertung, nur Beschreibung.`, orga:`Halbkreis, Bühne an der Stirnseite; Musikbox`, komm:`Beschreibendes Feedback schult den analytischen Blick.`},
  {p:`Reflexion`, t:8, was:`Kreis. „Was hat die Zufallskarte mit eurer Idee gemacht? Was unterscheidet Variieren von Kopieren?“ Videos in den Gruppenordner sichern.`, orga:`Kreis`, komm:`Macht das Verfahren bewusst und sichert den Prozess.`},
  {p:`Abschluss`, t:4, was:`Ausblick: Musik wählen, auf acht Achter erweitern.`, orga:`Kreis`, komm:`Kohärenz in der Reihe.`}],
@@ -4109,7 +4117,7 @@ skizze:{titel:`Fünf Gruppenflächen und Werkschau`, el:[
  [`r`,6,6,24,14,`Gruppe 1`,`f`],[`r`,38,6,24,14,`Gruppe 2`,`f`],[`r`,70,6,24,14,`Gruppe 3`,`f`],[`r`,6,28,24,14,`Gruppe 4`,`f`],[`r`,38,28,24,14,`Gruppe 5`,`f`],
  [`r`,70,28,24,14,`Werkschau`,`z`],[`c`,8,22,1.4,``],[`c`,40,22,1.4,``],[`c`,72,22,1.4,``],[`c`,8,44,1.4,``],[`c`,40,44,1.4,``],
  [`s`,12,16,4,4,0],[`s`,44,16,4,4,0],[`s`,76,16,4,4,0],[`s`,12,38,4,4,0],[`s`,44,38,4,4,0],[`L`,50,24]]},
-lit:[`bsb22gyo`,`kurz`,`balzneumann`]
+lit:[`bsb22gyo`,`kurz`,`balzneumann`,`iqsh12`]
 });
 
 UV.push({
@@ -4495,7 +4503,7 @@ verlauf:[
  {p:`Erwärmung`, t:10, was:`Drei Minuten lockeres Laufen mit Armkreisen, Skippings, Seitgalopp. Dann zu zweit: Schulterbrücke, Ausfallschritte im Gehen, Liegestütz in leichter Stufe, je zehn Wiederholungen.`, orga:`Rundlauf, dann Paare`, komm:`Allgemeine und übungsnahe Vorbereitung.`},
  {p:`Technik-Check`, t:12, was:`Paare gehen im Schnelldurchlauf alle acht Stationen ab, je eine Minute. Stufe wählen, ein Merkmal je Übung mit der Stationskarte prüfen. L korrigiert bei Kniebeuge, Rudern und Rumpfheben.`, orga:`14 Paare, je 3 bis 4 SuS pro Station; Stationskarten`, komm:`Die Stufe wird vor der Belastung gewählt, Technikfehler werden früh erkannt.`},
  {p:`Durchgang 1`, t:12, was:`Acht Stationen, 40 Sekunden Belastung, 20 Sekunden Wechsel. Die Paare üben gleichzeitig nebeneinander und rücken auf das Signal eine Station weiter. Danach Trinkpause und Borg-Wert eintragen.`, orga:`Stationsrechteck; Intervalltimer, Musik`, komm:`Der Timer steuert, L beobachtet und korrigiert.`},
- {p:`Zwischenauswertung`, t:8, was:`Das Protokoll zeigt die Verteilung der Werte. „Wer liegt im Zielbereich? Was ändert ihr?“ Jede Person legt ihre Anpassung fest und nennt sie der Partnerin oder dem Partner mit Begründung.`, orga:`Halbkreis; Tablet 2`, komm:`Belastungssteuerung wird zur eigenen Entscheidung.`},
+ {p:`Zwischenauswertung`, t:8, was:`Das Protokoll zeigt die Verteilung der Werte. „Wer liegt im Zielbereich? Was ändert ihr?“ Jede Person legt ihre Anpassung fest und nennt sie der Partnerin oder dem Partner mit Begründung. Ablauf als Denken-Austauschen-Besprechen (D-A-B): 30 Sekunden allein auf das eigene Protokoll schauen und die Anpassung festlegen, dann dem Partner erklären, dann ruft L zwei Paare zufällig auf.`, orga:`Halbkreis; Tablet 2`, komm:`Belastungssteuerung wird zur eigenen Entscheidung. Weil alle zuerst allein nachdenken und mit Aufruf rechnen müssen, sind die Antworten durchdachter und alle beteiligt (IQSH, 2012).`},
  {p:`Durchgang 2`, t:12, was:`Zweiter Durchgang mit angepasster Stufe. An jeder zweiten Station beobachtet eine Person das vereinbarte Merkmal, die andere übt; Rückmeldung im Wechsel.`, orga:`Stationsrechteck`, komm:`Technik unter Ermüdung sichern.`},
  {p:`Cool-down`, t:6, was:`Zwei Runden Gehen, Dehnen von Brust, Hüftbeugern und Oberschenkelrückseite. Zweiten Borg-Wert eintragen.`, orga:`freie Fläche`, komm:`Geordnetes Abklingen, zweiter Messpunkt.`},
  {p:`Reflexion und Abbau`, t:12, was:`Vergleich der beiden Verteilungen. „Hat die Anpassung gewirkt? Welche Stellschraube würdet ihr nächstes Mal drehen?“ Ausblick: In Stunde 5 planen die SuS einen eigenen Zirkel. Abbau stationsweise.`, orga:`Halbkreis, dann Paare`, komm:`Daten werden gedeutet, Planungskompetenz angebahnt.`}],
@@ -4513,7 +4521,7 @@ skizze:{titel:`Achter-Zirkel mit Timer`, el:[
  [`r`,77,34,16,8,`5 Rudern`,`z`],[`r`,54,34,16,8,`6 Ausfallschritt`,`z`],[`r`,31,34,16,8,`7 Stütz`,`m`],[`r`,8,34,16,8,`8 Brücke`,`m`],
  [`s`,11,17,4,3.4,0],[`s`,34,17,4,3.4,0],[`s`,57,17,4,3.4,0],[`s`,80,17,3,3.4,0],[`s`,80,31,3,3.4,0],[`s`,57,31,4,3.4,0],[`s`,34,31,3,3.4,0],[`s`,11,31,3,3.4,0],
  [`c`,48,24,2,`Timer`],[`c`,3,24,2,``],[`L`,58,24]]},
-lit:[`bsb24`,`borg`,`helmke`]
+lit:[`bsb24`,`borg`,`helmke`,`iqsh12`]
 });
 
 UV.push({
@@ -4585,7 +4593,7 @@ verlauf:[
  {p:`Lauf 1: gleiche Vorgabe`, t:10, was:`Sechs Minuten: Eine Person arbeitet eine Runde (10 Kniebeugen, 8 Liegestütz, 10 Ruderzüge, 12 Bergsteiger), die zweite zählt und prüft, die dritte pausiert. Reihum wechseln. Runden notieren.`, orga:`Teamflächen; Timer, Bänder an der Sprossenwand oder mit Partnerhalt`, komm:`Ausgangspunkt für den Vergleich. Eingebaute Pausen sichern die Qualität.`},
  {p:`Pause und Zwischenbilanz`, t:14, was:`Trinken, lockeres Gehen. Rundenzahlen an die Tafel. „Was sagt das Ergebnis über die Teams aus?“ Hypothesen für Lauf 2 sammeln. Teams prüfen ihre Rundenvorgaben noch einmal.`, orga:`Halbkreis vor der Tafel`, komm:`Ausreichende Erholung und Denkzeit; die Daten liefern den Gesprächsanlass.`},
  {p:`Lauf 2: skaliert`, t:12, was:`Sechs Minuten im selben Ablauf, jetzt mit individueller Rundenvorgabe und gewählter Stufe. Kampfrichterrolle wie zuvor. Runden notieren, Auslaufen.`, orga:`Teamflächen; Timer`, komm:`Der direkte Vergleich macht die Wirkung der Skalierung erfahrbar.`},
- {p:`Reflexion und Abbau`, t:12, was:`Beide Ergebnisreihen nebeneinander. „Welcher Lauf war fairer? Für wen?“ Diskussion mit Kriterien: gleiche Regeln, gleiche Chancen, gleiche Anstrengung. Bezug zu Gewichtsklassen und Handicap-Regeln im Sport. Dehnen, Abbau.`, orga:`Halbkreis, dann Teams`, komm:`Urteilsbildung mit Bezug zur Sporttheorie.`}],
+ {p:`Reflexion und Abbau`, t:12, was:`Beide Ergebnisreihen nebeneinander. „Welcher Lauf war fairer? Für wen?“ Diskussion mit Kriterien: gleiche Regeln, gleiche Chancen, gleiche Anstrengung. Bezug zu Gewichtsklassen und Handicap-Regeln im Sport. Dehnen, Abbau. Zum Schluss stellen sich alle noch einmal auf die Positionslinie vom Einstieg. Wer den Platz gewechselt hat, nennt das Argument, das überzeugt hat. Stehen zwei klare Lager gegenüber: kurze Streitlinie mit abwechselnden Argumenten.`, orga:`Halbkreis, dann Teams`, komm:`Urteilsbildung mit Bezug zur Sporttheorie. Der Vergleich der beiden Positionierungen macht Urteilsbildung sichtbar (Scholz, 2004).`}],
 diff:{
  leichter:[`Liegestütz an der Bank, Rudern mit steilerem Körperwinkel`, `Rundenvorgabe auf 40 Prozent des Testwerts senken`, `Laufdauer vier Minuten`],
  schwerer:[`höhere Übungsstufe bei gleicher Rundenvorgabe`, `Kampfrichterrolle mit zwei Merkmalen gleichzeitig`, `eigenen Skalierungsvorschlag für eine fünfte Übung entwickeln`],
@@ -4600,7 +4608,7 @@ skizze:{titel:`Acht Teamflächen`, el:[
  [`r`,8,30,16,12,`Team 5`,`m`],[`r`,30,30,16,12,`Team 6`,`m`],[`r`,52,30,16,12,`Team 7`,`m`],[`r`,74,30,16,12,`Team 8`,`m`],
  [`s`,12,15,3,4,0],[`s`,34,15,3,4,0],[`s`,56,15,3,4,0],[`s`,78,15,3,4,0],[`s`,12,39,3,4,0],[`s`,34,39,3,4,0],[`s`,56,39,3,4,0],[`s`,78,39,3,4,0],
  [`r`,95,17,3,16,``,`w`],[`x`,86,24,`Timer, Tafel`],[`L`,50,24]]},
-lit:[`bsb22gyo`,`kurz`,`balzneumann`]
+lit:[`bsb22gyo`,`kurz`,`balzneumann`,`bpb04`]
 });
 
 UV.push({
@@ -6372,7 +6380,7 @@ verlauf:[
  {p:`Einstieg`, t:4, was:`Kreis. Vier Gefühlskarten. „Woran siehst du, dass jemand traurig ist, ohne das Gesicht zu sehen?“ Ideen sammeln.`, orga:`Kreis; Gefühlskarten`, komm:`Aufmerksamkeit vom Gesicht auf den Körper lenken.`},
  {p:`Erwärmung`, t:6, was:`Gehen durch den Raum, auf Zuruf groß, klein, schnell, langsam, fest, locker.`, orga:`freie Fläche; Musik`, komm:`Bewegungsqualitäten wiederholen.`},
  {p:`Gefühle erproben`, t:10, was:`Alle gleichzeitig: zu Musik als fröhliche, traurige, wütende, ängstliche Figur durch den Raum gehen. Nach jedem Gefühl Standbild, L nennt beobachtete Merkmale. Merkmale an die Tafel.`, orga:`freie Fläche; Musik, Tafel`, komm:`Gemeinsames Ausprobieren ohne Bühne.`},
- {p:`Gefühle raten`, t:10, was:`Sechs Gruppen zu vier. Jede Gruppe zieht eine Gefühlskarte, zeigt das Gefühl als Standbild und kurze Bewegung. Die anderen raten und nennen ein Merkmal.`, orga:`Gruppen im Halbkreis; Gefühlskarten`, komm:`Erkennen und Begründen.`},
+ {p:`Gefühle raten`, t:10, was:`Sechs Gruppen zu vier. Jede Gruppe zieht eine Gefühlskarte, zeigt das Gefühl als Standbild und kurze Bewegung. Die anderen raten und nennen ein Merkmal. Variante Schulter-Tipp: L tippt nach dem Raten eine Figur an die Schulter, das Kind sagt in einem Satz, wie es sich in seiner Haltung fühlt.`, orga:`Gruppen im Halbkreis; Gefühlskarten`, komm:`Erkennen und Begründen. Beim Standbild beschreiben zuerst die Zuschauenden, danach kommen die Figuren selbst zu Wort (Scholz, 2004).`},
  {p:`In die Geschichte`, t:7, was:`Jede Gruppe baut ein Gefühl in ihre Waldszene aus Stunde 2 ein, etwa: Die Tiere haben Angst vor dem Gewitter. Einmal üben.`, orga:`Gruppen`, komm:`Brücke zur Tanzgeschichte in Stunde 4.`},
  {p:`Abschluss`, t:3, was:`Kreis. „Welches Gefühl war am leichtesten zu zeigen? Woran erkennt man Wut im Körper?“`, orga:`Kreis`, komm:`Sicherung der Merkmale.`}],
 diff:{
@@ -6387,7 +6395,7 @@ material:`4 große Gefühlskarten, 6 Sätze kleine Gefühlskarten, Musikbox, Taf
 skizze:{titel:`Freie Fläche und Halbkreis`, el:[
  [`r`,30,1,40,3,`Gefühlskarten und Tafel`,`w`],[`r`,36,14,28,14,`Darstellung`,`f`],
  [`s`,20,34,6,6,0],[`s`,26,40,6,6,0],[`s`,41,25.5,4,6,0],[`L`,86,25]]},
-lit:[`bsb22gs`,`kurz`,`bahr`]
+lit:[`bsb22gs`,`kurz`,`bahr`,`bpb04`]
 });
 
 UV.push({
@@ -8089,7 +8097,7 @@ verlauf:[
  {p:`Einstieg`, t:3, was:`Sitzkreis. L erzählt von Rangeleien auf dem Hof. „Wie kann Kämpfen fair und sicher sein?“`, orga:`Sitzkreis`, komm:`Lebensweltbezug, Problemstellung.`},
  {p:`Erwärmung`, t:5, was:`Schildkröten umdrehen in Paaren, nach 30 Sekunden Wechsel. Dazwischen lockern.`, orga:`Paare auf Matten`, komm:`Bekannte Kampfform, Aufwärmen.`},
  {p:`Erleben`, t:6, was:`Kampf um den Schatz: ein Kind liegt auf dem Ball, das andere versucht ihn zu holen. 30 Sekunden, dann Wechsel. Ohne weitere Regeln als die Sicherheitsregeln.`, orga:`Paare auf 12 Matten; 12 Bälle`, komm:`Offene Phase, L beobachtet genau und bricht bei Gefahr ab.`},
- {p:`Austauschen`, t:5, was:`Sitzkreis. „Wann war es unangenehm? Wie hast du es gezeigt? Hat der andere es gemerkt?“`, orga:`Sitzkreis`, komm:`Grenzen werden benannt.`},
+ {p:`Austauschen`, t:5, was:`Sitzkreis. „Wann war es unangenehm? Wie hast du es gezeigt? Hat der andere es gemerkt?“ Ablauf als Denken-Austauschen-Besprechen: Hand aufs Herz und still überlegen, dann dem Nachbarkind erzählen, dann im Kreis.`, orga:`Sitzkreis`, komm:`Grenzen werden benannt. Die kurze Denk- und Partnerphase gibt auch zurückhaltenden Kindern einen Satz, den sie im Kreis sagen können (IQSH, 2012).`},
  {p:`Verstehen`, t:4, was:`L bündelt das Ritual: Begrüßung, Stopp und Abklopfen, Verabschiedung. Zwei Kinder machen es vor. Plakat aufhängen.`, orga:`Sitzkreis; Plakat`, komm:`Klare Struktur, Grundlage der Reihe.`},
  {p:`Anwenden`, t:12, was:`Schatzkampf mit Ritual in drei Runden. Nach jeder Runde neue Partner. L ruft zwischendurch „Stopp“, alle lassen los. Kinder mit Pause gehen in die Ruhezone.`, orga:`Paare auf Matten`, komm:`Ritual wird geübt, Stopp-Probe prüft die Umsetzung.`},
  {p:`Abschluss`, t:5, was:`Rücken an Rücken sitzen und gemeinsam atmen. Kreis: „Welche Regel war heute am wichtigsten?“ Daumenabfrage zum Ritual.`, orga:`Kreis`, komm:`Beruhigen, Reflexion der Regel.`}],
@@ -8108,7 +8116,7 @@ skizze:{titel:`Kampfinseln mit Ruhezone`, el:[
  [`r`,8,36,14,9,``,`m`],[`r`,30,36,14,9,``,`m`],[`r`,52,36,14,9,``,`m`],[`r`,74,36,14,9,``,`m`],
  [`s`,12,12,2,5,0],[`s`,34,12,2,5,0],[`s`,56,26,2,5,0],[`s`,78,40,2,5,0],
  [`r`,93,14,4,22,`Ruhe`,`b`],[`L`,47,32]]},
-lit:[`bsb22gs`,`fncs`,`busch`,`lange07`]
+lit:[`bsb22gs`,`fncs`,`busch`,`lange07`,`iqsh12`]
 });
 
 UV.push({
@@ -8972,6 +8980,9 @@ lange07:`Lange, H., & Sinning, S. (2007). Kämpfen, Ringen und Raufen im Sportun
 fncs:`Fridtjof-Nansen-Grundschule. (o. J.). Fachcurriculum Sport [Unveröffentlichtes schulinternes Dokument, erarbeitet mit dem LI-Arbeitsbereich Bewegung & Sport]. [prüfen: Jahr]`,
 fng24:`Fridtjof-Nansen-Grundschule. (2024). Stoffverteilungsplan Sport [Unveröffentlichtes schulinternes Dokument].`,
 fngrp:`Fridtjof-Nansen-Grundschule. (o. J.). Rahmenplan für relevante Besonderheiten [Unveröffentlichtes schulinternes Dokument].`,
+iqsh12:`Institut für Qualitätsentwicklung an Schulen Schleswig-Holstein. (2012). Methoden im Unterricht: Anregungen für Schule und Lehrerbildung (2. Aufl.). IQSH.`,
+bpb04:`Scholz, L. (2004). Methoden-Kiste (3. Aufl.; Thema im Unterricht extra). Bundeszentrale für politische Bildung.`,
+wdr11:`Schwandner, M. (2011, 17. Mai). Loben ist gar nicht so einfach [Radiobeitrag, Sendemanuskript]. In Leonardo: Wissenschaft und mehr. WDR 5.`,
 borg:`Borg, G. (1998). Borg's perceived exertion and pain scales (Borgs Skalen für Anstrengungs- und Schmerzempfinden). Human Kinetics.`};
 
 const $=s=>document.querySelector(s);
@@ -9098,7 +9109,7 @@ function detailView(u){u=VU(u);
  const ts=times(u);const netto=u.verlauf.reduce((a,v)=>a+v.t,0);const k=KB[u.kb][1];
  const li=a=>`<ul class="cl">${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
  const S=(id,n,t,body)=>`<section class="sec" id="x-${id}"><h2><i>${n}</i>${t}</h2>${body}</section>`;
- const nav=[['reihe','Unterrichtsreihe'],['ziele','Lernziele'],['verlauf','Verlaufsplan'],['aufbau','Aufbau und Material'],['diff','Differenzierung'],['quer','Querschnittsthemen'],['reflex','Reflexionsfragen'],['bp','Bildungsplanbezug'],['bed','Bedingungsanalyse'],['sach','Sach- und didaktische Analyse'],['lit','Literatur']];
+ const nav=[['reihe','Unterrichtsreihe'],['ziele','Lernziele'],['verlauf','Verlaufsplan'],['aufbau','Aufbau und Material'],['diff','Differenzierung'],['quer','Querschnittsthemen'],['reflex','Reflexionsfragen'],['meth','Methoden und Rückmeldung'],['bp','Bildungsplanbezug'],['bed','Bedingungsanalyse'],['sach','Sach- und didaktische Analyse'],['lit','Literatur']];
  app.innerHTML=`<div class="bar"><button class="btn" id="back">← Zurück</button><span class="bar2" style="margin:0"><button class="btn" id="lgdo">Mit Lerngruppe durchführen</button><button class="btn pri" id="pdf">Als PDF speichern</button></span></div>${lgDone(u)}
  <div style="--k:${k}">
  <div class="hero"><span class="lab">${u.kb} · ${KB[u.kb][0]} &nbsp;|&nbsp; Bewegungsfeld ${u.bf} · ${BF[u.bf]}</span><h1>${esc(u.titel)}</h1><p>${esc(u.thema)}</p><div class="qs">${u.quer.map(q=>`<span class="q">${q}</span>`).join('')}</div></div>
@@ -9117,10 +9128,11 @@ function detailView(u){u=VU(u);
  ${S('diff','FÜR ALLE','Differenzierung',`<div class="g3"><div><h4>Leichter</h4>${li(u.diff.leichter)}</div><div><h4>Schwerer</h4>${li(u.diff.schwerer)}</div><div class="box"><h4>Inklusive Anpassungen</h4><p>${esc(u.diff.inklusion)}</p></div></div>`)}
  ${S('quer','QUER','Querschnittsthemen',`<div class="g2">${Object.entries(u.querText).map(([q,v])=>`<div class="box"><h4>${esc(q)}</h4><p>${esc(v)}</p></div>`).join('')}</div>`)}
  ${S('reflex','DANACH','Reflexionsfragen',`<div class="g2"><div><h4>Für die Schülerinnen und Schüler</h4><ol class="ql">${u.reflexSuS.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></div><div><h4>Für die Lehrkraft</h4><ol class="ql">${u.reflexLK.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></div></div>`)}
+ ${S('meth','WOMIT','Methoden und Rückmeldung',methSection(u))}
  ${S('bp','WAS','Bildungsplanbezug',`<p class="prose">${esc(u.bp)}</p>`)}
  ${S('bed','MIT WEM','Bedingungsanalyse',`<div class="g2"><div class="box"><h4>Lerngruppe</h4><p>${esc(u.bedingung.gruppe)}</p></div><div class="box"><h4>Lernvoraussetzungen</h4><p>${esc(u.bedingung.vorauss)}</p></div><div class="box"><h4>Raum</h4><p>${esc(u.bedingung.raum)}</p></div><div class="box warn"><h4>Sicherheit</h4><p>${esc(u.bedingung.sicherheit)}</p></div></div>`)}
  ${S('sach','WARUM','Sach- und didaktische Analyse',`<h4>Sachanalyse</h4><p class="prose">${esc(u.sach)}</p><h4 style="margin-top:16px">Didaktische Überlegungen</h4><p class="prose">${esc(u.didaktik)}</p>`)}
- ${S('lit','QUELLEN','Literatur',`<div class="lit">${u.lit.map(x=>`<p>${esc(LIT[x])}</p>`).join('')}</div>`)}
+ ${S('lit','QUELLEN','Literatur',`<div class="lit">${litOf(u).map(x=>`<p>${esc(LIT[x])}</p>`).join('')}</div>`)}
  </div></div></div>`;
  window.scrollTo(0,0);
 }
@@ -9729,7 +9741,7 @@ function lgRoute(id){const p=id.split('/');if(currRoute(id))return true;if(fbRou
  if(p[0]==='s'){const s=DB.sessions.find(x=>x.id===p[1]);s&&gById(s.gid)?lgSession(s):lgHome();return true}
  if(p[0]==='k'){const g=gById(p[1]),k=g&&g.kids.find(x=>x.id===p[2]);k?lgKid(g,k):lgHome();return true}
  return false}
-function navMark(id){const sec=id==='reflexion'?'reflexion':(id==='fallberatung'||/^fb\//.test(id))?'fallberatung':(id==='curriculum'||/^cur\//.test(id))?'curriculum':id==='hilfe'?'hilfe':(id==='gruppen'||/^[gsk]\//.test(id))?'gruppen':'';document.querySelectorAll('.mainnav button').forEach(b=>{b.dataset.nav===sec?(b.setAttribute('aria-current','page'),b.scrollIntoView&&b.parentNode.scrollWidth>b.parentNode.clientWidth&&b.parentNode.scrollTo({left:b.offsetLeft-16,behavior:'smooth'})):b.removeAttribute('aria-current')})}
+function navMark(id){const sec=id==='reflexion'?'reflexion':(id==='fallberatung'||/^fb\//.test(id))?'fallberatung':(id==='curriculum'||/^cur\//.test(id))?'curriculum':id==='hilfe'?'hilfe':(id==='methoden'||/^m\//.test(id)||id==='methoden/loben')?'methoden':(id==='gruppen'||/^[gsk]\//.test(id))?'gruppen':'';document.querySelectorAll('.mainnav button').forEach(b=>{b.dataset.nav===sec?(b.setAttribute('aria-current','page'),b.scrollIntoView&&b.parentNode.scrollWidth>b.parentNode.clientWidth&&b.parentNode.scrollTo({left:b.offsetLeft-16,behavior:'smooth'})):b.removeAttribute('aria-current')})}
 
 function lgSubmit(f){if(f.id!=='lgnew')return;const name=f.name.value.trim();if(!name)return;const g={id:uid(),name,jahr:f.jahr.value.trim(),kids:parseKids(f.kids.value)};DB.groups.push(g);lgSave();go('g/'+g.id)}
 function lgImport(d){if(!d||!Array.isArray(d.groups)||!Array.isArray(d.sessions)){toast('Das ist keine gültige Sicherung.');return}
@@ -9836,6 +9848,11 @@ function helpData(){const Z=`${symL('++')} bis ${symL('--')}`;return [
   `<b>Acht Phasen:</b> Oben die Nummern antippen oder unten „Weiter“. Jede Phase zeigt Ziel, Moderationssätze, Regeln und eine Uhr.`,
   `<b>Protokoll:</b> Schlüsselfrage, Hypothesen und Ideen direkt eintragen. Am Ende den ersten Schritt mit Datum festhalten.`,
   `<b>Weitergeben:</b> „Protokoll als PDF“ speichert das Ergebnis für die Fallgeberin oder den Fallgeber.`],[['fallberatung','Fallberatung öffnen']]],
+ ['methoden','Methoden und Rückmeldung nutzen',[
+  `<b>Methodenkoffer öffnen:</b> Oben auf „Methoden und Rückmeldung“ tippen. Mit den Knöpfen unter „Funktion“ und „Stufe“ grenzt du die Auswahl ein.`,
+  `<b>Methode ansehen:</b> Jede Karte zeigt Ablauf, Umsetzung in der Halle, Tipps und alle Unterrichtsversuche, in denen die Methode vorkommt.`,
+  `<b>In einer Stunde:</b> Im Abschnitt „Methoden und Rückmeldung“ stehen die Methoden dieser Stunde, passende Ergänzungen und Hinweise, wie du zu den Lernzielen Rückmeldung gibst.`,
+  `<b>Richtig loben:</b> Grundsätze und Beispiele mit „statt“ und „besser“ für jede Stufe.`],[['methoden','Methoden öffnen']]],
  ['iphone','Auf dem iPhone oder iPad nutzen',[
   `<b>Nicht aus der Dateien-App öffnen.</b> Sie zeigt nur eine Vorschau, in der nichts reagiert.`,
   `<b>Über den Link in Safari öffnen,</b> dann „Teilen“ und „Zum Home-Bildschirm“ antippen. Das Tool startet danach wie eine App.`]]
@@ -10210,7 +10227,199 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-fbgo],[dat
  else if(b.dataset.fbrm){if(b.dataset.armed){FB.s=FB.s.filter(x=>x!==s);fbSave();toast('Fallberatung gelöscht.');go('fallberatung')}else{b.dataset.armed='1';b.textContent='Wirklich löschen?'}}});
 document.addEventListener('input',e=>{if(e.target.id==='fbtxt'||e.target.id==='fbfrage'||e.target.id==='fbschritt'){const s=fbGet(location.hash.slice(4));if(s){clearTimeout(fbStore.t);fbStore.t=setTimeout(()=>fbStore(s),400)}}});
 
-function route(){const id=location.hash.slice(1);navMark(id);if(lgRoute(id)){window.scrollTo(0,0);return}const u=UV.find(x=>x.id===id);if(u)return detailView(u);if(id==='ergebnisse'){syncDraft();resultsView()}else{homeView()}window.scrollTo(0,0)}
+/* Methodenkoffer und Rückmeldung (Quellen: IQSH 2012, Scholz 2004, Schwandner 2011) */
+const MFN={orient:[`Orientieren und informieren`,`#1d4ed8`],aktiv:[`Vorwissen und Haltungen aktivieren`,`#b45309`],erarb:[`Erarbeiten und üben`,`#0c6b4e`],kontr:[`Kontrollieren und sichern`,`#475569`],aust:[`Austauschen und präsentieren`,`#9d174d`],urteil:[`Urteilen und Stellung beziehen`,`#b91c1c`],refl:[`Reflektieren und auswerten`,`#6d28d9`],koop:[`Zusammenarbeit organisieren`,`#0f766e`]};
+const MQ={iqsh:`IQSH, 2012`,bpb:`Scholz, 2004`,beide:`IQSH, 2012; Scholz, 2004`};
+const METH=[
+{id:`kurzvortrag`,name:`Kurzvortrag der Lehrkraft`,fn:[`orient`],q:`iqsh`,st:[`GS`,`Sek I`,`Sek II`],zeit:`1–3 min`,re:null,
+ kurz:`Die Lehrkraft gibt in kurzer Zeit eine inhaltliche Orientierung: wozu die Stunde dient, worauf es bei der Bewegung ankommt, was als Nächstes passiert.`,
+ ablauf:[`Einleitung: Thema begründen und Aufmerksamkeit gewinnen, etwa mit einer Frage, einem Bild oder einer kurzen Demonstration.`,`Hauptteil: eine Kerninformation nach der anderen, jeweils mit Beispiel oder Vormachen. Vor dem nächsten Punkt kurz bündeln.`,`Schluss: die Kernbotschaft in einem Satz wiederholen und den nächsten Schritt nennen („Deshalb probiert ihr gleich …“).`],
+ sport:`In der Halle ist Redezeit Bewegungszeit. Mehr als drei Minuten am Stück sind selten nötig. Eine Kernbotschaft plus Vormachen reicht meist. Die Gruppe sitzt im Halbkreis mit dem Rücken zur Ablenkung (Fenster, Nachbargruppe), die Lehrkraft steht so, dass alle die Bewegung von der Seite sehen, auf die es ankommt.`,
+ tipps:[`Vorher den Schlusssatz formulieren: „Darum achtet ihr heute auf …“.`,`Frei sprechen, Blickkontakt zu allen halten, bildhafte Sprache nutzen („Blitz-Start“, „Brett-Körper“).`,`Was sich zeigen lässt, zeigen statt erklären.`]},
+{id:`gespraech`,name:`Unterrichtsgespräch`,fn:[`aktiv`,`kontr`,`refl`],q:`iqsh`,st:[`GS`,`Sek I`,`Sek II`],zeit:`3–10 min`,re:null,
+ kurz:`Erfahrungen, Beobachtungen und Kenntnisse der Lernenden werden zum Thema gemacht, geordnet und vertieft.`,
+ ablauf:[`Orientierung: Leitfrage, Ziel und Zeitrahmen nennen.`,`Diskurs: Beiträge sammeln, ordnen, nachfragen, Fehlvorstellungen bearbeiten.`,`Sicherung: zusammenfassen, Akzent setzen, weiterführende Aufgabe nennen.`],
+ sport:`Im Sportunterricht dient das Gespräch vor allem dazu, Bewegungserfahrungen abzugleichen („Was habt ihr gespürt?“) und Fehler gemeinsam zu klären. Kurz halten, Leitfrage vorher festlegen und Beiträge möglichst an eine gezeigte Bewegung binden: Ein Kind macht vor, die anderen beschreiben.`,
+ tipps:[`Denkzeit geben, bevor jemand drankommt.`,`Lehrerecho vermeiden: Beiträge nicht wiederholen, sondern von anderen aufgreifen lassen.`,`Wenn nur wenige mitdenken, eine kurze Partnerphase einschieben (D-A-B).`]},
+{id:`dab`,name:`Denken-Austauschen-Besprechen (D-A-B)`,fn:[`aktiv`,`refl`,`kontr`],q:`iqsh`,st:[`GS`,`Sek I`,`Sek II`],zeit:`3–8 min`,re:/Denken[- –]+Austauschen|D-A-B|Think-Pair-Share/,
+ kurz:`Erst denkt jede Person allein nach, dann tauschen sich zwei aus, dann bespricht die Lehrkraft die Ergebnisse mit allen. Das ist die Grundform des kooperativen Lernens.`,
+ ablauf:[`Denken: Die Lehrkraft stellt eine offene Frage. Alle überlegen allein, mit fester Zeit (30–60 Sekunden).`,`Austauschen: Zwei Lernende erzählen sich ihre Idee und einigen sich auf eine gemeinsame Antwort.`,`Besprechen: Die Lehrkraft ruft zuerst gezielt Paare auf, danach dürfen sich weitere melden.`],
+ sport:`Passt in jede Reflexions- oder Sicherungsphase und kostet kaum Zeit. Die Denkphase kann im Stehen am Übungsplatz stattfinden, der Austausch mit dem Übungspartner. Gute Fragen beziehen sich auf eine Bewegungserfahrung: „Was hast du beim Absprung gemacht, als es weiter ging?“ In der Grundschule hilft ein Ritual: Hand aufs Herz (denken), Ellbogen an Ellbogen (austauschen), Daumen hoch (bereit).`,
+ tipps:[`Je unerfahrener oder heterogener die Gruppe, desto mehr Struktur: feste Zeiten, wer zuerst spricht, Satzanfang vorgeben.`,`Ankündigen, dass zufällig aufgerufen wird. Dann rechnet jede Person damit, etwas sagen zu müssen.`,`Auf leise Lautstärke achten, sonst versteht in der Halle niemand den Partner.`]},
+{id:`tandem`,name:`Kontrolle im Tandem`,fn:[`kontr`],q:`iqsh`,st:[`Sek I`,`Sek II`,`GS`],zeit:`5–12 min`,re:/Kontrolle im Tandem|Tandem-Kontrolle/,
+ kurz:`Lernende vergleichen Ergebnisse, die eindeutig richtig oder falsch sind, erst zu zweit, dann mit einem zweiten Paar. Ins Plenum kommt nur, was danach noch strittig ist.`,
+ ablauf:[`Einzeln: Jede Person löst die Aufgabe oder gibt ihre Einschätzung ab.`,`Tandem: Zwei vergleichen. Bei Unterschieden klären sie, wer recht hat, und prüfen nach (Kriterienkarte, Video, Regelblatt).`,`Zweites Tandem: Was ungeklärt bleibt, besprechen zwei Paare zusammen.`,`Plenum: Die Lehrkraft klärt nur, worin sich mindestens zwei Tandems nicht einig wurden.`],
+ sport:`Funktioniert gut bei Beobachtungsaufgaben mit eindeutigen Kriterien: Zone beim Absprung getroffen, Knie über dem Fuß, Regelverstoß ja oder nein, Wertung im Kampfgericht. Der Gewinn liegt im Streit um die richtige Antwort, weil die Lernenden dabei die Kriterien genau anwenden.`,
+ tipps:[`Eingreifen, wenn Paare Ergebnisse nur abgleichen, ohne zu begründen.`,`Am Ende nicht alles noch einmal im Plenum durchgehen, sonst entwertet das die Arbeit in den Tandems.`,`In der Grundschule mit Bildkarten und Ja-Nein-Kriterien beginnen.`]},
+{id:`puzzle`,name:`Gruppenpuzzle (Expertengruppen)`,fn:[`erarb`,`aust`,`koop`],q:`beide`,st:[`Sek I`,`Sek II`],zeit:`25–45 min`,re:/Gruppenpuzzle|Expertengruppe|Stammgruppe/,
+ kurz:`Jede Person einer Stammgruppe übernimmt einen Teil der Aufgabe, erarbeitet ihn mit den anderen „Experten“ für diesen Teil und bringt ihn zurück in die Stammgruppe. Am Ende soll jede Person alles können.`,
+ ablauf:[`Stammgruppe: gemeinsame Aufgabe mit mehreren Teilen, jede Person bekommt einen Teil (Nummer oder Farbe).`,`Expertengruppe: Alle mit demselben Teil arbeiten zusammen und bereiten vor, wie sie ihn weitergeben.`,`Zurück in der Stammgruppe: Die Experten leiten ihren Teil nacheinander an, die anderen fragen nach.`,`Stammgruppe fügt die Teile zusammen und löst die Ausgangsaufgabe.`,`Kontrolle: Die Lehrkraft lässt einzelne Personen zeigen oder erklären.`],
+ sport:`Gut geeignet für Inhalte, die sich in Bausteine zerlegen lassen: Elemente einer Kür, Figuren im Akrobatikkatalog, Bausteine einer Choreografie (Raum, Zeit, Kraft), Trainingsmethoden, Stationen eines Zirkels. Die Experten lernen die Bewegung und das Anleiten. Bei sicherheitsrelevanten Inhalten (Helfergriffe, Pyramiden) nimmt die Lehrkraft jede Expertengruppe ab, bevor sie zurückgeht.`,
+ tipps:[`Nur für Aufgaben nutzen, die komplex genug sind. Für ein einzelnes Element lohnt der Aufwand nicht.`,`Doppelbesetzung (zwei Personen pro Teil) sichert das Ergebnis, wenn jemand fehlt oder unsicher ist.`,`Extrazeit für das Vorbereiten des Anleitens einplanen.`]},
+{id:`koepfe`,name:`Nummerierte Köpfe (Rollen in der Gruppe)`,fn:[`koop`],q:`iqsh`,st:[`GS`,`Sek I`,`Sek II`],zeit:`ohne Zusatzzeit`,re:/Nummerierte Köpfe|Rollenkarte|Zeitwächter|Materialchef|Materialwart|Regelschreiber|Baumeister|Kamerafrau|Kameramann/,
+ kurz:`Jede Person in der Gruppe bekommt eine Nummer und damit eine Zusatzaufgabe für die Zusammenarbeit. So übernehmen einzelne Personen Verantwortung für den Prozess.`,
+ ablauf:[`Gruppenaufgabe stellen und Nummern verteilen.`,`Zuständigkeiten zuordnen, etwa: 1 Zeit, 2 Material, 3 Sicherheit, 4 achtet darauf, dass alle drankommen. Eine Nummer darf die Lehrkraft fragen.`,`Nach der Arbeit Ergebnis und Zusammenarbeit besprechen, die Rolleninhaber berichten zuerst.`],
+ sport:`Im Sport naheliegend, weil viel in Gruppen geübt wird. Sinnvolle Rollen: Zeitwächter, Materialchef (Aufbau, Abbau), Sicherheitsbeauftragte (Matten, Abstände), Kamera, Coach mit Beobachtungskarte, Regelschreiber beim Spiele-Erfinden. In der Grundschule helfen Rollenkarten mit Bild oder ein Band am Arm.`,
+ tipps:[`Bei Problemen die zuständige Person ansprechen, nicht die ganze Gruppe.`,`Vorher klären, was jede Rolle konkret tun muss.`,`Nur die Rollen vergeben, die die Aufgabe braucht. War es zuletzt laut, gibt es heute einen Lautstärkewächter.`]},
+{id:`interview`,name:`Drei-Schritte-Interview`,fn:[`aktiv`,`aust`,`refl`],q:`iqsh`,st:[`Sek I`,`Sek II`],zeit:`10–15 min`,re:/Drei-Schritte-Interview|Interview/,
+ kurz:`Zwei Lernende befragen sich nacheinander zu einer offenen Frage, fassen die Antworten zusammen und tauschen sich danach mit einem zweiten Paar aus.`,
+ ablauf:[`Fragen notieren, die man dem Partner stellen will.`,`Interview A fragt B, dann Rollenwechsel. Wer fragt, fasst am Ende zusammen, was er gehört hat.`,`Zwei Paare tauschen die Ergebnisse aus und bündeln sie unter einem vorgegebenen Gesichtspunkt.`],
+ sport:`Passt zu Themen mit persönlicher Erfahrung: Wie trainierst du in der Freizeit? Wann hast du dich im Sport getraut, obwohl du Angst hattest? Was bedeutet dir Fairness im Wettkampf? Gut als Einstieg in eine Reihe oder als Abschluss einer Reflexionsstunde, auch auf der Matte sitzend während einer Erholungspause.`,
+ tipps:[`Wenn das Fragenstellen schwerfällt, Fragen sammeln oder vorgeben.`,`Nachfragen üben: „Wie meinst du das?“, „Hast du ein Beispiel?“`,`Persönliche Themen freiwillig halten, niemand muss Privates erzählen.`]},
+{id:`stationen`,name:`Lernen an Stationen`,fn:[`erarb`],q:`iqsh`,st:[`GS`,`Sek I`,`Sek II`],zeit:`20–45 min`,re:/Stationen|Stationskarte|Stationsbetrieb|Lernzirkel|Zirkel/,
+ kurz:`Die Lernenden bearbeiten verschiedene Angebote zu einem gemeinsamen Thema weitgehend selbstständig an Stationen. Es gibt Pflicht- und Wahlstationen, die Lehrkraft berät.`,
+ ablauf:[`Vorbereitung: Aufgaben in verschiedenen Zugängen und Schwierigkeitsstufen, ohne zwingende Reihenfolge. Kontrollmöglichkeit und Tippkarten bereitlegen.`,`Einführung: Ziele, Überblick über die Stationen, Zeitrahmen, Regeln für Wechsel und Sicherheit.`,`Erarbeitung: Lernende wählen Reihenfolge und Umfang und dokumentieren auf einem Laufzettel.`,`Sicherung: Ergebnisse zeigen oder selbst kontrollieren, offene Fragen klären.`,`Reflexion: Arbeitsweise und Ergebnisse mit Blick auf die Ziele besprechen.`],
+ sport:`Im Sportunterricht die häufigste offene Form, ob als Gerätelandschaft, Fitnesszirkel oder Erkundungsstationen. Bewegungszeit ist hoch, die Lehrkraft kann einzelne Kinder beraten. Stationskarten mit Bild und Stufen (leicht, mittel, schwer) ermöglichen Differenzierung. Bei Geräten gilt: keine Station ohne Abnahme durch die Lehrkraft. Ein Expertensystem (Kinder, die eine Station besonders gut können) entlastet.`,
+ tipps:[`Schrittweise einführen: erst feste Rotation auf Signal, später freie Wahl.`,`Stationskarten stabil und wiederverwendbar gestalten (laminiert, große Bilder).`,`Stationen gemeinsam mit Kolleginnen und Kollegen oder mit der Klasse entwickeln.`]},
+{id:`projekt`,name:`Projektunterricht`,fn:[`erarb`,`aust`,`koop`],q:`iqsh`,st:[`GS`,`Sek I`,`Sek II`],zeit:`mehrere Stunden`,re:/Projekt/,
+ kurz:`Lernende bearbeiten über längere Zeit ein komplexes, lebensnahes Thema weitgehend selbstständig und erstellen ein Produkt, das sie präsentieren. Die Lehrkraft behält die Gesamtverantwortung.`,
+ ablauf:[`Orientierung: Thema in seiner Breite erkunden (Brainstorming, Bildimpuls, Positionslinie).`,`Planung: Ziele für Produkt, Lernen und Zusammenarbeit festlegen. Was, wann, wer, wie.`,`Produktion: arbeiten, mit Zwischenhalten zur Reflexion.`,`Evaluation: Ergebnisse an den vereinbarten Kriterien messen.`,`Präsentation: Aufführung, Spielfest, Ausstellung, Video.`],
+ sport:`Beispiele: ein Spielfest für jüngere Klassen planen, eine Zirkusvorstellung, eine bewegte Pause für den Schulhof, eine Choreografie für das Schulfest, ein Trainingsplan für einen Lauf. Dafür größere Zeitblöcke reservieren und den Planungsbogen nutzen.`,
+ tipps:[`Beobachten, wie viel Struktur einzelne Gruppen brauchen, und gezielt nachsteuern.`,`Freiräume lassen: Gruppen entwickeln eigene Arbeitswege, wenn man sie lässt.`,`Selbst gut im Thema stecken, um Material und Rückmeldung passend zu geben.`]},
+{id:`impulse`,name:`Begriffs-Impulse`,fn:[`aktiv`],q:`bpb`,st:[`GS`,`Sek I`,`Sek II`],zeit:`5–10 min`,re:/Begriffs-Impuls|Satzanfang|Satzanfänge/,
+ kurz:`Ein Satzanfang mit einem zentralen Begriff holt Vorstellungen, Meinungen und Vorurteile zum Thema an die Oberfläche. Die Antworten fließen in die Planung der Reihe ein.`,
+ ablauf:[`Die Lehrkraft gibt einen Satzanfang vor, z. B. „Fair spielen heißt für mich …“.`,`Alle ergänzen allein, schriftlich oder in Gedanken.`,`Austausch in wechselnden Paaren (Kugellager).`,`Kleingruppen einigen sich auf die wichtigsten Begriffe, die Klasse sammelt und sortiert sie.`],
+ sport:`Gute Satzanfänge: „Wenn ich an Wagnis denke …“, „Ein gutes Team …“, „Gesund trainieren heißt …“, „Beim Tanzen fühle ich mich …“. In der Halle können die Begriffe auf Kärtchen an eine Wand gelaufen werden. Variante für Ältere: Zu jedem Buchstaben eines Wortes (z. B. FAIRPLAY) einen passenden Begriff finden.`,
+ tipps:[`Die gesammelten Begriffe sichtbar hängen lassen und am Ende der Reihe wieder aufgreifen.`,`In der Grundschule mündlich arbeiten und mit Bildkarten unterstützen.`]},
+{id:`bildimpuls`,name:`Bildimpuls („Sich ein Bild machen“)`,fn:[`aktiv`,`orient`],q:`bpb`,st:[`GS`,`Sek I`,`Sek II`],zeit:`10–15 min`,re:/Bildimpuls|Fotos von|drei Fotos|Bildergeschichte/,
+ kurz:`Bilder zum Thema liegen aus. Jede Person wählt eines, das sie anspricht, und erklärt einem Partner, warum. Kleingruppen ordnen ihre Bilder zu einer Geschichte oder leiten Fragen für die Reihe ab.`,
+ ablauf:[`Bilder in der Mitte auslegen.`,`Jede Person wählt ein Bild und erzählt einem Gegenüber, was es bei ihr auslöst.`,`Kleingruppen bringen ihre Bilder in eine sinnvolle Reihenfolge oder wählen die aussagekräftigsten.`,`Gruppen formulieren Fragen oder Themen, die Klasse sortiert sie zu einem Themengerüst.`],
+ sport:`Fotos von Bewegungssituationen (Sprung, Sturz, Jubel, Streit, Hilfe) eignen sich zum Einstieg in Wagnis, Fairness oder Gestaltung. In der Grundschule als Bildkartenkreis im Sitzkreis. Bilder ohne erkennbare Gesichter oder aus freien Quellen nutzen, eigene Klassenfotos nur mit Einwilligung.`,
+ tipps:[`Mehr Bilder als Personen auslegen, damit echte Wahl entsteht.`,`Die entstandenen Fragen als roten Faden der Reihe sichtbar halten.`]},
+{id:`kugellager`,name:`Kugellager (Rotierendes Partnergespräch)`,fn:[`aust`,`aktiv`],q:`bpb`,st:[`GS`,`Sek I`,`Sek II`],zeit:`5–10 min`,re:/Kugellager|Rotierende[sn]? Partnergespräch|Innen- und Außenkreis/,
+ kurz:`Die Lernenden stehen sich in Innen- und Außenkreis gegenüber und erzählen sich gegenseitig Ergebnisse oder Gedanken. Auf ein Signal rückt ein Kreis weiter, das Gespräch beginnt mit einem neuen Gegenüber.`,
+ ablauf:[`Zwei Kreise bilden, die Personen stehen sich paarweise gegenüber.`,`Der Innenkreis erzählt, der Außenkreis hört zu und fasst zusammen. Dann umgekehrt.`,`Auf ein Signal rückt der Innenkreis zwei Plätze weiter.`,`Nach drei bis vier Wechseln abbrechen, wenn die Ergebnisse eindeutig sind.`],
+ sport:`In der Halle im Stehen ohne Umbau möglich. Variante mit Bewegung: Zwischen den Gesprächen einmal um den Kreis laufen oder eine kurze Aufgabe erledigen. Variante „Bewegungs-Kugellager“: Statt zu erzählen, zeigt man dem Gegenüber eine Bewegung (Move, Figur, Technikmerkmal), das Gegenüber macht sie nach. Gut zum Sichern: „Erklär deinem Gegenüber, wie du deine Ablaufmarke findest.“`,
+ tipps:[`Leise sprechen, weil die Hälfte gleichzeitig redet.`,`Der Zuhörende wiederholt kurz das Wichtigste. So wird aus Reden auch Zuhören.`]},
+{id:`fishbowl`,name:`Fishbowl`,fn:[`aust`,`refl`,`urteil`],q:`bpb`,st:[`Sek I`,`Sek II`],zeit:`8–15 min`,re:/Fishbowl|Fish-Bowl/,
+ kurz:`Sprecherinnen und Sprecher der Gruppen diskutieren in einem Innenkreis, die übrigen hören im Außenkreis zu. Ein freier Stuhl im Innenkreis erlaubt allen, sich kurz einzuschalten.`,
+ ablauf:[`Gruppen halten ihre Ergebnisse in Stichworten fest.`,`Je eine Person pro Gruppe setzt sich in den Innenkreis, dazu eine Moderation und ein freier Platz.`,`Die Sprecher tragen vor und reagieren direkt aufeinander.`,`Wer aus dem Außenkreis etwas beitragen will, setzt sich auf den freien Platz, spricht und geht wieder zurück.`],
+ sport:`Hilft bei Konflikten im Spiel (Regelstreit, Schiedsrichterfragen), bei Taktikbesprechungen und beim Vergleich von Gruppenlösungen. Statt Stühlen dienen kleine Kästen oder eine Bank, der freie Platz wird mit einer Matte markiert. Beobachtungsaufträge für den Außenkreis machen das Zuhören verbindlich.`,
+ tipps:[`Die Moderation kann eine Schülerin oder ein Schüler übernehmen.`,`Vorher klären: Auf dem freien Platz spricht man einmal und geht wieder.`]},
+{id:`rundgang`,name:`Galerie und Rundgang (nach der KARIKA-Tour)`,fn:[`aust`,`orient`,`urteil`],q:`bpb`,st:[`GS`,`Sek I`,`Sek II`],zeit:`10–20 min`,re:/Rundgang|Galerie|Werkschau|Spiele-Messe|KARIKA/,
+ kurz:`Bilder, Plakate oder Ergebnisse hängen an verschiedenen Orten. Kleingruppen gehen reihum, betrachten jede Station kurz unter derselben Leitfrage und vertiefen danach eine Station gründlich.`,
+ ablauf:[`Vier bis sechs Materialien im Raum verteilen.`,`Kleingruppen betrachten je eines für zwei bis drei Minuten unter einer Leitfrage, dann Wechsel im Uhrzeigersinn.`,`Jede Gruppe zieht ein Material und bearbeitet es mit einem Frageleitfaden: Was wird gezeigt? Wie? Welche Haltung steckt darin? Was meinen wir dazu? Welche Fragen bleiben?`,`Austausch, etwa im Fishbowl.`],
+ sport:`Im Original arbeitet die Methode mit Karikaturen. In der Sek II passen Karikaturen zu Doping, Leistungsdruck, Körperbildern oder Kommerz im Sport. In der Halle lässt sich die Idee auf Ergebnisse übertragen: Werkschau von Gruppenchoreografien, Spiele-Messe mit selbst erfundenen Spielen, Tablet-Stationen mit Videos. Die Zuschauenden beschreiben anhand einer Leitfrage, bevor sie bewerten.`,
+ tipps:[`Leitfrage für alle Stationen gleich halten, damit Vergleiche möglich werden.`,`Bei Darbietungen vorab klären: erst beschreiben, dann rückmelden.`]},
+{id:`debatte`,name:`Pro-und-Contra-Debatte`,fn:[`urteil`],q:`bpb`,st:[`Sek II`,`Sek I`],zeit:`30–45 min`,re:/Pro-und-Contra|Pro-Contra|Pro und Contra|Debatte|Streitgespräch/,
+ kurz:`Zwei per Los gebildete Gruppen vertreten eine Position zu einer Streitfrage, unabhängig von ihrer eigenen Meinung. Beobachter bewerten die Argumente. Ein Meinungsbild vorher und nachher zeigt, was sich bewegt hat.`,
+ ablauf:[`Streitfrage klären und erstes Meinungsbild abstimmen.`,`Gruppen per Los bilden, Positionen mit Material erarbeiten, Gegenargumente vorwegnehmen, Sprecher bestimmen.`,`Debatte: Eröffnung durch die Leitung, Eingangsstatements, dann Rede und Gegenrede.`,`Auswertung durch die Beobachter: Welche Argumente überzeugten, welche nicht?`,`Zweites Meinungsbild und Vergleich mit dem ersten.`],
+ sport:`Streitfragen aus dem Sport: Sollen Noten im Sportunterricht die Anstrengung oder die Leistung bewerten? Braucht der Schulsport Bundesjugendspiele? Gehören Fitnesstracker in den Unterricht? Ist ein Sieg mit Handicap weniger wert? Nach der Debatte kann die Frage praktisch überprüft werden, etwa mit zwei Wettkampfmodellen.`,
+ tipps:[`Spielregeln vorher festhalten: sachlich, fair, ausreden lassen.`,`Wegen der Lauf- und Bewegungszeit lieber als Kurzform (Streitlinie) in die Praxisstunde einbauen und die lange Form für Theorie- oder Regenstunden nutzen.`]},
+{id:`standbild`,name:`Standbild`,fn:[`erarb`,`aust`],q:`bpb`,st:[`GS`,`Sek I`,`Sek II`],zeit:`5–20 min`,re:/Standbild|Bildhauer|einfrieren|Freeze/,ex:/Tablet|Video|Taktiktafel|Standbilder vom|zeigt zwei Standbilder/,
+ kurz:`Eine Person formt als Bildhauer aus den Körpern anderer ohne Worte ein Bild zu einem Thema, einer Situation oder einem Gefühl. Die Zuschauenden beschreiben und deuten es, dann sprechen die Figuren und zuletzt der Bildhauer.`,
+ ablauf:[`Thema festlegen (Gefühl, Konflikt, Szene, Lösung).`,`Bildhauer wählt Mitspieler und formt Haltung, Mimik, Gestik und Abstand, ohne zu sprechen.`,`Das Bild bleibt einige Sekunden stehen, alle schweigen.`,`Zuschauende beschreiben und deuten, dann berichten die Figuren, wie es sich angefühlt hat, zuletzt erklärt der Bildhauer seine Absicht.`],
+ sport:`Im Bewegungsfeld Gestalten und Darstellen gehört das Einfrieren zum Handwerk: Bewegung zur Musik, auf „Stopp“ eine Haltung zu einem Begriff einnehmen. Weitere Einsätze: Schlussbild einer Pyramide oder Choreografie, eine Fairplay-Situation aus dem Spiel nachstellen, Gefühle ohne Gesicht zeigen. Varianten: Ein anderer Bildhauer verändert das Bild; die Lehrkraft tippt eine Figur an die Schulter, sie sagt einen Satz in der Ich-Form.`,
+ tipps:[`Vorübungen machen das Erstarren leichter: Freeze auf Musikstopp, paarweises Formen.`,`Körperkontakt beim Formen vorher klären. Wer nicht berührt werden will, zeigt die Haltung vor.`,`Standbilder fotografieren und später vergleichen (nur mit Einwilligung, danach löschen).`]},
+{id:`linie`,name:`Positionslinie und Streitlinie`,fn:[`urteil`,`aktiv`,`refl`],q:`bpb`,st:[`GS`,`Sek I`,`Sek II`],zeit:`5–12 min`,re:/Positionslinie|Streitlinie|Positionierung auf einer Linie|positionieren sich|Meinungslinie/,
+ kurz:`Eine Linie im Raum hat zwei Pole (ja und nein) und eine Mitte. Zu einer Streitfrage stellen sich alle an die Stelle, die ihrer Meinung entspricht, und begründen. Bei klaren Lagern wird daraus eine Streitlinie mit abwechselnden Argumenten.`,
+ ablauf:[`Linie markieren (Klebeband, Seil, Hallenlinie), Pole und Mitte benennen.`,`Streitfrage stellen, alle positionieren sich.`,`Einzelne begründen ihren Standort, aus beiden Richtungen.`,`Streitlinie: Beide Lager sammeln kurz Argumente und tragen sie abwechselnd vor.`,`Erneut positionieren. Wer sich bewegt hat, erklärt, welches Argument überzeugt hat.`],
+ sport:`Für den Sportunterricht ideal, weil Urteilen hier mit Bewegung verbunden ist und die Hallenlinien schon da sind. Streitfragen: „Der Stärkere gewinnt immer.“, „Ich brauche eine Uhr zum Trainieren.“, „Gleiche Vorgabe für alle ist fair.“ Auch als Selbsteinschätzung nutzbar: „Wie sicher fühlst du dich am Kasten?“ In der Grundschule mit zwei Ecken oder Daumen-Linie und einfachen Fragen.`,
+ tipps:[`Vorher und nachher positionieren lassen. Die Bewegung auf der Linie macht Meinungsänderung sichtbar.`,`Bei persönlichen Fragen (Angst, Körper) lieber geheim abfragen, etwa mit geschlossenen Augen und Daumen.`]},
+{id:`mindmap`,name:`Mind-Map`,fn:[`orient`,`kontr`],q:`bpb`,st:[`Sek I`,`Sek II`,`GS`],zeit:`5–15 min`,re:/Mind-?Map|Mindmap|Begriffsnetz/,
+ kurz:`Ein Thema steht in der Mitte, Hauptäste und Nebenäste ordnen Begriffe und Zusammenhänge auf einen Blick.`,
+ ablauf:[`Thema in die Mitte schreiben.`,`Hauptäste für die wichtigsten Unterthemen, nur Schlüsselwörter.`,`Nebenäste für Details, Beispiele, Bilder.`,`Mind-Map am Ende der Reihe ergänzen und als Lernhilfe nutzen.`],
+ sport:`Als Plakat an der Hallenwand, das über eine Reihe wächst: Merkmale einer Technik, Trainingsprinzipien, Regeln eines Spiels, Bausteine einer Choreografie. In der Grundschule mit Bildsymbolen statt Wörtern.`,
+ tipps:[`Plakat in jeder Stunde kurz aufgreifen, damit es nicht nur Dekoration bleibt.`,`Lernende ergänzen lassen, statt fertig vorzugeben.`]},
+{id:`quiz`,name:`Quiz und Rätsel`,fn:[`kontr`],q:`bpb`,st:[`GS`,`Sek I`,`Sek II`],zeit:`5–10 min`,re:/Quiz|Rätsel|Lückentext/,
+ kurz:`Quizfragen, Puzzle, Lückentexte und Rätsel festigen zentrale Begriffe. Besonders wirksam ist es, wenn Lernende die Aufgaben selbst für andere erstellen.`,
+ ablauf:[`Wichtige Begriffe festlegen.`,`Umschreibung oder Frage mit plausiblen Falschantworten formulieren.`,`Aufgaben austauschen und lösen lassen.`],
+ sport:`Als Bewegungsquiz: Vier Antwortecken A bis D, alle laufen zur Ecke ihrer Antwort. Beispiele: Regelquiz im Spiel, Baderegeln im Schwimmen, Fachbegriffe der Leichtathletik, Muskelgruppen im Fitnessbereich. Lernende denken sich Fragen für die Parallelklasse aus.`,
+ tipps:[`Falschantworten so wählen, dass sie typische Fehlvorstellungen abbilden.`,`Kurz halten, die Antwort sofort klären.`]},
+{id:`planung`,name:`Planungsbogen für Gruppenarbeit`,fn:[`koop`,`erarb`],q:`bpb`,st:[`Sek I`,`Sek II`,`GS`],zeit:`5–10 min Planung`,re:/Planungsbogen|Arbeitsplan/,
+ kurz:`Ein Bogen mit Leitfragen führt Gruppen durch selbstständige Arbeit: Problem erfassen, Vorgehen planen, Ergebnis präsentieren, Arbeit bewerten.`,
+ ablauf:[`Problem erfassen: Worum geht es, was wissen wir, was wollen wir?`,`Plan: Wer macht was mit wem bis wann? Was brauchen wir?`,`Präsentieren: Wie zeigen wir das Ergebnis so, dass andere mitmachen oder verstehen?`,`Bewerten: Sind wir zufrieden? Was lief schwierig? Was machen wir nächstes Mal anders?`],
+ sport:`Für Gestaltungsaufgaben (Choreografie, Flow, Kür), eigene Zirkel, Spiele erfinden oder Projektstunden. Felder für Reihenfolge, Aufstellung, Rollen, Stufen pro Übung und Kriterien. Die Lehrkraft sammelt den Bogen ein und sieht so den Stand jeder Gruppe.`,
+ tipps:[`Den Bogen auf eine Seite begrenzen. Sonst wird aus Sport Schreibunterricht.`,`Gemeinsame Kriterien vorab festlegen, damit die Bewertung am Ende darauf zurückgreift.`]},
+{id:`blitzlicht`,name:`Blitzlicht, Daumenprobe und Zielscheibe`,fn:[`refl`],q:`bpb`,st:[`GS`,`Sek I`,`Sek II`],zeit:`2–6 min`,re:/Blitzlicht|Daumen|Zielscheibe|Evaluationsscheibe/,
+ kurz:`Kurze Auswertungsformen am Ende einer Phase: Jede Person sagt einen Satz (Blitzlicht), zeigt mit dem Daumen oder stellt sich auf eine Zielscheibe. So entsteht in kurzer Zeit ein Bild der ganzen Gruppe.`,
+ ablauf:[`Frage oder Satzanfang vorgeben („Heute habe ich gemerkt …“).`,`Reihum ein Satz pro Person, ohne Kommentar der anderen. Oder: alle zeigen gleichzeitig Daumen hoch, Mitte, runter.`,`Zielscheibe: Kriterien (Inhalt, Klima, eigener Einsatz) als Sektoren, Nähe zur Mitte bedeutet Zustimmung.`,`Die Lehrkraft nimmt die Rückmeldung auf und nennt, was sie daraus macht.`],
+ sport:`Kostet kaum Zeit und passt in jeden Stundenabschluss. Eine Zielscheibe lässt sich mit Hütchen oder Reifen auf den Hallenboden legen, die Lernenden stellen sich hinein. Daumenproben vor und nach einer Übung zeigen Veränderung („Wie sicher fühlst du dich?“).`,
+ tipps:[`Weitergeben erlauben, wer nichts sagen möchte.`,`Bei heiklen Fragen Augen schließen lassen, dann sieht niemand, wie die anderen abstimmen.`]}
+];
+function litOf(u){const k=u.lit.slice();const h=methodsIn(u);if(h.some(([m])=>m.q!=='bpb')&&!k.includes('iqsh12'))k.push('iqsh12');if(h.some(([m])=>m.q!=='iqsh')&&!k.includes('bpb04'))k.push('bpb04');if(!k.includes('wdr11'))k.push('wdr11');return k}
+const MBY=Object.fromEntries(METH.map(m=>[m.id,m]));
+
+/* Richtig loben (nach Schwandner, 2011) */
+const LOB={
+ prinz:[
+  [`Echt loben`,`Nur loben, was man wirklich gesehen hat und so meint. Wer echt lobt, hat das Verhalten oder die Leistung des Kindes im Blick, nicht eine Floskel.`],
+  [`Beschreiben statt bewerten`,`Konkret sagen, was gelungen ist. Allgemeines, übertriebenes oder durchschaubar lenkendes Lob schadet eher, als dass es hilft.`],
+  [`Nicht für Selbstverständliches`,`Lob für etwas, das ein Kind längst sicher kann, wirkt abwertend. Es signalisiert, dass man wenig erwartet, und nimmt auch späterem Lob die Kraft.`],
+  [`Sparsam statt inflationär`,`Wer jeden Ansatz sofort lobt, macht Kinder abhängig von Bestätigung und eher unsicher. Gezielte Fragen helfen oft mehr: Das Kind findet die Lösung selbst und erlebt darin die Bestätigung.`],
+  [`Lob als kleines Gespräch`,`Beobachtung nennen, dann die Sicht des Kindes einholen („Wie siehst du das?“). Wenn die Einschätzungen übereinstimmen, die Anerkennung aussprechen.`],
+  [`Haltungen anerkennen`,`Fairness, Geduld oder Hilfsbereitschaft konkret benennen: was das Kind getan hat und was es für andere bewirkt hat.`],
+  [`Stimmig bleiben`,`Gleiches Verhalten jedes Mal gleich bewerten. Blick, Nicken und Körperhaltung loben mit, auch ungewollt. Wer Fairness lobt und bei einem harten Foul anerkennend schaut, sendet zwei Botschaften.`],
+  [`Eigene Vorlieben prüfen`,`Lehrkräfte heben gern hervor, was ihnen selbst wichtig ist, etwa Durchsetzungskraft oder Sportlichkeit. Andere Fortschritte geraten dann aus dem Blick.`],
+  [`Ältere holen sich Anerkennung bei Gleichaltrigen`,`Mit der Pubertät verliert Lob von Erwachsenen an Gewicht, Rückmeldung von Gleichaltrigen gewinnt. Peer-Feedback mit klaren Kriterien nutzt das.`]],
+ bsp:[
+  [`GS`,`Rolle vorwärts`,`„Super!“`,`„Dein Kinn war die ganze Zeit auf der Brust. Darum bist du so rund gerollt.“`],
+  [`GS`,`Signal-Sprint`,`„Toll gelaufen!“`,`„Du bist beim Klatschen sofort los. Wie hast du gemerkt, dass es gleich kommt?“`],
+  [`GS`,`Fairness im Spiel`,`„Das war lieb von dir.“`,`„Du hast Mia den Ball gegeben. Sie hatte ihn heute noch nicht, jetzt war sie im Spiel.“`],
+  [`GS`,`Mut am Gerät`,`„Siehst du, war doch gar nicht schlimm!“`,`„Heute bist du zum ersten Mal ohne meine Hand über den Kasten. Wie war das für dich?“`],
+  [`Sek I`,`Korbleger`,`„Gut gemacht.“`,`„Rechts, links, hoch: Der Rhythmus stimmt jetzt dreimal hintereinander. Worauf hast du geachtet?“`],
+  [`Sek I`,`Gruppenchoreografie`,`„Schöne Choreo.“`,`„Im zweiten Achter setzt ihr alle genau auf die Eins ein. Der Kanon ist dadurch klar zu sehen.“`],
+  [`Sek I`,`Selbstverständliches`,`„Toll, dass du heute Sportsachen dabei hast.“`,`Kein Lob nötig. Besser später eine echte Leistung oder Anstrengung konkret benennen.`],
+  [`Sek II`,`Belastung steuern`,`„Stark!“`,`„Du bist im zweiten Durchgang bei Borg 14 geblieben und hast die Stufe selbst angepasst. Genau diese Steuerung üben wir.“`],
+  [`Sek II`,`Kampfgericht`,`„Ihr habt fair gewertet.“`,`„Ihr habt eure Abweichung bei Kür 3 über das Kriterium Körperspannung geklärt, nicht über Sympathie.“`]],
+ peer:[`Erst beschreiben, was man gesehen hat, dann ein Lob und ein Tipp.`,`Das Lob bezieht sich auf ein vereinbartes Kriterium (Kriterienkarte).`,`Der Tipp ist eine Sache, die man beim nächsten Versuch ausprobieren kann.`,`Wer Rückmeldung bekommt, hört zu und sagt danach, was er ausprobieren will.`]
+};
+
+/* Vorschläge pro Unterrichtsversuch */
+const MSUG=[
+ [`dab`,u=>true,`in der Sicherung oder Reflexion: erst allein nachdenken, dann mit dem Übungspartner, dann im Kreis`],
+ [`standbild`,u=>u.kb==='GD'||u.bf===7,`als Freeze auf Musikstopp oder als Schlussbild der Gestaltung`],
+ [`rundgang`,u=>u.kb==='GD',`als Werkschau: Gruppen zeigen reihum, die Zuschauenden beschreiben erst, dann geben sie Rückmeldung`],
+ [`linie`,u=>u.kb==='WK'||u.kb==='EW',`zu Beginn und am Ende: eine Streitfrage oder Selbsteinschätzung auf der Hallenlinie`],
+ [`tandem`,u=>u.kb==='LÜ'&&u.stufe!=='GS',`beim Beobachten mit Kriterienkarte: zwei vergleichen ihre Beobachtung, Strittiges klärt ein zweites Paar`],
+ [`stationen`,u=>u.kb==='LÜ'||u.kb==='EW',`für die Übungsphase mit Stufen an jeder Station`],
+ [`fishbowl`,u=>u.bf===5&&u.stufe!=='GS',`für Regel- oder Taktikfragen: Spielsprecher im Innenkreis, ein freier Platz`],
+ [`koepfe`,u=>/Gruppe|Crew|Team/.test(u.verlauf.map(v=>v.orga).join(' ')),`für die Gruppenarbeit: Zeit, Material, Sicherheit und Coach als feste Rollen`],
+ [`interview`,u=>u.kb==='WE'&&u.stufe!=='GS',`als Austausch über Körpererfahrungen in einer Erholungspause`],
+ [`kugellager`,u=>u.stufe!=='GS'||u.klasse>='3',`zum Sichern: dem Gegenüber erklären oder zeigen, was heute geholfen hat`],
+ [`debatte`,u=>u.stufe==='Sek II'&&(u.kb==='WK'||u.kb==='LÜ'),`als Kurzform (Streitlinie) zur Leitfrage der Stunde`],
+ [`blitzlicht`,u=>true,`am Stundenende: ein Satz pro Person oder Daumenprobe zum Stundenziel`]];
+function methodsIn(u){const out=[];METH.forEach(m=>{if(!m.re)return;const ph=u.verlauf.filter(v=>{const t=v.p+' '+v.was+' '+v.orga+' '+v.komm;return m.re.test(t)&&!(m.ex&&m.ex.test(t))}).map(v=>v.p);if(ph.length)out.push([m,ph])});return out}
+let MUSE=null;function methUse(){if(MUSE)return MUSE;MUSE={};UV.forEach(u=>methodsIn(u).forEach(([m])=>{(MUSE[m.id]=MUSE[m.id]||[]).push(u)}));return MUSE}
+function methSug(u,have){const ids=new Set(have.map(([m])=>m.id)),out=[];for(const [id,f,txt] of MSUG){if(out.length>=3)break;const m=MBY[id];if(ids.has(id)||!m.st.includes(u.stufe)||!f(u))continue;out.push([m,txt]);ids.add(id)}return out}
+const FBZ={motorisch:[`Beschreibend zurückmelden`,`Das Merkmal aus dem Ziel benennen, das du gesehen hast: „Ich habe gesehen, dass du …“. Pauschales „Super!“ vermeiden.`],kognitiv:[`Nachfragen statt loben`,`Erst erklären lassen, dann bestätigen, was stimmt: „Wie bist du darauf gekommen?“ So finden die Lernenden die Antwort selbst.`],'sozial-affektiv':[`Haltung konkret anerkennen`,`Situation und Wirkung nennen: was die Person getan hat und was es für die anderen bewirkt hat. Gleiches Verhalten jedes Mal gleich würdigen.`]};
+function methSection(u){const have=methodsIn(u),sug=methSug(u,have);
+ const tag=m=>m.fn.map(f=>`<span class="mfn" style="--c:${MFN[f][1]}">${MFN[f][0]}</span>`).join('');
+ const haveH=have.length?`<div class="mlist">${have.map(([m,ph])=>`<button class="mitem" data-nav="m/${m.id}"><b>${esc(m.name)}</b><small>Phase: ${ph.map(esc).join(', ')}</small></button>`).join('')}</div>`:`<p class="prose">In dieser Stunde ist keine Methode aus dem Methodenkoffer ausdrücklich benannt.</p>`;
+ const sugH=sug.length?`<div class="mlist">${sug.map(([m,t])=>`<button class="mitem" data-nav="m/${m.id}"><b>${esc(m.name)}</b><small>${esc(t)}</small></button>`).join('')}</div>`:'';
+ const zs=u.ziele.filter(z=>FBZ[z.b]);
+ return `<div class="g2"><div><h4>In dieser Stunde</h4>${haveH}</div><div><h4>Passt zusätzlich</h4>${sugH}</div></div>
+ <div class="box" style="margin-top:14px"><h4>Rückmeldung zu den Lernzielen</h4>${zs.map(z=>`<p><b>${esc(z.b)}: ${FBZ[z.b][0]}.</b> ${FBZ[z.b][1]}</p>`).join('')}<p style="margin-top:6px"><button class="lnk" data-nav="methoden/loben">Richtig loben: Grundsätze und Beispiele</button></p></div>`}
+
+function mCard(m){const n=(methUse()[m.id]||[]).length;return `<button class="ccard" data-nav="m/${m.id}"><b>${esc(m.name)}</b><span>${esc(m.kurz.split('. ')[0])}.</span><span class="mtags">${m.fn.map(f=>`<span class="mfn" style="--c:${MFN[f][1]}">${MFN[f][0]}</span>`).join('')}</span><span>${m.zeit} · ${m.st.join(', ')}${n?` · in ${n} Unterrichtsversuch${n>1?'en':''}`:''}</span></button>`}
+const mstate={fn:'',st:(typeof FIXED!=='undefined'&&FIXED)?({gs:'GS',gym:'Sek I',sts:'Sek I',os:'Sek II'})[FIXED]||'':''};
+function methHome(anchor){const list=METH.filter(m=>(!mstate.fn||m.fn.includes(mstate.fn))&&(!mstate.st||m.st.includes(mstate.st)));
+ app.innerHTML=`<div class="hero" style="--k:#17201c"><span class="lab">Methodenkoffer</span><h1>Methoden und Rückmeldung</h1><p>Methoden aus dem Methodenkoffer des IQSH und der Methodenkiste der bpb, übertragen auf die Sporthalle. Dazu Grundsätze, wie Lob und Rückmeldung wirken.</p></div>
+ <nav class="jump" aria-label="Bereiche"><button class="btn" data-to="m-koffer">Methoden</button><button class="btn" data-to="m-loben">Richtig loben</button><button class="btn" data-to="m-peer">Rückmeldung unter Schülerinnen und Schülern</button></nav>
+ ${SEC('01','Methoden nach Funktion',`<p class="prose">Eine Methode ist kein Selbstzweck. Sie soll zu Ziel, Inhalt, Lerngruppe und Situation passen (IQSH, 2012). Wähle zuerst, wozu die Phase dienen soll.</p>
+ <div class="mfilter"><span class="lab">Funktion</span><div class="mchips"><button class="mchip" aria-pressed="${!mstate.fn}" data-mf="">Alle</button>${Object.entries(MFN).map(([k,v])=>`<button class="mchip" aria-pressed="${mstate.fn===k}" data-mf="${k}" style="--c:${v[1]}">${v[0]}</button>`).join('')}</div>
+ <span class="lab">Stufe</span><div class="mchips"><button class="mchip" aria-pressed="${!mstate.st}" data-ms="">Alle</button>${STUFE.map(s=>`<button class="mchip" aria-pressed="${mstate.st===s}" data-ms="${s}">${STUFE_L[s]}</button>`).join('')}</div></div>
+ <div class="cgrid" style="margin-top:14px">${list.map(mCard).join('')||'<p class="prose">Keine Methode passt zu dieser Auswahl.</p>'}</div>`,'m-koffer')}
+ ${SEC('02','Richtig loben',`<p class="prose">Lob wirkt nicht automatisch. Entscheidend ist, dass es aufrichtig gemeint ist und sich auf das bezieht, was das Kind tatsächlich gezeigt hat (Schwandner, 2011).</p>
+ <div class="g3">${LOB.prinz.map(([t,x])=>`<div class="box"><h4>${t}</h4><p>${x}</p></div>`).join('')}</div>
+ <h4 style="margin-top:18px">Beispiele aus dem Sportunterricht</h4><div class="mtab"><table><thead><tr><th>Stufe</th><th>Situation</th><th>Statt</th><th>Besser</th></tr></thead><tbody>${LOB.bsp.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</tbody></table></div>`,'m-loben')}
+ ${SEC('03','Rückmeldung unter Schülerinnen und Schülern',`<ol class="hsteps">${LOB.peer.map(x=>`<li>${x}</li>`).join('')}</ol><p class="prose">Ab der Mittelstufe zählt die Rückmeldung von Gleichaltrigen oft mehr als die der Lehrkraft. Kriterienkarten aus den Unterrichtsversuchen eignen sich als Grundlage.</p>`,'m-peer')}
+ <div class="lit" style="margin-top:20px">${['iqsh12','bpb04','wdr11'].map(k=>`<p>${esc(LIT[k])}</p>`).join('')}</div>`;
+ if(anchor){const el=document.getElementById(anchor);if(el)setTimeout(()=>el.scrollIntoView({block:'start'}),0)}}
+function methDetail(m){const us=(methUse()[m.id]||[]).slice().sort((a,b)=>STUFE.indexOf(a.stufe)-STUFE.indexOf(b.stufe)||String(a.klasse).localeCompare(String(b.klasse),'de',{numeric:true}));
+ const src=m.q==='beide'?['iqsh12','bpb04']:[m.q==='iqsh'?'iqsh12':'bpb04'];
+ app.innerHTML=`<div class="bar"><button class="btn" data-nav="methoden">← Alle Methoden</button></div>
+ <div class="hero" style="--k:${MFN[m.fn[0]][1]}"><span class="lab">${m.fn.map(f=>MFN[f][0]).join(' · ')}</span><h1>${esc(m.name)}</h1><p>${esc(m.kurz)}</p></div>
+ <div class="facts"><div class="fact"><span class="lab">Zeit</span><b>${m.zeit}</b></div><div class="fact"><span class="lab">Geeignet für</span><b style="font-size:1.05rem">${m.st.map(s=>STUFE_L[s]).join(', ')}</b></div><div class="fact"><span class="lab">Quelle</span><b style="font-size:1.05rem">${MQ[m.q]}</b></div></div>
+ ${SEC('01','Ablauf',`<ol class="hsteps">${m.ablauf.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>`)}
+ ${SEC('02','Im Sportunterricht',`<p class="prose">${esc(m.sport)}</p>`)}
+ ${SEC('03','Tipps',`<ul class="cl">${m.tipps.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`)}
+ ${SEC('04','In diesen Unterrichtsversuchen',us.length?`<div class="mlist">${us.map(u=>`<button class="mitem" data-nav="${u.id}"><b>${esc(u.titel)}</b><small>Klasse ${u.klasse} · ${STUFE_L[u.stufe]} · ${BF[u.bf]} · ${KB[u.kb][0]}</small></button>`).join('')}</div>`:`<p class="prose">Noch in keinem Unterrichtsversuch ausdrücklich eingesetzt. Bei den einzelnen Stunden steht unter „Methoden und Rückmeldung“, wo sie passen würde.</p>`)}
+ <div class="lit">${src.map(k=>`<p>${esc(LIT[k])}</p>`).join('')}</div>`}
+function methRoute(id){if(id==='methoden'){methHome();return true}if(id==='methoden/loben'){methHome('m-loben');return true}const p=id.split('/');if(p[0]==='m'&&MBY[p[1]]){methDetail(MBY[p[1]]);return true}return false}
+document.addEventListener('click',e=>{const c=e.target.closest('[data-mf],[data-ms]');if(!c)return;if(c.dataset.mf!==undefined)mstate.fn=c.dataset.mf;if(c.dataset.ms!==undefined)mstate.st=c.dataset.ms;const y=scrollY;methHome();window.scrollTo(0,y)});
+
+function route(){const id=location.hash.slice(1);navMark(id);if(methRoute(id)){if(id!=='methoden/loben')window.scrollTo(0,0);return}if(lgRoute(id)){window.scrollTo(0,0);return}const u=UV.find(x=>x.id===id);if(u)return detailView(u);if(id==='ergebnisse'){syncDraft();resultsView()}else{homeView()}window.scrollTo(0,0)}
 addEventListener('hashchange',route);route();
 function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.append(t);setTimeout(()=>t.remove(),4500)}
 
@@ -10262,7 +10471,8 @@ function buildPdf(u,img){
  H('8 Differenzierung');h3('Leichter');UL(u.diff.leichter);h3('Schwerer');UL(u.diff.schwerer);h3('Inklusive Anpassungen');P(u.diff.inklusion);
  H('9 Querschnittsthemen');Object.entries(u.querText).forEach(([k,v])=>{h3(k);P(v)});
  H('10 Reflexionsfragen');h3('Für die Schülerinnen und Schüler');UL(u.reflexSuS);h3('Für die Lehrkraft');UL(u.reflexLK);
- H('Literatur');u.lit.forEach(k=>P(LIT[k],8,'normal',1.5));
+ {const h=methodsIn(u),sg=methSug(u,h);H('11 Methoden und Rückmeldung');if(h.length){h3('In dieser Stunde');UL(h.map(([m,ph])=>`${m.name} (Phase: ${ph.join(', ')})`))}if(sg.length){h3('Passt zusätzlich');UL(sg.map(([m,t])=>`${m.name}: ${t}`))}h3('Rückmeldung zu den Lernzielen');UL(u.ziele.filter(z=>FBZ[z.b]).map(z=>`${z.b}: ${FBZ[z.b][0]}. ${FBZ[z.b][1]}`))}
+ H('Literatur');litOf(u).forEach(k=>P(LIT[k],8,'normal',1.5));
  const n=doc.getNumberOfPages();for(let i=1;i<=n;i++){doc.setPage(i);doc.setFontSize(7.5);doc.setTextColor(110,110,110);doc.text(`Unterrichtsversuch „${u.titel}“, Klasse ${u.klasse}`,M,291);doc.text(`${i} / ${n}`,M+W,291,{align:'right'})}
  return doc;
 }
