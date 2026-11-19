@@ -316,13 +316,14 @@ q.vli{display:block;quotes:none;margin:5px 0 0;padding:4px 8px;background:#eef6e
 .mchip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
 .mlist{display:grid;gap:8px}.mitem{display:flex;flex-direction:column;gap:2px;text-align:left;border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 12px}
 .mitem:hover{border-color:var(--acc);background:var(--soft)}.mitem small{color:var(--mut);font-size:.85rem;line-height:1.4}
+.kstep{display:grid;grid-template-columns:44px 1fr;gap:14px;border:1px solid var(--line);background:#fff;border-radius:14px;padding:16px;margin:12px 0}.knum{width:40px;height:40px;border-radius:50%;background:#be123c;color:#fff;display:grid;place-items:center;font:800 1.2rem var(--disp)}.kstep h3{font-size:1.2rem}.ksay{border-left:4px solid #be123c;background:#fff1f2;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;font-size:1.05rem}.ksay p{margin:0 0 .4em}.kwhy{color:var(--mut);font-size:.9rem}.kakut{max-width:760px;margin:0 auto}.kakut .kstep{font-size:1.08rem}.kprog{display:flex;gap:8px;justify-content:center;margin:6px 0 14px}.kdot{width:40px;height:40px;border-radius:50%;border:2px solid #be123c;background:#fff;font-weight:700;color:#be123c}.kdot[aria-current=true]{background:#be123c;color:#fff}.knav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px}.knav .btn{padding:14px 18px}.knav .btn:disabled{opacity:.4}.ksteps li{margin:0 0 .7em}
 .mtab{overflow-x:auto}.mtab table{border-collapse:collapse;width:100%;font-size:.9rem}.mtab th,.mtab td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.mtab th{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="top"><h1>Unterrichts<em>versuche</em> Sport</h1><p><span id="kl">Klasse 1–13</span> nach den Hamburger Bildungsplänen. <span id="etappe"></span></p></header>
-<nav class="mainnav" aria-label="Bereiche"><button data-nav="" aria-current="page">Unterrichtsversuche</button><button data-nav="curriculum">Schulcurriculum</button><button data-nav="methoden">Methoden und Rückmeldung</button><button data-nav="gruppen">Meine Lerngruppen</button><button data-nav="reflexion">Reflektiere herausfordernde Unterrichtssituationen</button><button data-nav="fallberatung">Kollegiale Fallberatung</button><button data-nav="hilfe">So geht's</button></nav>
+<nav class="mainnav" aria-label="Bereiche"><button data-nav="" aria-current="page">Unterrichtsversuche</button><button data-nav="curriculum">Schulcurriculum</button><button data-nav="methoden">Methoden und Rückmeldung</button><button data-nav="konflikte">Konflikte begleiten</button><button data-nav="gruppen">Meine Lerngruppen</button><button data-nav="reflexion">Reflektiere herausfordernde Unterrichtssituationen</button><button data-nav="fallberatung">Kollegiale Fallberatung</button><button data-nav="hilfe">So geht's</button></nav>
 <main id="app"></main>
 <footer>Grundlage: Bildungspläne Sport der Freien und Hansestadt Hamburg (Grundschule 2022, Sekundarstufe I 2024, Studienstufe 2022). Die Unterrichtsversuche sind Planungsvorschläge und müssen an Lerngruppe, Halle und Sicherheitsvorgaben der eigenen Schule angepasst werden. Mit [prüfen] markierte Angaben bitte am Original kontrollieren.</footer>
 </div>
@@ -8983,6 +8984,13 @@ fngrp:`Fridtjof-Nansen-Grundschule. (o. J.). Rahmenplan für relevante Besonderh
 iqsh12:`Institut für Qualitätsentwicklung an Schulen Schleswig-Holstein. (2012). Methoden im Unterricht: Anregungen für Schule und Lehrerbildung (2. Aufl.). IQSH.`,
 bpb04:`Scholz, L. (2004). Methoden-Kiste (3. Aufl.; Thema im Unterricht extra). Bundeszentrale für politische Bildung.`,
 mk26:`Methodenkartei. (2026). Methoden [Website]. Universität Oldenburg und Universität Vechta. Abgerufen am 18. November 2026, von https://www.methodenkartei.uni-oldenburg.de/methoden/`,
+konf26:`Evidenzbasierte Methoden zur Konfliktbewältigung mit Kindern [Praxisleitfaden ohne Autorenangabe, unveröffentlicht]. (o. J.).`,
+cierpka05:`Cierpka, M. (2005). FAUSTLOS: Wie Kinder Konflikte gewaltfrei lösen lernen. Herder.`,
+durlak11:`Durlak, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D., & Schellinger, K. B. (2011). The impact of enhancing students' social and emotional learning: A meta-analysis of school-based universal interventions. Child Development, 82(1), 405–432. https://doi.org/10.1111/j.1467-8624.2010.01564.x`,
+gottman97:`Gottman, J. M., & DeClaire, J. (1997). The heart of parenting: Raising an emotionally intelligent child. Simon & Schuster. (Deutsch: Kinder brauchen emotionale Intelligenz, Heyne)`,
+greene14:`Greene, R. W. (2014). Lost at school: Why our kids with behavioral challenges are falling through the cracks and how we can help them (Rev. ed.). Scribner.`,
+lieberman07:`Lieberman, M. D., Eisenberger, N. I., Crockett, M. J., Tom, S. M., Pfeifer, J. H., & Way, B. M. (2007). Putting feelings into words: Affect labeling disrupts amygdala activity in response to affective stimuli. Psychological Science, 18(5), 421–428. https://doi.org/10.1111/j.1467-9280.2007.01916.x`,
+rosenberg04:`Rosenberg, M. B. (2004). Konflikte lösen durch Gewaltfreie Kommunikation: Ein Gespräch mit Gabriele Seils. Herder.`,
 wdr11:`Schwandner, M. (2011, 17. Mai). Loben ist gar nicht so einfach [Radiobeitrag, Sendemanuskript]. In Leonardo: Wissenschaft und mehr. WDR 5.`,
 borg:`Borg, G. (1998). Borg's perceived exertion and pain scales (Borgs Skalen für Anstrengungs- und Schmerzempfinden). Human Kinetics.`};
 
@@ -9742,7 +9750,7 @@ function lgRoute(id){const p=id.split('/');if(currRoute(id))return true;if(fbRou
  if(p[0]==='s'){const s=DB.sessions.find(x=>x.id===p[1]);s&&gById(s.gid)?lgSession(s):lgHome();return true}
  if(p[0]==='k'){const g=gById(p[1]),k=g&&g.kids.find(x=>x.id===p[2]);k?lgKid(g,k):lgHome();return true}
  return false}
-function navMark(id){const sec=id==='reflexion'?'reflexion':(id==='fallberatung'||/^fb\//.test(id))?'fallberatung':(id==='curriculum'||/^cur\//.test(id))?'curriculum':id==='hilfe'?'hilfe':(id==='methoden'||/^m\//.test(id)||id==='methoden/loben')?'methoden':(id==='gruppen'||/^[gsk]\//.test(id))?'gruppen':'';document.querySelectorAll('.mainnav button').forEach(b=>{b.dataset.nav===sec?(b.setAttribute('aria-current','page'),b.scrollIntoView&&b.parentNode.scrollWidth>b.parentNode.clientWidth&&b.parentNode.scrollTo({left:b.offsetLeft-16,behavior:'smooth'})):b.removeAttribute('aria-current')})}
+function navMark(id){const sec=id==='reflexion'?'reflexion':(id==='fallberatung'||/^fb\//.test(id))?'fallberatung':(id==='curriculum'||/^cur\//.test(id))?'curriculum':id==='hilfe'?'hilfe':(id==='methoden'||/^m\//.test(id)||id==='methoden/loben')?'methoden':(id==='konflikte'||id==='konflikte-akut'||/^k\//.test(id))?'konflikte':(id==='gruppen'||/^[gsk]\//.test(id))?'gruppen':'';document.querySelectorAll('.mainnav button').forEach(b=>{b.dataset.nav===sec?(b.setAttribute('aria-current','page'),b.scrollIntoView&&b.parentNode.scrollWidth>b.parentNode.clientWidth&&b.parentNode.scrollTo({left:b.offsetLeft-16,behavior:'smooth'})):b.removeAttribute('aria-current')})}
 
 function lgSubmit(f){if(f.id!=='lgnew')return;const name=f.name.value.trim();if(!name)return;const g={id:uid(),name,jahr:f.jahr.value.trim(),kids:parseKids(f.kids.value)};DB.groups.push(g);lgSave();go('g/'+g.id)}
 function lgImport(d){if(!d||!Array.isArray(d.groups)||!Array.isArray(d.sessions)){toast('Das ist keine gültige Sicherung.');return}
@@ -9854,6 +9862,10 @@ function helpData(){const Z=`${symL('++')} bis ${symL('--')}`;return [
   `<b>Methode ansehen:</b> Jede Karte zeigt Ablauf, Umsetzung in der Halle, Tipps und alle Unterrichtsversuche, in denen die Methode vorkommt.`,
   `<b>In einer Stunde:</b> Im Abschnitt „Methoden und Rückmeldung“ stehen die Methoden dieser Stunde, passende Ergänzungen und Hinweise, wie du zu den Lernzielen Rückmeldung gibst.`,
   `<b>Richtig loben:</b> Grundsätze und Beispiele mit „statt“ und „besser“ für jede Stufe.`],[['methoden','Methoden öffnen']]],
+ ['konflikte','Konflikte begleiten',[
+  `<b>Im Ernstfall:</b> Unter „Konflikte begleiten“ oben auf „Jetzt im Konflikt“ tippen. Das Tool führt mit großen Knöpfen durch die fünf Schritte und zeigt passende Sätze für die gewählte Stufe.`,
+  `<b>Situationen aus der Halle:</b> Neun typische Fälle wie Streit um den Ball, Foul, Regelstreit, Ausgrenzung oder Grenzüberschreitung beim Raufen, jeweils mit Vorgehen, Wiedergutmachung und Vorbeugen.`,
+  `<b>In jeder Stunde:</b> Unter „Methoden und Rückmeldung“ steht, welche Konfliktsituation in dieser Stunde wahrscheinlich ist.`],[['konflikte','Konflikte öffnen'],['konflikte-akut','Fünf Schritte']]],
  ['iphone','Auf dem iPhone oder iPad nutzen',[
   `<b>Nicht aus der Dateien-App öffnen.</b> Sie zeigt nur eine Vorschau, in der nichts reagiert.`,
   `<b>Über den Link in Safari öffnen,</b> dann „Teilen“ und „Zum Home-Bildschirm“ antippen. Das Tool startet danach wie eine App.`]]
@@ -10551,9 +10563,185 @@ MSUG.splice(1,0,
 const PEERF={GS:`twostars`,'Sek I':`wuerfel`,'Sek II':`fuenffinger`};
 function peerFor(u){const id=u.kb==='GD'&&u.stufe!=='GS'?'rueckenplakat':PEERF[u.stufe]||'twostars';return MBY[id]}
 
+/* Konflikte begleiten: handlungsorientierte Kategorie nach dem Praxisleitfaden „Evidenzbasierte Konfliktbewältigung mit Kindern“ */
+Object.assign(MFN,{konflikt:[`Konflikte lösen`,`#be123c`]});
+MQ.konf=`Praxisleitfaden Konfliktbewältigung`;
+METH.push(
+{id:`stoppregel`,name:`Stopp-Regel`,fn:[`konflikt`,`koop`],q:`konf`,st:[`GS`,`Sek I`],zeit:`Einführung 10 min, dann laufend`,re:/Stopp heißt Stopp|Stopp-Regel|Stopp-Hand/,
+ kurz:`Wer „Stopp“ sagt und die Hand hebt, zeigt eine Grenze. Alle hören sofort auf. Danach sagt das Kind, was es stört, und das andere Kind hört zu.`,
+ ablauf:[`Regel gemeinsam einführen und üben: Hand heben, „Stopp!“ sagen, alle frieren ein.`,`Das Kind sagt, was es stört („Stopp, du hältst mich zu fest“).`,`Das andere Kind hört auf und fragt nach, falls es nicht versteht.`,`Wer die Regel bricht, klärt das mit der Lehrkraft nach den fünf Schritten.`],
+ sport:`Unverzichtbar beim Ringen und Raufen, in Partnerakrobatik und bei Fangspielen mit Körperkontakt. Die Stopp-Regel gibt allen Kindern ein Signal, das jederzeit gilt, auch gegenüber Stärkeren. Am besten in jeder Kampfstunde zu Beginn kurz wiederholen.`,
+ tipps:[`Die Regel gilt für alle gleich, auch beim Spaß-Raufen.`,`Wer „Stopp“ respektiert, wird dafür konkret anerkannt, siehe „Richtig loben“.`]},
+{id:`ichbotschaft`,name:`Ich-Botschaften`,fn:[`konflikt`,`peer`],q:`konf`,st:[`GS`,`Sek I`,`Sek II`],zeit:`Einführung 10 min, dann laufend`,re:/Ich-Botschaft/,
+ kurz:`Statt Vorwürfen („Du bist gemein“) beschreibt das Kind, was passiert ist, wie es sich fühlt und was es sich wünscht.`,
+ ablauf:[`Was ist passiert? „Als du mir den Ball weggenommen hast …“`,`Wie geht es mir? „… war ich wütend …“`,`Was wünsche ich mir? „… ich möchte, dass wir uns abwechseln.“`],
+ sport:`Hilft nach Fouls, bei Regelstreit und bei Kritik in Gruppenarbeiten. Ein Satzmuster an der Hallenwand oder auf einer Karte in der Ruheecke erleichtert den Einstieg. In der Sek I lässt sich die Form mit Two Stars and a Wish verbinden.`,
+ tipps:[`Erst üben, wenn niemand aufgebracht ist, zum Beispiel mit Situationen aus dem letzten Spiel.`,`Kein Zwang zur Formel: Wer sinngemäß so spricht, macht es richtig.`]},
+{id:`klassenrat`,name:`Klassenrat`,fn:[`konflikt`,`refl`,`urteil`],q:`konf`,st:[`GS`,`Sek I`,`Sek II`],zeit:`15–30 min, regelmäßig`,re:/Klassenrat/,
+ kurz:`Eine feste, regelmäßige Runde, in der die Klasse Anliegen und Konflikte bespricht und Lösungen demokratisch beschließt. Schülerinnen und Schüler übernehmen die Leitung.`,
+ ablauf:[`Anliegen vorher sammeln, etwa in einem Briefkasten oder auf einer Liste.`,`Rollen verteilen: Leitung, Protokoll, Zeit.`,`Anliegen nacheinander besprechen: Was ist passiert? Was schlagen wir vor?`,`Lösung beschließen, aufschreiben und beim nächsten Mal prüfen.`],
+ sport:`Wiederkehrende Konflikte im Sport (Teambildung, Fairness, Umkleide, Schiedsrichterentscheidungen) gehören in eine ruhige Runde, nicht in die laufende Stunde. Ein Sport-Klassenrat von zehn Minuten am Ende jeder vierten Stunde reicht oft. Wenn die Klasse einen Klassenrat hat, Sportthemen dort einbringen.`,
+ tipps:[`Nur Lösungen beschließen, keine Strafen.`,`Beschlüsse sichtbar aufhängen und in der nächsten Sitzung prüfen.`]},
+{id:`streitschlichtung`,name:`Streitschlichtung (Peer-Mediation)`,fn:[`konflikt`,`koop`],q:`konf`,st:[`GS`,`Sek I`,`Sek II`],zeit:`10–20 min pro Fall`,re:/Streitschlicht|Peer-Mediation|Mediation/,
+ kurz:`Ausgebildete Mitschülerinnen und Mitschüler leiten das Gespräch zwischen zwei Streitenden nach einem festen Leitfaden. Sie entscheiden nicht, sondern helfen beiden, selbst eine Lösung zu finden.`,
+ ablauf:[`Einleitung: Regeln klären (ausreden lassen, keine Beleidigungen, Vertraulichkeit).`,`Sichtweisen: Beide erzählen nacheinander, die Schlichter fassen zusammen.`,`Gefühle und Wünsche: Was brauchst du, damit es wieder gut ist?`,`Lösungen sammeln und eine auswählen, die beide wollen.`,`Vereinbarung festhalten und später nachfragen.`],
+ sport:`Gibt es an der Schule Streitschlichter, können Konflikte aus der Sportstunde dorthin gehen, wenn sie in der Halle nicht geklärt werden konnten. Im Sport selbst lässt sich das Prinzip üben: Bei Spielen ohne Schiedsrichter übernehmen zwei Kinder die Rolle von Spielvermittlern, die bei Regelstreit nach dem Leitfaden fragen.`,
+ tipps:[`Schlichtung ist freiwillig. Bei Gewalt oder Mobbing bleibt die Verantwortung bei den Erwachsenen.`,`Die Schlichter brauchen eine Ausbildung. Ohne sie lieber den Leitfaden mit der Lehrkraft nutzen.`]},
+{id:`friedensort`,name:`Friedensort (Friedensbrücke, Palaverplatz)`,fn:[`konflikt`,`ruhe`],q:`konf`,st:[`GS`],zeit:`3–10 min pro Fall`,re:/Friedensbrücke|Friedensort|Palaver|Streitecke/,
+ kurz:`Ein fester Ort für angeleitete Konfliktgespräche. Wer streitet, geht dorthin und klärt den Streit mit Unterstützung nach festem Ablauf.`,
+ ablauf:[`Ort festlegen und gestalten (Matte, zwei Teppichfliesen, Bildkarten mit den fünf Schritten).`,`Ablauf mit der Klasse einüben, bevor er gebraucht wird.`,`Bei Streit gehen beide Kinder dorthin, die Lehrkraft oder ein Streitschlichter begleitet.`,`Am Ende eine Vereinbarung, dann zurück ins Spiel.`],
+ sport:`In der Halle reicht eine Matte am Rand in Sichtweite. Zwei Teppichfliesen markieren die Plätze, eine Bildkarte zeigt die Schritte. Der Ort ist kein Strafplatz: Dort klärt man Streit und spielt dann weiter. Ein Sprechstein oder ein kleiner Ball zeigt, wer gerade spricht.`,
+ tipps:[`Immer in Sichtweite der Lehrkraft, wegen der Aufsicht.`,`Kurz halten, danach geht es zurück ins Spiel. So bleibt der Ort positiv besetzt.`]},
+{id:`gefuehlskarten`,name:`Gefühlskarten und Gefühlsampel`,fn:[`konflikt`,`refl`],q:`konf`,st:[`GS`],zeit:`2–5 min`,re:/Gefühlskarte|Gefühlsampel|Gefühlsbarometer/,
+ kurz:`Bildkarten oder eine Ampel helfen Kindern, Gefühle zu zeigen und einzuordnen, bevor sie die Worte dafür haben.`,
+ ablauf:[`Wenige Gefühle mit Bild einführen (froh, wütend, traurig, ängstlich).`,`Ampel: grün „ich bin ruhig“, gelb „es wird mir zu viel“, rot „ich bin sehr wütend“.`,`Im Konflikt zeigt das Kind auf die Karte oder Farbe.`,`Die Lehrkraft benennt das Gefühl in einem Satz.`],
+ sport:`Gut bei Kindern, die sich im Spiel schnell aufregen. Die Ampel kann auch als Signal genutzt werden: Wer auf gelb steht, darf kurz an den Friedensort und kommt zurück, sobald es wieder grün ist.`,
+ tipps:[`Die Karten auch in ruhigen Momenten nutzen, etwa im Abschlusskreis.`,`Nicht abfragen, wie es jemandem geht, wenn das Kind gerade nicht sprechen will.`]}
+);
+const KONF={
+ grund:`Konflikte gehören zur Entwicklung. Kinder lernen in ihnen, Gefühle zu steuern, andere Sichtweisen zu verstehen und Lösungen auszuhandeln. Weil Impulskontrolle und Planung erst bis ins junge Erwachsenenalter ausreifen, brauchen Kinder im Streit einen ruhigen Erwachsenen, der sie begleitet (Ko-Regulation). Strafen und erzwungene Auszeiten helfen dabei wenig.`,
+ schritte:[
+  {t:`Ruhig unterbrechen und Sicherheit herstellen`,kurz:`Ko-Regulation`,
+   tun:[`Bei Gewalt oder Gefahr sofort eingreifen, Kinder trennen.`,`Auf Augenhöhe gehen, ruhig und langsam sprechen.`,`Den Streitgegenstand (Ball, Gerät) neutral an sich nehmen.`],
+   gs:[`„Stopp. Ich bin da. Ich halte den Ball, bis wir das geklärt haben.“`,`„Hauen tut weh. Ich lasse nicht zu, dass jemand verletzt wird.“`],
+   sek:[`„Stopp, Pause. Wir klären das jetzt kurz.“`,`„Ich nehme den Ball, bis ihr beide wieder ruhig seid.“`],
+   halle:`Spiel auf Signal kurz anhalten oder die anderen weiterspielen lassen, wenn es eine zweite Aufsicht oder einen klaren Auftrag gibt. Die Streitenden kommen mit an den Rand oder an den Friedensort, immer in Sichtweite.`,
+   warum:`Die Ruhe der Lehrkraft überträgt sich. Ein aufgebrachtes Kind kann erst nachdenken, wenn die akute Erregung sinkt.`},
+  {t:`Gefühle benennen`,kurz:`„Name it to tame it“`,
+   tun:[`Das Gefühl jedes Kindes in einem Satz aussprechen.`,`Nicht bewerten und nicht ausreden („Ist doch nicht so schlimm“).`],
+   gs:[`„Du bist richtig wütend, weil du den Ball zuerst hattest.“`,`„Und du bist enttäuscht, weil du auch mal dran sein wolltest.“`],
+   sek:[`„Du ärgerst dich, weil du das als Foul gesehen hast.“`,`„Du fühlst dich ungerecht behandelt.“`],
+   halle:`Kurz bleiben. Ein Satz pro Kind reicht. Gefühlskarten helfen Kindern, die gerade keine Worte finden.`,
+   warum:`Gefühle in Worte zu fassen dämpft starke Emotionen. Ein bildgebendes Experiment mit Erwachsenen zeigte geringere Aktivität der Amygdala, wenn Gefühle benannt wurden (Lieberman et al., 2007). Für Kinder im Streit ist das eine Übertragung.`},
+  {t:`Sichtweisen ohne Schuldfrage klären`,kurz:`Beide hören`,
+   tun:[`Jedes Kind erzählt nacheinander, was passiert ist. Ein Sprechstein oder Ball zeigt, wer spricht.`,`Die Lehrkraft fasst sachlich zusammen.`,`Keinen Schuldigen suchen und kein Urteil sprechen.`],
+   gs:[`„Erzähl du zuerst. Danach ist Ali dran.“`,`„Also: Du wolltest werfen, und Ali hat den Ball genommen, weil er dachte, er ist dran. Stimmt das?“`],
+   sek:[`„Jeder schildert kurz seine Sicht. Ohne Unterbrechung.“`,`„Ich fasse zusammen: … Habe ich das richtig verstanden?“`],
+   halle:`Den Ball als Sprechstein nutzen. Wer ihn hält, spricht.`,
+   warum:`Wer zuhört, statt zu richten, lässt beiden Kindern die Möglichkeit, die Sicht des anderen zu verstehen.`},
+  {t:`Lösungen von den Kindern entwickeln lassen`,kurz:`Selbst lösen`,
+   tun:[`Offen fragen, was beide jetzt tun können.`,`Warten, Ideen der Kinder aufgreifen.`,`Erst wenn keine Idee kommt, zwei oder drei neutrale Möglichkeiten anbieten.`],
+   gs:[`„Was könnt ihr tun, damit ihr beide zufrieden seid?“`,`„Ihr könntet euch abwechseln, zusammen werfen oder eine Sanduhr nehmen. Was passt?“`],
+   sek:[`„Wie wollt ihr das regeln, damit das Spiel weitergeht?“`,`„Welche Regel würde verhindern, dass das wieder passiert?“`],
+   halle:`Im Spiel bieten sich einfache Lösungen an: Wiederholung des Spielzugs, Münzwurf, abwechselnd, Regel für den Rest der Stunde. Eine Sanduhr oder ein Zeitgeber hilft beim Abwechseln.`,
+   warum:`Kinder, die selbst eine Lösung finden, üben Verhandeln. Wenn die Lehrkraft entscheidet, fehlt diese Übung.`},
+  {t:`Vereinbarung testen und Erfolg zurückmelden`,kurz:`Selbstwirksamkeit`,
+   tun:[`Die Lösung kurz zusammenfassen.`,`Umsetzen und zurück ins Spiel.`,`Nach einigen Minuten eine kurze Rückmeldung geben.`],
+   gs:[`„Ihr wechselt euch also ab. Los geht's.“`,`Später: „Ihr habt eine Lösung gefunden, mit der ihr beide weiterspielen könnt.“`],
+   sek:[`„Abgemacht: Strittige Bälle werden wiederholt.“`,`Später: „Eure Regel hat funktioniert. Das Spiel lief danach fair.“`],
+   halle:`Die Rückmeldung möglichst beschreibend geben, siehe „Richtig loben“. Lösungen, die für alle gelten sollen, im Abschlusskreis oder im Klassenrat festhalten.`,
+   warum:`Die Rückmeldung zeigt den Kindern, dass sie den Konflikt selbst gelöst haben.`}
+ ],
+ stufen:[
+  {st:`GS`,alter:`6–10 Jahre`,stand:`Kinder verstehen Regeln und Fairness und können zunehmend Kompromisse schließen und die Sicht anderer einnehmen. Jüngere Grundschulkinder reagieren oft noch impulsiv.`,
+   werkzeuge:[[`stoppregel`,`klare Grenzen setzen, auch gegenüber Stärkeren`],[`ichbotschaft`,`eigene Grenzen und Wünsche ohne Vorwurf ausdrücken`],[`gefuehlskarten`,`Gefühle zeigen, wenn Worte fehlen, besonders in Klasse 1 und 2`],[`friedensort`,`fester Ort für angeleitete Klärung`],[`klassenrat`,`wiederkehrende Konflikte gemeinsam lösen`],[`streitschlichtung`,`ältere Kinder schlichten nach Leitfaden`]],
+   hinweis:`Für Klasse 1 helfen außerdem Werkzeuge aus dem Elementarbereich: Gefühle kurz spiegeln, Grenzen ohne Beschämung („Hauen tut weh, ich halte deine Hand“), Sanduhr für abwechselndes Spielen.`},
+  {st:`Sek I`,alter:`10–16 Jahre`,stand:`Übertragung: Der Leitfaden beschreibt Kinder bis zehn Jahre. Die fünf Schritte, Ich-Botschaften, Klassenrat und Peer-Mediation werden auch in der Sekundarstufe eingesetzt. Jugendliche übernehmen mehr selbst, besonders in Schritt 3 und 4.`,
+   werkzeuge:[[`ichbotschaft`,`Kritik und Ärger sachlich äußern`],[`streitschlichtung`,`Schlichtung durch Gleichaltrige`],[`klassenrat`,`Regeln für Fairness und Teambildung gemeinsam festlegen`],[`fishbowl`,`Regelkonflikte im Spiel offen besprechen`],[`linie`,`Haltungen zu Fairness sichtbar machen`]],
+   hinweis:`Die Kollaborative Problemlösung nach Greene ist für Schulkinder mit wiederkehrenden Konflikten entwickelt und passt besonders hier (siehe Fall „Immer wieder dasselbe Kind“).`},
+  {st:`Sek II`,alter:`ab 16 Jahren`,stand:`Übertragung: Jugendliche lösen Konflikte meist selbst. Die Lehrkraft moderiert eher, als dass sie begleitet. Schritt 1 bleibt nötig, wenn Gefahr besteht.`,
+   werkzeuge:[[`ichbotschaft`,`Rückmeldung in Teams und Kampfgerichten`],[`klassenrat`,`Konflikte über Bewertung und Fairness im Kurs klären`],[`denktiere`,`strittige Entscheidungen aus mehreren Sichten betrachten`]],
+   hinweis:`In der Oberstufe hilft es, die Schritte offen zu machen und Lernende selbst moderieren zu lassen.`}
+ ],
+ faelle:[
+  {id:`ball`,t:`„Ich war zuerst!“ Streit um Ball oder Gerät`,st:[`GS`],
+   lage:`Zwei Kinder zerren am selben Ball, an einem Rollbrett oder wollen gleichzeitig auf die Weichbodenmatte.`,
+   s:[`Ball oder Gerät neutral an sich nehmen: „Ich halte ihn, bis wir es geklärt haben.“`,`„Ihr wollt beide mit dem Ball spielen und seid sauer.“`,`Beide erzählen nacheinander, wer was wollte.`,`„Wie könnt ihr beide drankommen?“ Ideen: abwechseln mit Sanduhr, zusammen werfen, anderes Gerät.`,`„Ihr wechselt euch alle zehn Würfe ab.“ Später kurz zurückmelden.`],
+   gut:`Kein „Entschuldigung“ erzwingen. Wer gezerrt hat, kann dem anderen den Ball zuerst geben.`,
+   vor:`Genug Material bereitstellen, klare Wechselregeln vorher absprechen, Sanduhr an begehrten Stationen.`,links:[`stoppregel`,`stationen`]},
+  {id:`foul`,t:`Foul und Wut im Spiel`,st:[`GS`,`Sek I`],
+   lage:`Nach einem harten Körperkontakt schubst ein Kind zurück, beide schreien sich an.`,
+   s:[`Spiel kurz anhalten, beide an den Rand holen, verletztes Kind zuerst versorgen.`,`„Du hast dich erschrocken und es hat wehgetan. Du warst so wütend, dass du geschubst hast.“`,`Beide schildern die Situation aus ihrer Sicht, ohne Unterbrechung.`,`„Was braucht ihr, damit ihr weiterspielen könnt?“ Ideen: Freiwurf, Spielzug wiederholen, Abstandsregel.`,`Vereinbarung zusammenfassen, zurück ins Spiel, später zurückmelden.`],
+   gut:`Wiedergutmachung statt Pflicht-Entschuldigung: „Wie kannst du helfen, dass es ihm besser geht?“ Zum Beispiel Kühlpack holen oder beim nächsten Angriff anspielen.`,
+   vor:`Regeln zum Körperkontakt vor dem Spiel klären. Bei vielen Fouls das Spiel vereinfachen: weniger Spieler, berührungsfreie Zone.`,links:[`ichbotschaft`,`fishbowl`]},
+  {id:`regel`,t:`„Der war drin!“ Regelstreit ohne Schiedsrichter`,st:[`GS`,`Sek I`,`Sek II`],
+   lage:`Teams streiten, ob ein Ball im Aus war oder ein Treffer zählt. Das Spiel steht still.`,
+   s:[`Spiel anhalten, je eine Sprecherin oder einen Sprecher pro Team holen.`,`„Beide Teams sind sicher, dass sie recht haben, und ärgern sich.“`,`Beide Sprecher schildern, was sie gesehen haben.`,`„Wie wollt ihr strittige Bälle regeln?“ Ideen: Wiederholung, Münzwurf, abwechselnd entscheiden, Spielvermittler.`,`Die neue Regel gilt für den Rest der Stunde, im Abschlusskreis prüfen.`],
+   gut:`Kein Urteil der Lehrkraft. Die Teams lernen, faire Regeln selbst zu finden.`,
+   vor:`Vor dem Spiel festlegen, wie bei Streit entschieden wird. Zwei Spielvermittler bestimmen.`,links:[`fishbowl`,`klassenrat`],uv:[`bf5-wk-1`]},
+  {id:`verlieren`,t:`Wut nach einer Niederlage`,st:[`GS`,`Sek I`],
+   lage:`Ein Kind wirft nach dem verlorenen Spiel den Ball weg, schimpft auf das eigene Team oder will nicht mehr mitmachen.`,
+   s:[`Ruhig hingehen, Abstand zu den anderen schaffen, nicht vor der Klasse zurechtweisen.`,`„Du hast dich sehr angestrengt und bist enttäuscht, dass es nicht gereicht hat.“`,`Zuhören, was dem Kind wichtig war. Ggf. das Team dazuholen.`,`„Was hilft dir jetzt?“ Ideen: kurz an den Friedensort, beim nächsten Spiel eine andere Rolle, Team neu mischen.`,`Wenn das Kind zurückkommt: „Du bist wieder dabei. Das war nicht leicht.“`],
+   gut:`Wenn das Kind andere beschimpft hat: im Team etwas Gutes tun lassen, zum Beispiel das Material wegräumen oder dem Team einen Pass geben.`,
+   vor:`Wettkampfformen mit gemischten Teams, häufigem Wechsel und Wertung der Fairness. Nach dem Spiel einen festen Ritus (Abklatschen, Blitzlicht).`,links:[`gefuehlskarten`,`friedensort`,`warmedusche`]},
+  {id:`ausgrenzung`,t:`„Mit dem spiele ich nicht!“ Ausgrenzung bei der Teambildung`,st:[`GS`,`Sek I`],
+   lage:`Ein Kind wird bei der Teamwahl übergangen oder ein Team weigert sich, ein Kind aufzunehmen.`,
+   s:[`Situation sofort stoppen, das betroffene Kind schützen, kein Vorführen vor der Klasse.`,`Mit dem betroffenen Kind: „Das tut weh, wenn man nicht gewollt wird.“ Mit der Gruppe: „Ihr habt Angst zu verlieren.“`,`Getrennt Sichtweisen hören, mit der Gruppe in Ruhe nach der Stunde.`,`Mit der Klasse eine faire Regel für Teambildung finden.`,`Die Regel gilt ab jetzt. Später rückmelden, wie es funktioniert hat.`],
+   gut:`Die Gruppe überlegt, wie das Kind sich jetzt willkommen fühlen kann, zum Beispiel durch eine Aufgabe im Team.`,
+   vor:`Kapitänswahl abschaffen, Gruppen zufällig bilden. Wiederholte Ausgrenzung ist Thema für Klassenrat und Klassenleitung.`,links:[`gruppen`,`klassenrat`]},
+  {id:`auslachen`,t:`Auslachen bei einer misslungenen Übung`,st:[`GS`,`Sek I`,`Sek II`],
+   lage:`Ein Kind bleibt am Kasten hängen oder fällt beim Vorführen, andere lachen oder kommentieren.`,
+   s:[`Ruhig und klar unterbrechen: „Stopp. Hier lacht niemand über andere.“`,`Zum betroffenen Kind: „Das war unangenehm.“ Zu den Lachenden kurz: „Ihr fandet das komisch.“`,`Mit den Lachenden später kurz sprechen: Wie hätte es sich für dich angefühlt?`,`„Was könnt ihr tun, damit sich hier jeder traut?“`,`Vereinbarung festhalten, Mut beim nächsten Versuch konkret anerkennen.`],
+   gut:`Die Lachenden helfen beim nächsten Versuch, zum Beispiel beim Sichern oder als Coach.`,
+   vor:`Zeigen nur freiwillig, Rückmeldung nach Kriterien (Two Stars and a Wish). Regel zu Beginn einer Reihe mit Vorführungen klären.`,links:[`twostars`,`ichbotschaft`]},
+  {id:`ringen`,t:`Grenze überschritten beim Ringen und Raufen`,st:[`GS`,`Sek I`],
+   lage:`Ein Kind hört trotz „Stopp“ nicht auf, das andere weint oder wehrt sich heftig.`,
+   s:[`Sofort trennen, beide aus der Kampffläche holen, nach Verletzungen schauen.`,`„Du hattest Angst und hast Stopp gesagt.“ „Du warst im Kampf so drin, dass du es nicht gehört hast.“`,`Beide schildern die Situation. Die Lehrkraft fasst zusammen: Die Stopp-Regel wurde nicht beachtet.`,`„Was brauchst du, damit du wieder mit ihm kämpfen willst?“ „Wie stellst du sicher, dass du das Stopp hörst?“`,`Vereinbarung, gegebenenfalls Partnerwechsel. Beim nächsten respektierten Stopp gezielt anerkennen.`],
+   gut:`Kein Kampf mit derselben Person, bis beide wollen. Das Kind, das nicht aufgehört hat, übt in der nächsten Runde die Rolle des Ringrichters.`,
+   vor:`Stopp-Regel und Kampfritual in jeder Stunde wiederholen. Paare nach Gewicht und Temperament bilden.`,links:[`stoppregel`],uv:[`bf4-wk-5`,`bf4-wk-1`]},
+  {id:`umkleide`,t:`Rangelei in der Umkleide oder Warteschlange`,st:[`GS`,`Sek I`],
+   lage:`In der Umkleide oder beim Warten an einer Station wird geschubst, gedrängelt oder beleidigt.`,
+   s:[`Sofort hingehen, trennen, Aufsichtspflicht beachten (die anderen nicht unbeaufsichtigt lassen).`,`Gefühle benennen: „Ihr seid beide genervt.“`,`Sichtweisen kurz hören, gegebenenfalls nach der Stunde ausführlich.`,`Lösung finden: andere Plätze, Reihenfolge, Abstand.`,`Lösung umsetzen, beim nächsten Mal daran erinnern.`],
+   gut:`Wer etwas kaputt oder durcheinander gebracht hat, bringt es in Ordnung.`,
+   vor:`Feste Plätze in der Umkleide, kurze Wartezeiten durch mehr Stationen, Rituale für den Übergang.`,links:[`stationen`,`koepfe`]},
+  {id:`wiederkehrend`,t:`Immer wieder dasselbe Kind`,st:[`GS`,`Sek I`,`Sek II`],
+   lage:`Ein Kind gerät in vielen Stunden in ähnliche Konflikte, etwa beim Verlieren, Warten oder Teilen.`,
+   s:[`Im Moment selbst: Schritt 1 und 2, das Kind beruhigen und nicht beschämen.`,`Später in Ruhe (Plan B nach Greene): „Mir ist aufgefallen, dass es beim Warten an der Station oft schwierig wird. Was ist da los?“`,`Die Sorge des Kindes verstehen, dann die eigene Sorge nennen („Ich sorge mich, dass sich jemand verletzt“).`,`Gemeinsam eine Lösung suchen, die beide Sorgen berücksichtigt.`,`Lösung ausprobieren, nach ein bis zwei Wochen gemeinsam prüfen.`],
+   gut:`Im Mittelpunkt steht nicht Strafe, sondern die fehlende Fähigkeit, die das Kind noch lernen muss, zum Beispiel Warten oder mit Enttäuschung umgehen.`,
+   vor:`Mit Klassenleitung und Eltern sprechen. Im Tool unter „Reflektiere herausfordernde Unterrichtssituationen“ die Situation durchdenken.`,links:[`klassenrat`,`gefuehlskarten`]}
+ ],
+ programme:[
+  [`Faustlos und sozial-emotionales Lernen`,`Trainingsprogramme für Kita und Grundschule zu Empathie, Impulskontrolle und Umgang mit Ärger. Laut Leitfaden zeigen Evaluationen weniger Aggression und mehr prosoziales Verhalten. Eine Meta-Analyse schulischer Programme zum sozial-emotionalen Lernen stützt das für den Unterricht (Durlak et al., 2011).`,`Wenn die Schule Faustlos nutzt, die dort gelernten Schritte im Sport aufgreifen.`],
+  [`Kollaborative Problemlösung (Greene)`,`Für wiederkehrende Konflikte. Statt Ungehorsam zu unterstellen, sucht man in einem ruhigen Moment gemeinsam nach ungelösten Problemen und fehlenden Fähigkeiten („Plan B“).`,`Siehe Fall „Immer wieder dasselbe Kind“.`],
+  [`Emotionscoaching (Gottman)`,`Erwachsene nehmen Gefühle als Lernchance, benennen sie und erarbeiten mit dem Kind Grenzen und Lösungen. Kinder lernen so, ihre Gefühle besser zu regulieren.`,`Entspricht Schritt 2 und 4 der fünf Schritte.`],
+  [`Peer-Mediation`,`Ausgebildete Schülerinnen und Schüler schlichten. Laut Leitfaden verbessert das Schulklima und Konfliktlösefähigkeit, auch bei den Schlichtern selbst. [prüfen: Der Leitfaden nennt keine konkrete Meta-Analyse.]`,`Schulische Streitschlichter auch für Sportkonflikte nutzen.`]
+ ],
+ fallen:[
+  [`„Sag jetzt Entschuldigung!“`,`Eine erzwungene Entschuldigung beendet den Streit nur äußerlich und lehrt kein Mitgefühl.`,`Wiedergutmachung anbieten: „Wie kannst du helfen, dass es ihr wieder besser geht?“ Im Sport etwa Kühlpack holen, Ball zurückgeben, beim nächsten Angriff anspielen.`],
+  [`Sofort Richter sein`,`Wer vorschnell urteilt oder Lösungen vorgibt, nimmt den Kindern die Chance, Verhandeln zu üben.`,`Erst die Kinder Lösungen suchen lassen. Die Lehrkraft entscheidet nur bei Gefahr oder wenn keine Einigung gelingt.`],
+  [`Allein auf die Bank`,`Isolation in starker Erregung verstärkt laut Leitfaden Angst und Kontrollverlust, statt Selbstkontrolle aufzubauen.`,`Eine Ruhepause in Sichtweite anbieten, nicht als Strafe, mit klarer Rückkehr („Du kommst wieder rein, wenn du bereit bist“). Bei Gefahr bleibt der Ausschluss vom Spiel nötig, dann begleitet und mit Gespräch.`]
+ ],
+ quelle:`Grundlage ist ein Praxisleitfaden ohne Autorenangabe. Die fünf Schritte stützen sich nach eigener Angabe auf den Konfliktlöseansatz von HighScope, die Gewaltfreie Kommunikation nach Rosenberg und Kindermediation. Einige Begründungen sind vereinfacht. Die Rolle von Spiegelneuronen für die Beruhigung ist wissenschaftlich umstritten. Die zitierte Studie zum Benennen von Gefühlen wurde mit Erwachsenen durchgeführt. Für die Sekundarstufe sind die Hinweise eine Übertragung.`
+};
+const kstate={st:(typeof FIXED!=='undefined'&&FIXED)?(FIXED==='gs'?'GS':FIXED==='os'?'Sek II':'Sek I'):'GS',step:0};
+const kSek=()=>kstate.st!=='GS';
+function kStufeBar(){return `<div class="mchips" role="group" aria-label="Stufe">${STUFE.map(s=>`<button class="mchip" data-kst="${s}" aria-pressed="${kstate.st===s}">${STUFE_L[s]}</button>`).join('')}</div>`}
+function kStepCard(i){const s=KONF.schritte[i],ex=kSek()?s.sek:s.gs;return `<div class="kstep"><div class="knum">${i+1}</div><div><h3>${esc(s.t)}</h3><span class="lab">${esc(s.kurz)}</span>
+ <ul class="cl">${s.tun.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+ <div class="ksay">${ex.map(x=>`<p>${esc(x)}</p>`).join('')}</div>
+ <p class="prose"><b>In der Halle:</b> ${esc(s.halle)}</p><p class="prose kwhy"><b>Warum:</b> ${esc(s.warum)}</p></div></div>`}
+const mLink=id=>{const m=MBY[id];return m?`<button class="lnk" style="margin:0" data-nav="m/${id}">${esc(m.name)}</button>`:''};
+function konfHome(anchor){const fs=KONF.faelle.filter(f=>f.st.includes(kstate.st));const stf=KONF.stufen.find(x=>x.st===kstate.st);
+ app.innerHTML=`<div class="hero" style="--k:#be123c"><span class="lab">Handeln im Konflikt</span><h1>Konflikte begleiten</h1><p>${esc(KONF.grund)}</p><p style="margin-top:12px"><button class="btn pri" data-nav="konflikte-akut">Jetzt im Konflikt: fünf Schritte Schritt für Schritt</button></p></div>
+ ${kStufeBar()}
+ <nav class="jump" aria-label="Bereiche"><button class="btn" data-to="k-schritte">Fünf Schritte</button><button class="btn" data-to="k-faelle">Situationen aus der Halle</button><button class="btn" data-to="k-stufe">Werkzeuge nach Stufe</button><button class="btn" data-to="k-fallen">Was nicht hilft</button><button class="btn" data-to="k-vor">Vorbeugen</button></nav>
+ ${SEC('01','Die fünf Schritte',`<p class="prose">Ein festes Vorgehen für akute Konflikte. Die Sätze passen sich der gewählten Stufe an.</p>${KONF.schritte.map((_,i)=>kStepCard(i)).join('')}`,'k-schritte')}
+ ${SEC('02','Situationen aus der Halle',`<div class="cgrid">${fs.map(f=>`<button class="ccard" data-nav="k/${f.id}"><b>${esc(f.t)}</b><span>${esc(f.lage)}</span><span>${f.st.map(s=>STUFE_L[s]).join(', ')}</span></button>`).join('')}</div>`,'k-faelle')}
+ ${SEC('03','Werkzeuge für '+STUFE_L[kstate.st],`<p class="prose">${esc(stf.stand)}</p><div class="mlist">${stf.werkzeuge.map(([id,t])=>MBY[id]?`<button class="mitem" data-nav="m/${id}"><b>${esc(MBY[id].name)}</b><small>${esc(t)}</small></button>`:'').join('')}</div><p class="prose" style="margin-top:10px">${esc(stf.hinweis)}</p>`,'k-stufe')}
+ ${SEC('04','Was nicht hilft und was stattdessen',`<div class="mtab"><table><thead><tr><th>Statt</th><th>Warum nicht</th><th>Besser</th></tr></thead><tbody>${KONF.fallen.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</tbody></table></div>`,'k-fallen')}
+ ${SEC('05','Vorbeugen: Programme und Ansätze',`<div class="g2">${KONF.programme.map(p=>`<div class="box"><h4>${esc(p[0])}</h4><p>${esc(p[1])}</p><p><b>Im Sport:</b> ${esc(p[2])}</p></div>`).join('')}</div>`,'k-vor')}
+ <div class="box" style="margin-top:18px"><h4>Zur Quelle</h4><p>${esc(KONF.quelle)}</p></div>
+ <div class="lit" style="margin-top:14px">${['konf26','cierpka05','durlak11','gottman97','greene14','lieberman07','rosenberg04'].map(k=>`<p>${esc(LIT[k])}</p>`).join('')}</div>`;
+ if(anchor){const el=document.getElementById(anchor);if(el)setTimeout(()=>el.scrollIntoView({block:'start'}),0)}}
+function konfAkut(){const i=kstate.step,n=KONF.schritte.length;
+ app.innerHTML=`<div class="bar"><button class="btn" data-nav="konflikte">← Konflikte begleiten</button></div>
+ <div class="kakut"><div class="kprog">${KONF.schritte.map((s,j)=>`<button class="kdot" data-kgo="${j}" aria-current="${j===i}" aria-label="Schritt ${j+1}">${j+1}</button>`).join('')}</div>
+ ${kStufeBar()}${kStepCard(i)}
+ <div class="knav"><button class="btn" data-kgo="${i-1}" ${i===0?'disabled':''}>← Zurück</button>${i<n-1?`<button class="btn pri" data-kgo="${i+1}">Weiter: ${esc(KONF.schritte[i+1].t)} →</button>`:`<button class="btn pri" data-nav="konflikte">Fertig</button>`}</div></div>`}
+function konfFall(f){app.innerHTML=`<div class="bar"><button class="btn" data-nav="konflikte">← Konflikte begleiten</button></div>
+ <div class="hero" style="--k:#be123c"><span class="lab">Situation · ${f.st.map(s=>STUFE_L[s]).join(', ')}</span><h1>${esc(f.t)}</h1><p>${esc(f.lage)}</p></div>
+ ${SEC('01','So gehst du vor',`<ol class="ksteps">${f.s.map((x,i)=>`<li><b>${esc(KONF.schritte[i].t)}.</b> ${esc(x)}</li>`).join('')}</ol>`)}
+ ${SEC('02','Wiedergutmachung',`<p class="prose">${esc(f.gut)}</p>`)}
+ ${SEC('03','Vorbeugen',`<p class="prose">${esc(f.vor)}</p>${f.links&&f.links.length?`<p class="prose">Passende Methoden: ${f.links.map(mLink).filter(Boolean).join(', ')}</p>`:''}${(f.uv||[]).filter(id=>UV.some(u=>u.id===id)).length?`<div class="mlist">${f.uv.map(id=>UV.find(u=>u.id===id)).filter(Boolean).map(u=>`<button class="mitem" data-nav="${u.id}"><b>${esc(u.titel)}</b><small>Unterrichtsversuch · Klasse ${u.klasse}</small></button>`).join('')}</div>`:''}`)}
+ <p style="margin-top:10px"><button class="btn pri" data-nav="konflikte-akut">Fünf Schritte Schritt für Schritt</button></p>
+ <div class="lit" style="margin-top:14px"><p>${esc(LIT.konf26)}</p></div>`}
+function konfFor(u){if(u.bf===4)return 'ringen';if(u.bf===5||u.bf===1&&u.kb==='WK')return 'regel';if(u.kb==='WK')return 'verlieren';if(u.kb==='EW'||u.kb==='GD')return 'auslachen';return 'ball'}
+function konfRoute(id){if(id==='konflikte'){konfHome();return true}if(id==='konflikte-akut'){konfAkut();return true}const p=id.split('/');if(p[0]==='k'){const f=KONF.faelle.find(x=>x.id===p[1]);if(f){konfFall(f);return true}}return false}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-kst],[data-kgo]');if(!a||a.disabled)return;if(a.dataset.kst){kstate.st=a.dataset.kst;const y=scrollY;location.hash==='#konflikte-akut'?konfAkut():konfHome();window.scrollTo(0,y)}else{kstate.step=Math.max(0,Math.min(KONF.schritte.length-1,+a.dataset.kgo));konfAkut();window.scrollTo(0,0)}});
+
 const MBY=Object.fromEntries(METH.map(m=>[m.id,m]));
 function litOf(u){const k=u.lit.slice();const h=methodsIn(u).map(([m])=>m);h.push(peerFor(u));h.forEach(m=>SRC[m.q].forEach(x=>{if(!k.includes(x))k.push(x)}));if(!k.includes('wdr11'))k.push('wdr11');return k}
-const SRC={iqsh:['iqsh12'],bpb:['bpb04'],beide:['iqsh12','bpb04'],mk:['mk26']};
+const SRC={iqsh:['iqsh12'],bpb:['bpb04'],beide:['iqsh12','bpb04'],mk:['mk26'],konf:['konf26']};
 function methodsIn(u){const out=[];METH.forEach(m=>{if(!m.re)return;const ph=u.verlauf.filter(v=>{const t=v.p+' '+v.was+' '+v.orga+' '+v.komm;return m.re.test(t)&&!(m.ex&&m.ex.test(t))}).map(v=>v.p);if(ph.length)out.push([m,ph])});return out}
 let MUSE=null;function methUse(){if(MUSE)return MUSE;MUSE={};UV.forEach(u=>methodsIn(u).forEach(([m])=>{(MUSE[m.id]=MUSE[m.id]||[]).push(u)}));return MUSE}
 function methSug(u,have){const ids=new Set(have.map(([m])=>m.id)),out=[];for(const [id,f,txt] of MSUG){if(out.length>=3)break;const m=MBY[id];if(ids.has(id)||!m.st.includes(u.stufe)||!f(u))continue;out.push([m,txt]);ids.add(id)}return out}
@@ -10564,7 +10752,7 @@ function methSection(u){const have=methodsIn(u),sug=methSug(u,have);
  const sugH=sug.length?`<div class="mlist">${sug.map(([m,t])=>`<button class="mitem" data-nav="m/${m.id}"><b>${esc(m.name)}</b><small>${esc(t)}</small></button>`).join('')}</div>`:'';
  const zs=u.ziele.filter(z=>FBZ[z.b]);
  return `<div class="g2"><div><h4>In dieser Stunde</h4>${haveH}</div><div><h4>Passt zusätzlich</h4>${sugH}</div></div>
- <div class="box" style="margin-top:14px"><h4>Rückmeldung zu den Lernzielen</h4>${zs.map(z=>`<p><b>${esc(z.b)}: ${FBZ[z.b][0]}.</b> ${FBZ[z.b][1]}</p>`).join('')}${(()=>{const pf=peerFor(u);return `<p><b>Rückmeldung unter Lernenden:</b> <button class="lnk" style="margin:0" data-nav="m/${pf.id}">${esc(pf.name)}</button> eignet sich für diese Stufe.</p>`})()}<p style="margin-top:6px"><button class="lnk" data-nav="methoden/loben">Richtig loben: Grundsätze und Beispiele</button></p></div>`}
+ <div class="box" style="margin-top:14px"><h4>Rückmeldung zu den Lernzielen</h4>${zs.map(z=>`<p><b>${esc(z.b)}: ${FBZ[z.b][0]}.</b> ${FBZ[z.b][1]}</p>`).join('')}${(()=>{const pf=peerFor(u);return `<p><b>Rückmeldung unter Lernenden:</b> <button class="lnk" style="margin:0" data-nav="m/${pf.id}">${esc(pf.name)}</button> eignet sich für diese Stufe.</p>`})()}${(()=>{const f=KONF.faelle.find(x=>x.id===konfFor(u));return `<p><b>Wenn es kracht:</b> <button class="lnk" style="margin:0" data-nav="k/${f.id}">${esc(f.t)}</button> oder die <button class="lnk" style="margin:0" data-nav="konflikte-akut">fünf Schritte</button>.</p>`})()}<p style="margin-top:6px"><button class="lnk" data-nav="methoden/loben">Richtig loben: Grundsätze und Beispiele</button></p></div>`}
 
 function mCard(m){const n=(methUse()[m.id]||[]).length;return `<button class="ccard" data-nav="m/${m.id}"><b>${esc(m.name)}</b><span>${esc(m.kurz.split('. ')[0])}.</span><span class="mtags">${m.fn.map(f=>`<span class="mfn" style="--c:${MFN[f][1]}">${MFN[f][0]}</span>`).join('')}</span><span>${m.zeit} · ${m.st.join(', ')}${n?` · in ${n} Unterrichtsversuch${n>1?'en':''}`:''}</span></button>`}
 const mstate={fn:'',st:(typeof FIXED!=='undefined'&&FIXED)?({gs:'GS',gym:'Sek I',sts:'Sek I',os:'Sek II'})[FIXED]||'':''};
@@ -10595,7 +10783,7 @@ function methRoute(id){if(id==='methoden'){methHome();return true}if(id==='metho
 document.addEventListener('click',e=>{const c=e.target.closest('[data-mf],[data-ms]');if(!c)return;if(c.dataset.mf!==undefined)mstate.fn=c.dataset.mf;if(c.dataset.ms!==undefined)mstate.st=c.dataset.ms;const y=scrollY;methHome();window.scrollTo(0,y)});
 
 
-function route(){const id=location.hash.slice(1);navMark(id);if(methRoute(id)){if(id!=='methoden/loben')window.scrollTo(0,0);return}if(lgRoute(id)){window.scrollTo(0,0);return}const u=UV.find(x=>x.id===id);if(u)return detailView(u);if(id==='ergebnisse'){syncDraft();resultsView()}else{homeView()}window.scrollTo(0,0)}
+function route(){const id=location.hash.slice(1);navMark(id);if(methRoute(id)){if(id!=='methoden/loben')window.scrollTo(0,0);return}if(konfRoute(id)){window.scrollTo(0,0);return}if(lgRoute(id)){window.scrollTo(0,0);return}const u=UV.find(x=>x.id===id);if(u)return detailView(u);if(id==='ergebnisse'){syncDraft();resultsView()}else{homeView()}window.scrollTo(0,0)}
 addEventListener('hashchange',route);route();
 function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.append(t);setTimeout(()=>t.remove(),4500)}
 
@@ -10647,7 +10835,7 @@ function buildPdf(u,img){
  H('8 Differenzierung');h3('Leichter');UL(u.diff.leichter);h3('Schwerer');UL(u.diff.schwerer);h3('Inklusive Anpassungen');P(u.diff.inklusion);
  H('9 Querschnittsthemen');Object.entries(u.querText).forEach(([k,v])=>{h3(k);P(v)});
  H('10 Reflexionsfragen');h3('Für die Schülerinnen und Schüler');UL(u.reflexSuS);h3('Für die Lehrkraft');UL(u.reflexLK);
- {const h=methodsIn(u),sg=methSug(u,h);H('11 Methoden und Rückmeldung');if(h.length){h3('In dieser Stunde');UL(h.map(([m,ph])=>`${m.name} (Phase: ${ph.join(', ')})`))}if(sg.length){h3('Passt zusätzlich');UL(sg.map(([m,t])=>`${m.name}: ${t}`))}h3('Rückmeldung zu den Lernzielen');UL(u.ziele.filter(z=>FBZ[z.b]).map(z=>`${z.b}: ${FBZ[z.b][0]}. ${FBZ[z.b][1]}`))}
+ {const h=methodsIn(u),sg=methSug(u,h);H('11 Methoden und Rückmeldung');if(h.length){h3('In dieser Stunde');UL(h.map(([m,ph])=>`${m.name} (Phase: ${ph.join(', ')})`))}if(sg.length){h3('Passt zusätzlich');UL(sg.map(([m,t])=>`${m.name}: ${t}`))}h3('Wenn es kracht');P('Fünf Schritte: ruhig unterbrechen, Gefühle benennen, Sichtweisen klären, Kinder Lösungen finden lassen, Vereinbarung testen. Passende Situation im Tool: '+KONF.faelle.find(x=>x.id===konfFor(u)).t+'.',9,'normal',1.4);h3('Rückmeldung zu den Lernzielen');UL(u.ziele.filter(z=>FBZ[z.b]).map(z=>`${z.b}: ${FBZ[z.b][0]}. ${FBZ[z.b][1]}`))}
  H('Literatur');litOf(u).forEach(k=>P(LIT[k],8,'normal',1.5));
  const n=doc.getNumberOfPages();for(let i=1;i<=n;i++){doc.setPage(i);doc.setFontSize(7.5);doc.setTextColor(110,110,110);doc.text(`Unterrichtsversuch „${u.titel}“, Klasse ${u.klasse}`,M,291);doc.text(`${i} / ${n}`,M+W,291,{align:'right'})}
  return doc;
