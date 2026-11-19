@@ -317,13 +317,14 @@ q.vli{display:block;quotes:none;margin:5px 0 0;padding:4px 8px;background:#eef6e
 .mlist{display:grid;gap:8px}.mitem{display:flex;flex-direction:column;gap:2px;text-align:left;border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 12px}
 .mitem:hover{border-color:var(--acc);background:var(--soft)}.mitem small{color:var(--mut);font-size:.85rem;line-height:1.4}
 .kstep{display:grid;grid-template-columns:44px 1fr;gap:14px;border:1px solid var(--line);background:#fff;border-radius:14px;padding:16px;margin:12px 0}.knum{width:40px;height:40px;border-radius:50%;background:#be123c;color:#fff;display:grid;place-items:center;font:800 1.2rem var(--disp)}.kstep h3{font-size:1.2rem}.ksay{border-left:4px solid #be123c;background:#fff1f2;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;font-size:1.05rem}.ksay p{margin:0 0 .4em}.kwhy{color:var(--mut);font-size:.9rem}.kakut{max-width:760px;margin:0 auto}.kakut .kstep{font-size:1.08rem}.kprog{display:flex;gap:8px;justify-content:center;margin:6px 0 14px}.kdot{width:40px;height:40px;border-radius:50%;border:2px solid #be123c;background:#fff;font-weight:700;color:#be123c}.kdot[aria-current=true]{background:#be123c;color:#fff}.knav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px}.knav .btn{padding:14px 18px}.knav .btn:disabled{opacity:.4}.ksteps li{margin:0 0 .7em}
+.ndk .knum{background:#0f766e}.ndk .ksay{border-color:#0f766e;background:#f0fdfa}.ndk .kdot{border-color:#0f766e;color:#0f766e}.ndk .kdot[aria-current=true]{background:#0f766e;color:#fff}
 .mtab{overflow-x:auto}.mtab table{border-collapse:collapse;width:100%;font-size:.9rem}.mtab th,.mtab td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.mtab th{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="top"><h1>Unterrichts<em>versuche</em> Sport</h1><p><span id="kl">Klasse 1–13</span> nach den Hamburger Bildungsplänen. <span id="etappe"></span></p></header>
-<nav class="mainnav" aria-label="Bereiche"><button data-nav="" aria-current="page">Unterrichtsversuche</button><button data-nav="curriculum">Schulcurriculum</button><button data-nav="methoden">Methoden und Rückmeldung</button><button data-nav="konflikte">Konflikte begleiten</button><button data-nav="gruppen">Meine Lerngruppen</button><button data-nav="reflexion">Reflektiere herausfordernde Unterrichtssituationen</button><button data-nav="fallberatung">Kollegiale Fallberatung</button><button data-nav="hilfe">So geht's</button></nav>
+<nav class="mainnav" aria-label="Bereiche"><button data-nav="" aria-current="page">Unterrichtsversuche</button><button data-nav="curriculum">Schulcurriculum</button><button data-nav="methoden">Methoden und Rückmeldung</button><button data-nav="konflikte">Konflikte begleiten</button><button data-nav="nd">Neurodivergente Kinder</button><button data-nav="gruppen">Meine Lerngruppen</button><button data-nav="reflexion">Reflektiere herausfordernde Unterrichtssituationen</button><button data-nav="fallberatung">Kollegiale Fallberatung</button><button data-nav="hilfe">So geht's</button></nav>
 <main id="app"></main>
 <footer>Grundlage: Bildungspläne Sport der Freien und Hansestadt Hamburg (Grundschule 2022, Sekundarstufe I 2024, Studienstufe 2022). Die Unterrichtsversuche sind Planungsvorschläge und müssen an Lerngruppe, Halle und Sicherheitsvorgaben der eigenen Schule angepasst werden. Mit [prüfen] markierte Angaben bitte am Original kontrollieren.</footer>
 </div>
@@ -9750,7 +9751,7 @@ function lgRoute(id){const p=id.split('/');if(currRoute(id))return true;if(fbRou
  if(p[0]==='s'){const s=DB.sessions.find(x=>x.id===p[1]);s&&gById(s.gid)?lgSession(s):lgHome();return true}
  if(p[0]==='k'){const g=gById(p[1]),k=g&&g.kids.find(x=>x.id===p[2]);k?lgKid(g,k):lgHome();return true}
  return false}
-function navMark(id){const sec=id==='reflexion'?'reflexion':(id==='fallberatung'||/^fb\//.test(id))?'fallberatung':(id==='curriculum'||/^cur\//.test(id))?'curriculum':id==='hilfe'?'hilfe':(id==='methoden'||/^m\//.test(id)||id==='methoden/loben')?'methoden':(id==='konflikte'||id==='konflikte-akut'||/^k\//.test(id))?'konflikte':(id==='gruppen'||/^[gsk]\//.test(id))?'gruppen':'';document.querySelectorAll('.mainnav button').forEach(b=>{b.dataset.nav===sec?(b.setAttribute('aria-current','page'),b.scrollIntoView&&b.parentNode.scrollWidth>b.parentNode.clientWidth&&b.parentNode.scrollTo({left:b.offsetLeft-16,behavior:'smooth'})):b.removeAttribute('aria-current')})}
+function navMark(id){const sec=id==='reflexion'?'reflexion':(id==='fallberatung'||/^fb\//.test(id))?'fallberatung':(id==='curriculum'||/^cur\//.test(id))?'curriculum':id==='hilfe'?'hilfe':(id==='methoden'||/^m\//.test(id)||id==='methoden/loben')?'methoden':(id==='konflikte'||id==='konflikte-akut'||/^k\//.test(id))?'konflikte':(id==='nd'||id==='nd-akut'||/^nd\//.test(id))?'nd':(id==='gruppen'||/^[gsk]\//.test(id))?'gruppen':'';document.querySelectorAll('.mainnav button').forEach(b=>{b.dataset.nav===sec?(b.setAttribute('aria-current','page'),b.scrollIntoView&&b.parentNode.scrollWidth>b.parentNode.clientWidth&&b.parentNode.scrollTo({left:b.offsetLeft-16,behavior:'smooth'})):b.removeAttribute('aria-current')})}
 
 function lgSubmit(f){if(f.id!=='lgnew')return;const name=f.name.value.trim();if(!name)return;const g={id:uid(),name,jahr:f.jahr.value.trim(),kids:parseKids(f.kids.value)};DB.groups.push(g);lgSave();go('g/'+g.id)}
 function lgImport(d){if(!d||!Array.isArray(d.groups)||!Array.isArray(d.sessions)){toast('Das ist keine gültige Sicherung.');return}
@@ -9866,6 +9867,11 @@ function helpData(){const Z=`${symL('++')} bis ${symL('--')}`;return [
   `<b>Im Ernstfall:</b> Unter „Konflikte begleiten“ oben auf „Jetzt im Konflikt“ tippen. Das Tool führt mit großen Knöpfen durch die fünf Schritte und zeigt passende Sätze für die gewählte Stufe.`,
   `<b>Situationen aus der Halle:</b> Neun typische Fälle wie Streit um den Ball, Foul, Regelstreit, Ausgrenzung oder Grenzüberschreitung beim Raufen, jeweils mit Vorgehen, Wiedergutmachung und Vorbeugen.`,
   `<b>In jeder Stunde:</b> Unter „Methoden und Rückmeldung“ steht, welche Konfliktsituation in dieser Stunde wahrscheinlich ist.`],[['konflikte','Konflikte öffnen'],['konflikte-akut','Fünf Schritte']]],
+ ['nd','Neurodivergente Kinder',[
+  `<b>Nach Bedürfnissen:</b> Unter „Neurodivergente Kinder“ wählst du ein Bedürfnis wie Aufmerksamkeit, Reize oder Struktur. Mit den Profil-Knöpfen (ADHS, Autismus, LRS und weitere) hebst du passende Bedürfnisse hervor.`,
+  `<b>Jede Bedürfnisseite</b> zeigt Anzeichen, Hilfen für alle Fächer mit Evidenzlage, Ideen für Deutsch, Mathematik, Sachunterricht und NaWi, Fremdsprachen sowie Musik und Kunst, dazu Sport mit TREE-Anpassungen.`,
+  `<b>Überlastung:</b> „Jetzt überlastet“ führt in fünf Schritten durch Meltdown oder Shutdown.`,
+  `<b>Hamburg:</b> Nachteilsausgleich, Notenschutz bei Lesen, Rechtschreiben und Rechnen sowie Ansprechpartner.`],[['nd','Neurodivergente Kinder öffnen'],['nd-akut','Bei Überlastung']]],
  ['iphone','Auf dem iPhone oder iPad nutzen',[
   `<b>Nicht aus der Dateien-App öffnen.</b> Sie zeigt nur eine Vorschau, in der nichts reagiert.`,
   `<b>Über den Link in Safari öffnen,</b> dann „Teilen“ und „Zum Home-Bildschirm“ antippen. Das Tool startet danach wie eine App.`]]
@@ -10739,6 +10745,292 @@ function konfFor(u){if(u.bf===4)return 'ringen';if(u.bf===5||u.bf===1&&u.kb==='W
 function konfRoute(id){if(id==='konflikte'){konfHome();return true}if(id==='konflikte-akut'){konfAkut();return true}const p=id.split('/');if(p[0]==='k'){const f=KONF.faelle.find(x=>x.id===p[1]);if(f){konfFall(f);return true}}return false}
 document.addEventListener('click',e=>{const a=e.target.closest('[data-kst],[data-kgo]');if(!a||a.disabled)return;if(a.dataset.kst){kstate.st=a.dataset.kst;const y=scrollY;location.hash==='#konflikte-akut'?konfAkut():konfHome();window.scrollTo(0,y)}else{kstate.step=Math.max(0,Math.min(KONF.schritte.length-1,+a.dataset.kgo));konfAkut();window.scrollTo(0,0)}});
 
+/* Neurodivergente Kinder: handlungsorientierte Kategorie nach Bedürfnissen, fächerübergreifend, Sport vertieft */
+Object.assign(LIT,{
+faraone21:`Faraone, S. V., Banaschewski, T., Coghill, D., Zheng, Y., Biederman, J., Bellgrove, M. A., … Wang, Y. (2021). The World Federation of ADHD International Consensus Statement: 208 evidence-based conclusions about the disorder (Internationale Konsenserklärung der World Federation of ADHD: 208 evidenzbasierte Aussagen zur Störung). Neuroscience & Biobehavioral Reviews, 128, 789–818. https://doi.org/10.1016/j.neubiorev.2021.01.022`,
+gaastra16:`Gaastra, G. F., Groen, Y., Tucha, L., & Tucha, O. (2016). The effects of classroom interventions on off-task and disruptive classroom behavior in children with symptoms of attention-deficit/hyperactivity disorder: A meta-analytic review (Wirkung von Interventionen im Klassenzimmer auf abgelenktes und störendes Verhalten bei Kindern mit ADHS-Symptomen: eine Meta-Analyse). PLoS ONE, 11(2), e0148841. https://doi.org/10.1371/journal.pone.0148841`,
+moore18:`Moore, D. A., Russell, A. E., Matthews, J., Ford, T. J., Rogers, M., Ukoumunne, O. C., … Gwernan-Jones, R. (2018). School-based interventions for attention-deficit/hyperactivity disorder: A systematic review with multiple synthesis methods (Schulbasierte Interventionen bei ADHS: systematische Übersicht mit mehreren Synthesemethoden). Review of Education, 6(3), 209–263. https://doi.org/10.1002/rev3.3149`,
+yegencik25:`Yegencik, B., et al. (2025). School-based randomized controlled trials for ADHD and accompanying impairments: A systematic review and meta-analysis (Schulbasierte randomisierte Studien zu ADHS und begleitenden Beeinträchtigungen: systematische Übersicht und Meta-Analyse). Frontiers in Psychology. [prüfen: Band, Seiten, DOI]`,
+harrison22:`Harrison, J. R., et al. (2022). Comparison of four classroom-based strategies for middle school students with ADHD: A pilot randomized controlled trial (Vergleich von vier Strategien im Klassenzimmer für Schülerinnen und Schüler der Mittelstufe mit ADHS: randomisierte Pilotstudie). Journal of Attention Disorders. [prüfen: Band, Seiten, DOI]`,
+huang23:`Huang, H., et al. (2023). Chronic exercise for core symptoms and executive functions in ADHD: A meta-analysis (Regelmäßige Bewegung für Kernsymptome und exekutive Funktionen bei ADHS: eine Meta-Analyse). Pediatrics. https://doi.org/10.1542/peds.2022-057745 [prüfen: Autorenliste]`,
+watson17:`Watson, A., Timperio, A., Brown, H., Best, K., & Hesketh, K. D. (2017). Effect of classroom-based physical activity interventions on academic and physical activity outcomes: A systematic review and meta-analysis (Wirkung von Bewegung im Klassenzimmer auf schulische Leistungen und körperliche Aktivität: systematische Übersicht und Meta-Analyse). International Journal of Behavioral Nutrition and Physical Activity, 14, 114. https://doi.org/10.1186/s12966-017-0569-9`,
+kingsears23:`King-Sears, M. E., Stefanidis, A., Evmenova, A. S., Rao, K., Mergen, R. L., Owen, L. S., & Strimel, M. M. (2023). Achievement of learners receiving UDL instruction: A meta-analysis (Lernleistung bei Unterricht nach Universal Design for Learning: eine Meta-Analyse). Teaching and Teacher Education, 122, 103956. https://doi.org/10.1016/j.tate.2022.103956 [prüfen: Seitenzahl]`,
+hume21:`Hume, K., Steinbrenner, J. R., Odom, S. L., Morin, K. L., Nowell, S. W., Tomaszewski, B., … Savage, M. N. (2021). Evidence-based practices for children, youth, and young adults with autism: Third generation review (Evidenzbasierte Praktiken für Kinder, Jugendliche und junge Erwachsene mit Autismus: Übersicht der dritten Generation). Journal of Autism and Developmental Disorders, 51, 4013–4032. https://doi.org/10.1007/s10803-020-04844-2`,
+bbz21:`Sandersfeld, J., & Siebert, B. (2021). Erste Schritte in der Unterstützung von Kindern mit Autismus in Schule und Unterricht (Kinder und Jugendliche mit Autismus in Schule und Unterricht, Ausgabe 1). Bildungs- und Beratungszentrum Pädagogik bei Krankheit/Autismus Hamburg. https://bbz.hamburg.de/autismusberatung`,
+bbzreihe:`Bildungs- und Beratungszentrum Pädagogik bei Krankheit/Autismus. (2021–2026). Kinder und Jugendliche mit Autismus in Schule und Unterricht: Arbeitshilfen (Ausgaben 1–10, u. a. Spezialinteressen, Offener Unterricht, Gruppenarbeiten, Klasseninformationsgespräche, Barrierefreie Klassenarbeiten, Mitarbeit im Unterricht). BBZ Hamburg. https://bbz.hamburg.de/autismusberatung`,
+wue20:`Carl, B., Sander, A., & Taurines, R. (Hrsg.). (2020). Sport mit Autismus [Handreichung]. Professional School of Education, Julius-Maximilians-Universität Würzburg.`,
+neumann:`Neumann, P. (o. J.). Fälle von Inklusion im Sportunterricht [Handreichung]. Unfallkasse Baden-Württemberg in Kooperation mit der Pädagogischen Hochschule Heidelberg. [prüfen: Erscheinungsjahr]`,
+halsall21:`Halsall, J., Clarke, C., & Crane, L. (2021). "Camouflaging" by adolescent autistic girls who attend both mainstream and specialist resource classes: Perspectives of girls, their mothers and their educators („Camouflaging“ autistischer Mädchen in Regel- und Förderklassen: Sicht der Mädchen, ihrer Mütter und ihrer Lehrkräfte). Autism, 25(7), 2074–2086. https://doi.org/10.1177/13623613211012819`,
+galuschka14:`Galuschka, K., Ise, E., Krick, K., & Schulte-Körne, G. (2014). Effectiveness of treatment approaches for children and adolescents with reading disabilities: A meta-analysis of randomized controlled trials (Wirksamkeit von Förderansätzen bei Lese-Rechtschreibstörung: Meta-Analyse randomisierter Studien). PLoS ONE, 9(2), e89900. https://doi.org/10.1371/journal.pone.0089900`,
+galuschka20:`Galuschka, K., Görgen, R., Kalmar, J., Haberstroh, S., Schmalz, X., & Schulte-Körne, G. (2020). Effectiveness of spelling interventions for learners with dyslexia: A meta-analysis and systematic review (Wirksamkeit von Rechtschreibförderung bei Legasthenie: Meta-Analyse und systematische Übersicht). Educational Psychologist, 55(1), 1–20. https://doi.org/10.1080/00461520.2019.1659794`,
+benavides20:`Benavides-Varela, S., Zandonella Callegher, C., Fagiolini, B., Leo, I., Altoè, G., & Lucangeli, D. (2020). Effectiveness of digital-based interventions for children with mathematical learning difficulties: A meta-analysis (Wirksamkeit digitaler Förderung bei Rechenschwierigkeiten: eine Meta-Analyse). Computers & Education, 157, 103953. https://doi.org/10.1016/j.compedu.2020.103953`,
+bsb25:`Behörde für Schule und Berufsbildung Hamburg. (2025). Förderung und Unterstützung von Schülerinnen und Schülern mit Schwierigkeiten oder besonderen Schwierigkeiten im Lesen, Rechtschreiben oder Rechnen [Handreichung, Stand 01/2025]. BSB.`,
+blank19:`Blank, R., Barnett, A. L., Cairney, J., Green, D., Kirby, A., Polatajko, H., Rosenblum, S., Smits-Engelsman, B., Sugden, D., Wilson, P., & Vinçon, S. (2019). International clinical practice recommendations on the definition, diagnosis, assessment, intervention, and psychosocial aspects of developmental coordination disorder (Internationale Empfehlungen zu Definition, Diagnostik, Intervention und psychosozialen Aspekten der umschriebenen Entwicklungsstörung motorischer Funktionen). Developmental Medicine & Child Neurology, 61(3), 242–285. https://doi.org/10.1111/dmcn.14132`,
+li24dcd:`Li, H., Ke, X., Huang, D., Xu, X., Tian, H., Gao, J., Jiang, C., & Song, W. (2024). The prevalence of developmental coordination disorder in children: A systematic review and meta-analysis (Häufigkeit der umschriebenen Entwicklungsstörung motorischer Funktionen bei Kindern: systematische Übersicht und Meta-Analyse). Frontiers in Pediatrics, 12, 1387406. https://doi.org/10.3389/fped.2024.1387406`,
+andren22:`Andrén, P., Jakubovski, E., Murphy, T. L., Woitecki, K., Tarnok, Z., Zimmerman-Brenner, S., … Verdellen, C. (2022). European clinical guidelines for Tourette syndrome and other tic disorders, version 2.0. Part II: Psychological interventions (Europäische Leitlinien zu Tourette-Syndrom und anderen Ticstörungen, Version 2.0, Teil II: Psychologische Interventionen). European Child & Adolescent Psychiatry, 31(3), 403–423. https://doi.org/10.1007/s00787-021-01845-z`,
+tgd05:`Tourette-Gesellschaft Deutschland e. V. (2005). Tourette-Syndrom: Ein Leitfaden für Lehrer [Broschüre, Stand Mai 2005]. TGD.`,
+gierczyk21:`Gierczyk, M., & Hornby, G. (2021). Twice-exceptional students: Review of implications for special and inclusive education (Doppelt außergewöhnliche Lernende: Folgerungen für sonderpädagogische und inklusive Bildung). Education Sciences, 11(2), 85. https://doi.org/10.3390/educsci11020085`,
+baum14:`Baum, S. M., Schader, R. M., & Hébert, T. P. (2014). Through a different lens: Reflecting on a strengths-based, talent-focused approach for twice-exceptional learners (Mit anderem Blick: stärken- und talentorientierte Förderung doppelt außergewöhnlicher Lernender). Gifted Child Quarterly, 58(4), 311–327. https://doi.org/10.1177/0016986214547632 [prüfen: DOI]`,
+mcdonnell10:`McDonnell, A. (2010). Managing aggressive behaviour in care settings: Understanding and applying low arousal approaches (Umgang mit aggressivem Verhalten: Low-Arousal-Ansätze verstehen und anwenden). Wiley-Blackwell.`,
+tiemann15:`Tiemann, H. (2015). Inklusiven Sportunterricht gestalten: Didaktisch-methodische Überlegungen. In M. Giese & L. Weigelt (Hrsg.), Inklusiver Sportunterricht in Theorie und Praxis (S. 53–66). Meyer & Meyer.`,
+giese17:`Giese, M., & Weigelt, L. (Hrsg.). (2017). Inklusiver Sport- und Bewegungsunterricht: Theorie und Praxis aus Sicht der Förderschwerpunkte. Meyer & Meyer.`,
+hibb22:`Hamburger Institut für Berufliche Bildung. (2022). Nachteilsausgleich: Handreichung für die berufsbildenden Schulen [Stand 06/2022]. HIBB. [prüfen: genauer Titel]`,
+ehlers23:`Ehlers, M. (2023, 31. August). Nachteilsausgleich: Grundsätzliches und Besonderes [Vortragsfolien]. Universität Hamburg. [prüfen: Vorname, Veranstaltung]`,
+zadhs:`Zentrales ADHS-Netz. (o. J.). ADHS in Schule und Unterricht. Abgerufen am 10. November 2026, von https://www.zentrales-adhs-netz.de/fuer-paedagogen/adhs-in-schule-und-unterricht/`
+});
+
+const ND={
+grund:`Neurodivergenz meint, dass Gehirne Informationen unterschiedlich verarbeiten: Aufmerksamkeit, Reize, Sprache, Zahlen, Bewegung. Diese Seite ordnet Hilfen nach dem, was ein Kind gerade braucht. Du kannst also handeln, bevor oder ohne dass eine Diagnose vorliegt, und dieselbe Hilfe nützt oft mehreren Kindern.`,
+haltung:[
+ [`Bedürfnis vor Etikett`,`Beobachte, was ein Kind in einer Situation braucht. Eine Diagnose stellen Fachleute, nicht die Schule. Die Hilfen hier setzen keine Diagnose voraus.`],
+ [`Barrieren abbauen`,`Zuerst den Unterricht verändern, dann das Kind fördern. Unterricht nach Universal Design for Learning (mehrere Zugänge, Ausdrucksformen und Motivationswege) zeigt in einer Meta-Analyse einen mittleren Effekt auf die Lernleistung (g = 0.43; King-Sears et al., 2023).`],
+ [`Gleiche Ziele, andere Wege`,`Nachteilsausgleich verändert den Weg zum Ziel, nicht das Ziel. Was dem Kind den Zugang öffnet, ist kein Vorteil gegenüber anderen.`],
+ [`Stärken als Hebel`,`Spezialinteressen, Energie, Detailblick oder bildhaftes Denken sind Einstiege ins Lernen. Stärkenorientierte Förderung ist besonders bei doppelt außergewöhnlichen Kindern gut beschrieben (Baum et al., 2014).`],
+ [`Mit dem Kind planen`,`Frag das Kind, was hilft und was stört. Ab der Sek I sind Jugendliche Fachleute für sich selbst. Vereinbarungen gemeinsam mit Eltern festhalten.`],
+ [`Was einem hilft, hilft vielen`,`Klare Abläufe, Bewegungspausen und visuelle Hilfen nutzen der ganzen Klasse. Kurze Bewegungspausen verbessern das aufgabenbezogene Verhalten aller Kinder (SMD = 0.60; Watson et al., 2017).`]],
+sprache:`Viele Betroffene bevorzugen „autistisches Kind“ statt „Kind mit Autismus“, andere sehen es umgekehrt. Frag nach, und sprich vor der Klasse nur über eine Diagnose, wenn Kind und Eltern das wollen. Das BBZ Hamburg hat eine Arbeitshilfe zu Klasseninformationsgesprächen.`,
+ev:{a:[`Metaanalysen`,`#047857`],b:[`Einzelstudien`,`#b45309`],c:[`Fachempfehlung`,`#475569`]},
+profile:[
+ {id:`adhs`,n:`ADHS`,anteil:`etwa 5–7 % der Kinder, Mädchen werden seltener erkannt`,kurz:`Schwierigkeiten mit Aufmerksamkeit, Impulssteuerung und oft Unruhe. Bei Mädchen häufiger unauffällig verträumt statt laut.`,b:[`aufm`,`reiz`,`struktur`,`ueberlast`],lit:[`faraone21`,`zadhs`]},
+ {id:`ass`,n:`Autismus`,anteil:`etwa 1 % der Kinder`,kurz:`Andere Wahrnehmung und Kommunikation, Bedürfnis nach Vorhersehbarkeit, oft starke Spezialinteressen und Reizempfindlichkeit. Mädchen maskieren häufig und erschöpfen dabei.`,b:[`reiz`,`struktur`,`sozial`,`ueberlast`,`motorik`],lit:[`hume21`,`bbz21`,`halsall21`]},
+ {id:`lrs`,n:`LRS`,anteil:`Hamburg: Förderung ab Prozentrang ≤10 (Lesen) bzw. ≤15 (Rechtschreiben)`,kurz:`Lang anhaltende Schwierigkeiten beim Lesen und Rechtschreiben trotz Unterricht. Die Intelligenz ist davon unabhängig.`,b:[`lese`],lit:[`galuschka14`,`bsb25`]},
+ {id:`dysk`,n:`Dyskalkulie`,anteil:`Hamburg: Förderung ab Prozentrang ≤10 (Rechnen)`,kurz:`Grundlegende Schwierigkeiten mit Zahlverständnis und Rechnen, oft verfestigtes zählendes Rechnen.`,b:[`lese`],lit:[`benavides20`,`bsb25`]},
+ {id:`dcd`,n:`Koordinationsstörung (DCD)`,anteil:`etwa 5 % der Kinder, Jungen häufiger`,kurz:`Bewegungen zu lernen und abzustimmen kostet viel Kraft: Schreiben, Anziehen, Ballfangen. Folgen sind oft Rückzug aus Sport und Spiel.`,b:[`motorik`,`struktur`],lit:[`blank19`,`li24dcd`]},
+ {id:`tic`,n:`Tics und Tourette`,anteil:`Tourette etwa 1 von 100 bis 300 [prüfen]; vorübergehende Tics häufiger`,kurz:`Plötzliche Bewegungen oder Laute, die sich nur kurz unterdrücken lassen. Stress und Unterdrücken verstärken sie oft.`,b:[`tics`,`ueberlast`],lit:[`andren22`,`tgd05`]},
+ {id:`hb`,n:`Hochbegabung und 2e`,anteil:`Doppelt außergewöhnlich: hohe Begabung plus ADHS, Autismus oder LRS`,kurz:`Stärken und Schwierigkeiten verdecken sich gegenseitig. Das Kind wirkt durchschnittlich oder unmotiviert.`,b:[`begabung`,`aufm`],lit:[`gierczyk21`,`baum14`]}],
+faecher:[[`de`,`Deutsch`],[`ma`,`Mathematik`],[`nw`,`Sachunterricht und NaWi`],[`fs`,`Fremdsprachen`],[`mk`,`Musik und Kunst`]],
+bed:[
+{id:`aufm`,t:`Aufmerksamkeit und Selbststeuerung`,c:`#7c3aed`,kurz:`Bei der Sache bleiben, anfangen, durchhalten, Material und Zeit organisieren.`,
+ zeichen:[`fängt Aufgaben nicht an oder bricht ab`,`steht auf, zappelt, ruft rein`,`verliert Material, vergisst Aufträge`,`wirkt verträumt und „nicht da“ (häufig bei Mädchen)`,`arbeitet bei Interesse sehr lange und vertieft`],
+ quer:[
+  [`Rückmeldung und Verstärkung im Alltag: klare Erwartungen, häufiges Lob für konkretes Verhalten, ruhige Konsequenzen. Klassenbasierte Verhaltensmaßnahmen und Selbstmanagement wirken am stärksten auf störendes und abgelenktes Verhalten (Gaastra et al., 2016).`,`a`],
+  [`Tagesbericht (Daily Report Card): zwei bis drei Ziele pro Tag, kurze Bewertung nach jeder Stunde, Austausch mit den Eltern. In Übersichten einer der am besten belegten Bausteine (Moore et al., 2018).`,`a`],
+  [`Selbstbeobachtung: das Kind prüft per Signal oder Karte selbst „Bin ich bei der Aufgabe?“ und hakt ab.`,`a`],
+  [`Organisation lehren statt abnehmen: Checklisten, Hausaufgabenheft, Materialfach. Fertigkeiten zu üben wirkt besser als Anforderungen nur zu senken (Harrison et al., 2022).`,`b`],
+  [`Aufgaben in kurze Etappen teilen, Zeit sichtbar machen (Sanduhr, Timer), Start mit leichtem Schritt.`,`c`],
+  [`Bewegung erlauben: Stehplatz, Botengänge, Knautschball, Bewegungspausen für alle.`,`a`]],
+ faecher:{
+  de:[`Schreibaufträge in Teilschritte gliedern (Ideen sammeln, Satzanfänge, Schreiben, Prüfen) mit Häkchen pro Schritt.`,`Lesemenge sichtbar portionieren, Lesepausen fest einplanen.`,`Wahl zwischen mündlicher und schriftlicher Form, wo das Ziel es zulässt.`],
+  ma:[`Weniger Aufgaben pro Blatt, dafür in mehreren Etappen. Zwischenkontrolle nach drei Aufgaben.`,`Rechenwege mit Farbe strukturieren, Kopfrechenphasen kurz und bewegt halten (Rechenstaffel).`],
+  nw:[`Versuche mit Rollenkarten (Material, Protokoll, Zeit) und Ablaufplan an der Tafel.`,`Klare Sicherheitsregeln vor dem Austeilen, Material erst auf Signal.`],
+  fs:[`Vokabeln in kleinen Paketen mit Bewegung (Karten-Lauf, Gesten) üben.`,`Kurze Sprechphasen statt langer Stillarbeit.`],
+  mk:[`Arbeitsauftrag in drei Bildern an der Tafel, fester Platz für Material.`,`Im Musikunterricht Instrumente erst auf Signal, klare Pausenzeichen.`]},
+ sport:[`Erklären mit dem Ball in der Hand und kurz: Zeigen, ein Satz, los. Längere Erklärungen im Sitzkreis vermeiden.`,`Wartezeiten kürzen: mehrere Stationen, kleine Gruppen, kein Anstehen in langen Reihen.`,`Feste Rolle als Starthilfe: Materialchef, Zeitnehmer, Vorturner.`,`Kognitiv fordernde Bewegung (Koordination mit Entscheidungsaufgaben, Spiele mit Regelwechsel) stärkt exekutive Funktionen. Regelmäßige Bewegung verbessert bei ADHS exekutive Funktionen deutlich (g ≈ 0.68) und Kernsymptome mittel (g ≈ 0.39; Huang et al., 2023).`,`Sport ist kein Belohnungsfach: Den Sportunterricht nicht als Strafe streichen, Kinder mit ADHS brauchen ihn besonders.`,`Impulsives Reinrufen oder Losrennen ruhig umlenken: Startsignal üben lassen („Wer wartet, darf zuerst“).`],
+ tree:{T:`kurze Erklärung mit Vormachen, Aufgaben in Etappen, viel Rückmeldung`,R:`feste Startsignale, klare Stopp-Regel, Rolle mit Verantwortung`,E:`kleine Felder, wenig Material sichtbar, fester Treffpunkt`,Q:`Timer, Markierungen, Hütchen als Zielpunkte`},
+ fallen:[[`Pause oder Sport als Strafe streichen`,`Bewegung als Hilfe einplanen, Konsequenz anders wählen`],[`„Konzentrier dich!“`,`konkret sagen, was jetzt zu tun ist: „Lies die erste Zeile.“`],[`nur Fehlverhalten bemerken`,`gelungenes Verhalten sofort und konkret benennen`]],
+ lit:[`gaastra16`,`moore18`,`harrison22`,`huang23`,`watson17`,`faraone21`]},
+{id:`reiz`,t:`Reize und Regulation`,c:`#0f766e`,kurz:`Mit Lärm, Licht, Berührung, Gerüchen und Gedränge zurechtkommen und sich selbst wieder beruhigen.`,
+ zeichen:[`hält sich Ohren zu, meidet laute Räume`,`reagiert heftig auf Berührung oder Gedränge`,`sucht starke Reize: drückt, schaukelt, kaut`,`zieht sich zurück oder wird plötzlich laut`,`schafft die Stunde, bricht zu Hause zusammen`],
+ quer:[
+  [`Reizarmen Platz anbieten: Rand oder Wand, wenig Durchgangsverkehr, gemeinsam mit dem Kind auswählen und beibehalten (Sandersfeld & Siebert, 2021).`,`c`],
+  [`Hilfsmittel erlauben: Gehörschutz, Kopfhörer, Sichtschutz, Sitzkissen, Kappe gegen grelles Licht.`,`c`],
+  [`Vereinbarte Rückzugsmöglichkeit mit wortlosem Signal (Auszeitkarte). Ort, Dauer, Tätigkeit und Rückkehr vorher festlegen, das Kind darf dort nicht weggeschickt werden (Sandersfeld & Siebert, 2021).`,`c`],
+  [`Geplante Regulationspausen statt Warten auf die Krise. Kurze Bewegungspausen helfen auch beim Wechsel zurück zur Aufgabe (Watson et al., 2017).`,`a`],
+  [`Eigene Lautstärke und Sprechmenge prüfen. Viele Probleme entstehen ungewollt durch die Umgebung (Low-Arousal-Ansatz nach McDonnell, 2010).`,`c`]],
+ faecher:{
+  de:[`Stille Lesezeit mit Kopfhörer erlauben.`,`Vorlesen vor der Klasse nur freiwillig oder in kleiner Gruppe.`],
+  ma:[`Gruppenarbeit mit Rückzugsoption: Einzelarbeit am Rand mit gleichem Auftrag.`],
+  nw:[`Laute oder riechende Versuche ankündigen, Gehörschutz oder Abstand anbieten, Alternative: Protokollieren aus der Distanz.`,`Arbeit mit Materialien wie Kleber, Erde oder Tieren nicht erzwingen, Handschuhe anbieten.`],
+  fs:[`Sprechübungen in Partnerarbeit statt im Klassenchor.`],
+  mk:[`Musik: Gehörschutz beim Musizieren, leise Instrumente zur Wahl, Rolle am Mischpult oder als Dirigent.`,`Kunst: Materialwahl lassen (Pinsel statt Fingerfarbe), Arbeitsplatz am Rand.`]},
+ sport:[`Die Halle ist für viele der lauteste Raum der Schule. Pfeife sparsam einsetzen oder durch Handzeichen und Musikstopp ersetzen.`,`Umkleide entschärfen: früher oder später umziehen, Lehrerumkleide oder anderer Raum (Carl et al., 2020).`,`Ruhe-Ecke in der Halle kennzeichnen, zum Beispiel eine Matte mit Kegel, in Sichtweite.`,`Körperkontakt ankündigen und wählen lassen: Partner selbst wählen, Kontakt über Material (Stab, Seil, Ball).`,`Schwimmen: Lautstärke in der Halle, Geruch und nasse Kleidung vorher besprechen, eigene Ecke im Becken.`,`Reizsucher bekommen gezielt starke Reize: Ziehen, Schieben, Hängen, Tragen, Rollen auf der Matte.`],
+ tree:{T:`ruhig sprechen, Handzeichen statt Pfeife, Kontakt ankündigen`,R:`Rückzug jederzeit erlaubt, Kontaktregeln vorher klären`,E:`Ruhe-Ecke, Trennvorhang nutzen, Musik leiser oder aus`,Q:`Gehörschutz, weiche Bälle, Material mit gewohnter Oberfläche`},
+ fallen:[[`„Stell dich nicht so an, ist doch nicht laut“`,`Wahrnehmung ernst nehmen, Hilfsmittel anbieten`],[`Rückzug als Strafe deuten`,`Rückzug als Selbsthilfe anerkennen`],[`ohne Ankündigung anfassen`,`erst fragen oder Kontakt über Material`]],
+ lit:[`bbz21`,`wue20`,`mcdonnell10`,`watson17`]},
+{id:`struktur`,t:`Struktur, Vorhersehbarkeit und Übergänge`,c:`#1d4ed8`,kurz:`Wissen, was kommt, wie lange es dauert und was danach passiert. Wechsel und Überraschungen bewältigen.`,
+ zeichen:[`fragt immer wieder nach dem Ablauf`,`reagiert stark auf Vertretung, Raumwechsel, Ausfall`,`kommt schwer von einer Tätigkeit los`,`hält sich streng an Regeln und erwartet das auch von anderen`],
+ quer:[
+  [`Visueller Stundenplan: drei bis vier Phasen, immer an derselben Stelle, zu Beginn kurz erklären. Nur ankündigen, was sich halten lässt; ein „Joker“ markiert Änderungen (Sandersfeld & Siebert, 2021).`,`a`],
+  [`Visuelle Hilfen gelten bei Autismus als evidenzbasierte Praxis (Hume et al., 2021): Piktogramme, Ablaufkarten, Zeitleisten.`,`a`],
+  [`Übergänge ankündigen: „Noch zwei Minuten, dann räumen wir auf“, Timer sichtbar.`,`c`],
+  [`Änderungen früh mitteilen: Ausflug, Vertretung, Raumwechsel. Für Vertretungsstunden eine Aufgabenbox vereinbaren.`,`c`],
+  [`Soziale Geschichten (Social Stories): kurze Texte mit Bild, die eine neue Situation und sinnvolles Verhalten erklären.`,`a`]],
+ faecher:{
+  de:[`Gleiche Struktur für Schreibaufgaben (Planungsbogen), Checkliste am Rand.`,`Offene Aufgaben mit einem Beispiel und klarer Mindestanforderung versehen.`],
+  ma:[`Arbeitsblätter immer gleich aufbauen: Beispiel oben, dann Aufgaben, Platz für Rechenweg.`],
+  nw:[`Versuchsablauf als Bildfolge, Material in nummerierten Kisten.`,`Ausflüge mit Fotos vom Ort vorbereiten.`],
+  fs:[`Feste Stundenrituale (Begrüßung, Datum, Wortschatz) als Anker.`],
+  mk:[`Werkstücke in Etappen mit Bildvorlage, sichtbares Ende („fertig ist es, wenn …“).`]},
+ sport:[`Stundenablauf an der Hallenwand: Aufwärmen, Hauptteil, Spiel, Abschluss mit Piktogrammen (Carl et al., 2020).`,`Fester Treffpunkt in der Halle, zum Beispiel der Mittelkreis.`,`Stationen mit Bildkarte und Nummer, Wechselsignal vorher üben, Laufrichtung mit Pfeilen.`,`Neue Spiele zuerst zuschauen lassen, Regeln als Variantenplan sichtbar machen.`,`Teams vorher und nicht durch öffentliches Wählen bilden.`,`Ende eines Spiels ankündigen: „Noch drei Punkte“ statt plötzlichem Abpfiff.`],
+ tree:{T:`gleicher Stundenaufbau, Vormachen, Regeln visuell`,R:`wenige, stabile Regeln, Änderungen ankündigen`,E:`Treffpunkt, markierte Stationen, Laufwege mit Pfeilen`,Q:`Bildkarten, Timer, Ablaufplan auf Tafel oder Tablet`},
+ fallen:[[`Überraschung als Belohnung („Heute mal was Neues!“)`,`Neues ankündigen und erklären`],[`Regeln ständig ändern`,`Variante sichtbar ankündigen`],[`„Mach einfach mit“`,`erst zuschauen lassen, dann einsteigen`]],
+ lit:[`bbz21`,`hume21`,`wue20`,`neumann`]},
+{id:`sozial`,t:`Kommunikation und Miteinander`,c:`#c2410c`,kurz:`Sprache wörtlich verstehen, Gruppenarbeit, Spielregeln und ungeschriebene Regeln, Freundschaften.`,
+ zeichen:[`versteht Ironie oder Redewendungen wörtlich`,`meidet Gruppenarbeit oder bestimmt alles`,`reagiert auf Fehler anderer streng`,`steht in Pausen allein`,`spricht ausführlich über ein Thema`],
+ quer:[
+  [`Klar sprechen: konkrete Aufforderungen statt Andeutungen („Nenne zwei Gründe“), keine Ironie, Kind namentlich ansprechen (Sandersfeld & Siebert, 2021).`,`c`],
+  [`Gruppenarbeit am Entwicklungsstand ansetzen: feste Partner, klare Rollen, Einzelarbeit mit gleichem Ziel als Option (BBZ, Arbeitshilfe Gruppenarbeiten).`,`c`],
+  [`Soziale Regeln ausdrücklich erklären und üben, statt sie vorauszusetzen.`,`a`],
+  [`Mitarbeit nicht nur mündlich bewerten: schriftliche Beiträge, Vorbereitung mit Karte (BBZ, Arbeitshilfe Mitarbeit).`,`c`],
+  [`Soziale Kompetenztrainings allein wirken bei ADHS kaum (Effekt nahe null). Sinnvoller sind Hilfen in der echten Situation [prüfen: Bussanich et al., 2025].`,`a`]],
+ faecher:{
+  de:[`Bildliche Sprache ausdrücklich erklären, Figurenperspektiven mit Hilfsfragen.`,`Diskussionen mit Rederegeln und Sprechkarten.`],
+  ma:[`Textaufgaben mit eindeutiger Frage, Kontext darf zum Spezialinteresse passen.`],
+  nw:[`Spezialinteressen als Experten-Rolle nutzen (Kurzvortrag, Steckbrief).`],
+  fs:[`Rollenspiele mit Drehbuch statt Improvisation.`],
+  mk:[`Ensemble mit fester Stimme, Kunst als Einzelbeitrag zum Gemeinschaftsbild.`]},
+ sport:[`Rollen klar zuweisen und einen festen Partner ermöglichen (Carl et al., 2020).`,`Spiele mit klaren Aufgaben statt viel Absprache: Zonen, feste Positionen, Spezialaufgaben (Tiemann, 2015).`,`Fair Play ausdrücklich erklären: Was ist ein Foul, wann ist ein Lob ok, wie verliert man.`,`Schiedsrichter- oder Statistikrolle als echte Teilhabe, nicht als Abschiebung.`,`Wettkampf dosieren: Gewinnen und Verlieren vorher besprechen, kooperative Formen anbieten.`],
+ tree:{T:`direkte Ansprache, kurze Sätze, Vormachen`,R:`feste Rollen, Spezialaufgaben, klare Fairplay-Regeln`,E:`kleine Teams, Zonen mit eigenem Raum`,Q:`Leibchen mit Rollensymbol, Regelkarte`},
+ fallen:[[`„Ihr wisst doch, wie man fair spielt“`,`Regeln ausdrücklich nennen und üben`],[`öffentliches Teamwählen`,`Teams vorher festlegen`],[`Blickkontakt einfordern`,`Zuhören an anderen Zeichen erkennen`]],
+ lit:[`bbz21`,`bbzreihe`,`wue20`,`tiemann15`]},
+{id:`lese`,t:`Lesen, Schreiben und Rechnen`,c:`#0369a1`,kurz:`Schriftsprache und Zahlen verstehen und nutzen, ohne dass die Schwäche alle anderen Fächer blockiert.`,
+ zeichen:[`liest langsam, rät Wörter`,`viele Rechtschreibfehler trotz Übung`,`rechnet mit Fingern, auch bei kleinen Zahlen`,`verwechselt Stellenwerte`,`meidet Vorlesen und Tafelaufgaben`],
+ quer:[
+  [`Systematische Buchstaben-Laut-Förderung (Phonics) ist der einzige Ansatz mit gesichertem Effekt beim Lesen (Galuschka et al., 2014). Farbfolien und reines Hörtraining zeigen keine Wirkung.`,`a`],
+  [`Rechtschreibung: Laut-, Regel- und Wortbausteintraining wirken mittel bis stark (Galuschka et al., 2020).`,`a`],
+  [`Rechnen: weg vom zählenden Rechnen, hin zu Mengen, Zerlegungen und Stellenwerten mit Material. Digitale Übungsprogramme wirken mittel (ES = 0.55; Benavides-Varela et al., 2020).`,`a`],
+  [`Hamburg: Förderung sofort, Nachteilsausgleich nach sechs Monaten, Notenschutz auf Antrag nach zwölf Monaten Förderung und sechs Monaten Nachteilsausgleich (BSB, 2025). Details unter „Nachteilsausgleich in Hamburg“.`,`c`],
+  [`In allen Fächern: Lesen nicht zur Hürde für Fachinhalte machen. Aufgaben vorlesen, Hörtexte, größere Schrift, klare Gliederung.`,`c`]],
+ faecher:{
+  de:[`Täglich kurze Lautleseübung zu zweit (Lesetandem).`,`Rechtschreibung in Wortfamilien und Regeln üben, nicht nur Diktate.`,`Bewertung: Inhalt und Ausdruck getrennt von Rechtschreibung ausweisen.`],
+  ma:[`Rechenrahmen, Hunderterfeld und Stellenwerttafel bis in die Sek I erlauben.`,`Bis Klasse 4 sind in Hamburg Hilfsmittel wie 1×1-Plan als Nachteilsausgleich möglich, nicht wenn Kopfrechnen selbst geprüft wird (BSB, 2025).`],
+  nw:[`Fachbegriffe mit Bild und Silbentrennung, Lückentext statt freiem Protokoll.`],
+  fs:[`Aussprache und Schreibung getrennt bewerten. BSB-Beispiel Vokabeltest: Bedeutung 1,5 Punkte, Rechtschreibung 0,5 Punkte.`,`Hörverstehen und Sprechen stärker gewichten.`],
+  mk:[`Liedtexte vorab als Hördatei, Notenlesen mit Farben oder Bildern.`]},
+ sport:[`Sport ist für viele Kinder mit LRS oder Dyskalkulie ein Ort des Erfolgs. Schriftliche Aufgaben im Sport (Stationskarten, Theorie) mit Bild und wenig Text.`,`Punkte und Zeiten zählen lassen nur mit Hilfe (Zählstrichliste, Tabelle), sonst wird Sport zur Rechenprüfung.`,`Bewegtes Lernen für Mathe nutzen: Zahlenstaffel, Hüpfen am Zahlenstrahl, Mengen mit Bällen legen.`,`Sport-Theorie in der Oberstufe: Nachteilsausgleich gilt auch hier, zum Beispiel Zeitzuschlag.`],
+ tree:{T:`Vormachen statt Lesen, mündliche Erklärung`,R:`Punktezählen durch Partner oder Tafel`,E:`Bildkarten an Stationen`,Q:`Zählhilfen, Zahlenkarten, Tablet mit Vorlesefunktion`},
+ fallen:[[`laut vorlesen lassen vor allen`,`freiwillig oder im Tandem`],[`„Üb halt mehr“`,`gezielte Förderung nach belegten Methoden`],[`Farbfolien als Lösung`,`Buchstaben-Laut-Förderung`]],
+ lit:[`galuschka14`,`galuschka20`,`benavides20`,`bsb25`]},
+{id:`motorik`,t:`Bewegungskoordination`,c:`#b91c1c`,kurz:`Bewegungen planen, abstimmen und automatisieren: von der Handschrift bis zum Ballfangen.`,
+ zeichen:[`stolpert häufig, stößt an`,`Schrift mühsam und unleserlich`,`braucht lange beim Umziehen`,`meidet Ballspiele, wird zuletzt gewählt`,`ist nach Bewegung schneller erschöpft`],
+ quer:[
+  [`Aufgabenorientierte Ansätze wirken: konkrete Alltagsfertigkeit üben (Neuromotorisches Aufgabentraining, CO-OP), nicht allgemeines Funktionstraining (Blank et al., 2019).`,`a`],
+  [`Motorische Last senken, damit Lernen möglich bleibt: Arbeitsblätter statt Abschreiben, Laptop oder Diktierfunktion, Griffverdickung, Lineal mit Griff.`,`c`],
+  [`Mehr Zeit für Schreib- und Bastelaufgaben, Bewertung nicht nach Schriftbild.`,`c`],
+  [`Psychosoziale Folgen beachten: Rückzug, geringes Selbstwertgefühl, weniger Bewegung im Alltag (Blank et al., 2019).`,`a`]],
+ faecher:{
+  de:[`Schreibmenge begrenzen, Tastatur erlauben, Lineatur passend wählen.`],
+  ma:[`Geodreieck und Zirkel durch Schablone oder digitale Geometrie ergänzen. Kästchen größer.`],
+  nw:[`Feinmotorisch schwierige Versuchsschritte im Team aufteilen.`],
+  fs:[`Vokabeln digital lernen, Schreiben ersetzen durch Zuordnen.`],
+  mk:[`Kunst: Werkzeug mit dickem Griff, Bewertung von Idee und Prozess statt Präzision. Musik: Instrumente mit einfacher Handhabung.`]},
+ sport:[`Bewegungen in Teilschritte zerlegen und mit Selbstinstruktion üben: Ziel, Plan, Tun, Prüfen (Prinzip aus CO-OP; Blank et al., 2019).`,`Viel Wiederholung in ruhiger Umgebung, Üben ohne Zuschauer ermöglichen.`,`Material anpassen: größere, langsamere Bälle (Softball, Luftballon), Ziele größer, Abstand kürzer.`,`Bewertung nach individuellem Fortschritt und Anstrengung, nicht nur nach Normtabelle.`,`Umziehen: Zeitpuffer, Schuhe mit Klett, kein Wettlauf in der Umkleide.`,`Erfolgserlebnisse in Ausdauer, Schwimmen oder Klettern suchen, wo Koordination weniger dominiert.`],
+ tree:{T:`Teilschritte, Selbstinstruktion, viele Wiederholungen`,R:`mehr Versuche, kein Ausscheiden`,E:`größere Ziele, kürzere Distanzen, ruhige Übungsecke`,Q:`Softbälle, Luftballon, Klettverschluss, Bodenmarkierungen`},
+ fallen:[[`„Streng dich mal an“`,`Anstrengung sehen und loben, Aufgabe anpassen`],[`Ausscheidungsspiele`,`Spiele mit Wiedereinstieg`],[`Vorturnen vor allen`,`Üben in kleiner Gruppe`]],
+ lit:[`blank19`,`li24dcd`,`tiemann15`]},
+{id:`tics`,t:`Tics und unwillkürliche Bewegungen`,c:`#4d7c0f`,kurz:`Plötzliche Bewegungen oder Laute, die das Kind nur kurz zurückhalten kann.`,
+ zeichen:[`Augenzwinkern, Kopfrucken, Schulterzucken`,`Räuspern, Schniefen, Laute, selten Wörter`,`Tics nehmen bei Stress, Aufregung oder Müdigkeit zu`,`Tics lassen in konzentrierter Tätigkeit oft nach`],
+ quer:[
+  [`Aufklärung ist der erste Schritt, unabhängig von der Stärke der Tics (europäische Leitlinie; Andrén et al., 2022). Mit Kind und Eltern absprechen, ob und wie die Klasse informiert wird.`,`a`],
+  [`Tics nicht kommentieren, nicht ermahnen, nicht zum Unterdrücken auffordern. Unterdrücken kostet Kraft und kann die Tics danach verstärken (TGD, 2005).`,`c`],
+  [`Rückzugsmöglichkeit erlauben, um Tics „rauszulassen“, ohne Begründung vor der Klasse.`,`c`],
+  [`Prüfungen: separater Raum oder Zeitzuschlag als Nachteilsausgleich prüfen.`,`c`],
+  [`Mitschüler, die necken, klar stoppen. Hänseln verstärkt Stress und damit Tics.`,`c`]],
+ faecher:{
+  de:[`Vorlesen freiwillig. Schreibtics: Tastatur oder mehr Zeit.`],
+  ma:[`Zeitdruck reduzieren, Tests im Nebenraum möglich.`],
+  nw:[`Bei motorischen Tics Sicherheit beachten: kein Hantieren mit Glas oder Hitze allein.`],
+  fs:[`Sprechprüfung allein statt vor der Klasse.`],
+  mk:[`Stille Phasen (Hören, Konzert) mit Platz am Rand, damit Laute weniger auffallen.`]},
+ sport:[`Bewegung tut vielen gut, Tics nehmen bei konzentrierter Bewegung oft ab.`,`Bei Wurf- oder Schlagtics Sicherheitsabstand und weiche Materialien.`,`Leise Phasen (Entspannung, Zielwerfen) können schwer sein: Rolle mit Bewegung anbieten.`,`Kein Kommentar in der Halle, auch nicht scherzhaft.`],
+ tree:{T:`nicht kommentieren, ruhig bleiben`,R:`Auszeit ohne Begründung möglich`,E:`Abstand bei Wurf- und Schlagspielen`,Q:`weiche Bälle und Schläger`},
+ fallen:[[`„Hör jetzt auf damit“`,`ignorieren, Arbeit weiterlaufen lassen`],[`Tic als Absicht deuten`,`als unwillkürlich behandeln`],[`vor der Klasse erklären ohne Absprache`,`mit Kind und Eltern planen`]],
+ lit:[`andren22`,`tgd05`]},
+{id:`begabung`,t:`Unter- und Überforderung, besondere Begabung`,c:`#a16207`,kurz:`Wenn hohe Begabung und Schwierigkeiten zusammenkommen, wirkt ein Kind oft durchschnittlich, gelangweilt oder verweigernd.`,
+ zeichen:[`große Ideen, aber wenig auf dem Papier`,`fragt tief nach, langweilt sich bei Wiederholung`,`Leistung schwankt stark zwischen Themen`,`perfektionistisch, bricht bei Fehlern ab`],
+ quer:[
+  [`Stärkenorientiert fördern: Talente gezielt ausbauen, nicht nur Defizite beheben (Baum et al., 2014; Gierczyk & Hornby, 2021).`,`b`],
+  [`Verdichten (Compacting): Bekanntes überspringen, gewonnene Zeit für Vertiefung nutzen.`,`c`],
+  [`Schwächen kompensieren, damit sie die Stärke nicht ausbremsen: Diktieren, Mindmaps, Präsentation statt Aufsatz.`,`c`],
+  [`Hamburg: Beratungsstelle besondere Begabungen (BbB) bei der BSB nutzen.`,`c`]],
+ faecher:{
+  de:[`Schreibaufträge mit freiem Thema oder Rechercheprojekt, Ergebnis auch als Podcast oder Vortrag.`],
+  ma:[`Knobel- und Beweisaufgaben, eigene Aufgaben erfinden, Wettbewerbe.`],
+  nw:[`Eigene Forschungsfrage, Experte für ein Teilgebiet.`],
+  fs:[`Lektüre auf höherem Niveau, Tandem mit älteren Lernenden.`],
+  mk:[`Komposition, eigenes Projekt, Wettbewerbe.`]},
+ sport:[`Taktik- und Trainerrolle: Spielzüge entwickeln, Übungen für andere planen.`,`Höhere Aufgabenkomplexität statt nur mehr Wiederholung (Zusatzbedingung, neue Variante).`,`Bei hoher Begabung und schwacher Motorik: Wissen sichtbar machen (Regelexperte, Analyse mit Video).`],
+ tree:{T:`offene Aufgaben, Bewegungsproblem selbst lösen`,R:`Zusatzbedingungen, Rollen mit Verantwortung`,E:`Expertenstation`,Q:`Tablet für Videoanalyse`},
+ fallen:[[`„Du kannst doch mehr“`,`fragen, was gerade blockiert`],[`mehr vom Gleichen als Zusatzaufgabe`,`andere, tiefere Aufgabe`]],
+ lit:[`baum14`,`gierczyk21`]},
+{id:`ueberlast`,t:`Überlastung, Meltdown und Shutdown`,c:`#be123c`,kurz:`Wenn das System voll ist: heftiger Ausbruch (Meltdown) oder Rückzug und Verstummen (Shutdown). Beides ist kein Trotz.`,
+ zeichen:[`Vorzeichen: Unruhe, Ohren zuhalten, Kreisen, Fragen nach dem Ende`,`Meltdown: Schreien, Weinen, Wegrennen, Werfen`,`Shutdown: reagiert nicht mehr, starrt, kann nicht sprechen`,`Erschöpfung am Nachmittag nach „gutem“ Schultag (Maskieren)`],
+ quer:[
+  [`Vorbeugen ist wichtiger als Eingreifen: Auslöser gemeinsam herausfinden (Lärm, Wechsel, Gruppenarbeit, Hunger) und den Tag entlasten.`,`c`],
+  [`Low-Arousal-Ansatz: weniger Worte, weniger Reize, kein Machtkampf, Sicherheit für alle (McDonnell, 2010).`,`c`],
+  [`Maskieren kostet viel Kraft und führt zu Erschöpfung und Angst, besonders bei autistischen Mädchen (Halsall et al., 2021). Unauffälligkeit heißt nicht, dass alles gut ist.`,`b`],
+  [`Krisenplan mit Kind und Eltern: Anzeichen, hilfreiche Schritte, Rückzugsort, wer wird informiert.`,`c`]],
+ faecher:{
+  de:[`Bei Überlastung Arbeit unterbrechen dürfen, ohne dass sie verloren geht.`],
+  ma:[`Tests mit Pausenkarte, separater Raum möglich.`],
+  nw:[`Laute Versuche und Exkursionen besonders vorbereiten.`],
+  fs:[`Sprechprüfungen mit Vorbereitungszeit.`],
+  mk:[`Konzerte und Aufführungen: Probe am Ort, Rückzugsraum.`]},
+ sport:[`Typische Auslöser in Sport: Lärm, Wettkampfdruck, Niederlage, Körperkontakt, Umkleide, unerwarteter Regelwechsel.`,`Ruhe-Ecke und vereinbartes Signal, das jederzeit gilt.`,`Bei Meltdown Gruppe umlenken: Mitspielende zu einer anderen Aufgabe schicken statt Publikum entstehen zu lassen.`,`Aufsicht sichern: zweite Person rufen, falls das Kind die Halle verlässt.`],
+ tree:{T:`wenig sprechen, ruhige Stimme, kein Publikum`,R:`Rückzug ist erlaubt und kein Versagen`,E:`Ruhe-Ecke, Licht und Musik reduzieren`,Q:`Gehörschutz, Decke oder Matte`},
+ fallen:[[`diskutieren, fragen „Warum machst du das?“`,`schweigen, Raum geben, später reden`],[`festhalten, außer bei akuter Gefahr`,`Abstand halten, Gefahrenquellen entfernen`],[`Strafe für den Ausbruch`,`Erholung, dann gemeinsam Auslöser klären`]],
+ lit:[`mcdonnell10`,`halsall21`,`bbz21`]}],
+akut:[
+ {t:`Vorzeichen erkennen`,kurz:`Je früher, desto leichter`,tun:[`Auf Signale achten: Unruhe, Ohren zuhalten, Starren, wiederholte Fragen.`,`Jetzt schon entlasten: Pause anbieten, Aufgabe kürzen, Ruhe-Ecke zeigen.`],sag:[`„Du kannst jetzt in die Ruhe-Ecke.“`,`Auszeitkarte hinlegen, ohne Worte.`],halle:`Kind aus dem lauten Spiel nehmen, bevor es kippt: „Hol bitte die Hütchen.“`,warum:`Vor dem Höhepunkt ist das Kind noch erreichbar. Danach kaum noch.`},
+ {t:`Reize und Worte runter`,kurz:`Weniger ist mehr`,tun:[`Selbst ruhig werden, langsam bewegen, leise sprechen.`,`Nur einen kurzen Satz, keine Fragen, keine Erklärungen.`,`Licht, Musik, Pfeife aus. Andere Kinder weg.`],sag:[`„Ich bin da.“`,`„Du bist sicher.“`],halle:`Gruppe mit kurzer Aufgabe ans andere Hallenende schicken. Kein Publikum.`,warum:`Im Meltdown ist Sprache kaum verarbeitbar. Jede zusätzliche Anforderung erhöht die Belastung (Low-Arousal-Ansatz).`},
+ {t:`Sicherheit herstellen`,kurz:`Für alle`,tun:[`Gefährliche Gegenstände wegnehmen oder wegstellen.`,`Abstand halten, nicht festhalten, außer bei akuter Gefahr.`,`Zweite Person holen, wenn das Kind wegrennt oder sich verletzt.`],sag:[`„Ich stelle das hier weg.“`],halle:`Geräte sichern, Ausgang im Blick, Kollegin oder Kollegen der Nachbarhalle rufen.`,warum:`Ruhe und Abstand senken die Erregung. Körperliche Begrenzung verstärkt sie meist.`},
+ {t:`Warten und da sein`,kurz:`Zeit geben`,tun:[`Meltdown: abwarten, bis die Welle abebbt, nicht reden.`,`Shutdown: nicht drängen, keine Antwort einfordern, Rückzug zulassen.`,`Etwas Vertrautes anbieten: Wasser, Gehörschutz, Decke.`],sag:[`„Lass dir Zeit.“`,`Wortlos ein Glas Wasser hinstellen.`],halle:`Kind auf der Matte in der Ruhe-Ecke lassen, Unterricht für die anderen weiterführen.`,warum:`Erholung braucht Zeit. Druck verlängert den Zustand.`},
+ {t:`Danach: Erholen und verstehen`,kurz:`Später, nicht sofort`,tun:[`Ruhige Rückkehr ohne Vorwürfe, Teilnahme in kleinem Umfang.`,`Später gemeinsam Auslöser klären, nicht im gleichen Moment.`,`Krisenplan anpassen, Eltern informieren.`,`Auf die Beziehung achten: zeigen, dass das Kind willkommen ist.`],sag:[`„Schön, dass du wieder da bist.“`,`Später: „Was war zu viel?“`],halle:`Rückkehr mit einer leichten Rolle (Zähler, Zeitnehmer).`,warum:`Nach dem Ausbruch ist das Kind erschöpft. Reparieren der Beziehung geht vor dem Besprechen.`}],
+mvss:[[`Meltdown`,`Ausbruch nach außen: Schreien, Weinen, Werfen, Wegrennen. Wirkt wie Wut, ist aber Überlastung.`],[`Shutdown`,`Rückzug nach innen: Verstummen, Starren, nicht mehr reagieren. Wird leicht übersehen oder als Verweigerung gedeutet.`],[`Wutanfall`,`Zielgerichtet und meist an Publikum gebunden. Hört auf, wenn das Ziel erreicht ist. Hier helfen die fünf Schritte unter „Konflikte begleiten“.`]],
+nta:{
+ grund:[`Ein Nachteilsausgleich verändert die Bedingungen, nicht die fachlichen Anforderungen. Er steht nicht im Zeugnis.`,`Grundlage sind das Hamburgische Schulgesetz und die Ausbildungs- und Prüfungsordnungen (zum Beispiel APO-GrundStGy § 6). Über die Maßnahmen entscheidet die Zeugniskonferenz.`,`Eine Diagnose allein begründet keinen Anspruch, entscheidend ist die Beeinträchtigung im Einzelfall. Für ADHS gibt es keinen eigenen Rechtsanspruch, ein Nachteilsausgleich ist aber im Einzelfall möglich (Zentrales ADHS-Netz).`,`Der Nachteilsausgleich ist ein pädagogisches Prinzip, das im Alltag beginnt, nicht erst bei Prüfungen (Ehlers, 2023).`],
+ lrr:[`Seit 1.8.2024 regelt § 44 Abs. 1a, 1b und 4 HmbSG mit der Verordnung zum Notenschutz (19.8.2024) Lesen, Rechtschreiben und Rechnen. Die Richtlinie von 2006 und die Handreichung von 2013 gelten dafür nicht mehr (BSB, 2025).`,`Schwierigkeiten: Lesen Prozentrang ≤10, Rechtschreiben ≤15, Rechnen ≤10. Besondere Schwierigkeiten: Lesen <5, Rechtschreiben <10, Rechnen <5.`,`Stufen: Förderung sofort, Nachteilsausgleich nach sechs Monaten, Notenschutz auf Antrag nach zwölf Monaten Förderung und sechs Monaten Nachteilsausgleich.`,`Notenschutz bedeutet zum Beispiel, Rechtschreibung zurückhaltend zu gewichten. Er wird im Zeugnis vermerkt, ohne Diagnose.`,`Nachteilsausgleich beim Rechnen nur bis Ende Klasse 4. Vorlesen bis Klasse 6, Apps bis Klasse 8.`,`Testverfahren unter anderem: SCHNABEL, HaReT, ZAREKI-R, SLS, ELFE II.`,`Die Elternkammer Hamburg hat 2025 Kritik an der neuen Handreichung geäußert. Aktuellen Stand bei der BSB prüfen [prüfen].`],
+ bsp:[`Zeitzuschlag, Pausen, separater Raum`,`Aufgaben vorlesen, größere Schrift, klare Gliederung`,`technische Hilfen: Laptop, Diktierfunktion, Gehörschutz`,`mündliche statt schriftliche Form oder umgekehrt`,`Einzel- statt Gruppenprüfung`,`im Sport: individuell angepasste Regeln, Einzel- statt Mannschaftsdisziplin, angepasster Prüfungsrahmen (HIBB, 2022; Ehlers, 2023)`]},
+netz:[
+ [`Eltern`,`Erste Ansprechpartner. Beobachtungen teilen, Maßnahmen gemeinsam festlegen und im Förderplan festhalten.`],
+ [`Förderkoordination und Sonderpädagogik der Schule`,`Förderplan, Diagnostik, Absprachen im Kollegium.`],
+ [`ReBBZ`,`Regionale Bildungs- und Beratungszentren: Beratung bei Lern- und Verhaltensschwierigkeiten, sonderpädagogische Begutachtung.`],
+ [`BBZ Autismusberatung`,`Bildungs- und Beratungszentrum Pädagogik bei Krankheit/Autismus: Beratung für Schulen, Fortbildungen, Arbeitshilfen (bbz.hamburg.de/autismusberatung).`],
+ [`Beratungsstelle besondere Begabungen (BbB)`,`Beratung zu Hochbegabung und doppelt außergewöhnlichen Kindern.`],
+ [`Schulbegleitung`,`Unterstützt einzelne Kinder im Alltag. Absprachen zu Aufgaben und Rolle im Sport treffen.`]],
+akt:[
+ [`Offene Aktivitäten`,`Große Freiheit bei Bewegung, Material und Sozialform, zum Beispiel Bewegungsbaustelle. Gut bei Reizempfindlichkeit, weil Kinder Tempo und Nähe selbst wählen.`],
+ [`Angepasste gemeinsame Aktivitäten`,`Alle spielen dasselbe Spiel, Regeln und Zonen werden angepasst. Gut für Teilhabe, verlangt klare Rollen.`],
+ [`Angepasste parallele Aktivitäten`,`Gleiches Thema, verschiedene Gruppen oder Felder mit eigener Variante. Gut bei Überlastung durch große Gruppen.`],
+ [`Umschließende Aktivitäten`,`Spiele, die ohne oder mit kleinen Änderungen für alle passen.`]],
+quelle:`Zusammengestellt aus Meta-Analysen, Leitlinien und Hamburger Arbeitshilfen. Die Evidenzlage ist markiert: Metaanalysen, Einzelstudien oder Fachempfehlung. Viele Empfehlungen im Sport beruhen auf Fachempfehlungen, weil es zu Sportunterricht mit neurodivergenten Kindern wenig Wirksamkeitsforschung gibt.`
+};
+const NDB=Object.fromEntries(ND.bed.map(b=>[b.id,b]));
+const ndstate={p:null,f:'alle',step:0};
+const ndEv=k=>`<span class="mfn" style="--c:${ND.ev[k][1]}">${ND.ev[k][0]}</span>`;
+function ndLit(keys){return `<div class="lit" style="margin-top:14px">${keys.filter(k=>LIT[k]).map(k=>`<p>${esc(LIT[k])}</p>`).join('')}</div>`}
+function ndTree(t){return `<div class="mtab"><table><thead><tr><th>TREE</th><th>Anpassung</th></tr></thead><tbody>${[['T','Unterrichtsstil (Teaching style)'],['R','Regeln (Rules)'],['E','Umgebung (Environment)'],['Q','Material (Equipment)']].map(([k,l])=>`<tr><td><b>${l}</b></td><td>${esc(t[k])}</td></tr>`).join('')}</tbody></table></div>`}
+function ndHome(anchor){const P=ND.profile,sel=ndstate.p&&P.find(x=>x.id===ndstate.p);
+ app.innerHTML=`<div class="hero" style="--k:#0f766e"><span class="lab">Handeln nach Bedürfnissen</span><h1>Neurodivergente Kinder</h1><p>${esc(ND.grund)}</p><p style="margin-top:12px"><button class="btn pri" data-nav="nd-akut">Jetzt überlastet: fünf Schritte</button></p></div>
+ <nav class="jump" aria-label="Bereiche"><button class="btn" data-to="nd-bed">Bedürfnisse</button><button class="btn" data-to="nd-halt">Haltung</button><button class="btn" data-to="nd-sport">Sport vertieft</button><button class="btn" data-to="nd-nta">Nachteilsausgleich</button><button class="btn" data-to="nd-netz">Zusammenarbeit</button></nav>
+ ${SEC('01','Was braucht das Kind gerade?',`<p class="prose">Wähle ein Profil, um die passenden Bedürfnisse hervorzuheben, oder beginne direkt mit dem, was du beobachtest.</p>
+ <div class="mchips" role="group" aria-label="Profil"><button class="mchip" data-ndp="" aria-pressed="${!ndstate.p}">Alle</button>${P.map(p=>`<button class="mchip" data-ndp="${p.id}" aria-pressed="${ndstate.p===p.id}">${esc(p.n)}</button>`).join('')}</div>
+ ${sel?`<div class="box" style="margin:8px 0 12px"><h4>${esc(sel.n)}</h4><p>${esc(sel.kurz)}</p><p><b>Häufigkeit:</b> ${esc(sel.anteil)}</p></div>`:''}
+ <div class="cgrid">${ND.bed.filter(b=>!sel||sel.b.includes(b.id)).map(b=>`<button class="ccard" data-nav="nd/${b.id}" style="border-left:5px solid ${b.c}"><b>${esc(b.t)}</b><span>${esc(b.kurz)}</span><span>${P.filter(p=>p.b.includes(b.id)).map(p=>p.n).join(', ')}</span></button>`).join('')}</div>`,'nd-bed')}
+ ${SEC('02','Haltung: sechs Grundsätze',`<div class="g2">${ND.haltung.map(h=>`<div class="box"><h4>${esc(h[0])}</h4><p>${esc(h[1])}</p></div>`).join('')}</div><p class="prose" style="margin-top:10px"><b>Sprache:</b> ${esc(ND.sprache)}</p>`,'nd-halt')}
+ ${SEC('03','Sport vertieft: Anpassen mit System',`<p class="prose">Sport ist für neurodivergente Kinder oft Lieblingsfach und Stressfach zugleich: laut, offen, körpernah, wettkampforientiert. Zwei Werkzeuge helfen, Anpassungen zu planen (Tiemann, 2015).</p>
+ <div class="g2"><div class="box"><h4>TREE</h4><p><b>T</b>eaching style: Erklären, Sozialform, Methode. <b>R</b>ules: Regeln, Spezialaufgaben. <b>E</b>nvironment: Halle, Licht, Akustik, Reizdichte. <b>E</b>quipment: Bälle, Ziele, Hilfsmittel. Jede Bedürfnisseite zeigt passende TREE-Anpassungen.</p></div>
+ <div class="box"><h4>CHANGE IT</h4><p>Für Spiele: Coaching style, How to score, Area, Number of players, Game rules, Equipment, Inclusion, Time. Besonders hilfreich: Anzahl der Spielenden senken, Zonen schaffen, Zeit begrenzen.</p></div></div>
+ <h4 style="margin-top:14px">Vier Aktivitätstypen</h4><div class="mlist">${ND.akt.map(a=>`<div class="mitem"><b>${esc(a[0])}</b><small>${esc(a[1])}</small></div>`).join('')}</div>
+ <div class="box" style="margin-top:12px"><h4>Häufige Hürden in Halle und Bad</h4><p>Umkleide (Lärm, Enge, Geruch, Nacktheit), Pfeife und Musik, Warten in Reihen, öffentliches Teamwählen, Körperkontakt, Regelwechsel, Verlieren vor Publikum, Bewertung nach Normtabelle (Carl et al., 2020; Neumann, o. J.).</p></div>`,'nd-sport')}
+ ${SEC('04','Nachteilsausgleich in Hamburg',`<ul class="cl">${ND.nta.grund.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h4>Lesen, Rechtschreiben, Rechnen</h4><ul class="cl">${ND.nta.lrr.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h4>Typische Maßnahmen</h4><ul class="cl">${ND.nta.bsp.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`,'nd-nta')}
+ ${SEC('05','Zusammenarbeit',`<div class="g2">${ND.netz.map(n=>`<div class="box"><h4>${esc(n[0])}</h4><p>${esc(n[1])}</p></div>`).join('')}</div>`,'nd-netz')}
+ <div class="box" style="margin-top:18px"><h4>Zu den Quellen</h4><p>${esc(ND.quelle)}</p></div>
+ ${ndLit([...new Set([...ND.profile.flatMap(p=>p.lit),'kingsears23','watson17','tiemann15','giese17','neumann','wue20','bbzreihe','hibb22','ehlers23'])])}`;
+ if(anchor){const el=document.getElementById(anchor);if(el)setTimeout(()=>el.scrollIntoView({block:'start'}),0)}}
+function ndBed(b){const F=ND.faecher.filter(([k])=>ndstate.f==='alle'||ndstate.f===k);
+ app.innerHTML=`<div class="bar"><button class="btn" data-nav="nd">← Neurodivergente Kinder</button></div>
+ <div class="hero" style="--k:${b.c}"><span class="lab">Bedürfnis · ${ND.profile.filter(p=>p.b.includes(b.id)).map(p=>esc(p.n)).join(', ')}</span><h1>${esc(b.t)}</h1><p>${esc(b.kurz)}</p>${b.id==='ueberlast'?`<p style="margin-top:12px"><button class="btn pri" data-nav="nd-akut">Jetzt überlastet: fünf Schritte</button></p>`:''}</div>
+ ${SEC('01','Woran du es merkst',`<ul class="cl">${b.zeichen.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p class="prose kwhy">Beobachtungen, keine Diagnose. Mehrere Bedürfnisse treten oft gemeinsam auf.</p>`)}
+ ${SEC('02','Was in allen Fächern hilft',`<div class="mlist">${b.quer.map(([t,e])=>`<div class="mitem"><span>${esc(t)}</span><span class="mtags">${ndEv(e)}</span></div>`).join('')}</div>`)}
+ ${SEC('03','Aus Sicht der Fächer',`<div class="mchips" role="group" aria-label="Fach"><button class="mchip" data-ndf="alle" aria-pressed="${ndstate.f==='alle'}">Alle Fächer</button>${ND.faecher.map(([k,l])=>`<button class="mchip" data-ndf="${k}" aria-pressed="${ndstate.f===k}">${l}</button>`).join('')}</div><div class="g2">${F.map(([k,l])=>`<div class="box"><h4>${l}</h4><ul class="cl">${b.faecher[k].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`).join('')}</div>`)}
+ ${SEC('04','Im Sport',`<ul class="cl">${b.sport.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><h4 style="margin-top:12px">Anpassen mit TREE</h4>${ndTree(b.tree)}`)}
+ ${SEC('05','Was nicht hilft',`<div class="mtab"><table><thead><tr><th>Statt</th><th>Besser</th></tr></thead><tbody>${b.fallen.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td></tr>`).join('')}</tbody></table></div>`)}
+ <p class="prose" style="margin-top:10px">Weitere Bedürfnisse: ${ND.bed.filter(x=>x.id!==b.id).map(x=>`<button class="lnk" style="margin:0" data-nav="nd/${x.id}">${esc(x.t)}</button>`).join(', ')}</p>
+ ${ndLit(b.lit)}`}
+function ndAkut(){const i=ndstate.step,n=ND.akut.length,s=ND.akut[i];
+ app.innerHTML=`<div class="bar"><button class="btn" data-nav="nd/ueberlast">← Überlastung</button></div>
+ <div class="kakut ndk"><div class="kprog">${ND.akut.map((x,j)=>`<button class="kdot" data-ndgo="${j}" aria-current="${j===i}" aria-label="Schritt ${j+1}">${j+1}</button>`).join('')}</div>
+ <div class="kstep"><div class="knum">${i+1}</div><div><h3>${esc(s.t)}</h3><span class="lab">${esc(s.kurz)}</span><ul class="cl">${s.tun.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><div class="ksay">${s.sag.map(x=>`<p>${esc(x)}</p>`).join('')}</div><p class="prose"><b>In der Halle:</b> ${esc(s.halle)}</p><p class="prose kwhy"><b>Warum:</b> ${esc(s.warum)}</p></div></div>
+ <div class="knav"><button class="btn" data-ndgo="${i-1}" ${i===0?'disabled':''}>← Zurück</button>${i<n-1?`<button class="btn pri" data-ndgo="${i+1}">Weiter: ${esc(ND.akut[i+1].t)} →</button>`:`<button class="btn pri" data-nav="nd/ueberlast">Fertig</button>`}</div>
+ <div class="box" style="margin-top:16px"><h4>Meltdown, Shutdown oder Wutanfall?</h4>${ND.mvss.map(m=>`<p><b>${esc(m[0])}:</b> ${esc(m[1])}</p>`).join('')}<p><button class="lnk" style="margin:0" data-nav="konflikte-akut">Zu den fünf Schritten bei Konflikten</button></p></div></div>`}
+function ndFor(u){const r=[];if(u.kb==='WK'||u.bf===5)r.push('sozial');if(u.bf===3||u.bf===4||u.bf===7||u.kb==='WE')r.push('reiz');if([1,2,6].includes(u.bf)||u.kb==='EW'||u.kb==='GD')r.push('motorik');r.push('struktur','aufm');return [...new Set(r)].slice(0,3)}
+function ndRoute(id){if(id==='nd'){ndHome();return true}if(id==='nd-akut'){ndAkut();return true}const p=id.split('/');if(p[0]==='nd'&&NDB[p[1]]){ndBed(NDB[p[1]]);return true}return false}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-ndp],[data-ndf],[data-ndgo]');if(!a||a.disabled)return;const y=scrollY;
+ if(a.dataset.ndp!==undefined){ndstate.p=a.dataset.ndp||null;ndHome();window.scrollTo(0,y)}
+ else if(a.dataset.ndf){ndstate.f=a.dataset.ndf;ndBed(NDB[location.hash.split('/')[1]]);window.scrollTo(0,y)}
+ else{ndstate.step=Math.max(0,Math.min(ND.akut.length-1,+a.dataset.ndgo));ndAkut();window.scrollTo(0,0)}});
+
 const MBY=Object.fromEntries(METH.map(m=>[m.id,m]));
 function litOf(u){const k=u.lit.slice();const h=methodsIn(u).map(([m])=>m);h.push(peerFor(u));h.forEach(m=>SRC[m.q].forEach(x=>{if(!k.includes(x))k.push(x)}));if(!k.includes('wdr11'))k.push('wdr11');return k}
 const SRC={iqsh:['iqsh12'],bpb:['bpb04'],beide:['iqsh12','bpb04'],mk:['mk26'],konf:['konf26']};
@@ -10752,7 +11044,7 @@ function methSection(u){const have=methodsIn(u),sug=methSug(u,have);
  const sugH=sug.length?`<div class="mlist">${sug.map(([m,t])=>`<button class="mitem" data-nav="m/${m.id}"><b>${esc(m.name)}</b><small>${esc(t)}</small></button>`).join('')}</div>`:'';
  const zs=u.ziele.filter(z=>FBZ[z.b]);
  return `<div class="g2"><div><h4>In dieser Stunde</h4>${haveH}</div><div><h4>Passt zusätzlich</h4>${sugH}</div></div>
- <div class="box" style="margin-top:14px"><h4>Rückmeldung zu den Lernzielen</h4>${zs.map(z=>`<p><b>${esc(z.b)}: ${FBZ[z.b][0]}.</b> ${FBZ[z.b][1]}</p>`).join('')}${(()=>{const pf=peerFor(u);return `<p><b>Rückmeldung unter Lernenden:</b> <button class="lnk" style="margin:0" data-nav="m/${pf.id}">${esc(pf.name)}</button> eignet sich für diese Stufe.</p>`})()}${(()=>{const f=KONF.faelle.find(x=>x.id===konfFor(u));return `<p><b>Wenn es kracht:</b> <button class="lnk" style="margin:0" data-nav="k/${f.id}">${esc(f.t)}</button> oder die <button class="lnk" style="margin:0" data-nav="konflikte-akut">fünf Schritte</button>.</p>`})()}<p style="margin-top:6px"><button class="lnk" data-nav="methoden/loben">Richtig loben: Grundsätze und Beispiele</button></p></div>`}
+ <div class="box" style="margin-top:14px"><h4>Rückmeldung zu den Lernzielen</h4>${zs.map(z=>`<p><b>${esc(z.b)}: ${FBZ[z.b][0]}.</b> ${FBZ[z.b][1]}</p>`).join('')}${(()=>{const pf=peerFor(u);return `<p><b>Rückmeldung unter Lernenden:</b> <button class="lnk" style="margin:0" data-nav="m/${pf.id}">${esc(pf.name)}</button> eignet sich für diese Stufe.</p>`})()}${(()=>{const f=KONF.faelle.find(x=>x.id===konfFor(u));return `<p><b>Wenn es kracht:</b> <button class="lnk" style="margin:0" data-nav="k/${f.id}">${esc(f.t)}</button> oder die <button class="lnk" style="margin:0" data-nav="konflikte-akut">fünf Schritte</button>.</p>`})()}${`<p><b>Neurodivergente Kinder:</b> ${ndFor(u).map(id=>`<button class="lnk" style="margin:0" data-nav="nd/${id}">${esc(NDB[id].t)}</button>`).join(', ')}.</p>`}<p style="margin-top:6px"><button class="lnk" data-nav="methoden/loben">Richtig loben: Grundsätze und Beispiele</button></p></div>`}
 
 function mCard(m){const n=(methUse()[m.id]||[]).length;return `<button class="ccard" data-nav="m/${m.id}"><b>${esc(m.name)}</b><span>${esc(m.kurz.split('. ')[0])}.</span><span class="mtags">${m.fn.map(f=>`<span class="mfn" style="--c:${MFN[f][1]}">${MFN[f][0]}</span>`).join('')}</span><span>${m.zeit} · ${m.st.join(', ')}${n?` · in ${n} Unterrichtsversuch${n>1?'en':''}`:''}</span></button>`}
 const mstate={fn:'',st:(typeof FIXED!=='undefined'&&FIXED)?({gs:'GS',gym:'Sek I',sts:'Sek I',os:'Sek II'})[FIXED]||'':''};
@@ -10783,7 +11075,7 @@ function methRoute(id){if(id==='methoden'){methHome();return true}if(id==='metho
 document.addEventListener('click',e=>{const c=e.target.closest('[data-mf],[data-ms]');if(!c)return;if(c.dataset.mf!==undefined)mstate.fn=c.dataset.mf;if(c.dataset.ms!==undefined)mstate.st=c.dataset.ms;const y=scrollY;methHome();window.scrollTo(0,y)});
 
 
-function route(){const id=location.hash.slice(1);navMark(id);if(methRoute(id)){if(id!=='methoden/loben')window.scrollTo(0,0);return}if(konfRoute(id)){window.scrollTo(0,0);return}if(lgRoute(id)){window.scrollTo(0,0);return}const u=UV.find(x=>x.id===id);if(u)return detailView(u);if(id==='ergebnisse'){syncDraft();resultsView()}else{homeView()}window.scrollTo(0,0)}
+function route(){const id=location.hash.slice(1);navMark(id);if(methRoute(id)){if(id!=='methoden/loben')window.scrollTo(0,0);return}if(konfRoute(id)){window.scrollTo(0,0);return}if(ndRoute(id)){window.scrollTo(0,0);return}if(lgRoute(id)){window.scrollTo(0,0);return}const u=UV.find(x=>x.id===id);if(u)return detailView(u);if(id==='ergebnisse'){syncDraft();resultsView()}else{homeView()}window.scrollTo(0,0)}
 addEventListener('hashchange',route);route();
 function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.append(t);setTimeout(()=>t.remove(),4500)}
 
@@ -10835,7 +11127,7 @@ function buildPdf(u,img){
  H('8 Differenzierung');h3('Leichter');UL(u.diff.leichter);h3('Schwerer');UL(u.diff.schwerer);h3('Inklusive Anpassungen');P(u.diff.inklusion);
  H('9 Querschnittsthemen');Object.entries(u.querText).forEach(([k,v])=>{h3(k);P(v)});
  H('10 Reflexionsfragen');h3('Für die Schülerinnen und Schüler');UL(u.reflexSuS);h3('Für die Lehrkraft');UL(u.reflexLK);
- {const h=methodsIn(u),sg=methSug(u,h);H('11 Methoden und Rückmeldung');if(h.length){h3('In dieser Stunde');UL(h.map(([m,ph])=>`${m.name} (Phase: ${ph.join(', ')})`))}if(sg.length){h3('Passt zusätzlich');UL(sg.map(([m,t])=>`${m.name}: ${t}`))}h3('Wenn es kracht');P('Fünf Schritte: ruhig unterbrechen, Gefühle benennen, Sichtweisen klären, Kinder Lösungen finden lassen, Vereinbarung testen. Passende Situation im Tool: '+KONF.faelle.find(x=>x.id===konfFor(u)).t+'.',9,'normal',1.4);h3('Rückmeldung zu den Lernzielen');UL(u.ziele.filter(z=>FBZ[z.b]).map(z=>`${z.b}: ${FBZ[z.b][0]}. ${FBZ[z.b][1]}`))}
+ {const h=methodsIn(u),sg=methSug(u,h);H('11 Methoden und Rückmeldung');if(h.length){h3('In dieser Stunde');UL(h.map(([m,ph])=>`${m.name} (Phase: ${ph.join(', ')})`))}if(sg.length){h3('Passt zusätzlich');UL(sg.map(([m,t])=>`${m.name}: ${t}`))}h3('Wenn es kracht');P('Fünf Schritte: ruhig unterbrechen, Gefühle benennen, Sichtweisen klären, Kinder Lösungen finden lassen, Vereinbarung testen. Passende Situation im Tool: '+KONF.faelle.find(x=>x.id===konfFor(u)).t+'.',9,'normal',1.4);h3('Neurodivergente Kinder');P('Passende Hilfen im Tool: '+ndFor(u).map(id=>NDB[id].t).join(', ')+'. Bei Überlastung: weniger Worte, weniger Reize, Rückzug erlauben.',9,'normal',1.4);h3('Rückmeldung zu den Lernzielen');UL(u.ziele.filter(z=>FBZ[z.b]).map(z=>`${z.b}: ${FBZ[z.b][0]}. ${FBZ[z.b][1]}`))}
  H('Literatur');litOf(u).forEach(k=>P(LIT[k],8,'normal',1.5));
  const n=doc.getNumberOfPages();for(let i=1;i<=n;i++){doc.setPage(i);doc.setFontSize(7.5);doc.setTextColor(110,110,110);doc.text(`Unterrichtsversuch „${u.titel}“, Klasse ${u.klasse}`,M,291);doc.text(`${i} / ${n}`,M+W,291,{align:'right'})}
  return doc;
