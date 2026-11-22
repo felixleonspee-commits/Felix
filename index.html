@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="author" content="Felix Spee"><meta name="copyright" content="© 2026 Felix Spee"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -319,6 +319,7 @@ q.vli{display:block;quotes:none;margin:5px 0 0;padding:4px 8px;background:#eef6e
 .kstep{display:grid;grid-template-columns:44px 1fr;gap:14px;border:1px solid var(--line);background:#fff;border-radius:14px;padding:16px;margin:12px 0}.knum{width:40px;height:40px;border-radius:50%;background:#be123c;color:#fff;display:grid;place-items:center;font:800 1.2rem var(--disp)}.kstep h3{font-size:1.2rem}.ksay{border-left:4px solid #be123c;background:#fff1f2;border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;font-size:1.05rem}.ksay p{margin:0 0 .4em}.kwhy{color:var(--mut);font-size:.9rem}.kakut{max-width:760px;margin:0 auto}.kakut .kstep{font-size:1.08rem}.kprog{display:flex;gap:8px;justify-content:center;margin:6px 0 14px}.kdot{width:40px;height:40px;border-radius:50%;border:2px solid #be123c;background:#fff;font-weight:700;color:#be123c}.kdot[aria-current=true]{background:#be123c;color:#fff}.knav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:8px}.knav .btn{padding:14px 18px}.knav .btn:disabled{opacity:.4}.ksteps li{margin:0 0 .7em}
 .ndk .knum{background:#0f766e}.ndk .ksay{border-color:#0f766e;background:#f0fdfa}.ndk .kdot{border-color:#0f766e;color:#0f766e}.ndk .kdot[aria-current=true]{background:#0f766e;color:#fff}
 .mtab{overflow-x:auto}.mtab table{border-collapse:collapse;width:100%;font-size:.9rem}.mtab th,.mtab td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}.mtab th{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+footer .byline{display:block;margin-top:10px;padding-top:10px;border-top:1px solid #ddd6c4;font-size:.8rem;color:#5f5a4c}
 </style>
 </head>
 <body>
@@ -326,7 +327,7 @@ q.vli{display:block;quotes:none;margin:5px 0 0;padding:4px 8px;background:#eef6e
 <header class="top"><h1>Unterrichts<em>versuche</em> Sport</h1><p><span id="kl">Klasse 1–13</span> nach den Hamburger Bildungsplänen. <span id="etappe"></span></p></header>
 <nav class="mainnav" aria-label="Bereiche"><button data-nav="" aria-current="page">Unterrichtsversuche</button><button data-nav="curriculum">Schulcurriculum</button><button data-nav="methoden">Methoden und Rückmeldung</button><button data-nav="konflikte">Konflikte begleiten</button><button data-nav="nd">Neurodivergente Kinder</button><button data-nav="gruppen">Meine Lerngruppen</button><button data-nav="reflexion">Reflektiere herausfordernde Unterrichtssituationen</button><button data-nav="fallberatung">Kollegiale Fallberatung</button><button data-nav="hilfe">So geht's</button></nav>
 <main id="app"></main>
-<footer>Grundlage: Bildungspläne Sport der Freien und Hansestadt Hamburg (Grundschule 2022, Sekundarstufe I 2024, Studienstufe 2022). Die Unterrichtsversuche sind Planungsvorschläge und müssen an Lerngruppe, Halle und Sicherheitsvorgaben der eigenen Schule angepasst werden. Mit [prüfen] markierte Angaben bitte am Original kontrollieren.</footer>
+<footer>Grundlage: Bildungspläne Sport der Freien und Hansestadt Hamburg (Grundschule 2022, Sekundarstufe I 2024, Studienstufe 2022). Die Unterrichtsversuche sind Planungsvorschläge und müssen an Lerngruppe, Halle und Sicherheitsvorgaben der eigenen Schule angepasst werden. Mit [prüfen] markierte Angaben bitte am Original kontrollieren.<span class="byline">© 2026 Felix Spee · Unterrichtsversuche Sport 1–13 · Stand 22.11.2026<br>Konzipiert und fachlich verantwortet von Felix Spee, erstellt mit KI-Unterstützung.<br>Alle Rechte vorbehalten. Nutzung im eigenen Unterricht erlaubt, Weitergabe nur unverändert und mit dieser Angabe.</span></footer>
 </div>
 <script>/** @license
  *
@@ -11075,6 +11076,7 @@ function methRoute(id){if(id==='methoden'){methHome();return true}if(id==='metho
 document.addEventListener('click',e=>{const c=e.target.closest('[data-mf],[data-ms]');if(!c)return;if(c.dataset.mf!==undefined)mstate.fn=c.dataset.mf;if(c.dataset.ms!==undefined)mstate.st=c.dataset.ms;const y=scrollY;methHome();window.scrollTo(0,y)});
 
 
+(function(){const L=window.jspdf;if(!L||L.__fs)return;L.__fs=1;const J=L.jsPDF;function W(...a){const d=new J(...a);const o=d.output;d.output=function(){try{if(!d.__fsDone){d.__fsDone=1;d.setProperties({author:'Felix Spee',creator:'Unterrichtsversuche Sport 1–13 (Felix Spee)',subject:'© 2026 Felix Spee. Konzipiert und fachlich verantwortet von Felix Spee, erstellt mit KI-Unterstützung.'});const n=d.internal.getNumberOfPages(),fs=d.getFontSize(),tc=d.getTextColor();for(let i=1;i<=n;i++){d.setPage(i);const w=d.internal.pageSize.getWidth(),h=d.internal.pageSize.getHeight();d.setFontSize(6.5);d.setTextColor(130,130,130);d.text('© 2026 Felix Spee · Unterrichtsversuche Sport 1–13 · konzipiert und fachlich verantwortet von Felix Spee, erstellt mit KI-Unterstützung',w/2,h-3,{align:'center'})}d.setFontSize(fs);d.setTextColor(tc)}}catch(e){}return o.apply(d,arguments)};return d}Object.assign(W,J);W.prototype=J.prototype;L.jsPDF=W})();
 function route(){const id=location.hash.slice(1);navMark(id);if(methRoute(id)){if(id!=='methoden/loben')window.scrollTo(0,0);return}if(konfRoute(id)){window.scrollTo(0,0);return}if(ndRoute(id)){window.scrollTo(0,0);return}if(lgRoute(id)){window.scrollTo(0,0);return}const u=UV.find(x=>x.id===id);if(u)return detailView(u);if(id==='ergebnisse'){syncDraft();resultsView()}else{homeView()}window.scrollTo(0,0)}
 addEventListener('hashchange',route);route();
 function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.append(t);setTimeout(()=>t.remove(),4500)}
