@@ -167,6 +167,7 @@ ol.steplist{padding-left:22px}ol.steplist li{padding:8px 10px;border-radius:8px;
 .ev2{background:#f7f8fc}.crisis{margin:12px 0}.learn p{font-size:16.5px}.mbody.one{grid-template-columns:1fr}
 @media (max-width:640px){.dims .dim{grid-template-columns:1fr 50px}.dims .dim .bar{grid-column:1/-1;order:3}.opts label{flex:1 1 45%}}
 .pdfbar{display:flex;justify-content:flex-end;margin:0 0 -4px}
+.intro{border-left:5px solid var(--teal);background:linear-gradient(90deg,#f3faf9,#fff 60%)}.intro h2{font-size:22px;margin-top:4px}.intro p{max-width:780px}.need{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}.need .chip{background:#fff}.tip{color:#36405a;background:#fff;border:1px dashed #b9dcda;border-radius:10px;padding:8px 12px;max-width:780px}.inv{margin-top:12px}
 #modal{position:fixed;inset:0;background:rgba(20,28,48,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
 #modal.on{display:flex}
 .mbox{background:#fff;border-radius:16px;max-width:560px;width:100%;padding:24px;max-height:90vh;overflow:auto}
@@ -661,7 +662,7 @@ const FB_METHODS = [
 const FLOWS = {
  fallberatung: {
   t:"Kollegiale Fallberatung", mod:"fb", short:"Fallberatung",
-  intro:"Acht Phasen wie im Sport-Tool: Rollen, Fall und Schlüsselfrage, Verständnisfragen, Hypothesen, Stellungnahme, Lösungsideen, erster Schritt, Rückblick. Gedacht für 3 bis 8 Kolleg:innen, etwa 45 Minuten.",
+  intro:"Acht Phasen: Rollen, Fall und Schlüsselfrage, Verständnisfragen, Hypothesen, Stellungnahme, Lösungsideen, erster Schritt, Rückblick. Gedacht für 3 bis 8 Kolleg:innen, etwa 45 Minuten.",
   roles:["Fallgeber:in","Moderation","Beratung","Protokoll","Prozessbeobachtung"],
   src:["tietze","hul","bertels","mdn"],
   phases:[
@@ -1021,6 +1022,31 @@ const ROLE_CARDS = [
 ];
 const PREP = ["Welche Situation beschäftigt mich gerade so, dass ich handeln möchte?","Wer ist beteiligt? (nur Kürzel)","Was habe ich schon versucht?","Was soll nach der Beratung anders sein?","Was soll in der Runde auf keinen Fall passieren?"];
 
+/* ---------- Abholen: Einstieg je Bereich ---------- */
+const INTROS = {
+ fb: {h:"Gemeinsam auf einen Fall schauen",
+  p:["Manche Situationen lassen einen nicht los: eine Klasse, die nicht zur Ruhe kommt, ein Elterngespräch, das schiefgelaufen ist, ein Kind, um das Sie sich sorgen. Allein dreht man sich dabei oft im Kreis.",
+     "Holen Sie sich zwei bis sieben Kolleg:innen dazu und nehmen Sie sich etwa 45 Minuten. Die anderen sehen Ihre Situation mit eigenen Augen und bringen Blickwinkel mit, die Ihnen gerade fehlen. Sie gehen mit neuen Ideen und einem ersten konkreten Schritt aus der Runde."],
+  need:["3 bis 8 Personen","etwa 45 Minuten","ein ruhiger Raum","ein Gerät für Diktat und Protokoll"],
+  tip:"Noch keine Runde? Fragen Sie im Jahrgangsteam, in der Fachschaft oder direkt nach der Konferenz. Wer einmal dabei war, kommt meist wieder.",
+  invite:"Hallo zusammen, ich würde gern eine Situation aus meinem Unterricht mit euch besprechen und eure Sicht dazu hören. Habt ihr Lust auf eine kollegiale Fallberatung? Wir bräuchten etwa 45 Minuten und einen ruhigen Raum. Wie wäre es mit [Tag, Uhrzeit, Raum]? Was wir besprechen, bleibt in der Runde."},
+ kf: {h:"Wenn es knirscht",
+  p:["Konflikte gehören zum Schulalltag. Schwierig wird es, wenn sie Kraft kosten, sich wiederholen oder festfahren, im Kollegium, mit Eltern oder in der Klasse.",
+     "Schätzen Sie zuerst ein, wie weit ein Konflikt schon eskaliert ist. Davon hängt ab, ob Sie ihn selbst klären können oder sich Unterstützung holen sollten. Steht ein schwieriges Gespräch an, können Sie es vorher mit ein, zwei Kolleg:innen im Rollenspiel durchspielen."],
+  need:["Einschätzung: 5 Minuten allein","Klärungsgespräch: etwa 60 Minuten mit neutraler Moderation","Gesprächsprobe: etwa 40 Minuten zu dritt oder zu viert"],
+  tip:"Für eine Gesprächsprobe reicht eine Kollegin oder ein Kollege, die oder der das Gegenüber spielt. Eine dritte Person als Beobachtung macht die Rückmeldung genauer."},
+ nd: {h:"Verstehen, bevor man reagiert",
+  p:["In fast jeder Klasse lernen Kinder und Jugendliche, deren Gehirn anders arbeitet als das der Mehrheit, etwa bei ADHS, Autismus oder Lese-Rechtschreib-Schwierigkeiten. Was im Unterricht als Störung oder Verweigerung auffällt, hat oft einen nachvollziehbaren Grund.",
+     "Hier finden Sie kompaktes Wissen mit einer ehrlichen Einordnung, was gut belegt ist und was nicht. Dazu gibt es zwei Abläufe: einen für die Planung im Klassenteam und einen für das Gespräch mit der Schülerin oder dem Schüler selbst."],
+  need:["Lesen: 10 bis 15 Minuten","Unterstützungsplan: etwa 45 Minuten im Klassenteam","Beratungsgespräch: etwa 40 Minuten zu zweit"],
+  tip:"Am meisten bringt der Unterstützungsplan, wenn alle Lehrkräfte der Klasse dabei sind. Dann setzen alle die gleichen zwei, drei Absprachen um."},
+ lg: {h:"Auch auf sich selbst schauen",
+  p:["Wer jeden Tag für andere da ist, verliert die eigene Kraft leicht aus dem Blick. Dieser Bereich lädt Sie ein, kurz innezuhalten: Wie geht es mir gerade, und was würde mir guttun?",
+     "In ein bis drei Minuten schätzen Sie sich selbst ein und bekommen passende Übungen und Lerneinheiten vorgeschlagen. Sie entscheiden, was Sie ausprobieren. Ihre Antworten bleiben auf Ihrem Gerät, niemand sonst sieht sie."],
+  need:["Einschätzung: 1 bis 3 Minuten","Übungen: 2 bis 7 Minuten","für Sie allein"],
+  tip:"Fangen Sie klein an: eine Übung, die Sie diese Woche dreimal machen, bringt mehr als ein großer Vorsatz."}
+};
+
 /* ===== Lehrkräftegesundheit: Quellen ===== */
 Object.assign(SRC, {
   who5: {a:"Psychiatric Research Unit, WHO Collaborating Center for Mental Health. (1998). <i>WHO (Fünf): Fragebogen zum Wohlbefinden</i> [Deutsche Version]. Frederiksborg General Hospital.", k:"WHO-5, 1998", st:"online geprüft; Nutzung nicht kommerziell mit Quellenangabe"},
@@ -1174,7 +1200,7 @@ function go(v) { if (typeof stopPlayer === "function") stopPlayer(); if (D.on &&
 
 /* ===== Module ===== */
 const MODS = {
- fb: { t: "Kollegiale Fallberatung", s: "Einen Fall in sechs Phasen gemeinsam beraten. Diktat von Anfang an, Protokoll am Ende.", flows: ["fallberatung"], ic: "M4 6h16M4 12h10M4 18h7" },
+ fb: { t: "Kollegiale Fallberatung", s: "Einen Fall in acht Phasen gemeinsam beraten. Diktat von Anfang an, Protokoll am Ende.", flows: ["fallberatung"], ic: "M4 6h16M4 12h10M4 18h7" },
  kf: { t: "Konflikte und Beziehungen", s: "Konflikte einschätzen, Klärungsgespräche moderieren, schwierige Gespräche im Rollenspiel üben.", flows: ["konflikt", "rollenspiel"], ic: "M7 8a3 3 0 1 0 0-.01M17 8a3 3 0 1 0 0-.01M3 19c0-3 2-5 4-5s4 2 4 5M13 19c0-3 2-5 4-5s4 2 4 5" },
  lg: { t: "Lehrkräftegesundheit", s: "Wohlbefinden einschätzen, passende Übungen und Selbstlerneinheiten, alles mit Quellen und nur auf Ihrem Gerät gespeichert.", flows: [], ic: "M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" },
  nd: { t: "Neurodivergenz im Schulalltag", s: "Haltung, Wissen zu ADHS, Autismus, LRS und Rechnen, Hamburger Regelungen und ein Ablauf für Unterstützungspläne.", flows: ["neuro", "ndberatung"], ic: "M12 3a6 6 0 0 0-4 10.5V17h8v-3.5A6 6 0 0 0 12 3zM9 21h6" }
@@ -1227,6 +1253,7 @@ function vMod() {
   if (view.id === "lg") return vHealth();
   const m = MODS[view.id];
   let h = `<p class="crumb"><button class="link" data-act="nav" data-to="home">Start</button> / ${m.t}</p><h1 class="pt">${m.t}</h1><p class="lead">${m.s}</p>`;
+  h += introCard(view.id);
   h += `<div class="flows">${m.flows.map(f => `<div class="flow"><h3>${FLOWS[f].t}</h3><p>${FLOWS[f].intro}</p><ol class="mini">${FLOWS[f].phases.map(p => `<li>${p.t} <span>${p.min} Min.</span></li>`).join("")}</ol><button class="btn primary" data-act="new" data-flow="${f}">${micSvg()} Neue Sitzung</button></div>`).join("")}</div>`;
   const own = DB.sessions.filter(s => m.flows.includes(s.flow));
   if (own.length) h += `<section class="card"><h2>Gespeicherte Sitzungen</h2>${listRows(own.sort((a, b) => b.updated - a.updated))}</section>`;
@@ -1236,6 +1263,13 @@ function vMod() {
   return h;
 }
 
+function introCard(id) {
+  const x = INTROS[id]; if (!x) return "";
+  return `<section class="card intro"><p class="kicker">Worum es hier geht</p><h2>${x.h}</h2>${x.p.map(p => `<p>${p}</p>`).join("")}
+  <div class="need"><span class="small muted">Das brauchen Sie:</span><div class="chips static">${x.need.map(n => `<span class="chip">${n}</span>`).join("")}</div></div>
+  <p class="small tip">${x.tip}</p>
+  ${x.invite ? `<details class="meth inv"><summary><b>Einladung an Kolleg:innen</b><span>Text zum Kopieren für Mail oder Messenger</span></summary><div class="mbody one"><p id="invtxt">${x.invite}</p><button class="btn small" data-act="invcopy">Text kopieren</button></div></details>` : ""}</section>`;
+}
 function fbInfo() {
   return `<section class="card"><div class="hd"><h2>Rollen</h2><button class="btn small" data-act="rolespdf">Rollenkarten als PDF</button></div>
   <div class="roles">${ROLE_CARDS.map(c => `<div class="rcard"><b>${c.r}</b><ul>${c.a.map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("")}</div>
@@ -1301,6 +1335,7 @@ function vSetup() {
   const ps = view.ps || f.roles.slice(0, 3).map(r => ({ k: "", r }));
   return `<p class="crumb"><button class="link" data-act="mod" data-id="${f.mod}">${MODS[f.mod].t}</button> / Neue Sitzung</p>
   <h1 class="pt">${f.t}</h1><p class="lead">${f.intro}</p>
+  ${view.flow === "fallberatung" ? `<div class="note">Sie brauchen zwei bis sieben Kolleg:innen und etwa 45 Minuten. Eine Person bringt den Fall mit, eine moderiert, die anderen beraten. Wer welche Rolle hat, legen Sie gleich hier fest.</div>` : ""}
   <section class="card"><h2>Vorbereitung</h2>
   <div class="grid2"><label class="fld"><span>Titel der Sitzung (ohne Namen)</span><input id="s_title" value="${esc(view.title || "")}" placeholder="z. B. Elterngespräch 7b vorbereiten"></label>
   <label class="fld"><span>Datum</span><input type="date" id="s_date" value="${view.date || today()}"></label></div>
@@ -1677,6 +1712,7 @@ document.addEventListener("click", async e => {
     case "pdf": { if (!window.jspdf) { toast("PDF-Modul nicht geladen. Nutzen Sie „Als Text kopieren“."); break; } try { saveFile(fileName(s) + ".pdf", buildPDF(s).output("blob")); } catch (err) { toast("PDF konnte nicht erstellt werden: " + err.message); } break; }
     case "copy": { const t = protoText(s); try { await navigator.clipboard.writeText(t); toast("Protokoll kopiert."); } catch (err) { modal(`<h2>Text kopieren</h2><textarea rows="14" style="width:100%">${esc(t)}</textarea><div class="row"><button class="btn" data-act="mclose">Schließen</button></div>`); } break; }
     case "rolespdf": if (window.jspdf) saveFile("Rollenkarten_Fallberatung.pdf", rolesPDF().output("blob")); break;
+    case "invcopy": { const t = $("#invtxt").textContent; try { await navigator.clipboard.writeText(t); toast("Einladung kopiert. Tag, Uhrzeit und Raum noch eintragen."); } catch (err) { toast("Kopieren nicht möglich. Bitte Text markieren."); } break; }
     case "backup": saveFile("Beratungsraum_Sicherung_" + today() + ".json", new Blob([JSON.stringify(DB, null, 1)], { type: "application/json" })); break;
     case "wipe": ask("Alle Sitzungen in diesem Browser löschen?", "Alles löschen", () => { DB = { sessions: [], v: 1 }; saveNow(); render(); toast("Alle Daten gelöscht."); }); break;
   }
@@ -1770,6 +1806,7 @@ function vHealth() {
   const tabs = [["start", "Übersicht"], ["checks", "Selbsteinschätzung"], ["uebungen", "Übungen"], ["lernen", "Selbstlernen"], ["hilfe", "Hilfe und Daten"]];
   let h = `<p class="crumb"><button class="link" data-act="nav" data-to="home">Start</button> / Lehrkräftegesundheit</p>
   <h1 class="pt">Lehrkräftegesundheit</h1><p class="lead">Einschätzen, wie es Ihnen geht, passende Übungen finden und verstehen, was nachweislich hilft. Für Sie allein, ohne Konto, gespeichert nur auf diesem Gerät.</p>
+  ${tab === "start" ? introCard("lg") : ""}
   <nav class="tabs" role="tablist">${tabs.map(t => `<button role="tab" aria-selected="${t[0] === tab}" class="${t[0] === tab ? "on" : ""}" data-act="htab" data-t="${t[0]}">${t[1]}</button>`).join("")}</nav>`;
   if (tab === "start") {
     const r = recs(); const w = H().checks.filter(c => c.type === "who5").sort((a, b) => a.ts - b.ts).slice(-8);
