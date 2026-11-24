@@ -166,6 +166,7 @@ dl.terms{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:
 ol.steplist{padding-left:22px}ol.steplist li{padding:8px 10px;border-radius:8px;margin:4px 0}ol.steplist li em{display:block;font-style:normal;font-size:12.5px;color:var(--muted)}ol.steplist li.on{background:var(--teal-l);font-weight:600}ol.steplist li.dn{opacity:.55}
 .ev2{background:#f7f8fc}.crisis{margin:12px 0}.learn p{font-size:16.5px}.mbody.one{grid-template-columns:1fr}
 @media (max-width:640px){.dims .dim{grid-template-columns:1fr 50px}.dims .dim .bar{grid-column:1/-1;order:3}.opts label{flex:1 1 45%}}
+.pdfbar{display:flex;justify-content:flex-end;margin:0 0 -4px}
 #modal{position:fixed;inset:0;background:rgba(20,28,48,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
 #modal.on{display:flex}
 .mbox{background:#fff;border-radius:16px;max-width:560px;width:100%;padding:24px;max-height:90vh;overflow:auto}
@@ -1187,6 +1188,7 @@ function render() {
   a.innerHTML = v === "home" ? vHome() : v === "mod" ? vMod() : v === "setup" ? vSetup() : v === "session" ? vSession() : v === "proto" ? vProto() : v === "privacy" ? vPrivacy() : v === "sources" ? vSources() : v === "list" ? vList() : v === "check" ? vCheck() : v === "checkres" ? vCheckRes() : v === "ex" ? vEx() : v === "learn" ? vLearn() : vHome();
   document.querySelectorAll(".topnav button").forEach(b => b.classList.toggle("on", b.dataset.nav === "mod" ? (v === "mod" && b.dataset.id === view.id) : b.dataset.nav === v));
   if (v === "session") { updTimer(); updDict(); }
+  if (typeof pdfBar === "function") pdfBar();
 }
 
 function vHome() {
@@ -1700,7 +1702,7 @@ document.addEventListener("change", e => {
 document.addEventListener("keydown", e => { if (e.key === "Escape") mclose(); });
 $("#modal").addEventListener("click", e => { if (e.target.id === "modal") mclose(); });
 window.addEventListener("beforeunload", saveNow);
-render();
+
 
 /* ===== Lehrkräftegesundheit: Ansichten ===== */
 DB.health ||= { checks: [], log: {}, journal: [], learn: {} };
@@ -1885,6 +1887,108 @@ document.addEventListener("submit", e => {
     l.q.forEach((q, i) => { const v = +f.querySelector(`[name=q${i}]:checked`).value; const ok = v === q.r; if (ok) n++; const fb = $("#fb" + i); fb.className = "fb " + (ok ? "ok" : "no"); fb.innerHTML = (ok ? "Richtig. " : `Nicht ganz. Richtig ist: ${q.o[q.r]}. `) + q.e; });
     H().learn[l.id] = { score: n, date: today() }; saveNow(); toast(`${n} von ${l.q.length} richtig.`); }
 });
+
+/* ===== PDF-Export für jede Inhaltsseite ===== */
+const PDF_VIEWS = ["mod", "privacy", "sources", "check", "checkres", "ex", "learn"];
+function pdfBar() {
+  const a = $("#app"); if (!a || !PDF_VIEWS.includes(view.name)) return;
+  const bar = document.createElement("div"); bar.className = "pdfbar";
+  bar.innerHTML = `<button class="btn small" data-act="pagepdf">${pdfIcon()} Diese Seite als PDF</button>`;
+  a.prepend(bar);
+}
+function pdfIcon() { return `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M12 11v6M9 14l3 3 3-3"/></svg>`; }
+
+const SKIP = new Set(["BUTTON", "SELECT", "INPUT", "TEXTAREA", "SCRIPT", "STYLE", "SVG", "NAV", "IFRAME", "CANVAS"]);
+const clean = t => String(t || "").replace(/\s+/g, " ").trim();
+function liText(li) {
+  const els = [...li.children].filter(c => !SKIP.has(c.tagName) && !c.classList.contains("x"));
+  const loose = [...li.childNodes].some(n => n.nodeType === 3 && n.textContent.trim());
+  if (!loose && els.length > 1) return els.map(e => clean(e.textContent)).filter(Boolean).join(": ").replace(/: (\d+ Sek\.)$/, " ($1)");
+  const c = li.cloneNode(true); c.querySelectorAll("button,.x").forEach(x => x.remove()); return clean(c.textContent);
+}
+function domBlocks(root) {
+  const out = [];
+  const walk = el => {
+    if (el.nodeType !== 1) return;
+    const t = el.tagName, cl = el.classList;
+    if (SKIP.has(t) || el.tagName === "svg" || cl.contains("pdfbar") || cl.contains("crumb") || cl.contains("tabs") || cl.contains("exmini") || cl.contains("row") || cl.contains("pager") || cl.contains("acts") || cl.contains("live") || cl.contains("ring") || el.id === "toast" || el.id === "modal") return;
+    if (t === "FORM" && (el.id === "chk" || el.id === "quiz")) return;
+    if (t === "H1") return out.push({ k: "h1", x: clean(el.textContent) });
+    if (t === "H2") return out.push({ k: "h2", x: clean(el.textContent) });
+    if (t === "H3" || t === "H4" || t === "SUMMARY" || t === "LEGEND") { const c = el.cloneNode(true); return out.push({ k: "h3", x: [...c.children].length > 1 ? [...c.children].map(e => clean(e.textContent)).join(": ") : clean(c.textContent) }); }
+    if (t === "DT") return out.push({ k: "lab", x: clean(el.textContent) });
+    if (t === "P" || t === "DD") { const x = clean(el.textContent); if (x) out.push({ k: cl.contains("small") ? "small" : "p", x }); return; }
+    if (t === "LI") return out.push({ k: "li", x: liText(el), n: el.parentElement.tagName === "OL" ? [...el.parentElement.children].indexOf(el) + 1 : 0 });
+    if (cl.contains("glasl")) { [...el.querySelectorAll(".gs")].forEach((g, i) => out.push({ k: "li", n: i + 1, x: clean(g.querySelector("b").textContent) + ": " + clean(g.querySelector("em").textContent) + (g.classList.contains("on") ? " (gewählt)" : "") })); return; }
+    if (cl.contains("rec")) { [...el.childNodes].forEach(walk); const bs = [...el.querySelectorAll("button")].map(b => clean(b.textContent)); if (bs.length) out.push({ k: "p", x: "Empfohlen: " + bs.join(" · ") }); return; }
+    if (cl.contains("dim")) return out.push({ k: "p", x: clean(el.querySelector("span").textContent) + ": " + clean(el.querySelector("b").textContent) + " von 5" });
+    if (cl.contains("bigscore")) return out.push({ k: "big", x: clean(el.querySelector("b").textContent) + " " + clean(el.querySelector("span").textContent) });
+    if (cl.contains("hist")) return out.push({ k: "p", x: "Verlauf: " + [...el.querySelectorAll(".hb")].map(h => clean(h.querySelector("span").textContent) + " " + clean(h.querySelector("b").textContent) + " %").join(" · ") });
+    if (cl.contains("chips") || cl.contains("pills")) return out.push({ k: "p", x: [...el.children].map(c => clean(c.textContent)).join(" · ") });
+    if ((t === "B" || t === "STRONG" || t === "SPAN" || t === "EM") && el.parentElement && !["P", "LI", "DD"].includes(el.parentElement.tagName)) { const x = clean(el.textContent); if (x) out.push({ k: t === "B" || t === "STRONG" ? "lab2" : "p", x }); return; }
+    if (cl.contains("note")) { const c = el.cloneNode(true); c.querySelectorAll("button").forEach(b => b.remove()); return out.push({ k: "note", x: clean(c.textContent) }); }
+    [...el.childNodes].forEach(n => { if (n.nodeType === 3 && n.textContent.trim() && !["P", "LI"].includes(t)) out.push({ k: "p", x: clean(n.textContent) }); else walk(n); });
+  };
+  walk(root);
+  return out;
+}
+function extraBlocks() {
+  const out = [];
+  if (view.name === "check") { const c = CHECKS[view.id]; out.push({ k: "h2", x: "Fragebogen zum Ausfüllen" }, { k: "p", x: c.stem });
+    c.items.forEach((it, i) => { out.push({ k: "h3", x: `${i + 1}. ${Array.isArray(it) ? it[0] : it}` }, { k: "p", x: c.scale.map(s => "[  ] " + s[0]).join("    ") }); });
+    if (c.extra) out.push({ k: "p", x: "[  ] " + c.extra.l }); }
+  if (view.name === "learn") { const l = learnById(view.id); out.push({ k: "h2", x: "Fragen zum Selbsttest" });
+    l.q.forEach((q, i) => { out.push({ k: "h3", x: `${i + 1}. ${q.f}` }); q.o.forEach(o => out.push({ k: "li", x: "[  ] " + o })); });
+    out.push({ k: "h2", x: "Lösungen" }); l.q.forEach((q, i) => out.push({ k: "p", x: `${i + 1}. ${q.o[q.r]}. ${q.e}` })); }
+  return out;
+}
+function pageTitle() {
+  const h = $("#app h1"); return h ? clean(h.textContent) : "Beratungsraum";
+}
+function pagePDF() {
+  if (!window.jspdf) { toast("PDF-Modul nicht geladen."); return; }
+  const root = $("#app").cloneNode(true);
+  root.querySelectorAll("details").forEach(d => d.setAttribute("open", ""));
+  const blocks = domBlocks(root).concat(extraBlocks());
+  const ids = [...new Set([...$("#app").querySelectorAll(".cite[data-id]")].map(a => a.dataset.id))].filter(id => SRC[id]);
+  const { jsPDF } = window.jspdf; const doc = new jsPDF({ unit: "mm", format: "a4" });
+  const W = 210, H = 297, M = 18, CW = W - 2 * M; let y = 0;
+  const NAVY = [27, 42, 74], TEAL = [15, 139, 141], GREY = [96, 106, 122];
+  const head = () => { doc.setFillColor(...NAVY); doc.rect(0, 0, W, 16, "F"); doc.setFillColor(...TEAL); doc.rect(0, 16, W, 1.2, "F");
+    doc.setTextColor(255); doc.setFont("helvetica", "bold"); doc.setFontSize(10); doc.text("Felix Spee", M, 10); doc.setFont("helvetica", "normal"); doc.text(pdfSafe("· Tools für Lehrkräfte"), M + 19, 10);
+    doc.text("Beratungsraum", W - M, 10, { align: "right" }); y = 28; };
+  const need = h => { if (y + h > H - 20) { doc.addPage(); head(); } };
+  const para = (t, o = {}) => { doc.setFont("helvetica", o.b ? "bold" : "normal"); doc.setFontSize(o.sz || 10.5); doc.setTextColor(...(o.c || [30, 30, 30]));
+    const x = o.x || M, w = o.w || CW; const lines = doc.splitTextToSize(pdfSafe(t), w); const lh = (o.sz || 10.5) * 0.43;
+    if (o.keep) need(lh * Math.min(lines.length, 3) + (o.keep || 0));
+    lines.forEach(l => { need(lh); doc.text(l, x, y); y += lh; }); y += o.after ?? 1.6; };
+  head();
+  let first = true;
+  blocks.forEach(b => {
+    if (!b.x) return;
+    if (b.k === "h1") { if (first) { para(b.x, { b: 1, sz: 19, c: NAVY, after: 3 }); first = false; } else para(b.x, { b: 1, sz: 15, c: NAVY, after: 2, keep: 10 }); return; }
+    if (b.k === "h2") { need(16); y += 3; doc.setFillColor(...TEAL); doc.rect(M, y - 4, 1.4, 5.5, "F"); para(b.x, { b: 1, sz: 13, x: M + 4, w: CW - 4, c: NAVY, after: 2 }); return; }
+    if (b.k === "h3") return para(b.x, { b: 1, sz: 11, c: NAVY, after: 1.2, keep: 8 });
+    if (b.k === "lab" || b.k === "lab2") return para(b.x, { b: 1, sz: b.k === "lab" ? 9.5 : 10.5, c: b.k === "lab" ? GREY : NAVY, after: 0.8 });
+    if (b.k === "li") { const pre = b.n ? b.n + "." : "•"; doc.setFont("helvetica", "normal"); doc.setFontSize(10.5); need(5); doc.setTextColor(...TEAL); doc.text(pre, M + 1, y); return para(b.x, { x: M + 7, w: CW - 7, after: 1.2 }); }
+    if (b.k === "note") { const lines = doc.splitTextToSize(pdfSafe(b.x), CW - 8); const h = lines.length * 4.5 + 4; need(Math.min(h, 60)); const y0 = y - 3.5;
+      if (y0 + h < H - 20) { doc.setFillColor(238, 244, 246); doc.rect(M, y0, CW, h, "F"); doc.setFillColor(...TEAL); doc.rect(M, y0, 1.2, h, "F"); }
+      para(b.x, { x: M + 4, w: CW - 8, after: 3 }); return; }
+    if (b.k === "big") return para(b.x, { b: 1, sz: 16, c: NAVY, after: 2 });
+    if (b.k === "small") return para(b.x, { sz: 9, c: GREY, after: 1.4 });
+    para(b.x);
+  });
+  if (ids.length && view.name !== "sources") { need(16); y += 3; doc.setFillColor(...TEAL); doc.rect(M, y - 4, 1.4, 5.5, "F"); para("Quellen", { b: 1, sz: 13, x: M + 4, c: NAVY, after: 2 });
+    ids.map(i => stripHtml(SRC[i].a)).sort((a, b) => a.localeCompare(b, "de")).forEach(t => para(t, { sz: 8.5, c: GREY, after: 1.2 })); }
+  const n = doc.getNumberOfPages();
+  for (let i = 1; i <= n; i++) { doc.setPage(i); doc.setDrawColor(210); doc.line(M, H - 14, W - M, H - 14); doc.setFontSize(8); doc.setTextColor(...GREY); doc.setFont("helvetica", "normal");
+    doc.text(pdfSafe("Beratungsraum · entwickelt von Felix Spee · Stand " + fmtDate(today())), M, H - 9); doc.text(`Seite ${i} von ${n}`, W - M, H - 9, { align: "right" }); }
+  const name = ("Beratungsraum_" + pageTitle()).replace(/[^\wäöüÄÖÜß\-]+/g, "_").slice(0, 70) + ".pdf";
+  saveFile(name, doc.output("blob"));
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-act=pagepdf]"); if (b) { e.preventDefault(); try { pagePDF(); } catch (err) { toast("PDF konnte nicht erstellt werden: " + err.message); } } });
+
+render();
 
 </script>
 </body>
