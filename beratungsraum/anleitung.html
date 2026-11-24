@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beratungsraum als App · Anleitung</title>
+<meta name="author" content="Felix Spee">
+<meta name="theme-color" content="#1b2a4a">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{--navy:#1b2a4a;--indigo:#4652b8;--teal:#0f8b8d;--teal-l:#e3f3f2;--bg:#f5f6f9;--ink:#1d2433;--muted:#5f6a7d;--line:#dfe3ec;--warn:#b26a00;--warn-l:#fff4e0}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:clip}
+.top{background:var(--navy);color:#fff;border-bottom:3px solid var(--teal);padding:12px 20px;display:flex;align-items:center;gap:12px}
+.mono{width:34px;height:34px;border-radius:8px;background:#fff;color:var(--navy);display:grid;place-items:center;font-weight:800;position:relative;font-size:15px}
+.mono:after{content:"";position:absolute;right:-3px;bottom:-3px;width:10px;height:10px;border-radius:3px;background:var(--teal)}
+.top b{display:block;font-size:15px}.top small{opacity:.75;font-size:12.5px}
+main{max-width:860px;margin:0 auto;padding:24px 18px 50px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.1;color:var(--navy);margin:.3em 0 .3em;text-wrap:balance}
+h2{font-size:22px;color:var(--navy);margin:0 0 .6em}
+h3{font-size:17px;color:var(--navy);margin:1em 0 .3em}
+.lead{font-size:19px;color:#3a4458}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0}
+.hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:center}
+.qrbox{text-align:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.qrbox img{width:100%;max-width:220px;height:auto;display:block;margin:0 auto}
+.qrbox p{margin:.4em 0 0;font-size:14px;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.pill{background:var(--teal-l);color:#0b5f60;border-radius:999px;padding:5px 12px;font-size:14.5px;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--indigo);color:#fff;text-decoration:none;border-radius:10px;padding:12px 20px;font-weight:700;min-height:48px;border:0;font-size:16px;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 14px}
+.tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font:inherit;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;min-height:44px}
+.tabs button[aria-selected=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+ol.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding:4px 0 14px 52px}
+ol.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;display:grid;place-items:center}
+.ico{display:inline-block;vertical-align:-5px;width:22px;height:22px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:2px}
+.note{border-left:4px solid var(--teal);background:var(--teal-l);border-radius:10px;padding:12px 16px;margin:12px 0;font-size:16px}
+.note.warn{border-color:var(--warn);background:var(--warn-l)}
+.data{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.data div{border:1px solid var(--line);border-radius:12px;padding:14px}
+.data b{display:block;color:var(--navy);margin-bottom:4px}
+details{border-top:1px solid var(--line);padding:12px 0}details:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:700;color:var(--navy)}
+details p{margin:.5em 0 0}
+.src{font-size:13.5px;color:var(--muted)}.src a{color:var(--muted)}
+footer{border-top:1px solid var(--line);background:#fff;padding:20px;text-align:center;font-size:14px;color:var(--muted)}
+footer b{color:var(--navy)}
+a{color:var(--indigo)}
+@media(max-width:640px){.hero{grid-template-columns:1fr}.qrbox{display:none}body{font-size:16.5px}}
+@media print{.top,.tabs,.btn{display:none}.panel{display:block!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top"><span class="mono">FS</span><span><b>Beratungsraum</b><small>Felix Spee · Tools für Lehrkräfte</small></span></header>
+<main>
+<section class="hero">
+ <div>
+  <h1>Den Beratungsraum als App auf Ihr Gerät holen</h1>
+  <p class="lead">Das dauert etwa eine Minute. Sie brauchen kein Konto und keinen App-Store, es kostet nichts, und alles, was Sie eintragen, bleibt auf Ihrem Gerät.</p>
+  <div class="pills"><span class="pill">kostenlos</span><span class="pill">ohne Anmeldung</span><span class="pill">funktioniert auch offline</span><span class="pill">Daten nur auf Ihrem Gerät</span></div>
+  <a class="btn" href="./">Beratungsraum öffnen</a>
+ </div>
+ <div class="qrbox"><img src="qr-app.png" alt="QR-Code zum Beratungsraum"><p>Am Computer? Mit der Handykamera scannen, um den Beratungsraum auf dem Handy zu öffnen.</p></div>
+</section>
+
+<section class="card">
+ <h2>Was ist der Beratungsraum?</h2>
+ <p>Ein Werkzeug für den Schulalltag mit vier Bereichen: eine geführte <b>kollegiale Fallberatung</b> mit Diktat und Protokoll, Hilfen für <b>Konflikte und schwierige Gespräche</b>, Wissen zum Umgang mit <b>Neurodivergenz</b> und ein Bereich zur eigenen <b>Gesundheit</b> mit Selbsteinschätzungen und Übungen. Alle Inhalte sind mit Quellen belegt.</p>
+ <p>Sie können den Beratungsraum einfach im Browser nutzen. Als App auf dem Startbildschirm ist er schneller zur Hand, startet im Vollbild und läuft nach dem ersten Öffnen auch ohne Internet.</p>
+</section>
+
+<section class="card" id="install">
+ <h2>So speichern Sie ihn als App</h2>
+ <p>Wählen Sie Ihr Gerät. Das passende ist meist schon ausgewählt.</p>
+ <div class="tabs" role="tablist">
+  <button role="tab" aria-selected="true" data-p="ios">iPhone und iPad</button>
+  <button role="tab" aria-selected="false" data-p="android">Android</button>
+  <button role="tab" aria-selected="false" data-p="pc">Windows und Chromebook</button>
+  <button role="tab" aria-selected="false" data-p="mac">Mac</button>
+ </div>
+ <div class="panel" id="p-ios">
+  <ol class="steps">
+   <li>Öffnen Sie den Beratungsraum in <b>Safari</b>, am einfachsten über den QR-Code mit der Kamera.</li>
+   <li>Tippen Sie auf das <b>Teilen-Symbol</b> <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="2" stroke-linecap="round"><path d="M12 15V3M8 7l4-4 4 4M6 11H5v10h14V11h-1"/></svg>. Auf dem iPhone ist es unten in der Mitte, auf dem iPad oben rechts.</li>
+   <li>Scrollen Sie im Menü nach unten und wählen Sie <b>„Zum Home-Bildschirm“</b>.</li>
+   <li>Lassen Sie den Namen so und tippen Sie auf <b>„Hinzufügen“</b>.</li>
+   <li>Öffnen Sie den Beratungsraum ab jetzt über das neue Symbol auf dem Home-Bildschirm, nicht mehr über Safari.</li>
+  </ol>
+  <div class="note warn">Wichtig auf iPhone und iPad: Die App auf dem Home-Bildschirm hat ihren eigenen Speicher, getrennt von Safari. Was Sie vorher in Safari eingetragen haben, ist in der App nicht zu sehen. Und wenn Sie das App-Symbol löschen, sind auch Ihre Einträge gelöscht.</div>
+ </div>
+ <div class="panel" id="p-android" hidden>
+  <ol class="steps">
+   <li>Öffnen Sie den Beratungsraum in <b>Chrome</b>, am einfachsten über den QR-Code.</li>
+   <li>Oft erscheint unten von selbst ein Hinweis <b>„Installieren“</b>. Dann einfach antippen.</li>
+   <li>Sonst: Tippen Sie oben rechts auf das Menü <b>⋮</b>.</li>
+   <li>Wählen Sie <b>„App installieren“</b> oder <b>„Zum Startbildschirm hinzufügen“</b> und bestätigen Sie.</li>
+   <li>Die App liegt danach bei Ihren anderen Apps und auf dem Startbildschirm.</li>
+  </ol>
+ </div>
+ <div class="panel" id="p-pc" hidden>
+  <ol class="steps">
+   <li>Öffnen Sie den Beratungsraum in <b>Chrome</b> oder <b>Edge</b>.</li>
+   <li>Achten Sie in der Adresszeile ganz rechts auf das Symbol <b>„Installieren“</b> <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1b2a4a" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 8v6M9 11l3 3 3-3M8 21h8"/></svg> und klicken Sie darauf.</li>
+   <li>Kein Symbol zu sehen? Öffnen Sie das Menü (drei Punkte oben rechts) und suchen Sie nach <b>„Installieren“</b> oder <b>„Als App installieren“</b>. Die genaue Bezeichnung ändert sich mit den Browser-Versionen.</li>
+   <li>Bestätigen Sie mit <b>„Installieren“</b>. Der Beratungsraum öffnet sich in einem eigenen Fenster und ist im Startmenü zu finden.</li>
+  </ol>
+ </div>
+ <div class="panel" id="p-mac" hidden>
+  <ol class="steps">
+   <li>Öffnen Sie den Beratungsraum in <b>Safari</b> (ab macOS Sonoma) oder in Chrome oder Edge.</li>
+   <li>In Safari: Menü <b>Ablage</b> und dann <b>„Zum Dock hinzufügen“</b>.</li>
+   <li>In Chrome oder Edge: wie unter „Windows und Chromebook“ beschrieben.</li>
+   <li>Der Beratungsraum liegt danach im Dock und im Programme-Ordner.</li>
+  </ol>
+ </div>
+</section>
+
+<section class="card" id="daten">
+ <h2>Wo Ihre Daten bleiben</h2>
+ <p>Gerade bei Fallberatungen und Gesundheitsfragen ist das die wichtigste Frage. Hier die ehrliche Antwort.</p>
+ <div class="data">
+  <div><b>Nur auf Ihrem Gerät</b>Notizen, Transkripte, Protokolle und Gesundheitsangaben speichert der Beratungsraum im Speicher dieser App auf diesem Gerät. Es gibt keinen Server, keine Anmeldung, keine Statistik und keine Werbung.</div>
+  <div><b>Niemand sonst sieht etwas</b>Weder die Schule noch der Entwickler können Ihre Einträge sehen. Es gibt schlicht keine Stelle, an die sie geschickt werden.</div>
+  <div><b>Was beim Laden passiert</b>Das Programm selbst liegt bei GitHub Pages. Wenn Sie es öffnen oder aktualisieren, lädt Ihr Gerät es von dort. Dabei speichert GitHub aus Sicherheitsgründen die IP-Adresse. Ihre Eingaben werden dabei nie übertragen.</div>
+  <div><b>Diktat</b>Das Tool verlangt Spracherkennung direkt auf dem Gerät. Geht das in Ihrem Browser nicht, fragt es vorher nach. Ohne Ihre Zustimmung geht kein Ton nach außen, und Audio wird nie gespeichert.</div>
+  <div><b>Jedes Gerät für sich</b>Was Sie am Laptop eintragen, sehen Sie nicht auf dem Handy. Zum Umziehen gibt es unter „Sitzungen“ eine Sicherungsdatei, die Sie selbst verwahren.</div>
+  <div><b>Löschen</b>Sie können alles unter „Sitzungen“ löschen, Gesundheitsdaten auch getrennt. Wer die Website-Daten im Browser löscht oder auf dem iPhone das App-Symbol entfernt, löscht die Einträge ebenfalls.</div>
+ </div>
+ <div class="note">Darum lohnt sich die App auf iPhone und iPad besonders: Safari löscht Daten von Websites, die man sieben Tage nicht besucht hat. Apps auf dem Home-Bildschirm sind davon ausgenommen.</div>
+ <div class="note warn">Auf geteilten oder dienstlichen Geräten, die auch andere benutzen, sollten Sie den Bereich Gesundheit nicht nutzen oder die Daten danach löschen. Tragen Sie Schüler:innen, Eltern und Kolleg:innen nur mit Kürzeln ein. Die Datenschutzregeln Ihrer Schule gelten weiterhin.</div>
+</section>
+
+<section class="card">
+ <h2>Häufige Fragen</h2>
+ <details><summary>Kostet das etwas?</summary><p>Nein. Es gibt keine Kosten, kein Abo und keine Werbung.</p></details>
+ <details><summary>Brauche ich Internet?</summary><p>Nur beim ersten Öffnen und wenn es ein Update gibt. Danach funktioniert der Beratungsraum auch ohne Verbindung, etwa im Keller-Klassenraum oder in der Turnhalle.</p></details>
+ <details><summary>Wie bekomme ich Updates?</summary><p>Automatisch. Öffnen Sie den Beratungsraum mit Internetverbindung, lädt er die neueste Fassung. Ihre Einträge bleiben dabei erhalten.</p></details>
+ <details><summary>Ist das ein offizielles Angebot der Schulbehörde?</summary><p>Nein. Der Beratungsraum ist ein Werkzeug von Felix Spee. Die Inhalte stützen sich auf Fachliteratur und Hamburger Handreichungen, die Quellen stehen im Tool. Er ersetzt keine Beratung durch Fachleute.</p></details>
+ <details><summary>Was ist, wenn ich mein Handy verliere oder wechsle?</summary><p>Ohne Sicherung sind die Einträge dann weg. Laden Sie deshalb ab und zu unter „Sitzungen“ eine Sicherung herunter und bewahren Sie sie sicher auf.</p></details>
+ <details><summary>Es klappt nicht. Was nun?</summary><p>Prüfen Sie, ob Sie den richtigen Browser nutzen (iPhone: Safari, Android: Chrome). Sie können den Beratungsraum auch ohne Installation einfach im Browser verwenden; nur auf iPhone und iPad ist die App wegen der Datenspeicherung die bessere Wahl.</p></details>
+</section>
+
+<p class="src">Quellen: GitHub. (o. J.). <i>About GitHub Pages</i>. <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">docs.github.com</a> · Wilander, J. (2020). <i>Full third-party cookie blocking and more</i> [Vollständige Blockade von Drittanbieter-Cookies und mehr]. WebKit Blog. <a href="https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/">webkit.org</a> · MDN Web Docs. (o. J.). <i>SpeechRecognition: processLocally property</i>. <a href="https://developer.mozilla.org/docs/Web/API/SpeechRecognition/processLocally">developer.mozilla.org</a></p>
+</main>
+<footer><b>Beratungsraum</b> · entwickelt von Felix Spee · Tools für Lehrkräfte · Version 2.0, November 2026</footer>
+<script>
+{
+ const tabs=[...document.querySelectorAll('.tabs button')];
+ const show=p=>{tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.p===p));document.querySelectorAll('.panel').forEach(x=>x.hidden=x.id!=='p-'+p)};
+ tabs.forEach(b=>b.addEventListener('click',()=>show(b.dataset.p)));
+ const ua=navigator.userAgent;
+ if(/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1))show('ios');
+ else if(/Android/.test(ua))show('android');
+ else if(/Macintosh/.test(ua))show('mac');
+ else show('pc');
+}
+</script>
+</body>
+</html>
